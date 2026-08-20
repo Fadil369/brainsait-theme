@@ -1,0 +1,133 @@
+{% liquid
+  assign is_ar = false
+  if request.locale.iso_code == 'ar'
+    assign is_ar = true
+  endif
+  assign col = closest.collection
+  assign col_handle = col.handle | default: ''
+  assign show_book = false
+  if col_handle == 'solutions'
+    assign show_book = true
+  endif
+
+  assign chips = ''
+  for tag in col.all_tags
+    assign skip = false
+    assign tag_down = tag | downcase
+    if tag_down contains 'brainsait-catalog' or tag_down contains 'github-io' or tag_down == 'learn' or tag_down == 'solutions' or tag_down contains 'source:'
+      assign skip = true
+    endif
+    unless skip
+      assign chips = chips | append: tag | append: '|'
+    endunless
+  endfor
+  assign chip_list = chips | split: '|'
+  assign chip_list = chip_list | uniq | compact
+
+  if col.title == blank or col.title == empty
+    if is_ar
+      assign col_title = 'المكتبة'
+    else
+      assign col_title = 'The Library'
+    endif
+  else
+    assign col_title = col.title
+  endif
+%}
+
+<div class="page gh-shelf" data-component="gh-shelf" data-shelf="{{ col_handle }}">
+  <header class="page-head reveal">
+    <h1>{{ col_title }}</h1>
+    {% if col.description != blank %}
+      <p class="lede">{{ col.description }}</p>
+    {% endif %}
+  </header>
+
+  {% if chip_list.size > 1 %}
+    <div class="filters reveal" role="tablist" id="gh-shelf-filters">
+      <button type="button" class="chip active" role="tab" aria-selected="true" data-sub="all">
+        {% if is_ar %}الكل{% else %}All{% endif %} ({{ col.products_count }})
+      </button>
+      {% for tag in chip_list %}
+        {% assign count = 0 %}
+        {% for product in col.products %}
+          {% if product.tags contains tag %}
+            {% assign count = count | plus: 1 %}
+          {% endif %}
+        {% endfor %}
+        <button type="button" class="chip" role="tab" aria-selected="false" data-sub="{{ tag | escape }}">
+          {{ tag }} ({{ count }})
+        </button>
+      {% endfor %}
+    </div>
+  {% endif %}
+
+  <div class="grid reveal" id="gh-shelf-grid">
+    {% paginate col.products by 100 %}
+      {% for product in col.products %}
+        {% render 'gh-pcard', product: product, qv: true, show_book: show_book %}
+      {% endfor %}
+    {% endpaginate %}
+  </div>
+</div>
+
+<div class="qv-backdrop" id="gh-qv" hidden>
+  <div class="qv-panel" role="dialog" aria-modal="true" aria-label="Quick view">
+    <button class="qv-close" type="button" data-qv-close aria-label="Close">✕</button>
+    <div class="qv-media">
+      <img id="gh-qv-img" alt="" width="400" height="520">
+    </div>
+    <div class="qv-body">
+      <p class="qv-cat" id="gh-qv-cat"></p>
+      <h3 id="gh-qv-title"></h3>
+      <p class="qv-prop" id="gh-qv-prop"></p>
+      <p class="qv-desc" id="gh-qv-desc"></p>
+      <div class="qv-meta"><span id="gh-qv-meta"></span></div>
+      <hr class="qv-divider">
+      <div class="qv-price-row">
+        <p class="qv-price" id="gh-qv-price"></p>
+        <span id="gh-qv-compare"></span>
+      </div>
+      <div class="qv-cta">
+        <a class="button primary" id="gh-qv-cta" href="#">
+          {% if is_ar %}اشترِ الآن ←{% else %}Buy now →{% endif %}
+        </a>
+      </div>
+      <p class="qv-trust">⚡ {% if is_ar %}تسليم فوري · رابط Google Drive آمن · أسعار بالريال{% else %}Instant delivery · Secure Google Drive · SAR pricing{% endif %}</p>
+    </div>
+  </div>
+</div>
+
+{% javascript %}
+  (() => {
+    const grid = document.getElementById('gh-shelf-grid');
+    if (!grid) return;
+    const chips = document.querySelectorAll('#gh-shelf-filters .chip');
+    if (!chips.length) return;
+
+    chips.forEach((chip) => {
+      chip.addEventListener('click', () => {
+        chips.forEach((c) => {
+          c.classList.toggle('active', c === chip);
+          c.setAttribute('aria-selected', c === chip ? 'true' : 'false');
+        });
+        const sub = chip.dataset.sub || 'all';
+        grid.querySelectorAll('.pcard').forEach((card) => {
+          card.hidden = sub !== 'all' && card.dataset.sub !== sub;
+        });
+      });
+    });
+  })();
+{% endjavascript %}
+
+{% schema %}
+{
+  "name": "GH Shelf",
+  "tag": "section",
+  "class": "gh-shelf-section",
+  "settings": [],
+  "presets": [
+    { "name": "GH Shelf" }
+  ]
+}
+{% endschema %}

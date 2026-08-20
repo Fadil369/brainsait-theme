@@ -1,0 +1,103 @@
+{% liquid
+  assign is_ar = false
+  if request.locale.iso_code == 'ar'
+    assign is_ar = true
+  endif
+%}
+{% # theme-check-disable ValidScopedCSSClass %}
+
+<div class="bs-value">
+  <div class="bs-value__inner page-width">
+    <h2 class="bs-value__heading">
+      {% if is_ar %}
+        ما هي BrainSAIT؟
+      {% else %}
+        What is BrainSAIT?
+      {% endif %}
+    </h2>
+
+    <p class="bs-value__text">
+      {% if is_ar %}
+        BrainSAIT منصة رقمية تقدّم منتجات جاهزة لبنية هوية الرعاية الصحية: سجلّات OID، أدوات متوافقة مع FHIR،
+        وحزم تكامل مصمَّمة لمطوري ومؤسسات القطاع الصحي في المملكة العربية السعودية. كل منتج يُسلَّم رقمياً وفورياً
+        بعد الشراء.
+      {% else %}
+        BrainSAIT is a digital products platform for healthcare identity infrastructure: OID registries,
+        FHIR-aligned tooling, and integration bundles built for developers and enterprises across Saudi Arabia.
+        Every product is delivered instantly, digitally, right after purchase.
+      {% endif %}
+    </p>
+
+    <a href="{{ routes.all_products_collection_url }}" class="button button-secondary bs-value__cta">
+      {% if is_ar %}
+        استعرض جميع المنتجات
+      {% else %}
+        Browse all products
+      {% endif %}
+    </a>
+  </div>
+</div>
+
+{% stylesheet %}
+  .bs-value {
+    padding-block: 4rem;
+    background-color: var(--color-background);
+  }
+
+  .bs-value__inner {
+    max-width: 42rem;
+    margin-inline: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.1rem;
+  }
+
+  .bs-value__heading {
+    margin: 0;
+    font-family: var(--font-heading--family);
+    font-size: clamp(1.5rem, 3.5vw, 2.25rem);
+    color: var(--color-foreground);
+  }
+
+  .bs-value__text {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--bs-muted);
+  }
+
+  .bs-value__cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-block-start: 0.5rem;
+    padding-inline: 1.75rem;
+    padding-block: 0.75rem;
+    border-radius: var(--bs-radius-pill);
+    border: 1px solid var(--bs-accent);
+    color: var(--bs-accent);
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+
+  .bs-value__cta:hover {
+    background-color: var(--bs-accent);
+    color: #ffffff;
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "BrainSAIT Value Prop",
+  "tag": "section",
+  "settings": [],
+  "presets": [
+    {
+      "name": "BrainSAIT Value Prop"
+    }
+  ]
+}
+{% endschema %}

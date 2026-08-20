@@ -1,0 +1,102 @@
+{% liquid
+  assign is_ar = false
+  if request.locale.iso_code == 'ar'
+    assign is_ar = true
+  endif
+  assign learn_col = collections['learn']
+  assign solutions_col = collections['solutions']
+  assign learn_count = learn_col.products_count | default: 0
+  assign solutions_count = solutions_col.products_count | default: 0
+  assign build_count = 1
+  assign ticket = all_products['build-ticket']
+  assign ticket_compare = 14960
+  if ticket.compare_at_price and ticket.compare_at_price > 0
+    assign ticket_compare = ticket.compare_at_price
+  endif
+%}
+
+<div class="page gh-home" data-component="gh-home">
+  <section class="hero reveal">
+    <span class="hero-eyebrow"><span class="dot"></span>
+      {% if is_ar %}متجر برينسايت الفاخر{% else %}The BrainSAIT Luxury Store{% endif %}
+    </span>
+    <h1>{% if is_ar %}تعلّم · ابنِ · حلول{% else %}Learn · Build · Solutions{% endif %}</h1>
+    <p class="lede">
+      {% if is_ar %}
+        مكتبة رقمية، برنامج احتضان، وبرمجيات جاهزة — صممناها لترتقي بك. أنيقة في كل تفصيلة، قوية في كل ميزة.
+      {% else %}
+        A digital library, an incubation program, and production-ready software — crafted to elevate you. Elegant in every detail, powerful in every feature.
+      {% endif %}
+    </p>
+  </section>
+
+  <section class="stages">
+    <a class="stage-card learn" href="{{ routes.collections_url }}/learn">
+      <span class="stage-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V4a2 2 0 0 0-2-2H6.5A2.5 2.5 0 0 0 4 4.5v15z"/><path d="M4 19.5A2.5 2.5 0 0 0 6.5 22H20v-5"/></svg>
+      </span>
+      <h2>{% if is_ar %}تعلّم{% else %}Learn{% endif %} <span>·</span></h2>
+      <p>{% if is_ar %}كتب وروايات ثنائية اللغة — أعمال، تطوير، صحة، وتنمية ذاتية.{% else %}Bilingual books and novels — business, development, healthcare, and self-development.{% endif %}</p>
+      <span class="stage-count" data-suffix="{% if is_ar %}عنواناً{% else %}titles{% endif %}">{{ learn_count }}</span>
+      <svg class="stage-arrow" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+    </a>
+
+    <a class="stage-card build" href="{{ routes.root_url }}pages/build">
+      <span class="stage-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+      </span>
+      <h2>{% if is_ar %}ابنِ{% else %}Build{% endif %} <span>✨</span></h2>
+      <p>{% if is_ar %}برنامج احتضان عملي — من الفكرة إلى الإطلاق في 16 يوماً، بشهادة وصول دائم.{% else %}A hands-on incubation program — idea to launch in 16 days, with a permanent certificate.{% endif %}</p>
+      <span class="stage-count" data-suffix="{% if is_ar %}برنامج{% else %}program{% endif %}">{{ build_count }}</span>
+      <svg class="stage-arrow" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+    </a>
+
+    <a class="stage-card solutions" href="{{ routes.collections_url }}/solutions">
+      <span class="stage-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4M8 8h8"/></svg>
+      </span>
+      <h2>{% if is_ar %}حلول{% else %}Solutions{% endif %} <span>·</span></h2>
+      <p>{% if is_ar %}برمجيات ومنصات جاهزة — صحة، أعمال، وتطوير، بجلسات حجز مباشرة.{% else %}Production-ready software and platforms — healthcare, business, and development, with direct booking.{% endif %}</p>
+      <span class="stage-count" data-suffix="{% if is_ar %}حلاً{% else %}solutions{% endif %}">{{ solutions_count }}</span>
+      <svg class="stage-arrow" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+    </a>
+  </section>
+
+  <section>
+    <div class="section-head reveal">
+      <h2>{% if is_ar %}مميز{% else %}Featured{% endif %}</h2>
+      <a class="button secondary sm" href="{{ routes.collections_url }}/learn">{% if is_ar %}عرض الكل{% else %}View all{% endif %}</a>
+    </div>
+    <div class="grid reveal">
+      {% for product in learn_col.products limit: 8 %}
+        {% render 'gh-pcard', product: product %}
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="program-teaser reveal">
+    <h2>{% if is_ar %}تذكرة الاحتضان{% else %}The Incubation Pass{% endif %}</h2>
+    <p>{% if is_ar %}مقعد واحد، سعر موحد — حساب دائم، مستودع GitHub خاص بك، وعقل ثانٍ كامل.{% else %}One seat, one flat price — a permanent account, your own GitHub repo, and a full Second Brain.{% endif %}</p>
+    {% if ticket.price > 0 %}
+      <strong>
+        {% if ticket_compare > ticket.price %}
+          <s style="-webkit-text-fill-color: var(--muted); font-size: 1.3rem">{{ ticket_compare | money_without_trailing_zeros }}</s>
+        {% endif %}
+        {{ ticket.price | money_without_trailing_zeros }}
+      </strong>
+    {% endif %}
+    <a class="button primary lg" href="{{ routes.root_url }}pages/build">{% if is_ar %}قدّم طلبك{% else %}Apply now{% endif %}</a>
+  </section>
+</div>
+
+{% schema %}
+{
+  "name": "GH Home",
+  "tag": "section",
+  "class": "gh-home-section",
+  "settings": [],
+  "presets": [
+    { "name": "GH Home" }
+  ]
+}
+{% endschema %}

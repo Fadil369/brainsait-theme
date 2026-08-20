@@ -1,0 +1,40 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "section",
+      "blocks": {
+        "about_content": {
+          "type": "custom-liquid",
+          "settings": {
+            "custom_liquid": "{% liquid\n  assign is_ar = false\n  if request.locale.iso_code == 'ar'\n    assign is_ar = true\n  endif\n%}\n<div class=\"gh-static-page\">\n  <p class=\"gh-eyebrow\">{% if is_ar %}من نحن{% else %}About{% endif %}</p>\n  <h1>{% if is_ar %}برينسيت{% else %}BrainSAIT{% endif %}</h1>\n  <p class=\"gh-sub\">{% if is_ar %}هوية الرعاية الصحية × الذكاء الاصطناعي × المنتجات الرقمية — الرياض، السعودية.{% else %}Healthcare Identity × AI × Digital Products — Riyadh, Saudi Arabia.{% endif %}</p>\n  <div class=\"gh-static-page__body\">\n    <p>{% if is_ar %}برينسيت تبني عند تقاطع الطب والذكاء الاصطناعي — منصات رعاية صحية جاهزة لمعايير NPHIES وFHIR، مكتبة رقمية ثنائية اللغة، ومسار BUILD الذي يحتضن الأفكار حتى تصبح شركات.{% else %}BrainSAIT builds at the intersection of medicine and intelligence — NPHIES- and FHIR-ready healthcare platforms, a bilingual digital library, and the BUILD track that incubates ideas into companies.{% endif %}</p>\n    <h2>{% if is_ar %}ما نقدّمه{% else %}What we do{% endif %}</h2>\n    <ul>\n      <li><strong>{% if is_ar %}تعلّم{% else %}Learn{% endif %}</strong> — {% if is_ar %}كتب ومراجع ثنائية اللغة، تسليم فوري.{% else %}Bilingual books and references, instant delivery.{% endif %}</li>\n      <li><strong>{% if is_ar %}ابنِ{% else %}Build{% endif %}</strong> — {% if is_ar %}مسار احتضان موجّه من الفكرة إلى الإطلاق.{% else %}A guided incubation track from idea to launch.{% endif %}</li>\n      <li><strong>{% if is_ar %}حلول{% else %}Solutions{% endif %}</strong> — {% if is_ar %}برمجيات ومنصات جاهزة للإنتاج في الصحة والأعمال والتطوير.{% else %}Production-ready software and platforms across healthcare, business, and development.{% endif %}</li>\n    </ul>\n    <h2>{% if is_ar %}الامتثال والمعايير{% else %}Compliance & standards{% endif %}</h2>\n    <p>{% if is_ar %}NPHIES v3.2 · FHIR R4 · متوافق مع HIPAA وPDPL · مسجّلة لدى IANA برقم PEN 61026 · على بنية Cloudflare — بما يتماشى مع رؤية السعودية 2030.{% else %}NPHIES v3.2 · FHIR R4 · HIPAA & PDPL-aligned · IANA-registered PEN 61026 · built on Cloudflare — aligned with Saudi Vision 2030.{% endif %}</p>\n    <h2>{% if is_ar %}تواصل معنا{% else %}Get in touch{% endif %}</h2>\n    <p><a href=\"mailto:brainsait@icloud.com\">brainsait@icloud.com</a> · <a href=\"https://wa.me/966510010991\">WhatsApp</a> · <a href=\"https://calendar.app.google/RTGxRVA3HspdGBAf8\">{% if is_ar %}احجز مكالمة{% else %}Book a call{% endif %}</a></p>\n  </div>\n</div>"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "about_content"
+      ],
+      "name": "About",
+      "settings": {
+        "content_direction": "column",
+        "horizontal_alignment": "center",
+        "section_width": "page-width",
+        "background_color": "{{ settings.color_palette.background }}",
+        "padding-block-start": 48,
+        "padding-block-end": 64
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

@@ -1,0 +1,123 @@
+{% doc %}
+  Renders a BrainSAIT luxury product card (gh design system).
+
+  Accepts an optional `qv` flag to attach quick-view data attributes to the
+  cover, and an optional `show_book` flag to render the "Book a session"
+  CTA for solutions carrying a `custom.booking_url` metafield.
+
+  @param {product} product - The product to render
+  @param {boolean} [qv] - Whether to attach quick-view data attributes
+  @param {boolean} [show_book] - Whether to show the booking CTA
+
+  @example
+  {% render 'gh-pcard', product: product, qv: true %}
+{% enddoc %}
+
+{% liquid
+  assign is_ar = false
+  if request.locale.iso_code == 'ar'
+    assign is_ar = true
+  endif
+
+  assign sub = product.type | default: ''
+  for tag in product.tags
+    unless tag == 'brainsait-catalog' or tag == 'github-io' or tag == 'LEARN' or tag == 'SOLUTIONS' or tag contains 'source:'
+      assign sub = tag
+      break
+    endunless
+  endfor
+
+  assign booking_url = product.metafields.custom.booking_url
+  assign is_free = false
+  if product.price == 0 or product.price == blank
+    assign is_free = true
+  endif
+
+  assign desc_plain = product.description | strip_html
+  assign desc_lines = desc_plain | split: "\n"
+  assign tagline = desc_lines | first | strip | truncate: 110
+  assign benefit = desc_lines[1] | strip | truncate: 90
+  if benefit == blank
+    assign benefit = desc_lines[0] | strip | truncate: 90
+  endif
+%}
+
+<article class="pcard" data-sub="{{ sub | escape }}">
+  <div class="pcard-cover"
+    {% if qv %}
+      data-qv
+      data-qv-img="{{ product.featured_image | image_url: width: 800 }}"
+      data-qv-cat="{{ sub | escape }}"
+      data-qv-title="{{ product.title | escape }}"
+      data-qv-prop="{{ tagline | escape }}"
+      data-qv-desc="{{ desc_plain | truncate: 220 | escape }}"
+      data-qv-meta="{{ sub | escape }}"
+      data-qv-price="{% if is_free %}{% if is_ar %}مجاني{% else %}Free{% endif %}{% else %}{{ product.price | money }}{% endif %}"
+      data-qv-compare="{% if product.compare_at_price > product.price %}{{ product.compare_at_price | money }}{% endif %}"
+      data-qv-url="{{ product.url }}"
+      data-qv-cta="{% if is_ar %}اشترِ الآن{% else %}Buy now{% endif %}"
+    {% endif %}
+  >
+    <a class="pcard-cover-link" href="{{ product.url }}" tabindex="-1" aria-hidden="true">
+      {% if product.featured_image %}
+        <img src="{{ product.featured_image | image_url: width: 600 }}" alt="{{ product.title | escape }}" width="600" height="900" loading="lazy">
+      {% else %}
+        <span class="pcard-cover-fallback">{{ product.title | slice: 0 | upcase }}</span>
+      {% endif %}
+    </a>
+    {% if is_free %}
+      <span class="pcard-badge pcard-badge-free">FREE</span>
+    {% else %}
+      <span class="pcard-badge">{% if is_ar %}رقمي{% else %}DIGITAL{% endif %}</span>
+    {% endif %}
+    <span class="pcard-badge pcard-format">{{ sub | upcase }}</span>
+  </div>
+
+  <div class="pcard-body">
+    <p class="pcard-eyebrow">{{ sub }}</p>
+    <h3 class="pcard-title"><a href="{{ product.url }}">{{ product.title }}</a></h3>
+    <p class="pcard-prop">{{ tagline }}</p>
+    {% unless benefit == blank %}
+      <p class="pcard-benefit">{{ benefit }}</p>
+    {% endunless %}
+    <div class="pcard-foot">
+      {% if is_free %}
+        <span class="pcard-badge pcard-badge-free">FREE</span>
+      {% else %}
+        <span class="pcard-price">{{ product.price | money }}</span>
+      {% endif %}
+      <div class="pcard-cta">
+        <a class="button primary sm" href="{{ product.url }}">
+          {% if is_free %}
+            {% if is_ar %}تحميل{% else %}Get{% endif %}
+          {% elsif show_book and booking_url != blank %}
+            {% if is_ar %}احجز جلسة{% else %}Book a session{% endif %}
+          {% else %}
+            {% if is_ar %}اشترِ الآن{% else %}Buy now{% endif %}
+          {% endif %}
+        </a>
+        {% if show_book and booking_url != blank %}
+          <a class="button secondary sm" href="{{ booking_url }}" target="_blank" rel="noopener">
+            {% if is_ar %}حجز{% else %}Book{% endif %}
+          </a>
+        {% endif %}
+        {% if qv %}
+          <button class="button secondary sm pcard-qv" type="button" data-qv
+            data-qv-img="{{ product.featured_image | image_url: width: 800 }}"
+            data-qv-cat="{{ sub | escape }}"
+            data-qv-title="{{ product.title | escape }}"
+            data-qv-prop="{{ tagline | escape }}"
+            data-qv-desc="{{ desc_plain | truncate: 220 | escape }}"
+            data-qv-meta="{{ sub | escape }}"
+            data-qv-price="{% if is_free %}{% if is_ar %}مجاني{% else %}Free{% endif %}{% else %}{{ product.price | money }}{% endif %}"
+            data-qv-compare="{% if product.compare_at_price > product.price %}{{ product.compare_at_price | money }}{% endif %}"
+            data-qv-url="{{ product.url }}"
+            data-qv-cta="{% if is_ar %}اشترِ الآن{% else %}Buy now{% endif %}"
+          >
+            {% if is_ar %}نظرة سريعة{% else %}Quick view{% endif %}
+          </button>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</article>

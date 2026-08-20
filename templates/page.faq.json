@@ -1,0 +1,40 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "section",
+      "blocks": {
+        "faq_content": {
+          "type": "custom-liquid",
+          "settings": {
+            "custom_liquid": "{% liquid\n  assign is_ar = false\n  if request.locale.iso_code == 'ar'\n    assign is_ar = true\n  endif\n%}\n<div class=\"gh-static-page\">\n  <p class=\"gh-eyebrow\">FAQ</p>\n  <h1>{% if is_ar %}أسئلة شائعة{% else %}Frequently asked questions{% endif %}</h1>\n  <div class=\"gh-faq\" style=\"margin-top:24px\">\n    <details open>\n      <summary>{% if is_ar %}كيف يتم التسليم بعد الدفع؟{% else %}How is delivery handled after payment?{% endif %}</summary>\n      <div class=\"faq-a\">{% if is_ar %}كتب Learn: رابط Google Drive آمن يُرسل إلى بريدك مباشرة بعد تأكيد الدفع. حلول Solutions: تُطلب عبر واتساب أو بحجز جلسة — نتفق معك على التفاصيل والتسليم قبل البدء.{% else %}Learn titles: a secure Google Drive link is emailed to you right after payment confirms — instant, no shipping. Solutions: requested via WhatsApp or by booking a session — we agree on scope and delivery with you before starting.{% endif %}</div>\n    </details>\n    <details>\n      <summary>{% if is_ar %}هل المحتوى ثنائي اللغة؟{% else %}Is the content bilingual?{% endif %}</summary>\n      <div class=\"faq-a\">{% if is_ar %}نعم — تغطية عربية وإنجليزية كاملة في كل كتاب وحل.{% else %}Yes — full Arabic and English coverage across every book and solution.{% endif %}</div>\n    </details>\n    <details>\n      <summary>{% if is_ar %}كيف تعمل خطط دفع BUILD؟{% else %}How do BUILD payment plans work?{% endif %}</summary>\n      <div class=\"faq-a\">{% if is_ar %}اختر دفعة كاملة أو على قسطين أو ثلاثة أو أربعة عند التسجيل في صفحة BUILD — السعر الإجمالي واحد بلا رسوم إضافية.{% else %}Choose full payment or 2, 3, or 4 installments when you enroll on the BUILD page — same total price, no extra fees.{% endif %}</div>\n    </details>\n    <details>\n      <summary>{% if is_ar %}ما هي معايير الامتثال المتوفرة؟{% else %}What compliance standards do you support?{% endif %}</summary>\n      <div class=\"faq-a\">{% if is_ar %}NPHIES v3.2، FHIR R4، توافق مع HIPAA وPDPL، وتسجيل IANA برقم PEN 61026.{% else %}NPHIES v3.2, FHIR R4, HIPAA & PDPL alignment, and an IANA-registered PEN (61026).{% endif %}</div>\n    </details>\n    <details>\n      <summary>{% if is_ar %}كيف أتواصل مع الدعم؟{% else %}How do I reach support?{% endif %}</summary>\n      <div class=\"faq-a\">{% if is_ar %}راسلنا على brainsait@icloud.com أو عبر واتساب 966510010991، أو احجز مكالمة مباشرة من الصفحة الرئيسية.{% else %}Email brainsait@icloud.com or WhatsApp 966510010991, or book a call directly from the homepage.{% endif %}</div>\n    </details>\n  </div>\n</div>"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "faq_content"
+      ],
+      "name": "FAQ",
+      "settings": {
+        "content_direction": "column",
+        "horizontal_alignment": "center",
+        "section_width": "page-width",
+        "background_color": "{{ settings.color_palette.background }}",
+        "padding-block-start": 48,
+        "padding-block-end": 64
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

@@ -1,0 +1,466 @@
+{% liquid
+  assign is_ar = false
+  if request.locale.iso_code == 'ar'
+    assign is_ar = true
+  endif
+  assign ticket = all_products['build-ticket']
+  assign original_price = 14960
+  if ticket.compare_at_price and ticket.compare_at_price > 0
+    assign original_price = ticket.compare_at_price
+  endif
+  assign launch_price = 9630
+  if ticket.price > 0
+    assign launch_price = ticket.price
+  endif
+%}
+
+<div class="page build-page" data-component="gh-build"
+  data-is-ar="{% if is_ar %}1{% else %}0{% endif %}"
+  data-original-price="{{ original_price }}"
+  data-launch-price="{{ launch_price }}"
+  data-apply-api="{{ section.settings.apply_api }}"
+  data-turnstile-key="{{ section.settings.turnstile_site_key }}"
+  data-calendar-url="https://calendar.app.google/rAqiE6pNumtECdnd7"
+  data-track-url="{{ routes.root_url }}pages/track">
+
+  <section class="build-hero reveal">
+    <span class="hero-eyebrow"><span class="dot"></span>
+      {% if is_ar %}برنامج الاحتضان{% else %}The Incubation Program{% endif %}
+    </span>
+    <h1>{% if is_ar %}تذكرة الاحتضان{% else %}The Incubation Pass{% endif %}</h1>
+    <p class="lede">
+      {% if is_ar %}
+        مقعد واحد في منصة BUILD — من الفكرة إلى الإطلاق في 16 يوماً، مع حساب دائم، مستودع GitHub خاص بك، وعقل ثانٍ كامل.
+      {% else %}
+        One seat in the BUILD platform — idea to launch in 16 days, with a permanent account, your own GitHub repo, and a full Second Brain.
+      {% endif %}
+    </p>
+    <div class="build-launch-strip">
+      <span class="launch-tag">{% if is_ar %}عرض الإطلاق{% else %}Launch offer{% endif %}</span>
+      <span class="launch-was">{% if is_ar %}كان{% else %}Was{% endif %} {{ original_price | money_without_trailing_zeros }}</span>
+      <span class="launch-now">{% if is_ar %}الآن{% else %}Now{% endif %} {{ launch_price | money_without_trailing_zeros }}</span>
+      <span class="launch-timer">{% if is_ar %}لفترة محدودة{% else %}Limited time{% endif %}</span>
+    </div>
+    <div class="build-hero-cta">
+      <a class="button primary lg" href="#apply">
+        {% if is_ar %}ابدأ طلبك{% else %}Start your application{% endif %} 🚀
+      </a>
+      <a class="button secondary lg" href="https://calendar.app.google/rAqiE6pNumtECdnd7" target="_blank" rel="noopener noreferrer">
+        📅 {% if is_ar %}احجز جلسة تقييم{% else %}Book an evaluation{% endif %}
+      </a>
+    </div>
+    <p class="fineprint">
+      {% if is_ar %}
+        دفع آمن على store.brainsait.org — أدخل رمز الخصم قبل إتمام الشراء، أو احجز جلسة تقييم أولاً.
+      {% else %}
+        Secure checkout on store.brainsait.org — apply your promo code before checkout, or book an evaluation first.
+      {% endif %}
+    </p>
+  </section>
+
+  <section id="apply" class="build-price reveal">
+    <div class="build-form-container">
+      <div class="form-step welcome-step" id="gh-build-ticket">
+        <div class="build-ticket-card">
+          <span class="launch-badge">{% if is_ar %}عرض الإطلاق — لفترة محدودة{% else %}Launch offer — limited time{% endif %}</span>
+          <div class="bt-price-row">
+            <span class="bt-original" id="gh-bt-original">{{ original_price | money_without_trailing_zeros }}</span>
+            <span class="bt-price" id="gh-bt-price">{{ launch_price | money_without_trailing_zeros }}</span>
+            <span class="bt-savings" id="gh-bt-savings" hidden></span>
+          </div>
+          <p class="promo-ok" id="gh-promo-ok" hidden></p>
+
+          <div class="promo-box">
+            <div class="promo-row">
+              <input type="text" id="gh-promo-input" autocomplete="off"
+                placeholder="{% if is_ar %}أدخل رمز الخصم{% else %}Enter promo code{% endif %}">
+              <button type="button" class="btn-promo" id="gh-promo-apply">{% if is_ar %}تطبيق{% else %}Apply{% endif %}</button>
+            </div>
+            <p class="promo-err" id="gh-promo-err" hidden></p>
+            <p class="promo-clear" id="gh-promo-clear" hidden>
+              <button type="button" class="promo-clear-btn" id="gh-promo-remove">{% if is_ar %}إزالة الرمز{% else %}Remove code{% endif %}</button>
+            </p>
+          </div>
+
+          <div class="plan-box">
+            <label class="plan-label" for="gh-plan-options">{% if is_ar %}خطة الدفع{% else %}Payment plan{% endif %}</label>
+            <div class="plan-options" id="gh-plan-options">
+              <button type="button" class="plan-option active" data-plan="FULL">
+                <span class="plan-name">{% if is_ar %}دفعة كاملة{% else %}Full payment{% endif %}</span>
+                <span class="plan-price" data-amount="9630" data-count="1" data-cadence="{% if is_ar %}دفعة واحدة{% else %}One-time{% endif %}">{% if is_ar %}٩٬٦٣٠ ريال{% else %}9,630 SAR{% endif %}</span>
+              </button>
+              <button type="button" class="plan-option" data-plan="FLEX">
+                <span class="plan-name">{% if is_ar %}2 دفعات{% else %}2 installments{% endif %}</span>
+                <span class="plan-price" data-amount="4815" data-count="2" data-cadence="{% if is_ar %}دفعتان{% else %}Two payments{% endif %}">{% if is_ar %}٤٬٨١٥ ريال{% else %}4,815 SAR{% endif %} ×2</span>
+              </button>
+              <button type="button" class="plan-option" data-plan="SPLIT">
+                <span class="plan-name">{% if is_ar %}3 دفعات{% else %}3 installments{% endif %}</span>
+                <span class="plan-price" data-amount="3210" data-count="3" data-cadence="{% if is_ar %}ثلاث دفعات{% else %}Three payments{% endif %}">{% if is_ar %}٣٬٢١٠ ريال{% else %}3,210 SAR{% endif %} ×3</span>
+              </button>
+              <button type="button" class="plan-option" data-plan="QUARTER">
+                <span class="plan-name">{% if is_ar %}4 دفعات{% else %}4 installments{% endif %}</span>
+                <span class="plan-price" data-amount="2407.5" data-count="4" data-cadence="{% if is_ar %}أربع دفعات{% else %}Four payments{% endif %}">{% if is_ar %}٢٬٤٠٧٫٥٠ ريال{% else %}2,407.50 SAR{% endif %} ×4</span>
+              </button>
+            </div>
+            <p class="plan-hint" id="gh-plan-hint"></p>
+          </div>
+
+          <p class="bt-note">
+            {% if is_ar %}
+              تذكرة بناء واحدة بسعر موحد {{ launch_price | money_without_trailing_zeros }} — لا توجد فئات أو أسعار متدرجة.
+            {% else %}
+              One standard Build Ticket at a flat {{ launch_price | money_without_trailing_zeros }} — no tiers, no tier pricing.
+            {% endif %}
+          </p>
+
+          <div class="verification-form">
+            <div class="form-field">
+              <label for="gh-f-name">{% if is_ar %}الاسم الكامل{% else %}Full name{% endif %} *</label>
+              <input type="text" id="gh-f-name" autocomplete="name" placeholder="{% if is_ar %}اسمك الثلاثي{% else %}Your full name{% endif %}">
+            </div>
+            <div class="form-field">
+              <label for="gh-f-email">{% if is_ar %}البريد الإلكتروني{% else %}Email{% endif %} *</label>
+              <input type="email" id="gh-f-email" autocomplete="email" placeholder="your@email.com">
+            </div>
+            <div class="form-field">
+              <label for="gh-f-phone">{% if is_ar %}رقم الجوال{% else %}Phone{% endif %}</label>
+              <input type="tel" id="gh-f-phone" autocomplete="tel" placeholder="+966 5X XXX XXXX">
+            </div>
+            <div class="form-field">
+              <label for="gh-f-country">{% if is_ar %}الدولة{% else %}Country{% endif %} *</label>
+              <input type="text" id="gh-f-country" placeholder="{% if is_ar %}الدولة{% else %}Your country{% endif %}">
+            </div>
+            <div class="form-field">
+              <label for="gh-f-github">{% if is_ar %}اسم مستخدم GitHub{% else %}GitHub username{% endif %}</label>
+              <input type="text" id="gh-f-github" autocomplete="off" placeholder="{% if is_ar %}مثال: fadil369{% else %}e.g. fadil369{% endif %}">
+              <p class="field-hint">
+                {% if is_ar %}
+                  مطلوب للانضمام عبر GitHub: بعد الدفع نولّد مستودعك الخاص من قالب BUILD ونضيفك كمساهم.
+                {% else %}
+                  Required for the GitHub flow: after payment we generate your own repo from the BUILD starter and add you as a collaborator.
+                {% endif %}
+              </p>
+            </div>
+          </div>
+
+          <div class="turnstile-box" id="gh-turnstile" hidden></div>
+          <p class="promo-err" id="gh-submit-err" hidden></p>
+
+          <button type="button" class="btn-primary" id="gh-submit" disabled>
+            {% if is_ar %}أرسل واحجز مقعدك ←{% else %}Secure your seat →{% endif %}
+          </button>
+
+          <p class="bt-booking">
+            <a href="https://calendar.app.google/rAqiE6pNumtECdnd7" target="_blank" rel="noopener noreferrer">
+              {% if is_ar %}قبل أن تبدأ؟ احجز جلسة مع المؤسس ↗{% else %}Not sure yet? Book a session with the founder ↗{% endif %}
+            </a>
+          </p>
+        </div>
+      </div>
+
+      <div class="form-step result-step" id="gh-build-result" hidden>
+        <div class="tier-icon" style="font-size:3rem">✅</div>
+        <h2>{% if is_ar %}تم استلام طلبك!{% else %}Application received!{% endif %}</h2>
+        <p class="step-subtitle" id="gh-result-ref"></p>
+        <p class="step-description" id="gh-result-msg"></p>
+        <div class="form-actions" style="margin-top:1.5rem">
+          <a class="btn-primary" id="gh-result-track" href="#">
+            {% if is_ar %}لوحة تقدمك ←{% else %}Track your progress →{% endif %}
+          </a>
+        </div>
+        <div class="form-actions" style="margin-top:0.75rem; display:flex; gap:0.6rem; flex-wrap:wrap; justify-content:center">
+          <a class="btn-secondary" id="gh-result-notion" href="#" target="_blank" rel="noopener noreferrer" hidden>
+            {% if is_ar %}عرض في Notion{% else %}View in Notion{% endif %}
+          </a>
+          <a class="btn-secondary" href="https://github.com" target="_blank" rel="noopener noreferrer">
+            {% if is_ar %}فتح GitHub{% else %}Open GitHub{% endif %}
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="build-register reveal">
+    <h2>{% if is_ar %}كيف تنضم — عبر GitHub{% else %}How to join — via GitHub{% endif %}</h2>
+    <p class="benefits-intro">
+      {% if is_ar %}
+        المسار الجديد كله على GitHub: احجز مقعدك، ادفع السعر الموحد، وبعد الدفع يُفتح لك حسابك ومستودعك وإعدادك في Notion تلقائياً.
+      {% else %}
+        The whole journey runs on GitHub: secure your seat, pay the flat price, and after payment your account, repo, and Notion onboarding are provisioned automatically.
+      {% endif %}
+    </p>
+    <div class="register-steps">
+      <div class="register-step">
+        <span class="rs-num">1</span>
+        <h3>{% if is_ar %}قدّم بياناتك ومقعدك{% else %}Apply with your GitHub{% endif %}</h3>
+        <p>
+          {% if is_ar %}
+            عبّئ النموذج أعلاه — الاسم، البريد، واسم مستخدم GitHub (أنشئ حساباً مجانياً على github.com إن لم يكن لديك).
+          {% else %}
+            Fill the form above — name, email, and your GitHub username (create a free account at github.com if you don't have one).
+          {% endif %}
+        </p>
+      </div>
+      <div class="register-step">
+        <span class="rs-num">2</span>
+        <h3>{% if is_ar %}ادفع التذكرة الموحدة{% else %}Pay the flat ticket{% endif %}</h3>
+        <p>
+          {% if is_ar %}
+            تأخذك المنظومة إلى checkout في متجرنا — سعر موحد <b>{{ launch_price | money_without_trailing_zeros }}</b> للجميع، بدون فئات أو تأهل.
+          {% else %}
+            The system takes you to our store checkout — a flat <b>{{ launch_price | money_without_trailing_zeros }}</b> for everyone, no tiers, no eligibility.
+          {% endif %}
+        </p>
+      </div>
+      <div class="register-step">
+        <span class="rs-num">3</span>
+        <h3>{% if is_ar %}بعد الدفع — كل شيء يُفعّل تلقائياً{% else %}After payment — everything activates{% endif %}</h3>
+        <p>
+          {% if is_ar %}
+            حسابك في Shopify يُنشأ عبر Partner API، صفحة الإعداد تظهر في Notion، ومستودع GitHub الخاص بك يولَّد من قالب BUILD وتُضاف إليه كمساهم.
+          {% else %}
+            Your Shopify customer account is created via the Partner API, your onboarding page appears in Notion, and your own GitHub repo is generated from the BUILD starter with you added as a collaborator.
+          {% endif %}
+        </p>
+      </div>
+    </div>
+    <div class="register-commands">
+      <span class="rc-title">{% if is_ar %}المنظومة{% else %}The chain{% endif %}</span>
+      <code>GitHub</code>
+      <code>Shopify Partner API</code>
+      <code>Notion</code>
+      <code>account.brainsait.org</code>
+    </div>
+  </section>
+
+  <section class="build-lifecycle reveal">
+    <h2>{% if is_ar %}سباق البناء — 16 يوماً{% else %}Your build sprint — 16 days{% endif %}</h2>
+    <p class="benefits-intro">
+      {% if is_ar %}
+        منهج البرنامج مصمم على 16 يوماً: أسبوع للبناء والإطلاق، وأسبوع للتسويق والتسليم، ثم التخرج والشهادة. حساب account.brainsait.org وعقلك الثاني ووصولك لـ LEARN يبقون معك — بلا انتهاء صلاحية.
+      {% else %}
+        The curriculum is a focused 16-day sprint: one week to build & launch, one week for marketing & delivery, then graduation & certificate. Your account.brainsait.org access, Second Brain, and LEARN catalog stay with you — no expiry.
+      {% endif %}
+    </p>
+    <div class="lifecycle-track">
+      <div class="lifecycle-phase wk1">
+        <span class="lc-flag">{% if is_ar %}الأسبوع 1{% else %}Week 1{% endif %}</span>
+        <h3>{% if is_ar %}البناء والإطلاق{% else %}Build & Launch{% endif %}</h3>
+        <p>{% if is_ar %}اليوم 0→5: رحلة Forge — من الفكرة إلى إطلاق المنتج. إطلاق في نهاية الأسبوع الأول.{% else %}Day 0→5: the Forge journey — idea to shipped product. Launch at the end of week one.{% endif %}</p>
+      </div>
+      <div class="lifecycle-phase wk2">
+        <span class="lc-flag">{% if is_ar %}الأسبوع 2{% else %}Week 2{% endif %}</span>
+        <h3>{% if is_ar %}التسويق والتسليم{% else %}Marketing & Delivery{% endif %}</h3>
+        <p>{% if is_ar %}خطة تسويق، إطلاق القنوات، وتسليم المشروع للعميل.{% else %}Marketing plan, channel launch, and project delivery to your customer.{% endif %}</p>
+      </div>
+      <div class="lifecycle-phase grad">
+        <span class="lc-flag">{% if is_ar %}التخرج{% else %}Graduation{% endif %}</span>
+        <h3>{% if is_ar %}شهادة الإتمام{% else %}Completion certificate{% endif %}</h3>
+        <p>{% if is_ar %}شهادة رسمية دائمة عند إتمام الـ16 مرحلة.{% else %}A permanent official certificate once all 16 milestones are complete.{% endif %}</p>
+      </div>
+      <div class="lifecycle-phase exp">
+        <span class="lc-flag">{% if is_ar %}بعد التخرج{% else %}After graduation{% endif %}</span>
+        <h3>{% if is_ar %}حسابك يبقى نشطاً{% else %}Your account stays active{% endif %}</h3>
+        <p>{% if is_ar %}account.brainsait.org وعقلك الثاني ومستودع GitHub الخاص بك ووصول LEARN — كلها تبقى معك.{% else %}account.brainsait.org, your Second Brain, your own GitHub repo, and LEARN access all stay with you.{% endif %}</p>
+      </div>
+    </div>
+    <p class="lifecycle-timer">
+      <span class="timer-icon">⏳</span>
+      {% if is_ar %}16 يوماً للسباق — لكن ما تبنيه وتملكه يبقى بعده.{% else %}A 16-day sprint — but what you build and own outlasts it.{% endif %}
+    </p>
+  </section>
+
+  <section class="second-brain-program reveal">
+    <h2>{% if is_ar %}🧠 عقلك الثاني — هدية كل بنّاء{% else %}🧠 Your Second Brain — every builder's gift{% endif %}</h2>
+    <p class="benefits-intro">
+      {% if is_ar %}
+        إذا كانت القصة قابلة للتصديق، فالمنتج قابل للبيع. اشترِ المقعد وتملك عقلك الثاني — منصة متكاملة للتنظيم، التعلم، والإنطلاق.
+      {% else %}
+        If the story is believable, the product will sell. Buy your seat and own your Second Brain — a complete platform for organization, learning, and launch.
+      {% endif %}
+    </p>
+    <div class="second-brain-summary">
+      <div class="sb-row">
+        <span class="sb-num">16</span>
+        <div>
+          <h3>{% if is_ar %}يوماً مكثفاً{% else %}intense days{% endif %}</h3>
+          <p>{% if is_ar %}من الإشعال واختيار الفكرة حتى التخرج والعرض — منهج كامل منظم في Notion.{% else %}From ignition and idea selection to graduation and the final pitch — a complete curriculum, organized in Notion.{% endif %}</p>
+        </div>
+      </div>
+      <div class="sb-row">
+        <span class="sb-num">16</span>
+        <div>
+          <h3>{% if is_ar %}مختبراً عملياً{% else %}hands-on labs{% endif %}</h3>
+          <p>{% if is_ar %}مختبرات حقيقية خطوة بخطوة: متجر، دفع، تسليم آلي، تحليلات، أمن، ذكاء اصطناعي.{% else %}Real step-by-step labs: store, payments, automated delivery, analytics, security, AI.{% endif %}</p>
+        </div>
+      </div>
+      <div class="sb-row">
+        <span class="sb-num">16</span>
+        <div>
+          <h3>{% if is_ar %}معلم إنجاز{% else %}milestones{% endif %}</h3>
+          <p>{% if is_ar %}معالم مسجلة لك في قاعدة Build Milestones — كل يوم ترفع الحالة وتضع دليل إنجازك (Proof URL).{% else %}Milestones recorded in the Build Milestones database — every day you advance the status and attach your proof URL.{% endif %}</p>
+        </div>
+      </div>
+      <div class="sb-row">
+        <span class="sb-num">1</span>
+        <div>
+          <h3>{% if is_ar %}مستودع GitHub خاص بك{% else %}your own GitHub repo{% endif %}</h3>
+          <p>{% if is_ar %}بعد الدفع يولَّد مستودعك الخاص من قالب BUILD وتُضاف إليه كمساهم — تبدأ من مرجع تملكه، لا من الصفر.{% else %}After payment your own repo is generated from the BUILD starter and you are added as a collaborator — you start from a reference you own, not from zero.{% endif %}</p>
+        </div>
+      </div>
+      <div class="sb-row">
+        <span class="sb-num">∞</span>
+        <div>
+          <h3>{% if is_ar %}وصول كامل لمكتبة LEARN{% else %}full LEARN catalog access{% endif %}</h3>
+          <p>{% if is_ar %}كل مصدر تعليمي مفتوح في LEARN يُفتح لك مجاناً — بلا حدود، بلا انتهاء.{% else %}Every open learning resource on LEARN unlocked for you — free, unlimited, no expiry.{% endif %}</p>
+        </div>
+      </div>
+      <div class="sb-row">
+        <span class="sb-num">1</span>
+        <div>
+          <h3>{% if is_ar %}حساب عميل دائم{% else %}a permanent customer account{% endif %}</h3>
+          <p>{% if is_ar %}account.brainsait.org — تتبّع تقدمك، شهاداتك، وتنزيلاتك في مكان واحد، طوال الوقت.{% else %}account.brainsait.org — track your progress, certificates, and downloads in one place, for good.{% endif %}</p>
+        </div>
+      </div>
+    </div>
+    <div class="sb-cert">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76z"/><path d="m9 12 2 2 4-4"/></svg>
+      <p>
+        {% if is_ar %}
+          عند اكتمال المعالم الـ16 يُصدر لك نظام الشهادات الآلي شهادة رقمية فاخرة باسمك — ويُرسلها لبريدك مع رابط عقلك الثاني الكامل.
+        {% else %}
+          When all 16 milestones are complete, the automated certificate system issues a premium digital certificate in your name — and emails it with the full Second Brain link.
+        {% endif %}
+      </p>
+    </div>
+  </section>
+
+  <section class="build-security reveal">
+    <h2>{% if is_ar %}الأمان والسياسات{% else %}Security & Policy{% endif %}</h2>
+    <p class="benefits-intro">
+      {% if is_ar %}الاحتضان يُدار بمستوى إنتاجي — بوابات، تدقيق، وضوابط.{% else %}The incubator runs at production-grade — gates, audit, and controls.{% endif %}
+    </p>
+    <div class="security-grid">
+      <div class="security-card">
+        <span class="sec-icon">🛡️</span>
+        <h3>{% if is_ar %}بوابات موافقة{% else %}Approval gates{% endif %}</h3>
+        <p>{% if is_ar %}لا شيء يُطلق تلقائياً — الأوامر الحساسة تحتاج تأكيد المؤسس/الإدارة{% else %}Nothing launches autonomously — sensitive actions need founder/admin confirmation{% endif %}</p>
+      </div>
+      <div class="security-card">
+        <span class="sec-icon">🔒</span>
+        <h3>{% if is_ar %}إدارة سرية آمنة{% else %}Secure secret handling{% endif %}</h3>
+        <p>{% if is_ar %}الرموز تُدار في n8n Credentials — لا تُخزَّن مفاتيح في Airtable أو Git{% else %}Tokens live in n8n Credentials — no keys in Airtable or Git{% endif %}</p>
+      </div>
+      <div class="security-card">
+        <span class="sec-icon">👥</span>
+        <h3>{% if is_ar %}أدوار واضحة{% else %}Clear roles{% endif %}</h3>
+        <p>{% if is_ar %}مؤسس · مرشد · إدارة · وكيل — لكل دور صلاحياته{% else %}Founder · Mentor · Admin · Agent — each with scoped powers{% endif %}</p>
+      </div>
+      <div class="security-card">
+        <span class="sec-icon">📖</span>
+        <h3>{% if is_ar %}سجل تدقيق كامل{% else %}Full audit trail{% endif %}</h3>
+        <p>{% if is_ar %}كل حدث مسجّل في Forge Events — من الفكرة إلى الإطلاق{% else %}Every event logged in Forge Events — idea to launch{% endif %}</p>
+      </div>
+      <div class="security-card">
+        <span class="sec-icon">↩️</span>
+        <h3>{% if is_ar %}تراجع آمن{% else %}Safe rollback{% endif %}</h3>
+        <p>{% if is_ar %}نشر مع اختبارات دخان وإمكانية تراجع فورية{% else %}Deploys with smoke tests and instant rollback{% endif %}</p>
+      </div>
+      <div class="security-card">
+        <span class="sec-icon">🧠</span>
+        <h3>{% if is_ar %}ذكاء خاضع للتحكم{% else %}Controlled autonomy{% endif %}</h3>
+        <p>{% if is_ar %}المسارات 🟢 مستقلة، 🟡 تحتاج موافقة، 🔴 تحتاج تأكيداً{% else %}🟢 autonomous · 🟡 approval · 🔴 founder-confirm{% endif %}</p>
+      </div>
+    </div>
+    <div class="policy-note">
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+      <p>
+        {% if is_ar %}
+          سياسة الخصوصية: لا تُشارك بياناتك أو رموزك مع أي طرف ثالث. رموز الخصم شخصية ومرتبطة ببريدك، وتُفعَّل مرة واحدة فقط.
+        {% else %}
+          Privacy: your data and codes are never shared with third parties. Promo codes are personal, tied to your email, and activate once.
+        {% endif %}
+      </p>
+    </div>
+  </section>
+
+  <section class="program-benefits reveal">
+    <h2>{% if is_ar %}ما الذي ستحصل عليه{% else %}What you get{% endif %}</h2>
+    <div class="benefits-grid">
+      <div class="benefit-card"><span class="benefit-icon">🎯</span><h3>{% if is_ar %}دفعة مركزة{% else %}Cohort-based{% endif %}</h3></div>
+      <div class="benefit-card"><span class="benefit-icon">🧭</span><h3>{% if is_ar %}بناء موجّه{% else %}Mentored build{% endif %}</h3></div>
+      <div class="benefit-card"><span class="benefit-icon">🚀</span><h3>{% if is_ar %}أطلق منتجاً حقيقياً{% else %}Ship a real product{% endif %}</h3></div>
+      <div class="benefit-card"><span class="benefit-icon">🛡️</span><h3>{% if is_ar %}بنية إنتاجية{% else %}Production-grade infra{% endif %}</h3></div>
+      <div class="benefit-card"><span class="benefit-icon">🤖</span><h3>{% if is_ar %}مدرب ذكي وتقييم{% else %}AI coach & scoring{% endif %}</h3></div>
+      <div class="benefit-card"><span class="benefit-icon">🌐</span><h3>{% if is_ar %}تكديس تقني متكامل{% else %}Cloudflare + Shopify + GitHub{% endif %}</h3></div>
+    </div>
+  </section>
+
+  <section class="build-security reveal">
+    <h2>{% if is_ar %}🧰 الأدوات الحقيقية — لا قائمة تسويقية{% else %}🧰 The real tools — not a marketing list{% endif %}</h2>
+    <p class="benefits-intro">
+      {% if is_ar %}
+        لا تتعلم عن هذه الأدوات — تتعلم عليها، داخل نظام BrainSAIT الحي نفسه الذي يخدم عملاء حقيقيين الآن.
+      {% else %}
+        You don't learn about these tools — you learn on them, inside the live BrainSAIT system that serves real customers right now.
+      {% endif %}
+    </p>
+    <div class="lifecycle-track">
+      <div class="lifecycle-phase wk1">
+        <span class="lc-flag">{% if is_ar %}التطوير والبنية{% else %}Dev & Infra{% endif %}</span>
+        <p>GitHub · Cloudflare Workers/KV/R2/DNS · Linux Ubuntu Server · Bash · Docker</p>
+      </div>
+      <div class="lifecycle-phase wk2">
+        <span class="lc-flag">{% if is_ar %}الذكاء والأتمتة{% else %}AI & Automation{% endif %}</span>
+        <p>Claude Code · MCP · AI Agents · n8n · Hermes · Cron</p>
+      </div>
+      <div class="lifecycle-phase grad">
+        <span class="lc-flag">{% if is_ar %}البيانات والمحتوى{% else %}Data & Content{% endif %}</span>
+        <p>Airtable · Canva · Notion</p>
+      </div>
+      <div class="lifecycle-phase exp">
+        <span class="lc-flag">{% if is_ar %}التجارة والتواصل{% else %}Commerce & Comms{% endif %}</span>
+        <p>Shopify · Resend · Notion · WhatsApp Business</p>
+      </div>
+    </div>
+    <p class="fineprint" style="margin-top:16px">
+      {% if is_ar %}
+        📱 على جهازك: Apple Shortcuts وAutomator تُدرّسان عملياً على جهاز Mac/iPhone حقيقي أثناء المختبر — لا يمكن محاكاتهما من خادم، ولن ندّعي إثباتاً لا نملكه.
+      {% else %}
+        📱 On your device: Apple Shortcuts and Automator are taught hands-on on a real Mac/iPhone during the lab — they can't run on a server, and we won't fake a screenshot we don't have.
+      {% endif %}
+    </p>
+    <p class="fineprint">
+      {% if is_ar %}
+        كل أداة مرتبطة مباشرة بكتالوج LEARN وSOLUTIONS — تبدأ من مرجع تملكه، لا من الصفر.
+      {% else %}
+        Every tool cross-references the LEARN catalog and SOLUTIONS — you start from a reference you own, not from zero.
+      {% endif %}
+    </p>
+  </section>
+</div>
+
+{% schema %}
+{
+  "name": "GH Build",
+  "tag": "section",
+  "class": "gh-build-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "apply_api",
+      "label": "Apply API URL",
+      "default": "https://build-apply.brainsait.org/apply"
+    },
+    {
+      "type": "text",
+      "id": "turnstile_site_key",
+      "label": "Turnstile site key",
+      "default": "0x4AAAAAAEOQMeFSpP81DeXR"
+    }
+  ],
+  "presets": [
+    { "name": "GH Build" }
+  ]
+}
+{% endschema %}
