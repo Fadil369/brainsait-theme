@@ -499,10 +499,40 @@
         "padding-block-start": 48,
         "padding-block-end": 48
       }
+    },
+    "17871298323eadb0fe": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_de61bb3_kWQPq8": {
+          "type": "ai_gen_block_de61bb3",
+          "settings": {
+            "style": "navy",
+            "vertical_padding": 16,
+            "max_width": 1200,
+            "item_spacing": 30,
+            "icon_size": 24,
+            "font_size": 14,
+            "show_item_1": true,
+            "item_1_label": "Instant Digital Delivery",
+            "show_item_2": true,
+            "item_2_label": "Secure Checkout",
+            "show_item_3": true,
+            "item_3_label": "Arabic & English",
+            "show_item_4": true,
+            "item_4_label": "Lifetime Access"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_de61bb3_kWQPq8"
+      ],
+      "settings": {}
     }
   },
   "order": [
     "main",
+    "17871298323eadb0fe",
     "bs_book_session",
     "product_recommendations_qggXJq"
   ]

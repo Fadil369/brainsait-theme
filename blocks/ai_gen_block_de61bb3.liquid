@@ -1,0 +1,284 @@
+{% doc %}
+  @prompt
+    Create a digital product trust and highlights bar section for BrainSAIT product pages. This is a slim, horizontal strip that appears below the main product buy box. It should display 3-4 trust icons with short labels: "Instant Digital Delivery", "Secure Checkout", "Arabic & English", "Lifetime Access". Use deep navy (#1A2E4A) background with white icons and text, or white background with navy icons — make it toggleable. Icons should be simple SVG or emoji-style. The strip should be compact (not tall) and feel premium. Support RTL for Arabic. All labels should be editable in the editor.
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-trust-bar-{{ ai_gen_id }} {
+    display: block;
+    width: 100%;
+    background-color: {% if block.settings.style == 'navy' %}#1A2E4A{% else %}#FFFFFF{% endif %};
+    padding: {{ block.settings.vertical_padding }}px 0;
+    border-top: 1px solid {% if block.settings.style == 'navy' %}rgba(255, 255, 255, 0.1){% else %}rgba(26, 46, 74, 0.1){% endif %};
+    border-bottom: 1px solid {% if block.settings.style == 'navy' %}rgba(255, 255, 255, 0.1){% else %}rgba(26, 46, 74, 0.1){% endif %};
+  }
+
+  .ai-trust-bar__container-{{ ai_gen_id }} {
+    max-width: {{ block.settings.max_width }}px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .ai-trust-bar__grid-{{ ai_gen_id }} {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: {{ block.settings.item_spacing }}px;
+    align-items: center;
+    justify-items: center;
+  }
+
+  .ai-trust-bar__item-{{ ai_gen_id }} {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-align: start;
+  }
+
+  [dir="rtl"] .ai-trust-bar__item-{{ ai_gen_id }} {
+    flex-direction: row-reverse;
+  }
+
+  .ai-trust-bar__icon-{{ ai_gen_id }} {
+    flex-shrink: 0;
+    width: {{ block.settings.icon_size }}px;
+    height: {{ block.settings.icon_size }}px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .ai-trust-bar__icon-{{ ai_gen_id }} svg {
+    width: 100%;
+    height: 100%;
+    fill: {% if block.settings.style == 'navy' %}#FFFFFF{% else %}#1A2E4A{% endif %};
+  }
+
+  .ai-trust-bar__label-{{ ai_gen_id }} {
+    font-size: {{ block.settings.font_size }}px;
+    font-weight: 500;
+    color: {% if block.settings.style == 'navy' %}#FFFFFF{% else %}#1A2E4A{% endif %};
+    line-height: 1.3;
+    margin: 0;
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-trust-bar__grid-{{ ai_gen_id }} {
+      grid-template-columns: repeat(2, 1fr);
+      gap: {{ block.settings.item_spacing | times: 0.7 }}px;
+    }
+
+    .ai-trust-bar__item-{{ ai_gen_id }} {
+      gap: 8px;
+    }
+
+    .ai-trust-bar__label-{{ ai_gen_id }} {
+      font-size: {{ block.settings.font_size | times: 0.9 }}px;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .ai-trust-bar__grid-{{ ai_gen_id }} {
+      grid-template-columns: 1fr;
+      gap: {{ block.settings.item_spacing | times: 0.5 }}px;
+    }
+  }
+{% endstyle %}
+
+<div class="ai-trust-bar-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-trust-bar__container-{{ ai_gen_id }}">
+    <div class="ai-trust-bar__grid-{{ ai_gen_id }}">
+      {% if block.settings.show_item_1 %}
+        <div class="ai-trust-bar__item-{{ ai_gen_id }}">
+          <div class="ai-trust-bar__icon-{{ ai_gen_id }}">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path d="M19 12v7H5v-7H3v7c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-7h-2zm-6 .67l2.59-2.58L17 11.5l-5 5-5-5 1.41-1.41L11 12.67V3h2z"/>
+            </svg>
+          </div>
+          <p class="ai-trust-bar__label-{{ ai_gen_id }}">{{ block.settings.item_1_label }}</p>
+        </div>
+      {% endif %}
+
+      {% if block.settings.show_item_2 %}
+        <div class="ai-trust-bar__item-{{ ai_gen_id }}">
+          <div class="ai-trust-bar__icon-{{ ai_gen_id }}">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/>
+            </svg>
+          </div>
+          <p class="ai-trust-bar__label-{{ ai_gen_id }}">{{ block.settings.item_2_label }}</p>
+        </div>
+      {% endif %}
+
+      {% if block.settings.show_item_3 %}
+        <div class="ai-trust-bar__item-{{ ai_gen_id }}">
+          <div class="ai-trust-bar__icon-{{ ai_gen_id }}">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path d="M12.87 15.07l-2.54-2.51.03-.03c1.74-1.94 2.98-4.17 3.71-6.53H17V4h-7V2H8v2H1v1.99h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"/>
+            </svg>
+          </div>
+          <p class="ai-trust-bar__label-{{ ai_gen_id }}">{{ block.settings.item_3_label }}</p>
+        </div>
+      {% endif %}
+
+      {% if block.settings.show_item_4 %}
+        <div class="ai-trust-bar__item-{{ ai_gen_id }}">
+          <div class="ai-trust-bar__icon-{{ ai_gen_id }}">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+            </svg>
+          </div>
+          <p class="ai-trust-bar__label-{{ ai_gen_id }}">{{ block.settings.item_4_label }}</p>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Digital product trust bar",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Style"
+    },
+    {
+      "type": "select",
+      "id": "style",
+      "label": "Color scheme",
+      "options": [
+        {
+          "value": "navy",
+          "label": "Navy background"
+        },
+        {
+          "value": "white",
+          "label": "White background"
+        }
+      ],
+      "default": "navy"
+    },
+    {
+      "type": "range",
+      "id": "vertical_padding",
+      "label": "Vertical padding",
+      "min": 10,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "max_width",
+      "label": "Maximum width",
+      "min": 600,
+      "max": 1400,
+      "step": 50,
+      "unit": "px",
+      "default": 1200
+    },
+    {
+      "type": "range",
+      "id": "item_spacing",
+      "label": "Item spacing",
+      "min": 10,
+      "max": 60,
+      "step": 5,
+      "unit": "px",
+      "default": 30
+    },
+    {
+      "type": "range",
+      "id": "icon_size",
+      "label": "Icon size",
+      "min": 16,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "font_size",
+      "label": "Font size",
+      "min": 11,
+      "max": 18,
+      "step": 1,
+      "unit": "px",
+      "default": 14
+    },
+    {
+      "type": "header",
+      "content": "Item 1"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_item_1",
+      "label": "Show item 1",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "item_1_label",
+      "label": "Label",
+      "default": "Instant Digital Delivery"
+    },
+    {
+      "type": "header",
+      "content": "Item 2"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_item_2",
+      "label": "Show item 2",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "item_2_label",
+      "label": "Label",
+      "default": "Secure Checkout"
+    },
+    {
+      "type": "header",
+      "content": "Item 3"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_item_3",
+      "label": "Show item 3",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "item_3_label",
+      "label": "Label",
+      "default": "Arabic & English"
+    },
+    {
+      "type": "header",
+      "content": "Item 4"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_item_4",
+      "label": "Show item 4",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "item_4_label",
+      "label": "Label",
+      "default": "Lifetime Access"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Digital product trust bar"
+    }
+  ]
+}
+{% endschema %}
