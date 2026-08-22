@@ -57,14 +57,13 @@
 
   const renderPrice = () => {
     const p = finalPrice();
+    if (!el.price) return;
     if (promo) {
-      el.savings.hidden = false;
-      el.savings.textContent = (isAr ? 'وفّرت ' : 'You save ') + fmt(ORIGINAL_PRICE - p);
-      el.promoOk.hidden = false;
-      el.promoOk.textContent = '✅ ' + (isAr ? promo.titleAr : promo.titleEn);
+      if (el.savings) { el.savings.hidden = false; el.savings.textContent = (isAr ? 'وفّرت ' : 'You save ') + fmt(ORIGINAL_PRICE - p); }
+      if (el.promoOk) { el.promoOk.hidden = false; el.promoOk.textContent = '✅ ' + (isAr ? promo.titleAr : promo.titleEn); }
     } else {
-      el.savings.hidden = true;
-      el.promoOk.hidden = true;
+      if (el.savings) el.savings.hidden = true;
+      if (el.promoOk) el.promoOk.hidden = true;
     }
     el.price.textContent = fmt(p);
   };
@@ -76,7 +75,8 @@
   };
 
   const renderPlanHint = () => {
-    const opts = Array.from(el.planOptions.querySelectorAll('.plan-option'));
+    if (!el.planHint) return;
+    const opts = el.planOptions ? Array.from(el.planOptions.querySelectorAll('.plan-option')) : [];
     const opt = opts.find((o) => o.dataset.plan === plan);
     const amount = opt ? Number(opt.querySelector('.plan-price').dataset.amount) : 0;
     const count = opt ? Number(opt.querySelector('.plan-price').dataset.count) : 1;
@@ -92,11 +92,15 @@
 
   const contactValid = () => el.fName.value.trim() && el.fEmail.value.includes('@') && el.fCountry.value.trim();
 
+  // Safe event binding: a missing element must never kill the whole funnel.
+  const on = (node, ev, fn) => { if (node) node.addEventListener(ev, fn); };
+
   const updateSubmit = () => {
+    if (!el.submit) return;
     el.submit.disabled = !contactValid() || submitting || (TURNSTILE_KEY && !turnstileToken);
   };
 
-  el.promoApply.addEventListener('click', () => {
+  on(el.promoApply, 'click', () => {
     const code = el.promoInput.value.trim().toUpperCase();
     if (!code) return;
     const found = PROMOS[code];
@@ -116,7 +120,7 @@
     updateSubmit();
   });
 
-  el.promoRemove.addEventListener('click', () => {
+  on(el.promoRemove, 'click', () => {
     promo = null;
     el.promoInput.value = '';
     el.promoClear.hidden = true;
@@ -124,7 +128,7 @@
     renderPlanHint();
   });
 
-  el.planOptions.addEventListener('click', (e) => {
+  on(el.planOptions, 'click', (e) => {
     const opt = e.target.closest('.plan-option');
     if (!opt) return;
     plan = opt.dataset.plan;
@@ -133,11 +137,11 @@
   });
 
   ['input', 'change'].forEach((ev) => {
-    [el.fName, el.fEmail, el.fCountry].forEach((input) => input.addEventListener(ev, updateSubmit));
+    [el.fName, el.fEmail, el.fCountry].forEach((input) => on(input, ev, updateSubmit));
   });
 
   const loadTurnstile = () => {
-    if (!TURNSTILE_KEY) return;
+    if (!TURNSTILE_KEY || !el.turnstileBox) return;
     const render = () => {
       if (!window.turnstile) return;
       try {
@@ -161,8 +165,8 @@
     }
   };
 
-  el.submit.addEventListener('click', async () => {
-    if (submitting) return;
+  on(el.submit, 'click', async () => {
+    if (!el.submit || submitting) return;
     if (TURNSTILE_KEY && !turnstileToken) {
       el.submitErr.hidden = false;
       el.submitErr.textContent = isAr ? 'يرجى إكمال التحقق الأمني' : 'Please complete the security check';

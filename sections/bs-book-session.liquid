@@ -11,7 +11,7 @@
     <p class="gh-book__note">{% if is_ar %}احجز جلسة استشارية مجانية للبدء مع {{ product.title }}.{% else %}Book a free consultation session to get started with {{ product.title }}.{% endif %}</p>
     <iframe
       class="gh-book__iframe"
-      src="https://calendar.app.google/pokc8rLLuvUBecwHA"
+      src="{{ section.settings.booking_url }}"
       width="100%"
       height="600"
       style="border:0"
@@ -40,6 +40,14 @@
 {
   "name": "BS Book Session",
   "tag": "section",
-  "settings": []
+  "settings": [
+    {
+      "type": "text",
+      "id": "booking_url",
+      "label": "Booking calendar URL",
+      "info": "Google Calendar appointment link shown on SOLUTIONS product pages",
+      "default": "https://calendar.app.google/Ve9KSKmaVA6ehDP48"
+    }
+  ]
 }
 {% endschema %}

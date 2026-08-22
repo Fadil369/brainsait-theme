@@ -74,6 +74,18 @@
     </div>
   </section>
 
+  <section>
+    <div class="section-head reveal">
+      <h2>{% if is_ar %}حلول جاهزة للإنتاج{% else %}Production-Ready Solutions{% endif %}</h2>
+      <a class="button secondary sm" href="{{ routes.collections_url }}/solutions">{% if is_ar %}عرض الكل{% else %}View all{% endif %}</a>
+    </div>
+    <div class="grid reveal">
+      {% for product in solutions_col.products limit: 4 %}
+        {% render 'gh-pcard', product: product %}
+      {% endfor %}
+    </div>
+  </section>
+
   <section class="program-teaser reveal">
     <h2>{% if is_ar %}تذكرة الاحتضان{% else %}The Incubation Pass{% endif %}</h2>
     <p>{% if is_ar %}مقعد واحد، سعر موحد — حساب دائم، مستودع GitHub خاص بك، وعقل ثانٍ كامل.{% else %}One seat, one flat price — a permanent account, your own GitHub repo, and a full Second Brain.{% endif %}</p>
@@ -86,6 +98,15 @@
       </strong>
     {% endif %}
     <a class="button primary lg" href="{{ routes.root_url }}pages/build">{% if is_ar %}قدّم طلبك{% else %}Apply now{% endif %}</a>
+  </section>
+
+  <section class="reveal" style="text-align:center;margin-top:3rem">
+    <a class="button primary lg" href="https://calendar.app.google/Ve9KSKmaVA6ehDP48" target="_blank" rel="noopener noreferrer">
+      {% if is_ar %}📅 احجز جلسة استشارية مجانية{% else %}📅 Book a free consultation{% endif %}
+    </a>
+    <p style="color:var(--muted);font-size:.85rem;margin-top:.6rem">
+      {% if is_ar %}30 دقيقة لمناقشة احتياجاتك · NPHIES · FHIR · رؤية 2030{% else %}30 minutes to discuss your needs · NPHIES · FHIR · Vision 2030{% endif %}
+    </p>
   </section>
 </div>
 

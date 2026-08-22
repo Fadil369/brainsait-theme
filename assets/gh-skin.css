@@ -959,6 +959,13 @@ quick-add-modal .quick-add__inner,
   display: flex; align-items: center; justify-content: center;
   padding: 24px; animation: qvFade 0.18s ease;
 }
+/* Visibility is driven ONLY by .qv-open (toggled in gh-qv.js).
+   Fixes bug: display:flex outranked the [hidden] attribute, so the
+   quick-view stayed permanently visible on every page. */
+.qv-backdrop:not(.qv-open),
+.qv-backdrop[hidden] {
+  display: none !important;
+}
 .qv-panel {
   position: relative;
   background: var(--surface);
