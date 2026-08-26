@@ -2127,5 +2127,24 @@
         "default": "equal-width-buttons"
       }
     ]
+  },
+  {
+    "name": "MyFatoorah payments",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "mf_pay_enabled",
+        "label": "Enable local Saudi payment buttons (STC Pay · mada · Card)",
+        "default": false,
+        "info": "Keep OFF while the myfatoorah-checkout Worker is in TEST mode or the live key is not confirmed — otherwise customers are sent to a sandbox invoice."
+      },
+      {
+        "type": "text",
+        "id": "mf_worker_url",
+        "label": "MyFatoorah checkout Worker URL",
+        "default": "https://myfatoorah-checkout.brainsait-fadil.workers.dev",
+        "info": "POST /create-payment-link is called with the product variant and a guest email/phone; the Worker prices it server-side and returns a hosted MyFatoorah invoice."
+      }
+    ]
   }
 ]

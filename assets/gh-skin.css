@@ -1162,3 +1162,5 @@ main [id*="ProductInformation"] product-price[class*="align-left"] { text-align:
 .mf-pay-card:hover { box-shadow: 0 12px 30px rgba(233,196,106,.5); }
 .mf-pay-grid--compact .mf-pay-btn { padding: 0.42rem 0.4rem; font-size: 0.74rem; }
 @media (max-width: 560px) { .mf-pay-grid { grid-template-columns: 1fr; } .mf-pay-grid--compact { grid-template-columns: 1fr; } }
+.mf-pay-hint { font-size: 0.72rem; color: var(--muted); margin: 0 0 0.55rem; }
+.mf-pay-btn.is-loading { opacity: 0.55; pointer-events: none; cursor: wait; }

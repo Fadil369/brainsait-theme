@@ -268,5 +268,7 @@
   <script src="{{ 'gh-qv.js' | asset_url }}" defer></script>
   <script src="{{ 'gh-build.js' | asset_url }}" defer></script>
   <script src="{{ 'gh-track.js' | asset_url }}" defer></script>
+  <script>window.MF_PAY_WORKER_URL = {{ settings.mf_worker_url | default: 'https://myfatoorah-checkout.brainsait-fadil.workers.dev' | json }};</script>
+  <script src="{{ 'mf-pay.js' | asset_url }}" defer></script>
 </body>
 </html>
