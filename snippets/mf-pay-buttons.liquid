@@ -17,9 +17,6 @@
 
 {% liquid
   assign paylink = product.metafields.custom.myfatoorah_payment_link
-  if product.type == blank
-    assign mf = false
-  endif
   assign is_ar = false
   if request.locale.iso_code == 'ar'
     assign is_ar = true
