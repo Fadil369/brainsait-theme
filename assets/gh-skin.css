@@ -89,6 +89,9 @@
 * { box-sizing: border-box; }
 html, body { margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
+/* Kill phantom horizontal scroll that off-canvas drawers (chat/menu) can
+   produce on mobile — body alone is not the scrolling box, html is. */
+html { overflow-x: hidden; }
 body {
   background: var(--bg);
   color: var(--ink);
@@ -659,14 +662,17 @@ img { max-width: 100%; }
 
 /* ── Build ticket form (BuildEligibilityForm.css port) ────── */
 .build-form-container {
+  width: 100%;
   max-width: 620px;
-  margin: 0 auto;
+  margin-inline: auto;
   padding: 2rem 1rem;
+  box-sizing: border-box;
   min-height: 58vh;
   display: flex;
   align-items: center;
   justify-content: center;
 }
+.form-step { min-width: 0; }
 .form-step {
   width: 100%;
   background: var(--surface);
@@ -1047,8 +1053,16 @@ quick-add-modal .quick-add__inner,
    - Focus-visible accessibility outlines + scroll-margin under sticky header
    ============================================================ */
 
-/* --- Product page: match GH luxury glass (native product-information) --- */
-#product-information .product-information__media {
+/* --- Product page: match GH luxury glass (native product-information) ---
+   NOTE: anchor must resolve to the LIVE DOM. The rendered root id is
+   "ProductInformation-template-<id>" (class "product-details"), NOT the
+   canonical "#product-information" — keying on the canonical id was dead
+   CSS. Use a descendant-of-main compound that matches the real anchor. */
+main .product-details[id*="ProductInformation"],
+main div[id*="ProductInformation"] {
+  position: relative;
+}
+main .product-information__grid .product-information__media {
   position: relative;
   padding: 0.7rem;
   border-radius: calc(var(--radius) + 6px);
@@ -1058,7 +1072,7 @@ quick-add-modal .quick-add__inner,
   backdrop-filter: var(--glass-blur);
   box-shadow: var(--shadow);
 }
-#product-information .product-information__media::before {
+main .product-information__grid .product-information__media::before {
   content: "";
   position: absolute;
   inset: -1px;
@@ -1069,10 +1083,10 @@ quick-add-modal .quick-add__inner,
   opacity: 0.35;
   pointer-events: none;
 }
-#product-information .product-information__media > * { position: relative; z-index: 1; }
-#product-information .product-information__media .product-media,
-#product-information .product-information__media .product-media-container { border-radius: var(--radius); }
-#product-information h1 {
+main .product-information__grid .product-information__media > * { position: relative; z-index: 1; }
+main .product-information__grid .product-information__media .product-media,
+main .product-information__grid .product-information__media .product-media-container { border-radius: var(--radius); }
+main div[id*="ProductInformation"] h1 {
   margin: 0.2rem 0 0.5rem;
   font-size: clamp(1.9rem, 4vw, 2.7rem);
   line-height: 1.15;
@@ -1083,9 +1097,9 @@ quick-add-modal .quick-add__inner,
   background-size: 200% 100%;
   animation: shimmer 11s linear infinite;
 }
-#product-information .price,
-#product-information product-price .price { color: var(--gold); }
-#product-information button.add-to-cart-button {
+main div[id*="ProductInformation"] .price,
+main div[id*="ProductInformation"] product-price .price { color: var(--gold); }
+main div[id*="ProductInformation"] button.add-to-cart-button {
   min-height: 48px;
   border-radius: 999px;
   font-weight: 800;
@@ -1094,13 +1108,17 @@ quick-add-modal .quick-add__inner,
   border-color: transparent !important;
   box-shadow: 0 10px 30px rgba(233, 196, 106, 0.4);
 }
-#product-information button.add-to-cart-button:hover {
+main div[id*="ProductInformation"] button.add-to-cart-button:hover {
   transform: translateY(-2px);
   box-shadow: 0 16px 40px rgba(233, 196, 106, 0.55);
 }
-/* RTL: native price/desc are forced left in Horizon; flip for the Arabic store */
-[dir="rtl"] #product-information .text-left,
-[dir="rtl"] #product-information [class*="align-left"] { text-align: right; }
+/* RTL: native price/desc are forced left in Horizon; flip for the Arabic store.
+   product-price lives under a [class*="align-left"] text-block, NOT under
+   the media grid, so scope to the ProductInformation root instead. */
+[dir="rtl"] main div[id*="ProductInformation"] .text-left,
+[dir="rtl"] main div[id*="ProductInformation"] [class*="align-left"] { text-align: start; }
+/* product-price is direction-aware: start = right in RTL, left in LTR */
+main [id*="ProductInformation"] product-price[class*="align-left"] { text-align: start; }
 
 /* --- Mobile filter chips: horizontal scroll instead of a tall column --- */
 @media (max-width: 560px) {
