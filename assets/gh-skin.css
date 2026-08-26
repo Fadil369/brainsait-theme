@@ -1039,3 +1039,89 @@ quick-add-modal .quick-add__inner,
   .qv-panel { grid-template-columns: 1fr; }
   .plan-options { grid-template-columns: 1fr; }
 }
+
+/* ============================================================
+   UI cohesion & mobile polish (2026-08-26)
+   - Native Horizon product page glossed to the GH luxury glass
+   - Mobile filter chips become a horizontal scroll (no tall wrap)
+   - Focus-visible accessibility outlines + scroll-margin under sticky header
+   ============================================================ */
+
+/* --- Product page: match GH luxury glass (native product-information) --- */
+#product-information .product-information__media {
+  position: relative;
+  padding: 0.7rem;
+  border-radius: calc(var(--radius) + 6px);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  -webkit-backdrop-filter: var(--glass-blur);
+  backdrop-filter: var(--glass-blur);
+  box-shadow: var(--shadow);
+}
+#product-information .product-information__media::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  z-index: 0;
+  border-radius: inherit;
+  background: linear-gradient(135deg, rgba(233, 196, 106, 0.5), rgba(41, 216, 255, 0.25), rgba(240, 108, 255, 0.3));
+  filter: blur(18px);
+  opacity: 0.35;
+  pointer-events: none;
+}
+#product-information .product-information__media > * { position: relative; z-index: 1; }
+#product-information .product-information__media .product-media,
+#product-information .product-information__media .product-media-container { border-radius: var(--radius); }
+#product-information h1 {
+  margin: 0.2rem 0 0.5rem;
+  font-size: clamp(1.9rem, 4vw, 2.7rem);
+  line-height: 1.15;
+  background: var(--hero-grad);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  background-size: 200% 100%;
+  animation: shimmer 11s linear infinite;
+}
+#product-information .price,
+#product-information product-price .price { color: var(--gold); }
+#product-information button.add-to-cart-button {
+  min-height: 48px;
+  border-radius: 999px;
+  font-weight: 800;
+  background: var(--gold-grad) !important;
+  color: #131320 !important;
+  border-color: transparent !important;
+  box-shadow: 0 10px 30px rgba(233, 196, 106, 0.4);
+}
+#product-information button.add-to-cart-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 40px rgba(233, 196, 106, 0.55);
+}
+/* RTL: native price/desc are forced left in Horizon; flip for the Arabic store */
+[dir="rtl"] #product-information .text-left,
+[dir="rtl"] #product-information [class*="align-left"] { text-align: right; }
+
+/* --- Mobile filter chips: horizontal scroll instead of a tall column --- */
+@media (max-width: 560px) {
+  .gh-shelf .filters {
+    flex-wrap: nowrap;
+    gap: 0.5rem;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-x: contain;
+    margin-inline: -1.2rem;
+    padding-inline: 1.2rem;
+  }
+  .gh-shelf .filters::-webkit-scrollbar,
+  .gh-shelf .filters::-moz-scrollbar { display: none; }
+  .gh-shelf .chip { flex: 0 0 auto; }
+}
+
+/* --- Focus-visible accessibility + anchor scroll-margin --- */
+.pcard *:focus-visible,
+.chip:focus-visible,
+.stage-card *:focus-visible,
+.button:focus-visible,
+.gh-shelf .chip:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+#apply, [id="apply"] { scroll-margin-top: 88px; }
