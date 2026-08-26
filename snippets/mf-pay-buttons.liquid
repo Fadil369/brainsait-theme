@@ -21,10 +21,7 @@
 {% enddoc %}
 
 {% liquid
-  assign enabled = false
-  if section.settings.mf_pay_enabled or block.settings.mf_pay_enabled or settings.mf_pay_enabled
-    assign enabled = true
-  endif
+  assign enabled = settings.mf_pay_enabled
   assign variant = product.selected_or_first_available_variant | default: product.variants.first
   assign booking_url = product.metafields.custom.booking_url
   assign show = false
