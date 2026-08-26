@@ -1143,3 +1143,22 @@ main [id*="ProductInformation"] product-price[class*="align-left"] { text-align:
 .button:focus-visible,
 .gh-shelf .chip:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
 #apply, [id="apply"] { scroll-margin-top: 88px; }
+/* --- Local Saudi payment options (MyFatoorah) · mf-pay-buttons.liquid --- */
+.mf-pay { margin-top: 1rem; }
+.mf-pay-label { font-size: 0.82rem; font-weight: 700; letter-spacing: 0.04em;
+  text-transform: uppercase; color: var(--muted); margin: 0 0 0.55rem; }
+.mf-pay-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.5rem; }
+.mf-pay-btn { display: inline-flex; align-items: center; justify-content: center; gap: 0.4rem;
+  padding: 0.55rem 0.6rem; border-radius: 999px; font-size: 0.8rem; font-weight: 800;
+  text-decoration: none; color: #fff; border: 1px solid transparent;
+  transition: transform 0.18s var(--ease-out), box-shadow 0.18s var(--ease-out); }
+.mf-pay-btn:hover { transform: translateY(-2px); }
+.mf-pay-dot { width: 7px; height: 7px; border-radius: 50%; background: #fff; opacity: 0.9; }
+.mf-pay-stcpay { background: linear-gradient(135deg, #7f2dfb, #a855f7); box-shadow: 0 8px 22px rgba(168,85,247,.35); }
+.mf-pay-stcpay:hover { box-shadow: 0 12px 30px rgba(168,85,247,.5); }
+.mf-pay-mada { background: linear-gradient(135deg, #00a99d, #16a34a); box-shadow: 0 8px 22px rgba(22,163,74,.35); }
+.mf-pay-mada:hover { box-shadow: 0 12px 30px rgba(22,163,74,.5); }
+.mf-pay-card { background: linear-gradient(135deg, #e9c46a, #b8860b); color: #131320; box-shadow: 0 8px 22px rgba(233,196,106,.35); }
+.mf-pay-card:hover { box-shadow: 0 12px 30px rgba(233,196,106,.5); }
+.mf-pay-grid--compact .mf-pay-btn { padding: 0.42rem 0.4rem; font-size: 0.74rem; }
+@media (max-width: 560px) { .mf-pay-grid { grid-template-columns: 1fr; } .mf-pay-grid--compact { grid-template-columns: 1fr; } }
