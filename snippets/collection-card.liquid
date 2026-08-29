@@ -29,9 +29,17 @@
 {% liquid
   assign onboarding = false
   assign block_settings = block.settings
+  assign is_learn = false
+  assign learn_url = ''
 
   if collection == blank
     assign onboarding = true
+  endif
+
+  # LEARN card override: redirect to unified product, hide price, show monthly label
+  if collection.handle == 'brainsait-learn' or collection.handle == 'learn'
+    assign is_learn = true
+    assign learn_url = 'https://store.brainsait.de/products/learn-brainsait-digital-access'
   endif
 
   if block_settings.background_color != blank
@@ -63,7 +71,11 @@
   <a
     class="collection-card__link"
     {% unless onboarding %}
-      href="{{ collection.url }}"
+      {% if is_learn %}
+        href="{{ learn_url }}"
+      {% else %}
+        href="{{ collection.url }}"
+      {% endif %}
     {% endunless %}
   >
     <span class="visually-hidden">{{ collection.title }}</span>
@@ -71,6 +83,22 @@
   <div class="collection-card__inner">
     {{ card_image }}
     <div class="collection-card__content layout-panel-flex--column">
+      {%- comment -%}
+        LEARN card: bilingual price label & subscribe button
+        Uses translation keys from en.default.json / ar.json sections.collection_card
+      {%- endcomment -%}
+      {% if is_learn %}
+        <div class="collection-card__learn-cta" role="group" aria-label="{{ 'sections.collection_card.subscribe' | t }}">
+          <span class="collection-card__learn-price" aria-label="{{ 'sections.collection_card.learn_plan' | t }}">{{ 'sections.collection_card.learn_plan' | t }}</span>
+          <a
+            href="{{ learn_url }}"
+            class="collection-card__learn-btn"
+            aria-label="{{ 'sections.collection_card.subscribe' | t }}"
+          >
+            {{ 'sections.collection_card.subscribe' | t }}
+          </a>
+        </div>
+      {% endif %}
       {{ children }}
     </div>
   </div>
@@ -204,5 +232,47 @@
     &.collection-card .placeholder-svg {
       aspect-ratio: 99;
     }
+  }
+
+  /* LEARN card overrides */
+  .collection-card--learn .collection-card__learn-cta {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    margin-top: auto;
+  }
+
+  .collection-card--learn .collection-card__learn-price {
+    display: inline-block;
+    font-size: 12px;
+    line-height: 1.4;
+    font-weight: 600;
+    color: #fff;
+    background: #0a2540;
+    padding: 4px 10px;
+    border-radius: 4px;
+  }
+
+  .collection-card--learn .collection-card__learn-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.4;
+    padding: 8px 20px;
+    color: #0a2540;
+    background: #fff;
+    border: 2px solid #0a2540;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background 0.2s ease, color 0.2s ease;
+    cursor: pointer;
+  }
+
+  .collection-card--learn .collection-card__learn-btn:hover {
+    background: #0a2540;
+    color: #fff;
   }
 {% endstylesheet %}

@@ -327,7 +327,11 @@
       "quantity_maximum": "最多 {{ maximum }} 个",
       "in_cart": "在购物车中",
       "default_title": "默认标题",
-      "sticky_add_to_cart": "快速添加到购物车栏"
+      "sticky_add_to_cart": "快速添加到购物车栏",
+      "solutions_ready_heading": "Which solution do you want deployed?",
+      "solutions_ready_description": "Pick the exact system from our portfolio — we'll scope and kick off deployment in your environment after checkout.",
+      "solutions_ready_placeholder": "Select a solution",
+      "solutions_ready_required_error": "Please select which solution you want deployed."
     }
   },
   "fields": {

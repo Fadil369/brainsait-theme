@@ -364,7 +364,11 @@
       "quantity_maximum": "Максимум: {{ maximum }}",
       "in_cart": "в корзине",
       "default_title": "Название по умолчанию",
-      "sticky_add_to_cart": "Быстрое добавление в корзину"
+      "sticky_add_to_cart": "Быстрое добавление в корзину",
+      "solutions_ready_heading": "Which solution do you want deployed?",
+      "solutions_ready_description": "Pick the exact system from our portfolio — we'll scope and kick off deployment in your environment after checkout.",
+      "solutions_ready_placeholder": "Select a solution",
+      "solutions_ready_required_error": "Please select which solution you want deployed."
     }
   },
   "pagefly": {

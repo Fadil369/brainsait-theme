@@ -339,7 +339,11 @@
       "quantity_maximum": "Največ od {{ maximum }}",
       "in_cart": "v košarici",
       "default_title": "Privzeti naslov",
-      "sticky_add_to_cart": "Vrstica »Hitro dodajanje v košarico«"
+      "sticky_add_to_cart": "Vrstica »Hitro dodajanje v košarico«",
+      "solutions_ready_heading": "Which solution do you want deployed?",
+      "solutions_ready_description": "Pick the exact system from our portfolio — we'll scope and kick off deployment in your environment after checkout.",
+      "solutions_ready_placeholder": "Select a solution",
+      "solutions_ready_required_error": "Please select which solution you want deployed."
     }
   },
   "fields": {

@@ -378,7 +378,17 @@
       "quantity_maximum": "الحد الأقصى هو {{ maximum }}",
       "in_cart": "في سلة التسوق",
       "default_title": "العنوان الافتراضي",
-      "sticky_add_to_cart": "شريط الإضافة السريعة إلى سلة التسوق"
+      "sticky_add_to_cart": "شريط الإضافة السريعة إلى سلة التسوق",
+      "solutions_ready_heading": "أي حل تريد نشره؟",
+      "solutions_ready_description": "اختر النظام المحدد من مجموعتنا — سنقوم بتحديد النطاق وبدء النشر في بيئتك بعد إتمام الشراء.",
+      "solutions_ready_placeholder": "اختر حلاً",
+      "solutions_ready_required_error": "الرجاء اختيار الحل الذي تريد نشره."
+    }
+  },
+  "sections": {
+    "collection_card": {
+      "learn_plan": "خطة شهرية / Monthly plan",
+      "subscribe": "اشترك / Subscribe"
     }
   },
   "pagefly": {

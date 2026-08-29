@@ -364,7 +364,11 @@
       "quantity_maximum": "מקסימום של {{ maximum }}",
       "in_cart": "בסל",
       "default_title": "כותרת ברירת מחדל",
-      "sticky_add_to_cart": "סרגל הוספה מהירה לסל"
+      "sticky_add_to_cart": "סרגל הוספה מהירה לסל",
+      "solutions_ready_heading": "Which solution do you want deployed?",
+      "solutions_ready_description": "Pick the exact system from our portfolio — we'll scope and kick off deployment in your environment after checkout.",
+      "solutions_ready_placeholder": "Select a solution",
+      "solutions_ready_required_error": "Please select which solution you want deployed."
     }
   },
   "pagefly": {

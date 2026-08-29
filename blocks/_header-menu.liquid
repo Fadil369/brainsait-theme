@@ -44,7 +44,10 @@
             class="menu-list__list list-unstyled"
             role="list"
           >
-            {% for link in block_settings.menu.links %}
+                        <li class="menu-list__list-item">
+              <a href="/pages/learn" class="menu-list__item">📚 LEARN</a>
+            </li>
+{% for link in block_settings.menu.links %}
               <li>
                 <a
                   href="{{ link.url }}"
@@ -92,7 +95,10 @@
     %}
 
     {% capture children %}
-      {% for link in block_settings.menu.links %}
+                  <li class="menu-list__list-item">
+              <a href="/pages/learn" class="menu-list__item">📚 LEARN</a>
+            </li>
+{% for link in block_settings.menu.links %}
         <li
           class="menu-list__list-item"
           on:blur="/deactivate"
