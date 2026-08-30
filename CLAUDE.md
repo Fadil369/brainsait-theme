@@ -1,1 +1,0 @@
-/home/fadil369/brainsait-theme/AGENTS.md

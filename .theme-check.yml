@@ -1,5 +1,0 @@
-extends: theme-check:recommended
-
-ignore:
-  - layout/theme.liquid
-  - snippets/pagefly-main-js.liquid
