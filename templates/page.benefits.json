@@ -1,0 +1,18 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 12
+      }
+    },
+    "benefits_matrix_benefits": {
+      "type": "benefits-matrix",
+      "settings": {
+        "color_scheme": "background-1"
+      }
+    }
+  },
+  "order": ["main", "benefits_matrix_benefits"]
+}
