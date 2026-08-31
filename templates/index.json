@@ -6,6 +6,19 @@
         "color_scheme": "background-1"
       }
     },
+    "featured_products": {
+      "type": "bs-featured-products",
+      "settings": {
+        "color_scheme": "background-1",
+        "heading": "Featured Products",
+        "subheading": "Ready-to-use digital products with direct Saudi payment — STC Pay · mada · Card.",
+        "handles": "learn-brainsait-digital-access,build-forge-incubator-founders-program,solutions-ready-hospital-os,stealth-python-networking"
+      }
+    },
+    "value_props": {
+      "type": "bs-value-prop",
+      "settings": {}
+    },
     "benefits_matrix": {
       "type": "benefits-matrix",
       "settings": {
@@ -15,10 +28,6 @@
     "featured_collections": {
       "type": "collection-list",
       "settings": {
-        "heading": {
-          "type": "text",
-          "value": "Shop by path"
-        },
         "blocks_heading": "Explore LEARN, BUILD and SOLUTION",
         "heading_size": "medium"
       },
@@ -66,6 +75,8 @@
   },
   "order": [
     "store_hero",
+    "featured_products",
+    "value_props",
     "benefits_matrix",
     "featured_collections",
     "testimonials"

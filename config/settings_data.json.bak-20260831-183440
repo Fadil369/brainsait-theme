@@ -282,9 +282,7 @@
           "shadow": "#121212"
         }
       }
-    },
-    "mf_pay_enabled": true,
-    "mf_worker_url": "https://myfatoorah-checkout.brainsait-fadil.workers.dev"
+    }
   },
   "presets": {
     "Publisher": {

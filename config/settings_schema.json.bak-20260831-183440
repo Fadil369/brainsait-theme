@@ -1451,25 +1451,5 @@
         "default": "scheme-1"
       }
     ]
-  },
-
-  {
-    "name": "Local Saudi Payment (MyFatoorah)",
-    "settings": [
-      {
-        "type": "checkbox",
-        "id": "mf_pay_enabled",
-        "label": "Enable local Saudi payment buttons (STC Pay / mada / Card)",
-        "info": "Posts the product variant to the myfatoorah-checkout Worker (server-priced) and redirects to a hosted MyFatoorah invoice. Keep ON only when the Worker is in LIVE mode.",
-        "default": false
-      },
-      {
-        "type": "text",
-        "id": "mf_worker_url",
-        "label": "MyFatoorah checkout Worker URL",
-        "default": "https://myfatoorah-checkout.brainsait-fadil.workers.dev",
-        "info": "Base URL of the myfatoorah-checkout Cloudflare Worker that creates payment links."
-      }
-    ]
   }
 ]

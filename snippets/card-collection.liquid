@@ -12,7 +12,10 @@
     assign is_ar = true
   endif
   assign ratio = media_aspect_ratio | default: 'square'
-  assign card_title = card_collection.title | default: ('general.placeholder_collection' | t)
+  assign card_title = card_collection.title
+  if card_title == blank
+    assign card_title = 'general.placeholder_collection' | t
+  endif
 -%}
 
 <div class="card card--collection">

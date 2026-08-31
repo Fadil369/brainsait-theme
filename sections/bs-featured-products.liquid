@@ -1,0 +1,68 @@
+{%- liquid
+  assign is_ar = false
+  if request.locale.iso_code == 'ar'
+    assign is_ar = true
+  endif
+  assign heading = section.settings.heading
+  assign subheading = section.settings.subheading
+  # curated handles — deterministic (works without theme-editor override)
+  assign curated = 'learn-brainsait-digital-access,build-forge-incubator-founders-program,solutions-ready-hospital-os,stealth-python-networking' | split: ','
+  assign handles = section.settings.handles | default: ''
+  if handles != blank
+    assign handle_list = handles | split: ','
+  else
+    assign handle_list = curated
+  endif
+-%}
+{% # theme-check-disable ValidScopedCSSClass %}
+
+<section class="bs-featured color-{{ section.settings.color_scheme }} gradient">
+  <div class="page-width">
+    <div class="bs-featured__head">
+      <p class="bs-featured__eyebrow">
+        {% if is_ar %}مختارات حصرية{% else %}Curated essentials{% endif %}
+      </p>
+      <h2 class="bs-featured__heading">
+        {% if is_ar %}{{ heading | default: 'ابدأ رحلتك' }}{% else %}{{ heading | default: 'Start your journey' }}{% endif %}
+      </h2>
+      <p class="bs-featured__sub">
+        {% if is_ar %}{{ subheading | default: 'منتجات رقمية جاهزة مع دفع سعودي مباشر — STC Pay · mada · بطاقة.' }}{% else %}{{ subheading | default: 'Ready-to-use digital products with direct Saudi payment — STC Pay · mada · Card.' }}{% endif %}
+      </p>
+    </div>
+
+    <div class="bs-featured__grid">
+      {%- for handle in handle_list -%}
+        {%- assign p = all_products[handle] -%}
+        {%- if p != blank -%}
+          {%- render 'gh-pcard', product: p, qv: true -%}
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+
+{% style %}
+  .bs-featured { padding: 3.5rem 0; }
+  .bs-featured__head { text-align: center; max-width: 720px; margin: 0 auto 2.5rem; }
+  .bs-featured__eyebrow { font-size: 11px; letter-spacing: .1em; text-transform: uppercase; opacity: .7; margin-bottom: .6rem; display: inline-flex; align-items: center; gap: 8px; }
+  .bs-featured__heading { font-size: clamp(1.8rem, 4vw, 2.6rem); margin: 0 0 .6rem; letter-spacing: -0.01em; }
+  .bs-featured__sub { font-size: 1rem; opacity: .75; line-height: 1.6; margin: 0; }
+  .bs-featured__grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 240px), 1fr)); gap: 1.4rem; }
+  @media (max-width: 749px) { .bs-featured__grid { grid-template-columns: 1fr 1fr; gap: 1rem; } }
+  @media (max-width: 480px) { .bs-featured__grid { grid-template-columns: 1fr; } }
+{% endstyle %}
+
+{% schema %}
+{
+  "name": "BS Featured Products",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    { "type": "color_scheme", "id": "color_scheme", "label": "Color scheme", "default": "background-1" },
+    { "type": "text", "id": "heading", "label": "Heading" },
+    { "type": "text", "id": "subheading", "label": "Subheading" },
+    { "type": "text", "id": "handles", "label": "Product handles (comma-separated)" }
+  ],
+  "presets": [{ "name": "BS Featured Products" }]
+}
+{% endschema %}

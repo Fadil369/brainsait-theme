@@ -44,9 +44,17 @@
   # Plan label — align with the LEARN/BUILD/SOLUTIONS subscription model.
   assign plan_label = ''
   if product.tags contains 'solutions-ready' or product.tags contains 'SOLUTIONS READY' or product.tags contains 'one-time'
-    assign plan_label = is_ar ? 'جاهز — دفع كامل' : 'Pre-built · one-time'
+    if is_ar
+      assign plan_label = 'جاهز — دفع كامل'
+    else
+      assign plan_label = 'Pre-built · one-time'
+    endif
   elsif product.tags contains 'SOLUTIONS' or product.tags contains 'BUILD' or product.tags contains 'LEARN' or product.tags contains 'subscription'
-    assign plan_label = is_ar ? 'شهري' : 'Monthly'
+    if is_ar
+      assign plan_label = 'شهري'
+    else
+      assign plan_label = 'Monthly'
+    endif
   endif
 %}
 
@@ -54,7 +62,7 @@
   <div class="pcard-cover"
     {% if qv %}
       data-qv
-      data-qv-img="{{ product.featured_image | image_url: width: 800 }}"
+      data-qv-img="{% if product.featured_image %}{{ product.featured_image | image_url: width: 800 }}{% endif %}"
       data-qv-cat="{{ sub | escape }}"
       data-qv-title="{{ product.title | escape }}"
       data-qv-prop="{{ tagline | escape }}"
@@ -111,7 +119,7 @@
         {% endif %}
         {% if qv %}
           <button class="button secondary sm pcard-qv" type="button" data-qv
-            data-qv-img="{{ product.featured_image | image_url: width: 800 }}"
+            data-qv-img="{% if product.featured_image %}{{ product.featured_image | image_url: width: 800 }}{% endif %}"
             data-qv-cat="{{ sub | escape }}"
             data-qv-title="{{ product.title | escape }}"
             data-qv-prop="{{ tagline | escape }}"

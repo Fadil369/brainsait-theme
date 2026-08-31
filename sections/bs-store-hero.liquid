@@ -21,7 +21,7 @@
     </p>
 
     <h1 class="bs-store-hero__heading">
-      {% if is_ar %}تعلّم · ابنِ · حلول{% else %}Learn · Build · Solutions{% endif %}
+      {% if is_ar %}تعلّم · <span class="gold">ابنِ</span> · حلول{% else %}Learn · <span class="gold">Build</span> · Solutions{% endif %}
     </h1>
 
     <p class="bs-store-hero__subheading">
@@ -42,17 +42,17 @@
     </div>
 
     <ul class="bs-store-hero__tiers" role="list">
-      <li class="bs-store-hero__tier">
+      <li class="bs-store-hero__tier" style="--tier-accent: var(--gold, #e9c46a);">
         <span class="bs-store-hero__tier-label">LEARN</span>
         <span class="bs-store-hero__tier-price">{% if is_ar %}من 99 ر.س{% else %}from 99 SAR{% endif %}</span>
         <a href="{{ learn_url }}" class="bs-store-hero__tier-link">{% if is_ar %}تصفّح الكتب{% else %}Browse books{% endif %} →</a>
       </li>
-      <li class="bs-store-hero__tier">
+      <li class="bs-store-hero__tier" style="--tier-accent: #f59e0b;">
         <span class="bs-store-hero__tier-label">BUILD</span>
         <span class="bs-store-hero__tier-price">{% if is_ar %}شهري 499 ر.س{% else %}monthly 499 SAR{% endif %}</span>
         <a href="{{ build_url }}" class="bs-store-hero__tier-link">{% if is_ar %}انضم للحاضنة{% else %}Join the incubator{% endif %} →</a>
       </li>
-      <li class="bs-store-hero__tier">
+      <li class="bs-store-hero__tier" style="--tier-accent: #10b981;">
         <span class="bs-store-hero__tier-label">SOLUTION</span>
         <span class="bs-store-hero__tier-price">{% if is_ar %}من 1,999 ر.س{% else %}from 1,999 SAR{% endif %}</span>
         <a href="{{ sol_url }}" class="bs-store-hero__tier-link">{% if is_ar %}استكشف الحلول{% else %}Explore solutions{% endif %} →</a>
@@ -62,22 +62,27 @@
 </section>
 
 {% style %}
-  .bs-store-hero { position: relative; overflow: hidden; padding: 5rem 0 4rem; }
-  .bs-store-hero__glow { position: absolute; border-radius: 50%; filter: blur(90px); opacity: .35; pointer-events: none; }
-  .bs-store-hero__glow--1 { width: 480px; height: 480px; background: var(--color-foreground, #f59e0b); top: -160px; inset-inline-start: -120px; }
-  .bs-store-hero__glow--2 { width: 420px; height: 420px; background: var(--color-foreground, #0ea5e9); bottom: -160px; inset-inline-end: -120px; }
-  .bs-store-hero__grid { position: absolute; inset: 0; opacity: .04; background-image: linear-gradient(var(--color-foreground) 1px, transparent 1px), linear-gradient(90deg, var(--color-foreground) 1px, transparent 1px); background-size: 44px 44px; pointer-events: none; }
-  .bs-store-hero__inner { position: relative; z-index: 2; text-align: center; max-width: 860px; margin-inline: auto; }
-  .bs-store-hero__eyebrow { display: inline-flex; align-items: center; gap: 8px; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; opacity: .75; margin-bottom: 1rem; }
-  .bs-store-hero__heading { font-size: clamp(2.4rem, 6vw, 4.2rem); margin: 0 0 1rem; letter-spacing: -0.02em; }
-  .bs-store-hero__subheading { font-size: 1.05rem; line-height: 1.6; opacity: .85; max-width: 640px; margin: 0 auto 2rem; }
-  .bs-store-hero__actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 2.4rem; }
-  .bs-store-hero__cta-secondary { text-decoration: underline; text-underline-offset: 4px; opacity: .9; padding: .8rem 1rem; }
-  .bs-store-hero__tiers { list-style: none; margin: 0 auto; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; max-width: 720px; }
-  .bs-store-hero__tier { border: 1px solid rgb(var(--color-border-rgb, 0 0 0) / .12); border-radius: 14px; padding: 1.2rem; display: flex; flex-direction: column; gap: .35rem; text-align: start; background: rgb(var(--color-background-rgb, 255 255 255) / .6); }
-  .bs-store-hero__tier-label { font-weight: 800; letter-spacing: .05em; font-size: .95rem; }
-  .bs-store-hero__tier-price { font-size: .85rem; opacity: .7; }
-  .bs-store-hero__tier-link { font-size: .85rem; font-weight: 600; text-decoration: none; margin-top: auto; padding-top: .4rem; }
+  .bs-store-hero { position: relative; overflow: hidden; padding: 6rem 0 5rem; }
+  .bs-store-hero__glow { position: absolute; border-radius: 50%; filter: blur(110px); opacity: .38; pointer-events: none; }
+  .bs-store-hero__glow--1 { width: 540px; height: 540px; background: radial-gradient(circle, rgba(233,196,106,.5), transparent 70%); top: -180px; inset-inline-start: -140px; }
+  .bs-store-hero__glow--2 { width: 480px; height: 480px; background: radial-gradient(circle, rgba(41,216,255,.32), transparent 70%); bottom: -180px; inset-inline-end: -140px; }
+  .bs-store-hero__grid { position: absolute; inset: 0; opacity: .05; background-image: linear-gradient(rgb(var(--color-foreground-rgb, 0 0 0)) 1px, transparent 1px), linear-gradient(90deg, rgb(var(--color-foreground-rgb, 0 0 0)) 1px, transparent 1px); background-size: 44px 44px; pointer-events: none; mask-image: radial-gradient(ellipse at center, #000 30%, transparent 80%); }
+  .bs-store-hero__inner { position: relative; z-index: 2; text-align: center; max-width: 900px; margin-inline: auto; }
+  .bs-store-hero__eyebrow { display: inline-flex; align-items: center; gap: 10px; font-size: 12px; letter-spacing: .14em; text-transform: uppercase; opacity: .85; margin-bottom: 1.2rem; padding: .4rem 1rem; border: 1px solid rgb(var(--color-border-rgb, 0 0 0) / .18); border-radius: 999px; }
+  .bs-store-hero__eyebrow::before { content: ''; width: 7px; height: 7px; border-radius: 50%; background: var(--gold, #e9c46a); box-shadow: 0 0 12px var(--gold, #e9c46a); }
+  .bs-store-hero__heading { font-size: clamp(2.6rem, 7vw, 4.6rem); margin: 0 0 1.1rem; letter-spacing: -0.02em; line-height: 1.08; font-weight: 800; }
+  .bs-store-hero__heading .gold { background: linear-gradient(120deg, var(--gold-2, #f5dd9d), var(--gold, #e9c46a)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+  .bs-store-hero__subheading { font-size: 1.1rem; line-height: 1.7; opacity: .85; max-width: 660px; margin: 0 auto 2.2rem; }
+  .bs-store-hero__actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 2.8rem; }
+  .bs-store-hero__cta-secondary { text-decoration: underline; text-underline-offset: 4px; opacity: .9; padding: .8rem 1.1rem; }
+  .bs-store-hero__tiers { list-style: none; margin: 0 auto; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.1rem; max-width: 760px; }
+  .bs-store-hero__tier { position: relative; border: 1px solid rgb(var(--color-border-rgb, 0 0 0) / .14); border-radius: 18px; padding: 1.4rem 1.3rem; display: flex; flex-direction: column; gap: .45rem; text-align: start; background: rgb(var(--color-background-rgb, 255 255 255) / .72); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease; }
+  .bs-store-hero__tier::after { content: ''; position: absolute; inset-inline-start: 0; top: 0; bottom: 0; width: 3px; border-radius: 3px 0 0 3px; background: var(--tier-accent, var(--gold, #e9c46a)); opacity: .85; }
+  .bs-store-hero__tier:hover { transform: translateY(-5px); box-shadow: 0 18px 44px rgb(0 0 0 / .16); border-color: rgb(var(--color-border-rgb, 0 0 0) / .26); }
+  .bs-store-hero__tier-label { font-weight: 800; letter-spacing: .08em; font-size: 1.05rem; text-transform: uppercase; }
+  .bs-store-hero__tier-price { font-size: .88rem; opacity: .7; }
+  .bs-store-hero__tier-link { font-size: .86rem; font-weight: 700; text-decoration: none; margin-top: auto; padding-top: .6rem; display: inline-flex; align-items: center; gap: 6px; transition: gap .2s ease; }
+  .bs-store-hero__tier:hover .bs-store-hero__tier-link { gap: 10px; }
   @media (max-width: 749px) { .bs-store-hero__tiers { grid-template-columns: 1fr; } }
 {% endstyle %}
 
