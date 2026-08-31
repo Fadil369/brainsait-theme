@@ -1,0 +1,18 @@
+{% comment %} Minimal buy-buttons (fixes missing snippet) {% endcomment %}
+<div class="buy-buttons">
+  {% form 'product', product, id: product_form_id %}
+    <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+    <div class="product-form__buttons">
+      <button type="submit" name="add" class="button button--primary" {% unless product.selected_or_first_available_variant.available %}disabled{% endunless %}>
+        {% if product.selected_or_first_available_variant.available %}
+          {{ 'products.product.add_to_cart' | t }}
+        {% else %}
+          {{ 'products.product.sold_out' | t }}
+        {% endif %}
+      </button>
+      {% if block.settings.show_dynamic_checkout and product.selling_plan_groups.size == 0 %}
+        {{ form | payment_button }}
+      {% endif %}
+    </div>
+  {% endform %}
+</div>
