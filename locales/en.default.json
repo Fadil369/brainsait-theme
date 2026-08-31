@@ -360,7 +360,8 @@
   "sections": {
     "collection_card": {
       "learn_plan": "Monthly plan",
-      "subscribe": "Subscribe"
+      "subscribe": "Subscribe",
+      "learn_more": "Learn more"
     }
   },
   "pagefly": {

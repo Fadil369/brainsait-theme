@@ -388,7 +388,8 @@
   "sections": {
     "collection_card": {
       "learn_plan": "خطة شهرية / Monthly plan",
-      "subscribe": "اشترك / Subscribe"
+      "subscribe": "اشترك / Subscribe",
+      "learn_more": "اعرف المزيد / Learn more"
     }
   },
   "pagefly": {
