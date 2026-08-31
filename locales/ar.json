@@ -387,9 +387,9 @@
   },
   "sections": {
     "collection_card": {
-      "learn_plan": "خطة شهرية / Monthly plan",
-      "subscribe": "اشترك / Subscribe",
-      "learn_more": "اعرف المزيد / Learn more"
+      "learn_plan": "خطة شهرية",
+      "subscribe": "اشترك",
+      "learn_more": "اعرف المزيد"
     }
   },
   "pagefly": {
