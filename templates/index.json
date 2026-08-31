@@ -1,41 +1,73 @@
 {
   "sections": {
-    "17878732754a486070": {
-      "type": "_blocks",
-      "blocks": {},
-      "block_order": [],
-      "settings": {}
+    "store_hero": {
+      "type": "bs-store-hero",
+      "settings": {
+        "color_scheme": "background-1"
+      }
     },
-    "1787872304a1c72e5e": {
-      "type": "_blocks",
-      "blocks": {},
-      "block_order": [],
-      "settings": {}
+    "benefits_matrix": {
+      "type": "benefits-matrix",
+      "settings": {
+        "color_scheme": "background-1"
+      }
     },
-    "178787306568354753": {
-      "type": "_blocks",
-      "settings": {}
+    "featured_collections": {
+      "type": "collection-list",
+      "settings": {
+        "heading": {
+          "type": "text",
+          "value": "Shop by path"
+        },
+        "blocks_heading": "Explore LEARN, BUILD and SOLUTION",
+        "heading_size": "medium"
+      },
+      "blocks": {
+        "col_learn": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "learn",
+            "title": "LEARN"
+          }
+        },
+        "col_build": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "build",
+            "title": "BUILD"
+          }
+        },
+        "col_solutions": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "solutions",
+            "title": "SOLUTION"
+          }
+        },
+        "col_learn_books": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "learn-books",
+            "title": "LEARN Books"
+          }
+        }
+      },
+      "block_order": [
+        "col_learn",
+        "col_build",
+        "col_solutions",
+        "col_learn_books"
+      ]
     },
-    "178787361000090dd8": {
-      "type": "_blocks",
-      "blocks": {},
-      "block_order": [],
-      "disabled": true,
-      "settings": {}
-    },
-    "1787873834f9d01218": {
-      "type": "_blocks",
-      "blocks": {},
-      "block_order": [],
-      "disabled": true,
+    "testimonials": {
+      "type": "bs-testimonials",
       "settings": {}
     }
   },
   "order": [
-    "17878732754a486070",
-    "1787872304a1c72e5e",
-    "178787306568354753",
-    "178787361000090dd8",
-    "1787873834f9d01218"
+    "store_hero",
+    "benefits_matrix",
+    "featured_collections",
+    "testimonials"
   ]
 }

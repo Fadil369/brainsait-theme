@@ -1,0 +1,94 @@
+{%- liquid
+  assign is_ar = false
+  if request.locale.iso_code == 'ar'
+    assign is_ar = true
+  endif
+  assign learn_url = shop.url | append: '/collections/learn'
+  assign build_url = shop.url | append: '/collections/build'
+  assign sol_url = shop.url | append: '/collections/solutions'
+  assign benefits_url = shop.url | append: '/pages/benefits'
+-%}
+{% # theme-check-disable ValidScopedCSSClass %}
+
+<section class="bs-store-hero color-{{ section.settings.color_scheme }} gradient" id="section-{{ section.id }}">
+  <div class="bs-store-hero__glow bs-store-hero__glow--1" aria-hidden="true"></div>
+  <div class="bs-store-hero__glow bs-store-hero__glow--2" aria-hidden="true"></div>
+  <div class="bs-store-hero__grid" aria-hidden="true"></div>
+
+  <div class="bs-store-hero__inner page-width">
+    <p class="bs-store-hero__eyebrow">
+      {% if is_ar %}منصة الحلول — تعلّم · ابنِ · حلول{% else %}The Resolution Platform — Learn · Build · Solutions{% endif %}
+    </p>
+
+    <h1 class="bs-store-hero__heading">
+      {% if is_ar %}تعلّم · ابنِ · حلول{% else %}Learn · Build · Solutions{% endif %}
+    </h1>
+
+    <p class="bs-store-hero__subheading">
+      {% if is_ar %}
+        مكتبة رقمية، برنامج احتضان، وبرمجيات جاهزة — صمّمناها لترتقي بك. أنيقة في كل تفصيلة، قوية في كل ميزة.
+      {% else %}
+        A digital library, an incubation program, and production-ready software — crafted to elevate you. Elegant in every detail, powerful in every feature.
+      {% endif %}
+    </p>
+
+    <div class="bs-store-hero__actions">
+      <a href="{{ learn_url }}" class="button bs-store-hero__cta">
+        {% if is_ar %}ابدأ مع LEARN{% else %}Start with LEARN{% endif %}
+      </a>
+      <a href="{{ benefits_url }}" class="bs-store-hero__cta-secondary">
+        {% if is_ar %}قارن المزايا{% else %}Compare benefits{% endif %}
+      </a>
+    </div>
+
+    <ul class="bs-store-hero__tiers" role="list">
+      <li class="bs-store-hero__tier">
+        <span class="bs-store-hero__tier-label">LEARN</span>
+        <span class="bs-store-hero__tier-price">{% if is_ar %}من 99 ر.س{% else %}from 99 SAR{% endif %}</span>
+        <a href="{{ learn_url }}" class="bs-store-hero__tier-link">{% if is_ar %}تصفّح الكتب{% else %}Browse books{% endif %} →</a>
+      </li>
+      <li class="bs-store-hero__tier">
+        <span class="bs-store-hero__tier-label">BUILD</span>
+        <span class="bs-store-hero__tier-price">{% if is_ar %}شهري 499 ر.س{% else %}monthly 499 SAR{% endif %}</span>
+        <a href="{{ build_url }}" class="bs-store-hero__tier-link">{% if is_ar %}انضم للحاضنة{% else %}Join the incubator{% endif %} →</a>
+      </li>
+      <li class="bs-store-hero__tier">
+        <span class="bs-store-hero__tier-label">SOLUTION</span>
+        <span class="bs-store-hero__tier-price">{% if is_ar %}من 1,999 ر.س{% else %}from 1,999 SAR{% endif %}</span>
+        <a href="{{ sol_url }}" class="bs-store-hero__tier-link">{% if is_ar %}استكشف الحلول{% else %}Explore solutions{% endif %} →</a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+{% style %}
+  .bs-store-hero { position: relative; overflow: hidden; padding: 5rem 0 4rem; }
+  .bs-store-hero__glow { position: absolute; border-radius: 50%; filter: blur(90px); opacity: .35; pointer-events: none; }
+  .bs-store-hero__glow--1 { width: 480px; height: 480px; background: var(--color-foreground, #f59e0b); top: -160px; inset-inline-start: -120px; }
+  .bs-store-hero__glow--2 { width: 420px; height: 420px; background: var(--color-foreground, #0ea5e9); bottom: -160px; inset-inline-end: -120px; }
+  .bs-store-hero__grid { position: absolute; inset: 0; opacity: .04; background-image: linear-gradient(var(--color-foreground) 1px, transparent 1px), linear-gradient(90deg, var(--color-foreground) 1px, transparent 1px); background-size: 44px 44px; pointer-events: none; }
+  .bs-store-hero__inner { position: relative; z-index: 2; text-align: center; max-width: 860px; margin-inline: auto; }
+  .bs-store-hero__eyebrow { display: inline-flex; align-items: center; gap: 8px; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; opacity: .75; margin-bottom: 1rem; }
+  .bs-store-hero__heading { font-size: clamp(2.4rem, 6vw, 4.2rem); margin: 0 0 1rem; letter-spacing: -0.02em; }
+  .bs-store-hero__subheading { font-size: 1.05rem; line-height: 1.6; opacity: .85; max-width: 640px; margin: 0 auto 2rem; }
+  .bs-store-hero__actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 2.4rem; }
+  .bs-store-hero__cta-secondary { text-decoration: underline; text-underline-offset: 4px; opacity: .9; padding: .8rem 1rem; }
+  .bs-store-hero__tiers { list-style: none; margin: 0 auto; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; max-width: 720px; }
+  .bs-store-hero__tier { border: 1px solid rgb(var(--color-border-rgb, 0 0 0) / .12); border-radius: 14px; padding: 1.2rem; display: flex; flex-direction: column; gap: .35rem; text-align: start; background: rgb(var(--color-background-rgb, 255 255 255) / .6); }
+  .bs-store-hero__tier-label { font-weight: 800; letter-spacing: .05em; font-size: .95rem; }
+  .bs-store-hero__tier-price { font-size: .85rem; opacity: .7; }
+  .bs-store-hero__tier-link { font-size: .85rem; font-weight: 600; text-decoration: none; margin-top: auto; padding-top: .4rem; }
+  @media (max-width: 749px) { .bs-store-hero__tiers { grid-template-columns: 1fr; } }
+{% endstyle %}
+
+{% schema %}
+{
+  "name": "BrainSAIT Store Hero",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    { "type": "color_scheme", "id": "color_scheme", "label": "Color scheme", "default": "background-1" }
+  ],
+  "presets": [{ "name": "BrainSAIT Store Hero" }]
+}
+{% endschema %}
