@@ -1,0 +1,142 @@
+{% comment %}
+  Benefits Matrix — LEARN · BUILD · SOLUTION (bilingual, synced to store.brainsait.de)
+  Add to any page via the theme editor. Renders 6 tiers as 3 groups with 2 price options each.
+  Source of truth: handles/prices match live Shopify products (see AGENTS.md §21).
+{% endcomment %}
+
+{% liquid
+  assign is_ar = false
+  if request.locale.iso_code == 'ar'
+    assign is_ar = true
+  endif
+%}
+
+<section class="benefits-matrix color-{{ section.settings.color_scheme }} gradient" style="padding: 3rem 0;">
+  <div class="page-width">
+    <div class="benefits-matrix__head" style="text-align:center; max-width:760px; margin:0 auto 1.6rem;">
+      <p class="benefits-matrix__eyebrow" style="display:inline-flex; align-items:center; gap:6px; font-size:11px; letter-spacing:.08em; text-transform:uppercase; opacity:.7;">✨ {% if is_ar %}اختر مسارك{% else %}Choose your path{% endif %}</p>
+      <h2 style="font-size:1.8rem; margin:.4rem 0;">{% if is_ar %}مصفوفة المزايا — LEARN · BUILD · SOLUTION{% else %}Benefits matrix — LEARN · BUILD · SOLUTION{% endif %}</h2>
+      <p style="opacity:.7; font-size:14px;">{% if is_ar %}كل مسار يبني على الذي قبله. LEARN يفتح المعرفة، BUILD يحولها إلى منتج، SOLUTION ينشرها كمؤسسة.{% else %}Each path builds on the last. LEARN unlocks knowledge, BUILD turns it into product, SOLUTION ships it as a company.{% endif %}</p>
+    </div>
+
+    {% style %}
+      .benefits-matrix__grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap:1rem; align-items:stretch; }
+      .benefits-matrix__group { display:flex; flex-direction:column; gap:.9rem; }
+      .benefits-matrix__cat { display:flex; align-items:center; gap:8px; border-inline-start:4px solid var(--cat); padding-inline-start:10px; font-weight:800; letter-spacing:.06em; font-size:12px; }
+      .benefits-card { border:1px solid rgba(0,0,0,.08); border-radius:14px; background:#fff; overflow:hidden; position:relative; }
+      .benefits-card--popular { border-color:#f59e0b; box-shadow: 0 6px 24px rgba(245,158,11,.18); }
+      .benefits-card__badge { position:absolute; inset-inline-end:12px; top:10px; background:#f59e0b; color:#111; font-size:11px; font-weight:800; padding:3px 8px; border-radius:999px; }
+      .benefits-card__body { padding:1rem; }
+      .benefits-card__price { font-size:1.35rem; font-weight:800; }
+      .benefits-card__list { list-style:none; padding:0; margin:.6rem 0 0; display:flex; flex-direction:column; gap:6px; }
+      .benefits-card__list li { display:flex; gap:8px; align-items:flex-start; font-size:13px; line-height:1.4; }
+      .benefits-card__list li i { color:#10b981; font-style:normal; }
+    {% endstyle %}
+
+    <div class="benefits-matrix__grid">
+      {% comment %} LEARN {% endcomment %}
+      <div class="benefits-matrix__group">
+        <div class="benefits-matrix__cat" style="--cat:#0ea5e9;">{% if is_ar %}تعلّم{% else %}LEARN{% endif %}</div>
+        <div class="benefits-card">
+          <div class="benefits-card__body">
+            <h3 style="margin:0;">{% if is_ar %}كتاب LEARN{% else %}LEARN Book{% endif %}</h3>
+            <p style="opacity:.6; font-size:13px; margin:.2rem 0 .6rem;">{% if is_ar %}كتاب واحد، تحميل فوري R2{% else %}One book, instant R2 download{% endif %}</p>
+            <div style="display:flex; align-items:baseline; gap:6px;"><span class="benefits-card__price">99 {% if is_ar %}ر.س{% else %}SAR{% endif %}</span><span style="opacity:.6; font-size:12px;">{% if is_ar %}مرة واحدة{% else %}one-time{% endif %}</span></div>
+            <ul class="benefits-card__list">
+              <li><i>✓</i><span>📖 {% if is_ar %}كتاب واحد PDF (R2){% else %}Single book PDF (R2){% endif %}</span></li>
+            </ul>
+            <a class="button button--primary" href="https://store.brainsait.de/collections/learn-books" style="width:100%; justify-content:center; margin-top:12px; display:flex;">{% if is_ar %}تصفح الكتب{% else %}Browse books{% endif %}</a>
+          </div>
+        </div>
+        <div class="benefits-card">
+          <div class="benefits-card__body">
+            <h3 style="margin:0;">{% if is_ar %}LEARN شهري{% else %}LEARN Monthly{% endif %}</h3>
+            <p style="opacity:.6; font-size:13px; margin:.2rem 0 .6rem;">{% if is_ar %}كل الكتب الـ40، أونلاين{% else %}All 40 books, online{% endif %}</p>
+            <div style="display:flex; align-items:baseline; gap:6px;"><span class="benefits-card__price">182 {% if is_ar %}ر.س{% else %}SAR{% endif %}</span><span style="opacity:.6; font-size:12px;">/ {% if is_ar %}شهر{% else %}mo{% endif %}</span></div>
+            <ul class="benefits-card__list"><li><i>✓</i><span>📚 {% if is_ar %}كل كتب LEARN الـ40{% else %}All 40 LEARN books{% endif %}</span></li></ul>
+            <a class="button button--primary" href="https://store.brainsait.de/products/learn-brainsait-digital-access" style="width:100%; justify-content:center; margin-top:12px; display:flex;">{% if is_ar %}اشترك الآن{% else %}Subscribe now{% endif %}</a>
+          </div>
+        </div>
+      </div>
+
+      {% comment %} BUILD {% endcomment %}
+      <div class="benefits-matrix__group">
+        <div class="benefits-matrix__cat" style="--cat:#f59e0b;">{% if is_ar %}ابنِ{% else %}BUILD{% endif %}</div>
+        <div class="benefits-card benefits-card--popular">
+          <span class="benefits-card__badge">{% if is_ar %}الأكثر طلباً{% else %}Most popular{% endif %}</span>
+          <div class="benefits-card__body">
+            <h3 style="margin:0;">{% if is_ar %}BUILD شهري{% else %}BUILD Monthly{% endif %}</h3>
+            <p style="opacity:.6; font-size:13px; margin:.2rem 0 .6rem;">{% if is_ar %}حاضنة Forge — دورات 30 يوماً{% else %}Forge incubator — 30-day cycles{% endif %}</p>
+            <div style="display:flex; align-items:baseline; gap:6px;"><span class="benefits-card__price">499 {% if is_ar %}ر.س{% else %}SAR{% endif %}</span><span style="opacity:.6; font-size:12px;">/ {% if is_ar %}شهر{% else %}mo{% endif %}</span></div>
+            <ul class="benefits-card__list">
+              <li><i>✓</i><span>📚 {% if is_ar %}كل كتب LEARN{% else %}All LEARN books{% endif %}</span></li>
+              <li><i>✓</i><span>🧠 {% if is_ar %}Notion Forge{% else %}Notion Forge{% endif %}</span></li>
+              <li><i>✓</i><span>🗂️ {% if is_ar %}العقل الثاني{% else %}2nd Brain{% endif %}</span></li>
+              <li><i>✓</i><span>✈️ {% if is_ar %}بوت تليجرام{% else %}Telegram bot{% endif %}</span></li>
+            </ul>
+            <a class="button button--primary" href="https://store.brainsait.de/products/build-forge-incubator-founders-program" style="width:100%; justify-content:center; margin-top:12px; display:flex;">{% if is_ar %}اشترك الآن{% else %}Subscribe now{% endif %}</a>
+          </div>
+        </div>
+        <div class="benefits-card">
+          <div class="benefits-card__body">
+            <h3 style="margin:0;">{% if is_ar %}تذكرة BUILD{% else %}BUILD Ticket{% endif %}</h3>
+            <p style="opacity:.6; font-size:13px; margin:.2rem 0 .6rem;">{% if is_ar %}تذكرة لمرة واحدة{% else %}One-time ticket{% endif %}</p>
+            <div style="display:flex; align-items:baseline; gap:6px;"><span class="benefits-card__price">9,630 {% if is_ar %}ر.س{% else %}SAR{% endif %}</span><span style="opacity:.6; font-size:12px;">{% if is_ar %}مرة واحدة{% else %}one-time{% endif %}</span></div>
+            <ul class="benefits-card__list">
+              <li><i>✓</i><span>📚 {% if is_ar %}كل كتب LEARN{% else %}All LEARN books{% endif %}</span></li>
+              <li><i>✓</i><span>🧠 Notion Forge</span></li>
+              <li><i>✓</i><span>🗂️ 2nd Brain</span></li>
+              <li><i>✓</i><span>✈️ Telegram</span></li>
+            </ul>
+            <a class="button button--secondary" href="https://store.brainsait.de/products/build-ticket" style="width:100%; justify-content:center; margin-top:12px; display:flex;">{% if is_ar %}اشترِ الآن{% else %}Buy now{% endif %}</a>
+          </div>
+        </div>
+      </div>
+
+      {% comment %} SOLUTION {% endcomment %}
+      <div class="benefits-matrix__group">
+        <div class="benefits-matrix__cat" style="--cat:#10b981;">{% if is_ar %}حلول{% else %}SOLUTION{% endif %}</div>
+        <div class="benefits-card">
+          <div class="benefits-card__body">
+            <h3 style="margin:0;">{% if is_ar %}SOLUTION جاهز{% else %}SOLUTION Ready{% endif %}</h3>
+            <p style="opacity:.6; font-size:13px; margin:.2rem 0 .6rem;">{% if is_ar %}جاهز مسبقاً، يُنشر لك{% else %}Pre-built, deployed to you{% endif %}</p>
+            <div style="display:flex; align-items:baseline; gap:6px;"><span class="benefits-card__price">24,000 {% if is_ar %}ر.س{% else %}SAR{% endif %}</span><span style="opacity:.6; font-size:12px;">{% if is_ar %}مرة واحدة{% else %}one-time{% endif %}</span></div>
+            <ul class="benefits-card__list">
+              <li><i>✓</i><span>📚 LEARN</span></li>
+              <li><i>✓</i><span>🧠 Notion + 🗂️ 2nd Brain + ✈️ Telegram</span></li>
+              <li><i>✓</i><span>💬 Lark super-partner</span></li>
+              <li><i>✓</i><span>📅 {% if is_ar %}اجتماع انطلاق{% else %}Kickoff Meet{% endif %}</span></li>
+              <li><i>✓</i><span>🚀 {% if is_ar %}نشر جاهز{% else %}Pre-built deployment{% endif %}</span></li>
+            </ul>
+            <a class="button button--primary" href="https://store.brainsait.de/collections/solutions-ready" style="width:100%; justify-content:center; margin-top:12px; display:flex;">{% if is_ar %}اختر حلك{% else %}Choose your solution{% endif %}</a>
+          </div>
+        </div>
+        <div class="benefits-card">
+          <div class="benefits-card__body">
+            <h3 style="margin:0;">{% if is_ar %}SOLUTION شهري{% else %}SOLUTION Monthly{% endif %}</h3>
+            <p style="opacity:.6; font-size:13px; margin:.2rem 0 .6rem;">{% if is_ar %}شريك مميز، شهري{% else %}Super-partner, monthly{% endif %}</p>
+            <div style="display:flex; align-items:baseline; gap:6px;"><span class="benefits-card__price">1,999 {% if is_ar %}ر.س{% else %}SAR{% endif %}</span><span style="opacity:.6; font-size:12px;">/ {% if is_ar %}شهر{% else %}mo{% endif %}</span></div>
+            <ul class="benefits-card__list">
+              <li><i>✓</i><span>📚 LEARN</span></li>
+              <li><i>✓</i><span>🧠 Notion + 🗂️ 2nd Brain + ✈️ Telegram</span></li>
+              <li><i>✓</i><span>💬 Lark super-partner</span></li>
+            </ul>
+            <a class="button button--primary" href="https://store.brainsait.de/products/solutions-brainsait-super-partner-program" style="width:100%; justify-content:center; margin-top:12px; display:flex;">{% if is_ar %}اشترك الآن{% else %}Subscribe now{% endif %}</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p style="text-align:center; opacity:.6; font-size:12px; margin-top:1rem;">{% if is_ar %}الأسعار بالريال السعودي · الدفع على store.brainsait.de{% else %}Prices in SAR · Checkout on store.brainsait.de{% endif %}</p>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Benefits matrix",
+  "settings": [
+    { "type": "color_scheme", "id": "color_scheme", "label": "Color scheme", "default": "background-1" }
+  ],
+  "presets": [{ "name": "Benefits matrix" }]
+}
+{% endschema %}
