@@ -40,6 +40,14 @@
   if benefit == blank
     assign benefit = desc_lines[0] | strip | truncate: 90
   endif
+
+  # Plan label — align with the LEARN/BUILD/SOLUTIONS subscription model.
+  assign plan_label = ''
+  if product.tags contains 'solutions-ready' or product.tags contains 'SOLUTIONS READY' or product.tags contains 'one-time'
+    assign plan_label = is_ar ? 'جاهز — دفع كامل' : 'Pre-built · one-time'
+  elsif product.tags contains 'SOLUTIONS' or product.tags contains 'BUILD' or product.tags contains 'LEARN' or product.tags contains 'subscription'
+    assign plan_label = is_ar ? 'شهري' : 'Monthly'
+  endif
 %}
 
 <article class="pcard" data-sub="{{ sub | escape }}">
@@ -84,7 +92,7 @@
       {% if is_free %}
         <span class="pcard-badge pcard-badge-free">FREE</span>
       {% else %}
-        <span class="pcard-price">{{ product.price | money }}</span>
+        <span class="pcard-price">{{ product.price | money }}{% if plan_label != '' %} <span class="pcard-plan">{{ plan_label }}</span>{% endif %}</span>
       {% endif %}
       <div class="pcard-cta">
         <a class="button primary sm" href="{{ product.url }}">
@@ -122,3 +130,19 @@
     {% render 'mf-pay-buttons', product: product, compact: true %}
   </div>
 </article>
+{% stylesheet %}
+  .pcard-plan {
+    display: inline-block;
+    margin-left: 6px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: #0a2540;
+    background: #e8f0fb;
+    padding: 2px 8px;
+    border-radius: 999px;
+    vertical-align: middle;
+  }
+  [dir="rtl"] .pcard-plan { margin-left: 0; margin-right: 6px; }
+{% endstylesheet %}
