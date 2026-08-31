@@ -22,6 +22,22 @@
   class="utility-bar color-{{ section.settings.color_scheme }} gradient{% if section.settings.show_line_separator and section.blocks.size > 0 %} utility-bar--bottom-border{% elsif section.settings.show_line_separator and section.settings.show_social and social_icons%} utility-bar--bottom-border-social-only{% endif %}{% if section.settings.enable_country_selector or section.settings.enable_language_selector %} header-localization{% endif %}"
 >
   <div class="page-width utility-bar__grid{% if announcement_bar and language_country_selector or section.settings.show_social and social_icons %} utility-bar__grid--3-col{% elsif language_country_selector or section.settings.show_social and social_icons %} utility-bar__grid--2-col{% endif %}">
+    {%- comment -%}
+      Default BrainSAIT promo when the merchant has not configured any
+      announcement block. Additive + safe: never overrides existing blocks.
+      Links to the unified LEARN monthly product (store.brainsait.de).
+    {%- endcomment -%}
+    {%- if section.blocks.size == 0 -%}
+      <div class="announcement-bar" role="region" aria-label="{{ 'sections.announcements.announcement_bar' | t }}">
+        <a
+          href="https://store.brainsait.de/products/learn-brainsait-digital-access"
+          class="announcement-bar__link link link--text focus-inset animate-arrow"
+          style="color: inherit;"
+        >
+          <span class="announcement-bar__message h5"><span>🚀 BrainSAIT LEARN — Monthly plan · Subscribe now · Pre-built solutions from 24,000 SAR · حلول جاهزة من 24,000 ريال</span></span>
+        </a>
+      </div>
+    {%- endif -%}
     {%- if section.settings.show_social and social_icons -%}
       {%- render 'social-icons' -%}
     {%- endif -%}
