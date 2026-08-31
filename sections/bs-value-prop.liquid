@@ -1,103 +1,89 @@
-{% liquid
+{%- liquid
   assign is_ar = false
   if request.locale.iso_code == 'ar'
     assign is_ar = true
   endif
-%}
+  assign learn_url = shop.url | append: '/collections/learn'
+  assign sol_url = shop.url | append: '/collections/solutions'
+  assign benefits_url = shop.url | append: '/pages/benefits'
+-%}
 {% # theme-check-disable ValidScopedCSSClass %}
 
-<div class="bs-value">
+<section class="bs-value color-{{ section.settings.color_scheme }} gradient">
   <div class="bs-value__inner page-width">
-    <h2 class="bs-value__heading">
-      {% if is_ar %}
-        ما هي BrainSAIT؟
-      {% else %}
-        What is BrainSAIT?
-      {% endif %}
-    </h2>
 
-    <p class="bs-value__text">
-      {% if is_ar %}
-        BrainSAIT منصة رقمية تقدّم منتجات جاهزة لبنية هوية الرعاية الصحية: سجلّات OID، أدوات متوافقة مع FHIR،
-        وحزم تكامل مصمَّمة لمطوري ومؤسسات القطاع الصحي في المملكة العربية السعودية. كل منتج يُسلَّم رقمياً وفورياً
-        بعد الشراء.
-      {% else %}
-        BrainSAIT is a digital products platform for healthcare identity infrastructure: OID registries,
-        FHIR-aligned tooling, and integration bundles built for developers and enterprises across Saudi Arabia.
-        Every product is delivered instantly, digitally, right after purchase.
-      {% endif %}
-    </p>
+    <div class="bs-value__head">
+      <p class="bs-value__eyebrow">
+        {% if is_ar %}لماذا برينسايت؟{% else %}Why BrainSAIT?{% endif %}
+      </p>
+      <h2 class="bs-value__heading">
+        {% if is_ar %}منصة حلول متكاملة، صُمّمت للمملكة{% else %}One platform for Learn, Build &amp; Solution{% endif %}
+      </h2>
+    </div>
 
-    <a href="{{ routes.all_products_collection_url }}" class="button button-secondary bs-value__cta">
-      {% if is_ar %}
-        استعرض جميع المنتجات
-      {% else %}
-        Browse all products
-      {% endif %}
-    </a>
+    <div class="bs-value__stats" role="list">
+      <div class="bs-value__stat">
+        <span class="bs-value__num">40+</span>
+        <span class="bs-value__label">{% if is_ar %}كتاب LEARN{% else %}LEARN books{% endif %}</span>
+      </div>
+      <div class="bs-value__stat">
+        <span class="bs-value__num">65</span>
+        <span class="bs-value__label">{% if is_ar %}حلاً جاهزاً{% else %}solutions{% endif %}</span>
+      </div>
+      <div class="bs-value__stat">
+        <span class="bs-value__num">16</span>
+        <span class="bs-value__label">{% if is_ar %}يوماً للبناء{% else %}day BUILD sprint{% endif %}</span>
+      </div>
+      <div class="bs-value__stat">
+        <span class="bs-value__num">24/7</span>
+        <span class="bs-value__label">{% if is_ar %}تسليم فوري{% else %}instant delivery{% endif %}</span>
+      </div>
+    </div>
+
+    <div class="bs-value__trust" role="list">
+      <span class="bs-value__badge">🛡️ {% if is_ar %}متوافق مع PDPL{% else %}PDPL-aligned{% endif %}</span>
+      <span class="bs-value__badge">💳 {% if is_ar %}دفع سعودي (STC Pay · mada){% else %}Saudi pay (STC Pay · mada){% endif %}</span>
+      <span class="bs-value__badge">⚡ {% if is_ar %}تسليم رقمي فوري{% else %}instant digital delivery{% endif %}</span>
+      <span class="bs-value__badge">🌐 {% if is_ar %}ثنائي اللغة عربي/إنجليزي{% else %}bilingual AR/EN{% endif %}</span>
+    </div>
+
+    <div class="bs-value__actions">
+      <a href="{{ learn_url }}" class="button bs-value__cta">
+        {% if is_ar %}ابدأ مع LEARN{% else %}Start with LEARN{% endif %}
+      </a>
+      <a href="{{ benefits_url }}" class="bs-value__cta-secondary">
+        {% if is_ar %}قارن المزايا{% else %}Compare benefits{% endif %}
+      </a>
+    </div>
+
   </div>
-</div>
+</section>
 
-{% stylesheet %}
-  .bs-value {
-    padding-block: 4rem;
-    background-color: var(--color-background);
-  }
-
-  .bs-value__inner {
-    max-width: 42rem;
-    margin-inline: auto;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.1rem;
-  }
-
-  .bs-value__heading {
-    margin: 0;
-    font-family: var(--font-heading--family);
-    font-size: clamp(1.5rem, 3.5vw, 2.25rem);
-    color: var(--color-foreground);
-  }
-
-  .bs-value__text {
-    margin: 0;
-    font-size: 1rem;
-    line-height: 1.7;
-    color: var(--bs-muted);
-  }
-
-  .bs-value__cta {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    margin-block-start: 0.5rem;
-    padding-inline: 1.75rem;
-    padding-block: 0.75rem;
-    border-radius: var(--bs-radius-pill);
-    border: 1px solid var(--bs-accent);
-    color: var(--bs-accent);
-    text-decoration: none;
-    font-weight: 500;
-    transition: background-color 0.2s ease, color 0.2s ease;
-  }
-
-  .bs-value__cta:hover {
-    background-color: var(--bs-accent);
-    color: #ffffff;
-  }
-{% endstylesheet %}
+{% style %}
+  .bs-value { padding-block: 4.5rem; position: relative; overflow: hidden; }
+  .bs-value__inner { max-width: 960px; margin-inline: auto; text-align: center; }
+  .bs-value__eyebrow { font-size: 11px; letter-spacing: .1em; text-transform: uppercase; opacity: .7; margin-bottom: .6rem; }
+  .bs-value__heading { font-size: clamp(1.7rem, 4vw, 2.4rem); margin: 0 0 2.4rem; letter-spacing: -0.01em; }
+  .bs-value__stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; margin-bottom: 2.4rem; }
+  .bs-value__stat { display: flex; flex-direction: column; gap: .25rem; padding: 1.6rem 1rem; border-radius: 16px; border: 1px solid rgb(var(--color-border-rgb, 0 0 0) / .12); background: rgb(var(--color-background-rgb, 255 255 255) / .6); }
+  .bs-value__num { font-size: 2rem; font-weight: 800; background: linear-gradient(120deg, var(--gold-2, #f5dd9d), var(--gold, #e9c46a)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+  .bs-value__label { font-size: .82rem; opacity: .7; }
+  .bs-value__trust { display: flex; gap: .7rem; justify-content: center; flex-wrap: wrap; margin-bottom: 2rem; }
+  .bs-value__badge { display: inline-flex; align-items: center; gap: 6px; font-size: .82rem; font-weight: 600; padding: .5rem 1rem; border-radius: 999px; border: 1px solid rgb(var(--color-border-rgb, 0 0 0) / .16); background: rgb(var(--color-background-rgb, 255 255 255) / .5); }
+  .bs-value__actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+  .bs-value__cta-secondary { text-decoration: underline; text-underline-offset: 4px; opacity: .9; padding: .8rem 1.1rem; }
+  @media (max-width: 749px) { .bs-value__stats { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 480px) { .bs-value__stats { grid-template-columns: 1fr; } }
+{% endstyle %}
 
 {% schema %}
 {
-  "name": "BrainSAIT Value Prop",
+  "name": "BS Value Prop",
   "tag": "section",
-  "settings": [],
-  "presets": [
-    {
-      "name": "BrainSAIT Value Prop"
-    }
-  ]
+  "class": "section",
+  "settings": [
+    { "type": "color_scheme", "id": "color_scheme", "label": "Color scheme", "default": "background-1" }
+  ],
+  "presets": [{ "name": "BS Value Prop" }]
 }
 {% endschema %}
