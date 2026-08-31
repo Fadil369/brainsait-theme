@@ -68,7 +68,7 @@
   >
     <a class="pcard-cover-link" href="{{ product.url }}" tabindex="-1" aria-hidden="true">
       {% if product.featured_image %}
-        <img src="{{ product.featured_image | image_url: width: 600 }}" alt="{{ product.title | escape }}" width="600" height="900" loading="lazy">
+        {{ product.featured_image | image_url: width: 600, format: 'webp' | image_tag: alt: product.title, loading: 'lazy', widths: '300,600,800', sizes: '(min-width: 1100px) 300px, (min-width: 750px) 50vw, 100vw', class: 'pcard-cover-img' }}
       {% else %}
         <span class="pcard-cover-fallback">{{ product.title | slice: 0 | upcase }}</span>
       {% endif %}
