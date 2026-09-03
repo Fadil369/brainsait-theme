@@ -27,24 +27,26 @@
         <span class="bs-value__label">{% if is_ar %}كتاب LEARN{% else %}LEARN books{% endif %}</span>
       </div>
       <div class="bs-value__stat">
-        <span class="bs-value__num">65</span>
+        <span class="bs-value__num">65+</span>
         <span class="bs-value__label">{% if is_ar %}حلاً جاهزاً{% else %}solutions{% endif %}</span>
       </div>
       <div class="bs-value__stat">
         <span class="bs-value__num">16</span>
         <span class="bs-value__label">{% if is_ar %}يوماً للبناء{% else %}day BUILD sprint{% endif %}</span>
       </div>
-      <div class="bs-value__stat">
-        <span class="bs-value__num">24/7</span>
-        <span class="bs-value__label">{% if is_ar %}تسليم فوري{% else %}instant delivery{% endif %}</span>
+      <div class="bs-value__stat" style="border-color: rgba(184,241,78,.35); background: linear-gradient(135deg, rgba(184,241,78,.09), rgba(255,255,255,.6));">
+        <span class="bs-value__num" style="-webkit-text-fill-color:#5a7a00; background:none;">◎∞</span>
+        <span class="bs-value__label">{% if is_ar %}هوية BPR دائمة{% else %}BPR permanent identity{% endif %}</span>
       </div>
     </div>
 
     <div class="bs-value__trust" role="list">
       <span class="bs-value__badge">🛡️ {% if is_ar %}متوافق مع PDPL{% else %}PDPL-aligned{% endif %}</span>
-      <span class="bs-value__badge">💳 {% if is_ar %}دفع سعودي (STC Pay · mada){% else %}Saudi pay (STC Pay · mada){% endif %}</span>
-      <span class="bs-value__badge">⚡ {% if is_ar %}تسليم رقمي فوري{% else %}instant digital delivery{% endif %}</span>
-      <span class="bs-value__badge">🌐 {% if is_ar %}ثنائي اللغة عربي/إنجليزي{% else %}bilingual AR/EN{% endif %}</span>
+      <span class="bs-value__badge" style="border-color: rgba(184,241,78,.3);">◎ {% if is_ar %}BPR: IANA 61026{% else %}BPR: IANA 61026{% endif %}</span>
+      <span class="bs-value__badge">💳 {% if is_ar %}دفع سعودي{% else %}Saudi pay{% endif %} · STC Pay · mada</span>
+      <span class="bs-value__badge">⚡ {% if is_ar %}تسليم فوري{% else %}instant delivery{% endif %}</span>
+      <span class="bs-value__badge">🌐 {% if is_ar %}عربي / إنجليزي{% else %}AR/EN{% endif %}</span>
+      <span class="bs-value__badge">◎ {% if is_ar %}QR موثَّق{% else %}QR-verified{% endif %}</span>
     </div>
 
     <div class="bs-value__actions">

@@ -128,7 +128,7 @@
     assign benefit = desc_lines[0] | strip | truncate: 90
   endif
 
-  # Plan label — align with the LEARN/BUILD/SOLUTIONS subscription model.
+  # Plan label — align with the LEARN/BUILD/SOLUTIONS/BPR subscription model.
   assign plan_label = ''
   if product.tags contains 'solutions-ready' or product.tags contains 'SOLUTIONS READY' or product.tags contains 'one-time'
     if is_ar
@@ -136,12 +136,23 @@
     else
       assign plan_label = 'Pre-built · one-time'
     endif
+  elsif product.handle == 'provider-registry' or product.tags contains 'BPR' or product.type == 'SaaS Membership'
+    if is_ar
+      assign plan_label = 'هوية دائمة · سنوي/شهري'
+    else
+      assign plan_label = 'Permanent · yr/mo'
+    endif
   elsif product.tags contains 'SOLUTIONS' or product.tags contains 'BUILD' or product.tags contains 'LEARN' or product.tags contains 'subscription'
     if is_ar
       assign plan_label = 'شهري'
     else
       assign plan_label = 'Monthly'
     endif
+  endif
+
+  assign is_bpr = false
+  if product.handle == 'provider-registry' or product.type == 'SaaS Membership'
+    assign is_bpr = true
   endif
 %}
 
@@ -177,35 +188,48 @@
   </div>
 
   <div class="pcard-body">
-    <p class="pcard-eyebrow">{{ sub }}</p>
+    <p class="pcard-eyebrow">{% if is_bpr %}◎ BPR · {% endif %}{{ sub }}</p>
     <h3 class="pcard-title"><a href="{{ product.url }}">{{ product.title }}</a></h3>
-    <p class="pcard-prop">{{ tagline }}</p>
+    {% if is_bpr %}
+      <p class="pcard-prop" style="color: var(--ink-soft); font-weight: 600;">{% if is_ar %}هوية موثقة + SPID/OID · صفحة QR عامة · مساعد سريري ثنائي اللغة{% else %}Verified identity · SPID/OID · QR share · bilingual copilot{% endif %}</p>
+    {% else %}
+      <p class="pcard-prop">{{ tagline }}</p>
+    {% endif %}
     {% unless benefit == blank %}
-      <p class="pcard-benefit">{{ benefit }}</p>
+      <p class="pcard-benefit">{% if is_bpr %}— {% endif %}{{ benefit }}</p>
     {% endunless %}
     <div class="pcard-foot">
       {% if is_free %}
         <span class="pcard-badge pcard-badge-free">FREE</span>
       {% else %}
-        <span class="pcard-price">{{ product.price | money }}{% if plan_label != '' %} <span class="pcard-plan">{{ plan_label }}</span>{% endif %}</span>
+        <span class="pcard-price">{% if is_bpr %}3,960 / 163 {% if is_ar %}ر.س{% else %}SAR{% endif %}{% else %}{{ product.price | money }}{% endif %}{% if plan_label != '' %} <span class="pcard-plan" {% if is_bpr %}style="background:rgba(184,241,78,.18); color:#3a5a00; border:1px solid rgba(184,241,78,.35);"{% endif %}>{{ plan_label }}</span>{% endif %}</span>
       {% endif %}
       <div class="pcard-cta">
-        <a class="button primary sm" href="{{ primary_url }}">
-          {% if is_free %}
-            {% if is_ar %}تحميل{% else %}Get{% endif %}
-          {% else %}
-            {{ primary_label }}
+        {% if is_bpr %}
+          <a class="button primary sm" href="{{ product.url }}" style="background: linear-gradient(135deg, #b8f14e, #8ec800); color:#111;">
+            {% if is_ar %}السنوية 3,960{% else %}Annual 3,960{% endif %}
+          </a>
+          <a class="button secondary sm" href="{{ product.url }}?variant=monthly">
+            {% if is_ar %}شهري 163{% else %}Monthly 163{% endif %}
+          </a>
+        {% else %}
+          <a class="button primary sm" href="{{ primary_url }}">
+            {% if is_free %}
+              {% if is_ar %}تحميل{% else %}Get{% endif %}
+            {% else %}
+              {{ primary_label }}
+            {% endif %}
+          </a>
+          {% if has_secondary %}
+            <a class="button secondary sm" href="{{ secondary_url }}"{% if secondary_url contains 'http' %} target="_blank" rel="noopener"{% endif %}>
+              {{ secondary_label }}
+            </a>
           {% endif %}
-        </a>
-        {% if has_secondary %}
-          <a class="button secondary sm" href="{{ secondary_url }}"{% if secondary_url contains 'http' %} target="_blank" rel="noopener"{% endif %}>
-            {{ secondary_label }}
-          </a>
-        {% endif %}
-        {% if demo_url != blank %}
-          <a class="button secondary sm" href="{{ demo_url }}" target="_blank" rel="noopener">
-            {% if is_ar %}ديمو حي{% else %}Live demo{% endif %}
-          </a>
+          {% if demo_url != blank %}
+            <a class="button secondary sm" href="{{ demo_url }}" target="_blank" rel="noopener">
+              {% if is_ar %}ديمو حي{% else %}Live demo{% endif %}
+            </a>
+          {% endif %}
         {% endif %}
         {% if qv %}
           <button class="button secondary sm pcard-qv" type="button" data-qv

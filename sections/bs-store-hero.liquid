@@ -65,7 +65,21 @@
         <span class="bs-store-hero__tier-price">{% if is_ar %}1,999 ر.س/شهر أو 24,000 ر.س جاهز{% else %}1,999 SAR/mo or 24,000 SAR ready{% endif %}</span>
         <a href="{{ sol_url }}" class="bs-store-hero__tier-link">{% if is_ar %}استكشف الحلول{% else %}Explore solutions{% endif %} →</a>
       </li>
+      <li class="bs-store-hero__tier bs-store-hero__tier--bpr" style="--tier-accent: #b8f14e;">
+        <span class="bs-store-hero__tier-label">BPR <span style="font-size:10px; opacity:.7; font-weight:700; letter-spacing:.04em;">PROVIDER ID</span></span>
+        <span class="bs-store-hero__tier-price">{% if is_ar %}3,960 ر.س/سنة أو 163 ر.س/شهر · هوية دائمة{% else %}3,960 SAR/yr or 163 SAR/mo · permanent identity{% endif %}</span>
+        <a href="/products/provider-registry" class="bs-store-hero__tier-link">{% if is_ar %}فعّل هويتك{% else %}Activate identity{% endif %} →</a>
+      </li>
     </ul>
+    <div class="bs-store-hero__flow" aria-hidden="true">
+      <span class="bs-store-hero__flow-step"><i>۞</i> {% if is_ar %}الدفع{% else %}Pay{% endif %}</span>
+      <span class="bs-store-hero__flow-arrow">→</span>
+      <span class="bs-store-hero__flow-step"><i>✉</i> {% if is_ar %}شكراً + ترحيب{% else %}Thank-you + welcome{% endif %}</span>
+      <span class="bs-store-hero__flow-arrow">→</span>
+      <span class="bs-store-hero__flow-step"><i>◉</i> {% if is_ar %}الوصول والتنفيذ{% else %}Access & delivery{% endif %}</span>
+      <span class="bs-store-hero__flow-arrow">→</span>
+      <span class="bs-store-hero__flow-step"><i>◎</i> BPR</span>
+    </div>
   </div>
 </section>
 
@@ -85,14 +99,22 @@
   .bs-store-hero__actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 2.8rem; }
   .bs-store-hero__cta-secondary { text-decoration: underline; text-underline-offset: 4px; opacity: .9; padding: .8rem 1.1rem; }
   .bs-store-hero__tiers { list-style: none; margin: 0 auto; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.1rem; max-width: 760px; }
-  .bs-store-hero__tier { position: relative; border: 1px solid rgb(var(--color-border-rgb, 0 0 0) / .14); border-radius: 18px; padding: 1.4rem 1.3rem; display: flex; flex-direction: column; gap: .45rem; text-align: start; background: rgb(var(--color-background-rgb, 255 255 255) / .72); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease; }
+  .bs-store-hero__tier { position: relative; border: 1px solid rgb(var(--color-border-rgb, 0 0 0) / .14); border-radius: var(--radius, 10px); padding: 1.4rem 1.3rem; display: flex; flex-direction: column; gap: .45rem; text-align: start; background: rgb(var(--color-background-rgb, 255 255 255) / .72); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease; }
   .bs-store-hero__tier::after { content: ''; position: absolute; inset-inline-start: 0; top: 0; bottom: 0; width: 3px; border-radius: 3px 0 0 3px; background: var(--tier-accent, var(--gold, #e9c46a)); opacity: .85; }
-  .bs-store-hero__tier:hover { transform: translateY(-5px); box-shadow: 0 18px 44px rgb(0 0 0 / .16); border-color: rgb(var(--color-border-rgb, 0 0 0) / .26); }
-  .bs-store-hero__tier-label { font-weight: 800; letter-spacing: .08em; font-size: 1.05rem; text-transform: uppercase; }
-  .bs-store-hero__tier-price { font-size: .88rem; opacity: .7; }
-  .bs-store-hero__tier-link { font-size: .86rem; font-weight: 700; text-decoration: none; margin-top: auto; padding-top: .6rem; display: inline-flex; align-items: center; gap: 6px; transition: gap .2s ease; }
+  .bs-store-hero__tier:hover { transform: translateY(-3px); box-shadow: var(--shadow-soft, 0 10px 28px rgba(0,0,0,.12)); border-color: color-mix(in srgb, var(--tier-accent) 30%, rgba(0,0,0,.14)); }
+  .bs-store-hero__tier--bpr { background: linear-gradient(135deg, rgba(184,241,78,.14), rgba(255,255,255,.72)); border-color: rgba(184,241,78,.35); }
+  .bs-store-hero__tier--bpr:hover { border-color: #b8f14e; box-shadow: 0 12px 28px rgba(184,241,78,.18); }
+  .bs-store-hero__tier-label { font-weight: 800; letter-spacing: .06em; font-size: 1rem; text-transform: uppercase; }
+  .bs-store-hero__tier-price { font-size: .84rem; opacity: .72; line-height: 1.5; }
+  .bs-store-hero__tier-link { font-size: .84rem; font-weight: 700; text-decoration: none; margin-top: auto; padding-top: .6rem; display: inline-flex; align-items: center; gap: 6px; transition: gap .2s ease; }
   .bs-store-hero__tier:hover .bs-store-hero__tier-link { gap: 10px; }
-  @media (max-width: 749px) { .bs-store-hero__tiers { grid-template-columns: 1fr; } }
+  .bs-store-hero__tiers { gap: .9rem; }
+  .bs-store-hero__flow { display: flex; align-items: center; justify-content: center; gap: .5rem; flex-wrap: wrap; margin-top: 1.6rem; font-size: .78rem; opacity: .72; }
+  .bs-store-hero__flow-step { display: inline-flex; align-items: center; gap: 5px; padding: .35rem .7rem; border-radius: 999px; border: 1px solid rgb(var(--color-border-rgb,0 0 0)/.12); background: rgb(var(--color-background-rgb,255 255 255)/.55); }
+  .bs-store-hero__flow-step i { font-style: normal; width: 18px; height: 18px; display: grid; place-items: center; border-radius: 50%; background: var(--gold, #e9c46a); color: #111; font-size: 10px; font-weight: 800; }
+  .bs-store-hero__flow-arrow { opacity: .45; font-weight: 700; }
+  @media (max-width: 749px) { .bs-store-hero__tiers { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 560px) { .bs-store-hero__tiers { grid-template-columns: 1fr; } .bs-store-hero__flow { font-size: .72rem; } }
 {% endstyle %}
 
 {% schema %}
