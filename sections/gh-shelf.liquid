@@ -43,6 +43,22 @@
     {% endif %}
   </header>
 
+  {% if col_handle == 'learn' or col_handle == 'brainsait-learn' %}
+    <section class="bs-shelf-banner reveal" style="margin: 0 0 1.5rem; padding: 1.2rem 1.3rem; border: 1px solid rgb(var(--color-border-rgb,0 0 0)/.12); border-radius: 16px; background: rgb(var(--color-background-rgb,255 255 255)/.72); backdrop-filter: blur(12px);">
+      <p class="hero-eyebrow" style="margin:0 0 .4rem;"><span class="dot"></span> {% if is_ar %}وصول كامل{% else %}Complete access{% endif %}</p>
+      <h2 style="margin:0 0 .35rem;">{% if is_ar %}40 بطاقة LEARN — مع الدفع والشرح في كل بطاقة{% else %}40 LEARN cards — each with payment and explanation{% endif %}</h2>
+      <p style="margin:0; opacity:.8; line-height:1.7;">{% if is_ar %}زر الدفع يفتح Shopify على 182 ر.س/شهر، وزر “اعرف المزيد” يفتح صفحة التفاصيل الكاملة أو النافذة المنبثقة الخاصة بالمنتج.{% else %}The payment button opens Shopify at 182 SAR/month, and the learn-more button opens the full detail page or product pop-up.{% endif %}</p>
+    </section>
+  {% endif %}
+
+  {% if col_handle == 'solutions' %}
+    <section class="bs-shelf-banner reveal" style="margin: 0 0 1.5rem; padding: 1.2rem 1.3rem; border: 1px solid rgb(var(--color-border-rgb,0 0 0)/.12); border-radius: 16px; background: rgb(var(--color-background-rgb,255 255 255)/.72); backdrop-filter: blur(12px);">
+      <p class="hero-eyebrow" style="margin:0 0 .4rem;"><span class="dot"></span> {% if is_ar %}حلول حيّة{% else %}Live solutions{% endif %}</p>
+      <h2 style="margin:0 0 .35rem;">{% if is_ar %}37+ بطاقة حل مع روابط ديمو حيّة{% else %}37+ solution cards with live demo links{% endif %}</h2>
+      <p style="margin:0; opacity:.8; line-height:1.7;">{% if is_ar %}كل بطاقة تقود إلى الدفع الشهري 1,999 ر.س أو الحل الجاهز 24,000 ر.س، مع ديمو مباشر وخطوة تعريفية واضحة قبل الشراء.{% else %}Each card routes to the 1,999 SAR monthly plan or the 24,000 SAR ready-built plan, with a live demo and a clear walkthrough before purchase.{% endif %}</p>
+    </section>
+  {% endif %}
+
   {% if chip_list.size > 1 %}
     <div class="filters reveal" role="tablist" id="gh-shelf-filters">
       <button type="button" class="chip active" role="tab" aria-selected="true" data-sub="all">
