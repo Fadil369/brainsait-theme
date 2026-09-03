@@ -129,6 +129,20 @@
             <a class="button button--secondary" href="https://store.brainsait.de/collections/solutions-ready" style="width:100%; justify-content:center; margin-top:10px; display:flex;">{% if is_ar %}اعرف المزيد{% else %}Learn more{% endif %}</a>
           </div>
         </div>
+        <div class="benefits-card benefits-card--popular" style="border-color:#b8f14e;">
+          <span class="benefits-card__badge" style="background:#b8f14e; color:#111;">{% if is_ar %}هوية مهنية{% else %}Provider identity{% endif %}</span>
+          <div class="benefits-card__body">
+            <h3 style="margin:0;">{% if is_ar %}سجل برينسايت — BPR{% else %}BrainSAIT Provider Registry{% endif %}</h3>
+            <p style="opacity:.6; font-size:13px; margin:.2rem 0 .6rem;">{% if is_ar %}SPID + OID + QR + صفحة موثقة — سنوي افتراضي وشهري للمبتدئين{% else %}SPID + OID + QR + verified profile — annual default, junior monthly{% endif %}</p>
+            <div style="display:flex; align-items:baseline; gap:6px;"><span class="benefits-card__price">3,960 {% if is_ar %}ر.س{% else %}SAR{% endif %}</span><span style="opacity:.6; font-size:12px;">{% if is_ar %}سنوي{% else %}year{% endif %}</span><span style="opacity:.5; font-size:11px;">· 163 {% if is_ar %}شهري{% else %}mo{% endif %}</span></div>
+            <ul class="benefits-card__list">
+              <li><i>✓</i><span>◎ {% if is_ar %}هوية BPR دائمة (SPID + OID · IANA 61026){% else %}Permanent BPR identity (SPID + OID · IANA 61026){% endif %}</span></li>
+              <li><i>✓</i><span>📚 {% if is_ar %}وصول LEARN + BUILD + SOLUTION{% else %}LEARN + BUILD + SOLUTION access{% endif %}</span></li>
+              <li><i>✓</i><span>🩺 {% if is_ar %}مساعد سريري متعدد اللغات مجاني{% else %}Free multilingual clinical copilot{% endif %}</span></li>
+            </ul>
+            <a class="button button--primary" href="https://store.brainsait.de/products/provider-registry" style="width:100%; justify-content:center; margin-top:12px; display:flex;">{% if is_ar %}ابدأ بالسنوية{% else %}Start annual{% endif %}</a>
+          </div>
+        </div>
       </div>
     </div>
 
