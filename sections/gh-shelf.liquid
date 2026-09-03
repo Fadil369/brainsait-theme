@@ -81,7 +81,7 @@
   <div class="grid" id="gh-shelf-grid">
     {% paginate col.products by 100 %}
       {% for product in col.products %}
-        {% render 'gh-pcard', product: product, qv: true, show_book: show_book %}
+        {% render 'gh-pcard', product: product, qv: true, show_book: show_book, shelf: col_handle %}
       {% endfor %}
     {% endpaginate %}
   </div>

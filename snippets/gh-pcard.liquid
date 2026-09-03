@@ -8,6 +8,7 @@
   @param {product} product - The product to render
   @param {boolean} [qv] - Whether to attach quick-view data attributes
   @param {boolean} [show_book] - Whether to show the booking CTA
+  @param {string} [shelf] - Collection handle context for payment routing
 
   @example
   {% render 'gh-pcard', product: product, qv: true %}
@@ -28,6 +29,92 @@
   endfor
 
   assign booking_url = product.metafields.custom.booking_url
+  assign demo_url = product.metafields.custom.demo_url
+  assign shelf_handle = shelf | default: ''
+  assign learn_monthly_url = shop.url | append: '/products/learn-brainsait-digital-access'
+  assign solution_monthly_url = shop.url | append: '/products/solutions-brainsait-super-partner-program'
+  assign solution_ready_url = shop.url | append: '/collections/solutions-ready'
+  assign primary_url = product.url
+  assign secondary_url = product.url
+  assign primary_label = ''
+  assign secondary_label = ''
+  assign has_secondary = true
+
+  if is_ar
+    assign primary_label = 'اشترِ الآن'
+    assign secondary_label = 'اعرف المزيد'
+  else
+    assign primary_label = 'Buy now'
+    assign secondary_label = 'Learn more'
+  endif
+
+  assign is_learn_product = false
+  if product.tags contains 'LEARN'
+    assign is_learn_product = true
+  endif
+  if product.tags contains 'learn-book'
+    assign is_learn_product = true
+  endif
+
+  assign is_solution_product = false
+  if product.tags contains 'SOLUTIONS'
+    assign is_solution_product = true
+  endif
+  if product.tags contains 'solutions-ready'
+    assign is_solution_product = true
+  endif
+
+  if shelf_handle == 'learn' or shelf_handle == 'brainsait-learn'
+    assign primary_url = learn_monthly_url
+    if is_ar
+      assign primary_label = 'ادفع 182 ر.س/شهر'
+    else
+      assign primary_label = 'Pay 182 SAR/mo'
+    endif
+  elsif shelf_handle == 'solutions'
+    assign primary_url = solution_monthly_url
+    if product.tags contains 'solutions-ready'
+      assign secondary_url = product.url
+    else
+      assign secondary_url = solution_ready_url
+    endif
+    if is_ar
+      assign primary_label = 'شهري 1,999 ر.س'
+      assign secondary_label = 'جاهز 24,000 ر.س'
+    else
+      assign primary_label = 'Monthly 1,999 SAR'
+      assign secondary_label = 'Ready 24,000 SAR'
+    endif
+  elsif is_learn_product
+    assign secondary_url = learn_monthly_url
+    if is_ar
+      assign secondary_label = 'كل الكتب 182 ر.س'
+    else
+      assign secondary_label = 'All books 182 SAR'
+    endif
+  elsif is_solution_product
+    assign primary_url = solution_monthly_url
+    assign secondary_url = solution_ready_url
+    if is_ar
+      assign primary_label = 'شهري 1,999 ر.س'
+      assign secondary_label = 'جاهز 24,000 ر.س'
+    else
+      assign primary_label = 'Monthly 1,999 SAR'
+      assign secondary_label = 'Ready 24,000 SAR'
+    endif
+  elsif show_book and booking_url != blank
+    assign secondary_url = booking_url
+    if is_ar
+      assign primary_label = 'اعرف المزيد'
+      assign secondary_label = 'احجز جلسة'
+    else
+      assign primary_label = 'Learn more'
+      assign secondary_label = 'Book session'
+    endif
+  else
+    assign has_secondary = false
+  endif
+
   assign is_free = false
   if product.price == 0 or product.price == blank
     assign is_free = true
@@ -70,8 +157,8 @@
       data-qv-meta="{{ sub | escape }}"
       data-qv-price="{% if is_free %}{% if is_ar %}مجاني{% else %}Free{% endif %}{% else %}{{ product.price | money }}{% endif %}"
       data-qv-compare="{% if product.compare_at_price > product.price %}{{ product.compare_at_price | money }}{% endif %}"
-      data-qv-url="{{ product.url }}"
-      data-qv-cta="{% if is_ar %}اشترِ الآن{% else %}Buy now{% endif %}"
+      data-qv-url="{{ primary_url }}"
+      data-qv-cta="{{ primary_label | escape }}"
     {% endif %}
   >
     <a class="pcard-cover-link" href="{{ product.url }}" tabindex="-1" aria-hidden="true">
@@ -103,18 +190,21 @@
         <span class="pcard-price">{{ product.price | money }}{% if plan_label != '' %} <span class="pcard-plan">{{ plan_label }}</span>{% endif %}</span>
       {% endif %}
       <div class="pcard-cta">
-        <a class="button primary sm" href="{{ product.url }}">
+        <a class="button primary sm" href="{{ primary_url }}">
           {% if is_free %}
             {% if is_ar %}تحميل{% else %}Get{% endif %}
-          {% elsif show_book and booking_url != blank %}
-            {% if is_ar %}احجز جلسة{% else %}Book a session{% endif %}
           {% else %}
-            {% if is_ar %}اشترِ الآن{% else %}Buy now{% endif %}
+            {{ primary_label }}
           {% endif %}
         </a>
-        {% if show_book and booking_url != blank %}
-          <a class="button secondary sm" href="{{ booking_url }}" target="_blank" rel="noopener">
-            {% if is_ar %}حجز{% else %}Book{% endif %}
+        {% if has_secondary %}
+          <a class="button secondary sm" href="{{ secondary_url }}"{% if secondary_url contains 'http' %} target="_blank" rel="noopener"{% endif %}>
+            {{ secondary_label }}
+          </a>
+        {% endif %}
+        {% if demo_url != blank %}
+          <a class="button secondary sm" href="{{ demo_url }}" target="_blank" rel="noopener">
+            {% if is_ar %}ديمو حي{% else %}Live demo{% endif %}
           </a>
         {% endif %}
         {% if qv %}
@@ -127,8 +217,8 @@
             data-qv-meta="{{ sub | escape }}"
             data-qv-price="{% if is_free %}{% if is_ar %}مجاني{% else %}Free{% endif %}{% else %}{{ product.price | money }}{% endif %}"
             data-qv-compare="{% if product.compare_at_price > product.price %}{{ product.compare_at_price | money }}{% endif %}"
-            data-qv-url="{{ product.url }}"
-            data-qv-cta="{% if is_ar %}اشترِ الآن{% else %}Buy now{% endif %}"
+            data-qv-url="{{ primary_url }}"
+            data-qv-cta="{{ primary_label | escape }}"
           >
             {% if is_ar %}نظرة سريعة{% else %}Quick view{% endif %}
           </button>
