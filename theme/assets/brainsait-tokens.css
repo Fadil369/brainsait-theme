@@ -54,12 +54,12 @@ body { background: var(--bs-obsidian); color: var(--bs-ivory); font-family: var(
 .brainsait-header__action svg, .brainsait-menu-toggle svg { width: 1.2rem; height: 1.2rem; stroke: currentColor; fill: none; }
 .brainsait-cart-count { min-width: 1.15rem; padding: .05rem .3rem; border-radius: 999px; background: var(--bs-champagne-gold); color: var(--bs-obsidian); font-size: .68rem; text-align: center; }
 .brainsait-menu-toggle { display: none; cursor: pointer; padding: .5rem; }
-.brainsait-section { padding-block: clamp(4rem,8vw,7rem); }
+.brainsait-section { padding-block: clamp(3.25rem,6vw,5.5rem); }
 .brainsait-section--surface { background: var(--bs-surface); }
 .brainsait-section--accent { border-block: 1px solid rgba(199,168,107,.28); background: linear-gradient(110deg,var(--bs-graphite),#102824); }
-.brainsait-hero { min-height: min(48rem,80vh); display: grid; align-items: center; border-bottom: 1px solid var(--bs-border); background: radial-gradient(circle at 80% 30%,rgba(28,139,130,.18),transparent 38%),var(--bs-obsidian); }
-.brainsait-hero__inner { padding-block: clamp(5rem,12vw,10rem); }
-.brainsait-hero h1 { max-width: 14ch; margin: .3rem 0 1.25rem; color: var(--bs-ivory); font-family: var(--bs-font-display); font-size: clamp(3rem,8vw,7rem); font-weight: 500; line-height: .95; letter-spacing: -.035em; }
+.brainsait-hero { min-height: min(38rem,72vh); display: grid; align-items: center; border-bottom: 1px solid var(--bs-border); background: radial-gradient(circle at 82% 20%,rgba(199,168,107,.12),transparent 34%),var(--bs-obsidian); }
+.brainsait-hero__inner { padding-block: clamp(4rem,10vw,7rem); }
+.brainsait-hero h1 { max-width: 15ch; margin: .3rem 0 1.25rem; color: var(--bs-ivory); font-family: var(--bs-font-display); font-size: clamp(2.75rem,6.6vw,5.7rem); font-weight: 500; line-height: .98; letter-spacing: -.035em; }
 .brainsait-hero__lede, .brainsait-section__head > p:last-child { max-width: 48rem; color: var(--bs-muted); font-size: var(--bs-text-lg); line-height: 1.6; }
 .brainsait-eyebrow { color: var(--bs-champagne-gold); font-size: var(--bs-text-xs); font-weight: 700; letter-spacing: .11em; text-transform: uppercase; }
 .brainsait-actions { display: flex; flex-wrap: wrap; gap: var(--bs-space-3); margin-top: var(--bs-space-8); }
@@ -69,26 +69,46 @@ body { background: var(--bs-obsidian); color: var(--bs-ivory); font-family: var(
 .brainsait-link { color: var(--bs-champagne-gold); font-weight: 650; text-decoration: none; }
 .brainsait-section__head { max-width: 52rem; margin-bottom: var(--bs-space-12); }
 .brainsait-section__head h2, .brainsait-trust h2 { margin: .3rem 0 1rem; color: var(--bs-ivory); font-family: var(--bs-font-display); font-size: clamp(2.2rem,5vw,4.5rem); font-weight: 500; line-height: 1; }
-.brainsait-pathway-grid, .brainsait-product-grid { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: var(--bs-space-4); }
-.brainsait-pathway-card { min-height: 19rem; padding: var(--bs-space-6); border: 1px solid var(--bs-border); border-radius: var(--bs-radius-md); background: var(--bs-surface); color: var(--bs-ivory); text-decoration: none; }
-.brainsait-pathway-card:hover { border-color: var(--bs-champagne-gold); transform: translateY(-2px); }
+.brainsait-pathway-grid, .brainsait-product-grid { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: var(--bs-space-4); align-items: stretch; }
+.brainsait-pathway-card { min-height: 15rem; padding: var(--bs-space-6); border: 1px solid var(--bs-border); border-radius: var(--bs-radius-md); background: rgba(17,21,26,.78); color: var(--bs-ivory); text-decoration: none; transition: border-color var(--bs-transition), transform var(--bs-transition), background var(--bs-transition); }
+.brainsait-pathway-card:hover { border-color: rgba(199,168,107,.72); transform: translateY(-2px); background: var(--bs-surface); }
 .brainsait-pathway-card > span { color: var(--bs-teal); font-size: var(--bs-text-xs); font-weight: 700; }
-.brainsait-pathway-card h3 { margin: 4rem 0 .75rem; font-family: var(--bs-font-display); font-size: 2rem; }
+.brainsait-pathway-card h3 { margin: 2.5rem 0 .75rem; font-family: var(--bs-font-display); font-size: clamp(1.45rem,2.2vw,1.9rem); }
 .brainsait-pathway-card p { color: var(--bs-muted); line-height: 1.55; }
 .brainsait-pathway-card strong { display: block; margin-top: var(--bs-space-6); color: var(--bs-champagne-gold); font-size: var(--bs-text-sm); }
 .brainsait-section__support { margin-top: var(--bs-space-8); }
-.brainsait-product-card { overflow: hidden; border: 1px solid var(--bs-border); border-radius: var(--bs-radius-md); background: var(--bs-graphite); }
-.brainsait-product-card__media { display: block; aspect-ratio: 3 / 2; overflow: hidden; background: var(--bs-surface-raised); }
-.brainsait-product-card__media img, .brainsait-product-card__placeholder { width: 100%; height: 100%; object-fit: cover; }
-.brainsait-product-card__body { padding: var(--bs-space-6); }
+.brainsait-product-card { display: flex; flex-direction: column; min-height: 100%; overflow: hidden; border: 1px solid var(--bs-border); border-radius: var(--bs-radius-md); background: rgba(23,27,33,.88); box-shadow: none; }
+.brainsait-product-card__media { display: block; aspect-ratio: 4 / 3; overflow: hidden; background: var(--bs-surface-raised); }
+.brainsait-product-card__media img, .brainsait-product-card__placeholder { width: 100%; height: 100%; object-fit: cover; transition: transform var(--bs-transition); }
+.brainsait-product-card:hover .brainsait-product-card__media img { transform: scale(1.025); }
+.brainsait-product-card__body { display: flex; flex: 1; flex-direction: column; padding: var(--bs-space-5, 1.25rem); }
 .brainsait-product-card__family { margin: 0 0 var(--bs-space-2); color: var(--bs-teal); font-size: var(--bs-text-xs); font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
-.brainsait-product-card h3 { min-height: 3rem; margin: 0; font-size: 1.15rem; line-height: 1.35; }
+.brainsait-product-card h3 { min-height: auto; margin: 0; font-size: 1rem; line-height: 1.35; }
 .brainsait-product-card h3 a { color: var(--bs-ivory); text-decoration: none; }
-.brainsait-product-card__outcome { min-height: 4.5rem; color: var(--bs-muted); font-size: var(--bs-text-sm); line-height: 1.55; }
-.brainsait-product-card__commercial { display: flex; justify-content: space-between; align-items: end; gap: var(--bs-space-4); margin-block: var(--bs-space-6); }
+.brainsait-product-card__outcome { display: -webkit-box; min-height: 3.9rem; margin: .7rem 0 0; overflow: hidden; color: var(--bs-muted); font-size: .82rem; line-height: 1.5; -webkit-line-clamp: 3; -webkit-box-orient: vertical; }
+.brainsait-product-card__commercial { display: flex; justify-content: space-between; align-items: end; gap: var(--bs-space-4); margin-top: auto; margin-bottom: var(--bs-space-4); padding-top: var(--bs-space-4); }
 .brainsait-product-card__commercial strong, .brainsait-product-card__commercial span { display: block; }
+.brainsait-product-card__commercial strong { font-size: .95rem; }
 .brainsait-product-card__commercial span { color: var(--bs-muted); font-size: var(--bs-text-xs); }
 .brainsait-product-card__form .brainsait-button, .brainsait-product-card__body > .brainsait-button { width: 100%; }
+.brainsait-product-premium { padding-block: clamp(3rem,6vw,5.5rem); background: var(--bs-obsidian); border-bottom: 1px solid var(--bs-border); }
+.brainsait-product-premium__grid { display: grid; grid-template-columns: minmax(0,.92fr) minmax(0,1.08fr); gap: clamp(2rem,5vw,4.5rem); align-items: center; }
+.brainsait-product-premium__media { overflow: hidden; border: 1px solid var(--bs-border); border-radius: var(--bs-radius-lg); background: var(--bs-surface); aspect-ratio: 4 / 3; }
+.brainsait-product-premium__media img, .brainsait-product-premium__placeholder { width: 100%; height: 100%; object-fit: cover; }
+.brainsait-product-premium__content h1 { max-width: 15ch; margin: .35rem 0 1rem; color: var(--bs-ivory); font-family: var(--bs-font-display); font-size: clamp(2.35rem,5vw,4.8rem); font-weight: 500; line-height: 1; letter-spacing: -.035em; }
+.brainsait-product-premium__lead { max-width: 43rem; color: var(--bs-muted); font-size: clamp(1rem,1.35vw,1.2rem); line-height: 1.65; }
+.brainsait-product-premium__terms { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: var(--bs-space-3); margin-block: var(--bs-space-8); }
+.brainsait-product-premium__terms > div { min-height: 5.8rem; padding: var(--bs-space-4); border: 1px solid var(--bs-border); border-radius: var(--bs-radius-md); background: rgba(247,243,234,.045); }
+.brainsait-product-premium__terms span { display: block; margin-bottom: .45rem; color: var(--bs-muted); font-size: var(--bs-text-xs); text-transform: uppercase; letter-spacing: .08em; }
+.brainsait-product-premium__terms strong { display: block; color: var(--bs-ivory); font-size: .98rem; line-height: 1.35; }
+.brainsait-product-premium__actions { display: flex; flex-wrap: wrap; gap: var(--bs-space-3); align-items: center; }
+.brainsait-product-premium__form { display: contents; }
+.brainsait-product-premium__note { flex-basis: 100%; max-width: 36rem; margin: 0; color: var(--bs-muted); font-size: var(--bs-text-sm); line-height: 1.55; }
+.brainsait-product-premium__included { margin-top: var(--bs-space-8); padding-top: var(--bs-space-6); border-top: 1px solid var(--bs-border); }
+.brainsait-product-premium__included h2 { margin: 0 0 var(--bs-space-3); color: var(--bs-ivory); font-size: 1rem; letter-spacing: .08em; text-transform: uppercase; }
+.brainsait-product-premium__included ul { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: .7rem 1rem; margin: 0; padding: 0; list-style: none; }
+.brainsait-product-premium__included li { position: relative; padding-left: 1.1rem; color: var(--bs-muted); font-size: var(--bs-text-sm); line-height: 1.45; }
+.brainsait-product-premium__included li::before { content: ""; position: absolute; left: 0; top: .58em; width: .38rem; height: .38rem; border-radius: 999px; background: var(--bs-champagne-gold); }
 .brainsait-trust { max-width: 64rem; }
 .brainsait-trust__text { max-width: 50rem; color: var(--bs-muted); font-size: var(--bs-text-lg); line-height: 1.7; }
 .brainsait-product-section { padding-block: clamp(3.5rem,7vw,6rem); }
@@ -123,6 +143,7 @@ body { background: var(--bs-obsidian); color: var(--bs-ivory); font-family: var(
   .brainsait-header__nav[data-open="true"] { position: absolute; inset: 100% 0 auto; display: grid; justify-content: stretch; padding: var(--bs-space-4); border-bottom: 1px solid var(--bs-border); background: var(--bs-obsidian); }
   .brainsait-header__nav[data-open="true"] a { padding: .85rem 1rem; }
   .brainsait-pathway-grid, .brainsait-product-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .brainsait-product-premium__grid { grid-template-columns: 1fr; }
 }
 @media (max-width: 48rem) {
   .brainsait-header__action-label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); }
@@ -130,6 +151,8 @@ body { background: var(--bs-obsidian); color: var(--bs-ivory); font-family: var(
   .brainsait-footer__brand { grid-column: 1 / -1; }
   .brainsait-pathway-grid, .brainsait-product-grid { grid-template-columns: 1fr; }
   .brainsait-detail-grid { grid-template-columns: 1fr; }
+  .brainsait-product-premium__terms, .brainsait-product-premium__included ul { grid-template-columns: 1fr; }
+  .brainsait-product-premium__actions .brainsait-button { width: 100%; }
 }
 @media (max-width: 32rem) { .brainsait-footer__grid { grid-template-columns: 1fr; } .brainsait-footer__brand { grid-column: auto; } }
 @media (prefers-reduced-motion: reduce) {

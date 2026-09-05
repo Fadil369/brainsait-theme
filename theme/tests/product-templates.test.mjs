@@ -29,6 +29,29 @@ test('product sections use canonical metafields with safe empty states', async (
   assert.match(content, /!= blank/);
 });
 
+test('relaunch product templates use the clean premium product section, not the inherited legacy section', async () => {
+  for (const name of ['product', 'product.learn', 'product.membership', 'product.solution-ready', 'product.oid-registry']) {
+    const template = parse(await read(`templates/${name}.json`));
+    assert.equal(template.sections.main.type, 'brainsait-product-premium', `${name} must use the clean premium product section`);
+    assert.notEqual(template.sections.main.type, 'bs-product-detail', `${name} must not use inherited legacy product detail`);
+  }
+});
+
+test('premium product and card surfaces stay compact and restrained', async () => {
+  const premium = await read('sections/brainsait-product-premium.liquid');
+  const card = await read('snippets/brainsait-product-card.liquid');
+  const css = await read('assets/brainsait-tokens.css');
+
+  assert.match(premium, /brainsait-product-premium__grid/);
+  assert.match(premium, /Ask before buying/);
+  assert.match(premium, /Membership checkout is being validated/);
+  assert.doesNotMatch(premium, /bs-visible-ar|bs-lang-toggle|ب/u);
+  assert.match(card, /truncate:\s*112/);
+  assert.match(css, /-webkit-line-clamp:\s*3/);
+  assert.match(css, /brainsait-product-premium__terms/);
+  assert.doesNotMatch(css, /box-shadow:\s*var\(--bs-shadow-gold\)/);
+});
+
 test('billing makes recurring and enterprise behavior explicit', async () => {
   const billing = await read('sections/product-billing.liquid');
   assert.match(billing, /30-day billing cycle/i);

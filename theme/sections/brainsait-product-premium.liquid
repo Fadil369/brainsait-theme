@@ -1,0 +1,124 @@
+{% liquid
+  assign variant = product.selected_or_first_available_variant
+  assign family = product.metafields.brainsait.family.value | default: product.type
+  assign purchase_mode = product.metafields.brainsait.purchase_mode.value | default: 'direct'
+  assign billing_label = product.metafields.brainsait.billing_label.value
+  assign outcome = product.metafields.brainsait.outcome.value | default: product.description | strip_html | truncate: 220
+  assign inclusions = product.metafields.brainsait.inclusions.value
+  assign delivery = product.metafields.brainsait.delivery.value
+%}
+
+{% render 'brainsait-agent-commerce', product: product %}
+
+<section
+  class="brainsait-product-premium"
+  data-agent-commerce-detail
+  data-product-handle="{{ product.handle | escape }}"
+  data-product-family="{{ family | escape }}"
+  data-purchase-mode="{{ purchase_mode | escape }}"
+>
+  <div class="bs-container brainsait-product-premium__grid">
+    <div class="brainsait-product-premium__media" data-reveal>
+      {% if product.featured_image %}
+        {{
+          product.featured_image
+          | image_url: width: 1400
+          | image_tag:
+            widths: '520, 760, 980, 1200, 1400',
+            loading: 'eager',
+            alt: product.featured_image.alt | default: product.title
+        }}
+      {% else %}
+        {{ 'product-1' | placeholder_svg_tag: 'brainsait-product-premium__placeholder' }}
+      {% endif %}
+    </div>
+
+    <div class="brainsait-product-premium__content" data-reveal>
+      {% if family != blank %}
+        <p class="brainsait-eyebrow">{{ family }}</p>
+      {% endif %}
+
+      <h1>{{ product.title }}</h1>
+      <p class="brainsait-product-premium__lead">{{ outcome }}</p>
+
+      <div class="brainsait-product-premium__terms" aria-label="Commercial terms">
+        <div>
+          <span>Price</span>
+          <strong>{{ variant.price | money_with_currency }}</strong>
+        </div>
+        {% if billing_label != blank %}
+          <div>
+            <span>Billing</span>
+            <strong>{{ billing_label }}</strong>
+          </div>
+        {% endif %}
+        <div>
+          <span>Delivery</span>
+          <strong>
+            {% if delivery != blank %}
+              {{ delivery }}
+            {% elsif purchase_mode == 'consultation' %}
+              Scoped onboarding
+            {% else %}
+              Digital access
+            {% endif %}
+          </strong>
+        </div>
+      </div>
+
+      <div class="brainsait-product-premium__actions">
+        {% if purchase_mode == 'consultation' %}
+          <a class="brainsait-button" href="/pages/contact?offer={{ product.handle | url_encode }}">Request consultation</a>
+        {% elsif purchase_mode == 'recurring' %}
+          <button
+            class="brainsait-button"
+            type="button"
+            data-mf-pay
+            data-product-id="{{ product.id }}"
+            data-variant-id="{{ variant.id }}"
+            {% unless settings.mf_pay_enabled %}disabled aria-disabled="true"{% endunless %}
+          >
+            Start membership
+          </button>
+          {% unless settings.mf_pay_enabled %}
+            <p class="brainsait-product-premium__note">Membership checkout is being validated. Contact BrainSAIT to activate access.</p>
+          {% endunless %}
+        {% elsif product.available %}
+          {% form 'product', product, class: 'brainsait-product-premium__form' %}
+            <input type="hidden" name="id" value="{{ variant.id }}">
+            <button class="brainsait-button" type="submit">Add to cart</button>
+          {% endform %}
+        {% else %}
+          <span class="brainsait-button brainsait-button--disabled" aria-disabled="true">Unavailable</span>
+        {% endif %}
+        <a class="brainsait-button brainsait-button--secondary" href="/pages/contact?offer={{ product.handle | url_encode }}">Ask before buying</a>
+      </div>
+
+      {% if inclusions != blank %}
+        <div class="brainsait-product-premium__included">
+          <h2>Included</h2>
+          <ul>
+            {% for inclusion in inclusions limit: 5 %}
+              <li>{{ inclusion }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "BrainSAIT product premium",
+  "enabled_on": {
+    "templates": ["product"]
+  },
+  "settings": [],
+  "presets": [
+    {
+      "name": "BrainSAIT product premium"
+    }
+  ]
+}
+{% endschema %}

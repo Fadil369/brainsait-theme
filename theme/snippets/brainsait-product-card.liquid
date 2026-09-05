@@ -1,5 +1,5 @@
 {% liquid
-  assign outcome = product.metafields.brainsait.outcome.value | default: product.description | strip_html | truncate: 128
+  assign outcome = product.metafields.brainsait.outcome.value | default: product.description | strip_html | truncate: 112
   assign billing_label = product.metafields.brainsait.billing_label.value
   assign purchase_mode = product.metafields.brainsait.purchase_mode.value | default: 'direct'
   assign family = product.metafields.brainsait.family.value | default: product.type

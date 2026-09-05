@@ -10,7 +10,7 @@
 {
   "sections": {
     "main": {
-      "type": "bs-product-detail",
+      "type": "brainsait-product-premium",
       "settings": {}
     },
     "related-products": {

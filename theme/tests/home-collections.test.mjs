@@ -32,7 +32,7 @@ test('standardized product card exposes image, outcome, billing, price, and pred
   const css = await read('assets/brainsait-tokens.css');
   assert.match(card, /image_url:\s*width:/);
   assert.match(card, /widths:/);
-  assert.match(css, /brainsait-product-card__media[^}]*aspect-ratio:\s*3\s*\/\s*2/s);
+  assert.match(css, /brainsait-product-card__media[^}]*aspect-ratio:\s*4\s*\/\s*3/s);
   assert.match(card, /product\.metafields\.brainsait\.outcome/);
   assert.match(card, /product\.metafields\.brainsait\.billing_label/);
   assert.match(card, /money_with_currency/);
