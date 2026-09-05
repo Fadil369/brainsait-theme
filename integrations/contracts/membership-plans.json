@@ -1,0 +1,51 @@
+{
+  "version": "2026-09-05",
+  "currency": "SAR",
+  "source": "BrainSAIT Shopify relaunch approved catalog",
+  "plans": {
+    "LEARN-MONTHLY": {
+      "shopifySku": "BRN-LEARN-SUB-M",
+      "family": "LEARN",
+      "amount": 182,
+      "currency": "SAR",
+      "interval": "monthly",
+      "periodDays": 30,
+      "entitlementType": "LEARN",
+      "provisioning": [
+        "Frame.io Learn library",
+        "PDF streaming and downloads",
+        "Monthly entitlement renewal"
+      ]
+    },
+    "BUILD-MONTHLY": {
+      "shopifySku": "BRN-BUILD-SUB-M",
+      "family": "BUILD",
+      "amount": 499,
+      "currency": "SAR",
+      "interval": "monthly",
+      "periodDays": 30,
+      "entitlementType": "BUILD",
+      "provisioning": [
+        "Learn library access",
+        "Notion Founder OS",
+        "Telegram Forge bot",
+        "Monthly mentorship check-in"
+      ]
+    },
+    "SOLUTIONS-MONTHLY": {
+      "shopifySku": "BRN-SOL-SUB-M",
+      "family": "SOLUTIONS",
+      "amount": 1999,
+      "currency": "SAR",
+      "interval": "monthly",
+      "periodDays": 30,
+      "entitlementType": "SOLUTIONS_MONTHLY",
+      "provisioning": [
+        "Learn and Build access",
+        "Lark super-partner workspace",
+        "Code platform subdomain",
+        "Founder journey mentoring"
+      ]
+    }
+  }
+}

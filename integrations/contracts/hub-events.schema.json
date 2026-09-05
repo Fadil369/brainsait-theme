@@ -1,0 +1,183 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://store.brainsait.de/schemas/hub-events.schema.json",
+  "title": "BrainSAIT Shopify Membership Hub Event",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "eventId",
+    "eventType",
+    "occurredAt",
+    "source",
+    "shopify",
+    "membership",
+    "payment",
+    "subscription",
+    "status"
+  ],
+  "properties": {
+    "eventId": {
+      "type": "string",
+      "minLength": 8,
+      "maxLength": 160
+    },
+    "eventType": {
+      "enum": [
+        "payment.succeeded",
+        "payment.failed",
+        "subscription.renewed",
+        "subscription.cancelled",
+        "subscription.expired"
+      ]
+    },
+    "occurredAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "source": {
+      "enum": [
+        "myfatoorah",
+        "shopify",
+        "hub-test"
+      ]
+    },
+    "shopify": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "shopDomain"
+      ],
+      "properties": {
+        "shopDomain": {
+          "type": "string",
+          "pattern": "^[a-z0-9][a-z0-9-]*\\.myshopify\\.com$"
+        },
+        "customerGid": {
+          "type": "string",
+          "pattern": "^gid://shopify/Customer/[0-9]+$"
+        },
+        "orderGid": {
+          "type": "string",
+          "pattern": "^gid://shopify/Order/[0-9]+$"
+        },
+        "orderName": {
+          "type": "string",
+          "maxLength": 80
+        }
+      }
+    },
+    "membership": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "planId",
+        "sku"
+      ],
+      "properties": {
+        "planId": {
+          "enum": [
+            "LEARN-MONTHLY",
+            "BUILD-MONTHLY",
+            "SOLUTIONS-MONTHLY"
+          ]
+        },
+        "sku": {
+          "enum": [
+            "BRN-LEARN-SUB-M",
+            "BRN-BUILD-SUB-M",
+            "BRN-SOL-SUB-M"
+          ]
+        }
+      }
+    },
+    "payment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "amount",
+        "currency"
+      ],
+      "properties": {
+        "amount": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "currency": {
+          "const": "SAR"
+        },
+        "invoiceId": {
+          "type": "string",
+          "maxLength": 120
+        },
+        "method": {
+          "type": "string",
+          "maxLength": 80
+        }
+      }
+    },
+    "subscription": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "reference",
+        "interval"
+      ],
+      "properties": {
+        "reference": {
+          "type": "string",
+          "minLength": 8,
+          "maxLength": 160
+        },
+        "interval": {
+          "const": "monthly"
+        },
+        "periodStart": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "periodEnd": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    },
+    "status": {
+      "enum": [
+        "pending",
+        "active",
+        "failed",
+        "cancelled",
+        "expired"
+      ]
+    }
+  },
+  "not": {
+    "anyOf": [
+      {
+        "required": [
+          "cardNumber"
+        ]
+      },
+      {
+        "required": [
+          "cvv"
+        ]
+      },
+      {
+        "required": [
+          "token"
+        ]
+      },
+      {
+        "required": [
+          "secret"
+        ]
+      },
+      {
+        "required": [
+          "rawCardData"
+        ]
+      }
+    ]
+  }
+}
