@@ -1,0 +1,75 @@
+query BaselineProducts {
+  products(first: 250) {
+    nodes {
+      id
+      title
+      descriptionHtml
+      handle
+      status
+      productType
+      vendor
+      tags
+      templateSuffix
+      createdAt
+      updatedAt
+      publishedAt
+      totalInventory
+      seo {
+        title
+        description
+      }
+      options {
+        name
+        values
+      }
+      variants(first: 100) {
+        nodes {
+          id
+          title
+          sku
+          price
+          compareAtPrice
+          availableForSale
+          inventoryQuantity
+          selectedOptions {
+            name
+            value
+          }
+        }
+      }
+      media(first: 100) {
+        nodes {
+          ... on MediaImage {
+            id
+            image {
+              url
+              altText
+              width
+              height
+            }
+          }
+        }
+      }
+      metafields(first: 100) {
+        nodes {
+          id
+          namespace
+          key
+          type
+          value
+        }
+      }
+      collections(first: 50) {
+        nodes {
+          id
+          handle
+          title
+        }
+      }
+    }
+    pageInfo {
+      hasNextPage
+      endCursor
+    }
+  }
+}

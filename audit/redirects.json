@@ -1,0 +1,38 @@
+{
+  "data": {
+    "urlRedirects": {
+      "nodes": [
+        {
+          "id": "gid://shopify/UrlRedirect/391170031699",
+          "path": "/products/digital-product",
+          "target": "/products/digital-healthcare-masterclass"
+        },
+        {
+          "id": "gid://shopify/UrlRedirect/391605583955",
+          "path": "/products/one-ecosystem",
+          "target": "/products/one-ecosystem-limitless-intelligence"
+        },
+        {
+          "id": "gid://shopify/UrlRedirect/392358920275",
+          "path": "/blogs",
+          "target": "/pages/blog"
+        }
+      ],
+      "pageInfo": {
+        "hasNextPage": false,
+        "endCursor": "eyJsYXN0X2lkIjozOTIzNTg5MjAyNzUsImxhc3RfdmFsdWUiOiIzOTIzNTg5MjAyNzUifQ=="
+      }
+    }
+  },
+  "extensions": {
+    "cost": {
+      "requestedQueryCost": 13,
+      "actualQueryCost": 2,
+      "throttleStatus": {
+        "maximumAvailable": 2000.0,
+        "currentlyAvailable": 1998,
+        "restoreRate": 100.0
+      }
+    }
+  }
+}

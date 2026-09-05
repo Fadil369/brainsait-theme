@@ -1,0 +1,1539 @@
+{
+  "totals": {
+    "files": 36,
+    "errors": 0,
+    "warnings": 138
+  },
+  "checks": [
+    {
+      "path": "/home/fadil369/.worktrees/brainsait-shopify-relaunch/theme/snippets/fonts.liquid",
+      "offenses": [
+        {
+          "check": "RemoteAsset",
+          "severity": "warning",
+          "start_row": 1,
+          "start_column": 6,
+          "end_row": 1,
+          "end_column": 122,
+          "message": "Asset should be served by the Shopify CDN for better performance."
+        }
+      ],
+      "errorCount": 0,
+      "warningCount": 1,
+      "infoCount": 0
+    },
+    {
+      "path": "/home/fadil369/.worktrees/brainsait-shopify-relaunch/theme/snippets/pagefly-main-js.liquid",
+      "offenses": [
+        {
+          "check": "RemoteAsset",
+          "severity": "warning",
+          "start_row": 4,
+          "start_column": 16,
+          "end_row": 4,
+          "end_column": 109,
+          "message": "Asset should be served by the Shopify CDN for better performance."
+        },
+        {
+          "check": "OrphanedSnippet",
+          "severity": "warning",
+          "start_row": 0,
+          "start_column": 0,
+          "end_row": 1,
+          "end_column": 0,
+          "message": "This snippet is not referenced by any other files"
+        }
+      ],
+      "errorCount": 0,
+      "warningCount": 2,
+      "infoCount": 0
+    },
+    {
+      "path": "/home/fadil369/.worktrees/brainsait-shopify-relaunch/theme/layout/theme.liquid",
+      "offenses": [
+        {
+          "check": "RemoteAsset",
+          "severity": "warning",
+          "start_row": 24,
+          "start_column": 4,
+          "end_row": 24,
+          "end_column": 79,
+          "message": "Asset should be served by the Shopify CDN for better performance."
+        },
+        {
+          "check": "RemoteAsset",
+          "severity": "warning",
+          "start_row": 29,
+          "start_column": 18,
+          "end_row": 29,
+          "end_column": 74,
+          "message": "Asset should be served by the Shopify CDN for better performance."
+        },
+        {
+          "check": "RemoteAsset",
+          "severity": "warning",
+          "start_row": 80,
+          "start_column": 27,
+          "end_row": 80,
+          "end_column": 87,
+          "message": "Asset should be served by the Shopify CDN for better performance."
+        },
+        {
+          "check": "RemoteAsset",
+          "severity": "warning",
+          "start_row": 81,
+          "start_column": 20,
+          "end_row": 81,
+          "end_column": 68,
+          "message": "Asset should be served by the Shopify CDN for better performance."
+        },
+        {
+          "check": "RemoteAsset",
+          "severity": "warning",
+          "start_row": 82,
+          "start_column": 27,
+          "end_row": 82,
+          "end_column": 107,
+          "message": "Asset should be served by the Shopify CDN for better performance."
+        },
+        {
+          "check": "RemoteAsset",
+          "severity": "warning",
+          "start_row": 106,
+          "start_column": 14,
+          "end_row": 106,
+          "end_column": 70,
+          "message": "Asset should be served by the Shopify CDN for better performance."
+        },
+        {
+          "check": "RemoteAsset",
+          "severity": "warning",
+          "start_row": 107,
+          "start_column": 14,
+          "end_row": 107,
+          "end_column": 70,
+          "message": "Asset should be served by the Shopify CDN for better performance."
+        },
+        {
+          "check": "RemoteAsset",
+          "severity": "warning",
+          "start_row": 115,
+          "start_column": 25,
+          "end_row": 115,
+          "end_column": 60,
+          "message": "Asset should be served by the Shopify CDN for better performance."
+        },
+        {
+          "check": "RemoteAsset",
+          "severity": "warning",
+          "start_row": 116,
+          "start_column": 25,
+          "end_row": 116,
+          "end_column": 57,
+          "message": "Asset should be served by the Shopify CDN for better performance."
+        },
+        {
+          "check": "RemoteAsset",
+          "severity": "warning",
+          "start_row": 117,
+          "start_column": 8,
+          "end_row": 117,
+          "end_column": 204,
+          "message": "Asset should be served by the Shopify CDN for better performance."
+        }
+      ],
+      "errorCount": 0,
+      "warningCount": 10,
+      "infoCount": 0
+    },
+    {
+      "path": "/home/fadil369/.worktrees/brainsait-shopify-relaunch/theme/sections/brainsait-header.liquid",
+      "offenses": [
+        {
+          "check": "HardcodedRoutes",
+          "severity": "warning",
+          "start_row": 334,
+          "start_column": 13,
+          "end_row": 334,
+          "end_column": 14,
+          "message": "Use routes object {{ routes.root_url }} instead of hardcoding /"
+        },
+        {
+          "check": "HardcodedRoutes",
+          "severity": "warning",
+          "start_row": 341,
+          "start_column": 15,
+          "end_row": 341,
+          "end_column": 27,
+          "message": "Use routes object {{ routes.collections_url }} instead of hardcoding /collections"
+        },
+        {
+          "check": "HardcodedRoutes",
+          "severity": "warning",
+          "start_row": 344,
+          "start_column": 15,
+          "end_row": 344,
+          "end_column": 27,
+          "message": "Use routes object {{ routes.collections_url }} instead of hardcoding /collections"
+        },
+        {
+          "check": "HardcodedRoutes",
+          "severity": "warning",
+          "start_row": 347,
+          "start_column": 15,
+          "end_row": 347,
+          "end_column": 27,
+          "message": "Use routes object {{ routes.collections_url }} instead of hardcoding /collections"
+        }
+      ],
+      "errorCount": 0,
+      "warningCount": 4,
+      "infoCount": 0
+    },
+    {
+      "path": "/home/fadil369/.worktrees/brainsait-shopify-relaunch/theme/snippets/button-custom-styles.liquid",
+      "offenses": [
+        {
+          "check": "OrphanedSnippet",
+          "severity": "warning",
+          "start_row": 0,
+          "start_column": 0,
+          "end_row": 0,
+          "end_column": 1,
+          "message": "This snippet is not referenced by any other files"
+        }
+      ],
+      "errorCount": 0,
+      "warningCount": 1,
+      "infoCount": 0
+    },
+    {
+      "path": "/home/fadil369/.worktrees/brainsait-shopify-relaunch/theme/snippets/button.liquid",
+      "offenses": [
+        {
+          "check": "OrphanedSnippet",
+          "severity": "warning",
+          "start_row": 0,
+          "start_column": 0,
+          "end_row": 0,
+          "end_column": 1,
+          "message": "This snippet is not referenced by any other files"
+        }
+      ],
+      "errorCount": 0,
+      "warningCount": 1,
+      "infoCount": 0
+    },
+    {
+      "path": "/home/fadil369/.worktrees/brainsait-shopify-relaunch/theme/snippets/gift-card-recipient-button-custom-styles.liquid",
+      "offenses": [
+        {
+          "check": "OrphanedSnippet",
+          "severity": "warning",
+          "start_row": 0,
+          "start_column": 0,
+          "end_row": 0,
+          "end_column": 1,
+          "message": "This snippet is not referenced by any other files"
+        }
+      ],
+      "errorCount": 0,
+      "warningCount": 1,
+      "infoCount": 0
+    },
+    {
+      "path": "/home/fadil369/.worktrees/brainsait-shopify-relaunch/theme/snippets/gift-card-recipient-form.liquid",
+      "offenses": [
+        {
+          "check": "OrphanedSnippet",
+          "severity": "warning",
+          "start_row": 0,
+          "start_column": 0,
+          "end_row": 0,
+          "end_column": 1,
+          "message": "This snippet is not referenced by any other files"
+        },
+        {
+          "check": "ValidScopedCSSClass",
+          "severity": "warning",
+          "start_row": 16,
+          "start_column": 9,
+          "end_row": 16,
+          "end_column": 23,
+          "message": "CSS class 'recipient-form' may be defined outside the scope of this file."
+        },
+        {
+          "check": "ValidScopedCSSClass",
+          "severity": "warning",
+          "start_row": 31,
+          "start_column": 11,
+          "end_row": 31,
+          "end_column": 32,
+          "message": "CSS class 'gift-card-form-option' may be defined outside the scope of this file."
+        },
+        {
+          "check": "ValidScopedCSSClass",
+          "severity": "warning",
+          "start_row": 33,
+          "start_column": 19,
+          "end_row": 33,
+          "end_column": 42,
+          "message": "CSS class 'recipient-form__send-to' may be defined outside the scope of this file."
+        },
+        {
+          "check": "ValidScopedCSSClass",
+          "severity": "warning",
+          "start_row": 36,
+          "start_column": 18,
+          "end_row": 36,
+          "end_column": 53,
+          "message": "CSS class 'gift-card-form-option__button-label' may be defined outside the scope of this file."
+        },
+        {
+          "check": "ValidScopedCSSClass",
+          "severity": "warning",
+          "start_row": 49,
+          "start_column": 18,
+          "end_row": 49,
+          "end_column": 53,
+          "message": "CSS class 'gift-card-form-option__button-label' may be defined outside the scope of this file."
+        },
+        {
+          "check": "ValidScopedCSSClass",
+          "severity": "warning",
+          "start_row": 64,
+          "start_column": 11,
+          "end_row": 64,
+          "end_column": 27,
+          "message": "CSS class 'recipient-fields' may be defined outside the scope of this file."
+        },
+        {
+          "check": "ValidScopedCSSClass",
+          "severity": "warning",
+          "start_row": 71,
+          "start_column": 17,
+          "end_row": 71,
+          "end_column": 40,
+          "message": "CSS class 'recipient-fields__input' may be defined outside the scope of this file."
+        },
+        {
+          "check": "ValidScopedCSSClass",
+          "severity": "warning",
+          "start_row": 105,
+          "start_column": 17,
+          "end_row": 105,
+          "end_column": 40,
+          "message": "CSS class 'recipient-fields__input' may be defined outside the scope of this file."
+        },
+        {
+          "check": "ValidScopedCSSClass",
+          "severity": "warning",
+          "start_row": 145,
+          "start_column": 17,
+          "end_row": 145,
+          "end_column": 40,
+          "message": "CSS class 'recipient-fields__input' may be defined outside the scope of this file."
+        },
+        {
+          "check": "ValidScopedCSSClass",
+          "severity": "warning",
+          "start_row": 145,
+          "start_column": 41,
+          "end_row": 145,
+          "end_column": 67,
+          "message": "CSS class 'recipient-fields__textarea' may be defined outside the scope of this file."
+        },
+        {
+          "check": "ValidScopedCSSClass",
+          "severity": "warning",
+          "start_row": 158,
+          "start_column": 17,
+          "end_row": 158,
+          "end_column": 43,
+          "message": "CSS class 'recipient-form-field-label' may be defined outside the scope of this file."
+        },
+        {
+          "check": "ValidScopedCSSClass",
+          "severity": "warning",
+          "start_row": 184,
+          "start_column": 24,
+          "end_row": 184,
+          "end_column": 38,
+          "message": "CSS class 'field--send-on' may be defined outside the scope of this file."
+        },
+        {
+          "check": "ValidScopedCSSClass",
+          "severity": "warning",
+          "start_row": 190,
+          "start_column": 17,
+          "end_row": 190,
+          "end_column": 40,
+          "message": "CSS class 'recipient-fields__input' may be defined outside the scope of this file."
+        }
+      ],
+      "errorCount": 0,
+      "warningCount": 14,
+      "infoCount": 0
+    },
+    {
+      "path": "/home/fadil369/.worktrees/brainsait-shopify-relaunch/theme/snippets/header-drawer.liquid",
+      "offenses": [
+        {
+          "check": "OrphanedSnippet",
+          "severity": "warning",
+          "start_row": 0,
+          "start_column": 0,
+          "end_row": 0,
+          "end_column": 1,
+          "message": "This snippet is not referenced by any other files"
+        },
+        {
+          "check": "ValidScopedCSSClass",
+          "severity": "warning",
+          "start_row": 137,
+          "start_column": 49,
+          "end_row": 137,
+          "end_column": 58,
+          "message": "CSS class 'icon-plus' may be defined outside the scope of this file."
+        },
+        {
+          "check": "ValidScopedCSSClass",
+          "severity": "warning",
+          "start_row": 399,
+          "start_column": 65,
+          "end_row": 399,
+          "end_column": 74,
+          "message": "CSS class 'icon-plus' may be defined outside the scope of this file."
+        }
+      ],
+      "errorCount": 0,
+      "warningCount": 3,
+      "infoCount": 0
+    },
+    {
+      "path": "/home/fadil369/.worktrees/brainsait-shopify-relaunch/theme/snippets/link-featured-image.liquid",
+      "offenses": [
+        {
+          "check": "OrphanedSnippet",
+          "severity": "warning",
+          "start_row": 0,
+          "start_column": 0,
+          "end_row": 0,
+          "end_column": 1,
+          "message": "This snippet is not referenced by any other files"
+        }
+      ],
+      "errorCount": 0,
+      "warningCount": 1,
+      "infoCount": 0
+    },
+    {
+      "path": "/home/fadil369/.worktrees/brainsait-shopify-relaunch/theme/snippets/mega-menu-list.liquid",
+      "offenses": [
+        {
+          "check": "OrphanedSnippet",
+          "severity": "warning",
+          "start_row": 0,
+          "start_column": 0,
+          "end_row": 0,
+          "end_column": 1,
+          "message": "This snippet is not referenced by any other files"
+        },
+        {
+          "check": "ValidScopedCSSClass",
+          "severity": "warning",
+          "start_row": 75,
+          "start_column": 9,
+          "end_row": 75,
+          "end_column": 24,
+          "message": "CSS class 'mega-menu__list' may be defined outside the scope of this file."
+        }
+      ],
+      "errorCount": 0,
+      "warningCount": 2,
+      "infoCount": 0
+    },
+    {
+      "path": "/home/fadil369/.worktrees/brainsait-shopify-relaunch/theme/snippets/menu-font-styles.liquid",
+      "offenses": [
+        {
+          "check": "OrphanedSnippet",
+          "severity": "warning",
+          "start_row": 0,
+          "start_column": 0,
+          "end_row": 0,
+          "end_column": 1,
+          "message": "This snippet is not referenced by any other files"
+        }
+      ],
+      "errorCount": 0,
+      "warningCount": 1,
+      "infoCount": 0
+    },
+    {
+      "path": "/home/fadil369/.worktrees/brainsait-shopify-relaunch/theme/snippets/resolve-custom-hover.liquid",
+      "offenses": [
+        {
+          "check": "OrphanedSnippet",
+          "severity": "warning",
+          "start_row": 0,
+          "start_column": 0,
+          "end_row": 0,
+          "end_column": 1,
+          "message": "This snippet is not referenced by any other files"
+        }
+      ],
+      "errorCount": 0,
+      "warningCount": 1,
+      "infoCount": 0
+    },
+    {
+      "path": "/home/fadil369/.worktrees/brainsait-shopify-relaunch/theme/snippets/submenu-font-styles.liquid",
+      "offenses": [
+        {
+          "check": "OrphanedSnippet",
+          "severity": "warning",
+          "start_row": 0,
+          "start_column": 0,
+          "end_row": 0,
+          "end_column": 1,
+          "message": "This snippet is not referenced by any other files"
+        }
+      ],
+      "errorCount": 0,
+      "warningCount": 1,
+      "infoCount": 0
+    },
+    {
+      "path": "/home/fadil369/.worktrees/brainsait-shopify-relaunch/theme/snippets/util-mega-menu-img-sizes-attr.liquid",
+      "offenses": [
+        {
+          "check": "OrphanedSnippet",
+          "severity": "warning",
+          "start_row": 0,
+          "start_column": 0,
+          "end_row": 0,
+          "end_column": 1,
+          "message": "This snippet is not referenced by any other files"
+        }
+      ],
+      "errorCount": 0,
+      "warningCount": 1,
+      "infoCount": 0
+    },
+    {
+      "path": "/home/fadil369/.worktrees/brainsait-shopify-relaunch/theme/snippets/variant-button-custom-styles.liquid",
+      "offenses": [
+        {
+          "check": "OrphanedSnippet",
+          "severity": "warning",
+          "start_row": 0,
+          "start_column": 0,
+          "end_row": 0,
+          "end_column": 1,
+          "message": "This snippet is not referenced by any other files"
+        }
+      ],
+      "errorCount": 0,
+      "warningCount": 1,
+      "infoCount": 0
+    },
+    {
+      "path": "/home/fadil369/.worktrees/brainsait-shopify-relaunch/theme/snippets/variant-main-picker.liquid",
+      "offenses": [
+        {
+          "check": "OrphanedSnippet",
+          "severity": "warning",
+          "start_row": 0,
+          "start_column": 0,
+          "end_row": 0,
+          "end_column": 1,
+          "message": "This snippet is not referenced by any other files"
+        },
+        {
+          "check": "ValidScopedCSSClass",
+          "severity": "warning",
+          "start_row": 31,
+          "start_column": 11,
+          "end_row": 31,
+          "end_column": 25,
+          "message": "CSS class 'variant-picker' may be defined outside the scope of this file."
+        },
+        {
+          "check": "ValidScopedCSSClass",
+          "severity": "warning",
+          "start_row": 54,
+          "start_column": 17,
+          "end_row": 54,
+          "end_column": 37,
+          "message": "CSS class 'variant-picker__form' may be defined outside the scope of this file."
+        },
+        {
+          "check": "ValidScopedCSSClass",
+          "severity": "warning",
+          "start_row": 77,
+          "start_column": 19,
+          "end_row": 77,
+          "end_column": 33,
+          "message": "CSS class 'variant-option' may be defined outside the scope of this file."
+        },
+        {
+          "check": "ValidScopedCSSClass",
+          "severity": "warning",
+          "start_row": 82,
+          "start_column": 21,
+          "end_row": 82,
+          "end_column": 49,
+          "message": "CSS class 'variant-option__swatch-value' may be defined outside the scope of this file."
+        },
+        {
+          "check": "ValidScopedCSSClass",
+          "severity": "warning",
+          "start_row": 90,
+          "start_column": 19,
+          "end_row": 90,
+          "end_column": 33,
+          "message": "CSS class 'variant-option' may be defined outside the scope of this file."
+        },
+        {
+          "check": "ValidScopedCSSClass",
+          "severity": "warning",
+          "start_row": 98,
+          "start_column": 29,
+          "end_row": 98,
+          "end_column": 57,
+          "message": "CSS class 'variant-option__swatch-value' may be defined outside the scope of this file."
+        },
+        {
+          "check": "ValidScopedCSSClass",
+          "severity": "warning",
+          "start_row": 153,
+          "start_column": 29,
+          "end_row": 153,
+          "end_column": 63,
+          "message": "CSS class 'variant-option__button-label__pill' may be defined outside the scope of this file."
+        },
+        {
+          "check": "ValidScopedCSSClass",
+          "severity": "warning",
+          "start_row": 158,
+          "start_column": 27,
+          "end_row": 158,
+          "end_column": 61,
+          "message": "CSS class 'variant-option__button-label__text' may be defined outside the scope of this file."
+        },
+        {
+          "check": "ValidScopedCSSClass",
+          "severity": "warning",
+          "start_row": 191,
+          "start_column": 22,
+          "end_row": 191,
+          "end_column": 36,
+          "message": "CSS class 'variant-option' may be defined outside the scope of this file."
+        },
+        {
+          "check": "ValidScopedCSSClass",
+          "severity": "warning",
+          "start_row": 191,
+          "start_column": 37,
+          "end_row": 191,
+          "end_column": 62,
+          "message": "CSS class 'variant-option--dropdowns' may be defined outside the scope of this file."
+        },
+        {
+          "check": "ValidScopedCSSClass",
+          "severity": "warning",
+          "start_row": 194,
+          "start_column": 21,
+          "end_row": 194,
+          "end_column": 51,
+          "message": "CSS class 'variant-option__select-wrapper' may be defined outside the scope of this file."
+        },
+        {
+          "check": "ValidScopedCSSClass",
+          "severity": "warning",
+          "start_row": 204,
+          "start_column": 23,
+          "end_row": 204,
+          "end_column": 45,
+          "message": "CSS class 'variant-option__select' may be defined outside the scope of this file."
+        },
+        {
+          "check": "ValidScopedCSSClass",
+          "severity": "warning",
+          "start_row": 229,
+          "start_column": 23,
+          "end_row": 229,
+          "end_column": 27,
+          "message": "CSS class 'icon' may be defined outside the scope of this file."
+        }
+      ],
+      "errorCount": 0,
+      "warningCount": 14,
+      "infoCount": 0
+    },
+    {
+      "path": "/home/fadil369/.worktrees/brainsait-shopify-relaunch/theme/sections/brainsait-footer.liquid",
+      "offenses": [
+        {
+          "check": "HardcodedRoutes",
+          "severity": "warning",
+          "start_row": 369,
+          "start_column": 15,
+          "end_row": 369,
+          "end_column": 16,
+          "message": "Use routes object {{ routes.root_url }} instead of hardcoding /"
+        },
+        {
+          "check": "HardcodedRoutes",
+          "severity": "warning",
+          "start_row": 386,
+          "start_column": 21,
+          "end_row": 386,
+          "end_column": 33,
+          "message": "Use routes object {{ routes.collections_url }} instead of hardcoding /collections"
+        },
+        {
+          "check": "HardcodedRoutes",
+          "severity": "warning",
+          "start_row": 387,
+          "start_column": 21,
+          "end_row": 387,
+          "end_column": 33,
+          "message": "Use routes object {{ routes.collections_url }} instead of hardcoding /collections"
+        },
+        {
+          "check": "HardcodedRoutes",
+          "severity": "warning",
+          "start_row": 388,
+          "start_column": 21,
+          "end_row": 388,
+          "end_column": 33,
+          "message": "Use routes object {{ routes.collections_url }} instead of hardcoding /collections"
+        },
+        {
+          "check": "HardcodedRoutes",
+          "severity": "warning",
+          "start_row": 389,
+          "start_column": 21,
+          "end_row": 389,
+          "end_column": 33,
+          "message": "Use routes object {{ routes.collections_url }} instead of hardcoding /collections"
+        },
+        {
+          "check": "HardcodedRoutes",
+          "severity": "warning",
+          "start_row": 426,
+          "start_column": 15,
+          "end_row": 426,
+          "end_column": 16,
+          "message": "Use routes object {{ routes.root_url }} instead of hardcoding /"
+        }
+      ],
+      "errorCount": 0,
+      "warningCount": 6,
+      "infoCount": 0
+    },
+    {
+      "path": "/home/fadil369/.worktrees/brainsait-shopify-relaunch/theme/snippets/product-media-gallery.liquid",
+      "offenses": [
+        {
+          "check": "MissingRenderSnippetArguments",
+          "severity": "warning",
+          "start_row": 1,
+          "start_column": 10,
+          "end_row": 1,
+          "end_column": 92,
+          "message": "Missing required argument 'media_presentation' in render tag for snippet 'product-media-gallery-content'."
+        },
+        {
+          "check": "MissingRenderSnippetArguments",
+          "severity": "warning",
+          "start_row": 1,
+          "start_column": 10,
+          "end_row": 1,
+          "end_column": 92,
+          "message": "Missing required argument 'block_settings' in render tag for snippet 'product-media-gallery-content'."
+        },
+        {
+          "check": "MissingRenderSnippetArguments",
+          "severity": "warning",
+          "start_row": 1,
+          "start_column": 10,
+          "end_row": 1,
+          "end_column": 92,
+          "message": "Missing required argument 'block_id' in render tag for snippet 'product-media-gallery-content'."
+        },
+        {
+          "check": "MissingRenderSnippetArguments",
+          "severity": "warning",
+          "start_row": 1,
+          "start_column": 10,
+          "end_row": 1,
+          "end_column": 92,
+          "message": "Missing required argument 'block_shopify_attributes' in render tag for snippet 'product-media-gallery-content'."
+        },
+        {
+          "check": "MissingRenderSnippetArguments",
+          "severity": "warning",
+          "start_row": 1,
+          "start_column": 10,
+          "end_row": 1,
+          "end_column": 92,
+          "message": "Missing required argument 'block' in render tag for snippet 'product-media-gallery-content'."
+        },
+        {
+          "check": "MissingRenderSnippetArguments",
+          "severity": "warning",
+          "start_row": 1,
+          "start_column": 10,
+          "end_row": 1,
+          "end_column": 92,
+          "message": "Missing required argument 'section' in render tag for snippet 'product-media-gallery-content'."
+        },
+        {
+          "check": "UnrecognizedRenderSnippetArguments",
+          "severity": "warning",
+          "start_row": 1,
+          "start_column": 43,
+          "end_row": 1,
+          "end_column": 59,
+          "message": "Unknown argument 'product' in render tag for snippet 'product-media-gallery-content'."
+        },
+        {
+          "check": "UnrecognizedRenderSnippetArguments",
+          "severity": "warning",
+          "start_row": 1,
+          "start_column": 61,
+          "end_row": 1,
+          "end_column": 91,
+          "message": "Unknown argument 'variant_images' in render tag for snippet 'product-media-gallery-content'."
+        }
+      ],
+      "errorCount": 0,
+      "warningCount": 8,
+      "infoCount": 0
+    },
+    {
+      "path": "/home/fadil369/.worktrees/brainsait-shopify-relaunch/theme/sections/bs-404-page.liquid",
+      "offenses": [
+        {
+          "check": "HardcodedRoutes",
+          "severity": "warning",
+          "start_row": 112,
+          "start_column": 13,
+          "end_row": 112,
+          "end_column": 14,
+          "message": "Use routes object {{ routes.root_url }} instead of hardcoding /"
+        },
+        {
+          "check": "HardcodedRoutes",
+          "severity": "warning",
+          "start_row": 115,
+          "start_column": 13,
+          "end_row": 115,
+          "end_column": 25,
+          "message": "Use routes object {{ routes.collections_url }} instead of hardcoding /collections"
+        },
+        {
+          "check": "HardcodedRoutes",
+          "severity": "warning",
+          "start_row": 118,
+          "start_column": 13,
+          "end_row": 118,
+          "end_column": 25,
+          "message": "Use routes object {{ routes.collections_url }} instead of hardcoding /collections"
+        },
+        {
+          "check": "HardcodedRoutes",
+          "severity": "warning",
+          "start_row": 124,
+          "start_column": 15,
+          "end_row": 124,
+          "end_column": 27,
+          "message": "Use routes object {{ routes.collections_url }} instead of hardcoding /collections"
+        },
+        {
+          "check": "HardcodedRoutes",
+          "severity": "warning",
+          "start_row": 125,
+          "start_column": 15,
+          "end_row": 125,
+          "end_column": 27,
+          "message": "Use routes object {{ routes.collections_url }} instead of hardcoding /collections"
+        },
+        {
+          "check": "HardcodedRoutes",
+          "severity": "warning",
+          "start_row": 126,
+          "start_column": 15,
+          "end_row": 126,
+          "end_column": 27,
+          "message": "Use routes object {{ routes.collections_url }} instead of hardcoding /collections"
+        }
+      ],
+      "errorCount": 0,
+      "warningCount": 6,
+      "infoCount": 0
+    },
+    {
+      "path": "/home/fadil369/.worktrees/brainsait-shopify-relaunch/theme/sections/main-list-collections.liquid",
+      "offenses": [
+        {
+          "check": "VariableName",
+          "severity": "warning",
+          "start_row": 19,
+          "start_column": 11,
+          "end_row": 19,
+          "end_column": 71,
+          "message": "The variable 'moduloResult' uses wrong naming format"
+        }
+      ],
+      "errorCount": 0,
+      "warningCount": 1,
+      "infoCount": 0
+    },
+    {
+      "path": "/home/fadil369/.worktrees/brainsait-shopify-relaunch/theme/sections/main-product.liquid",
+      "offenses": [
+        {
+          "check": "MissingRenderSnippetArguments",
+          "severity": "warning",
+          "start_row": 109,
+          "start_column": 29,
+          "end_row": 114,
+          "end_column": 18,
+          "message": "Missing required argument 'product_resource' in render tag for snippet 'price'."
+        },
+        {
+          "check": "UnrecognizedRenderSnippetArguments",
+          "severity": "warning",
+          "start_row": 110,
+          "start_column": 20,
+          "end_row": 110,
+          "end_column": 36,
+          "message": "Unknown argument 'product' in render tag for snippet 'price'."
+        },
+        {
+          "check": "UnrecognizedRenderSnippetArguments",
+          "severity": "warning",
+          "start_row": 111,
+          "start_column": 20,
+          "end_row": 111,
+          "end_column": 37,
+          "message": "Unknown argument 'use_variant' in render tag for snippet 'price'."
+        },
+        {
+          "check": "UnrecognizedRenderSnippetArguments",
+          "severity": "warning",
+          "start_row": 112,
+          "start_column": 20,
+          "end_row": 112,
+          "end_column": 37,
+          "message": "Unknown argument 'show_badges' in render tag for snippet 'price'."
+        },
+        {
+          "check": "UnrecognizedRenderSnippetArguments",
+          "severity": "warning",
+          "start_row": 113,
+          "start_column": 20,
+          "end_row": 113,
+          "end_column": 47,
+          "message": "Unknown argument 'price_class' in render tag for snippet 'price'."
+        },
+        {
+          "check": "UnusedAssign",
+          "severity": "warning",
+          "start_row": 712,
+          "start_column": 8,
+          "end_row": 712,
+          "end_column": 49,
+          "message": "The variable 'seo_media' is assigned but not used"
+        },
+        {
+          "check": "UndefinedObject",
+          "severity": "warning",
+          "start_row": 572,
+          "start_column": 44,
+          "end_row": 572,
+          "end_column": 52,
+          "message": "Unknown object 'continue' used."
+        },
+        {
+          "check": "ValidScopedCSSClass",
+          "severity": "warning",
+          "start_row": 216,
+          "start_column": 47,
+          "end_row": 216,
+          "end_column": 56,
+          "message": "CSS class 'accordion' may be defined outside the scope of this file."
+        },
+        {
+          "check": "ValidScopedCSSClass",
+          "severity": "warning",
+          "start_row": 302,
+          "start_column": 38,
+          "end_row": 302,
+          "end_column": 52,
+          "message": "CSS class 'price-per-item' may be defined outside the scope of this file."
+        },
+        {
+          "check": "ValidScopedCSSClass",
+          "severity": "warning",
+          "start_row": 342,
+          "start_column": 38,
+          "end_row": 342,
+          "end_column": 52,
+          "message": "CSS class 'price-per-item' may be defined outside the scope of this file."
+        },
+        {
+          "check": "ValidScopedCSSClass",
+          "severity": "warning",
+          "start_row": 374,
+          "start_column": 35,
+          "end_row": 374,
+          "end_column": 42,
+          "message": "CSS class 'divider' may be defined outside the scope of this file."
+        },
+        {
+          "check": "ValidScopedCSSClass",
+          "severity": "warning",
+          "start_row": 382,
+          "start_column": 35,
+          "end_row": 382,
+          "end_column": 42,
+          "message": "CSS class 'divider' may be defined outside the scope of this file."
+        },
+        {
+          "check": "ValidScopedCSSClass",
+          "severity": "warning",
+          "start_row": 390,
+          "start_column": 35,
+          "end_row": 390,
+          "end_column": 42,
+          "message": "CSS class 'divider' may be defined outside the scope of this file."
+        },
+        {
+          "check": "ValidScopedCSSClass",
+          "severity": "warning",
+          "start_row": 475,
+          "start_column": 30,
+          "end_row": 475,
+          "end_column": 44,
+          "message": "CSS class 'rating-wrapper' may be defined outside the scope of this file."
+        },
+        {
+          "check": "ValidScopedCSSClass",
+          "severity": "warning",
+          "start_row": 486,
+          "start_column": 29,
+          "end_row": 486,
+          "end_column": 35,
+          "message": "CSS class 'rating' may be defined outside the scope of this file."
+        },
+        {
+          "check": "ValidScopedCSSClass",
+          "severity": "warning",
+          "start_row": 502,
+          "start_column": 30,
+          "end_row": 502,
+          "end_column": 42,
+          "message": "CSS class 'rating-count' may be defined outside the scope of this file."
+        }
+      ],
+      "errorCount": 0,
+      "warningCount": 16,
+      "infoCount": 0
+    },
+    {
+      "path": "/home/fadil369/.worktrees/brainsait-shopify-relaunch/theme/sections/main-article.liquid",
+      "offenses": [
+        {
+          "check": "VariableName",
+          "severity": "warning",
+          "start_row": 97,
+          "start_column": 21,
+          "end_row": 97,
+          "end_column": 66,
+          "message": "The variable 'anchorId' uses wrong naming format"
+        }
+      ],
+      "errorCount": 0,
+      "warningCount": 1,
+      "infoCount": 0
+    },
+    {
+      "path": "/home/fadil369/.worktrees/brainsait-shopify-relaunch/theme/sections/bs-value-prop.liquid",
+      "offenses": [
+        {
+          "check": "UnusedAssign",
+          "severity": "warning",
+          "start_row": 6,
+          "start_column": 2,
+          "end_row": 6,
+          "end_column": 62,
+          "message": "The variable 'sol_url' is assigned but not used"
+        }
+      ],
+      "errorCount": 0,
+      "warningCount": 1,
+      "infoCount": 0
+    },
+    {
+      "path": "/home/fadil369/.worktrees/brainsait-shopify-relaunch/theme/sections/gh-build.liquid",
+      "offenses": [
+        {
+          "check": "UnusedAssign",
+          "severity": "warning",
+          "start_row": 7,
+          "start_column": 2,
+          "end_row": 7,
+          "end_column": 60,
+          "message": "The variable 'learn_url' is assigned but not used"
+        }
+      ],
+      "errorCount": 0,
+      "warningCount": 1,
+      "infoCount": 0
+    },
+    {
+      "path": "/home/fadil369/.worktrees/brainsait-shopify-relaunch/theme/sections/main-search.liquid",
+      "offenses": [
+        {
+          "check": "UnusedAssign",
+          "severity": "warning",
+          "start_row": 271,
+          "start_column": 24,
+          "end_row": 271,
+          "end_column": 56,
+          "message": "The variable 'product_settings' is assigned but not used"
+        },
+        {
+          "check": "ValidScopedCSSClass",
+          "severity": "warning",
+          "start_row": 106,
+          "start_column": 28,
+          "end_row": 106,
+          "end_column": 45,
+          "message": "CSS class 'predictive-search' may be defined outside the scope of this file."
+        },
+        {
+          "check": "ValidScopedCSSClass",
+          "severity": "warning",
+          "start_row": 118,
+          "start_column": 28,
+          "end_row": 118,
+          "end_column": 32,
+          "message": "CSS class 'icon' may be defined outside the scope of this file."
+        },
+        {
+          "check": "ValidScopedCSSClass",
+          "severity": "warning",
+          "start_row": 122,
+          "start_column": 58,
+          "end_row": 122,
+          "end_column": 71,
+          "message": "CSS class 'field__button' may be defined outside the scope of this file."
+        },
+        {
+          "check": "ValidScopedCSSClass",
+          "severity": "warning",
+          "start_row": 123,
+          "start_column": 28,
+          "end_row": 123,
+          "end_column": 32,
+          "message": "CSS class 'icon' may be defined outside the scope of this file."
+        },
+        {
+          "check": "ValidScopedCSSClass",
+          "severity": "warning",
+          "start_row": 152,
+          "start_column": 35,
+          "end_row": 152,
+          "end_column": 41,
+          "message": "CSS class 'facets' may be defined outside the scope of this file."
+        },
+        {
+          "check": "ValidScopedCSSClass",
+          "severity": "warning",
+          "start_row": 226,
+          "start_column": 20,
+          "end_row": 226,
+          "end_column": 42,
+          "message": "CSS class 'product-grid-container' may be defined outside the scope of this file."
+        },
+        {
+          "check": "ValidScopedCSSClass",
+          "severity": "warning",
+          "start_row": 296,
+          "start_column": 35,
+          "end_row": 296,
+          "end_column": 39,
+          "message": "CSS class 'card' may be defined outside the scope of this file."
+        },
+        {
+          "check": "ValidScopedCSSClass",
+          "severity": "warning",
+          "start_row": 299,
+          "start_column": 40,
+          "end_row": 299,
+          "end_column": 53,
+          "message": "CSS class 'card__content' may be defined outside the scope of this file."
+        }
+      ],
+      "errorCount": 0,
+      "warningCount": 9,
+      "infoCount": 0
+    },
+    {
+      "path": "/home/fadil369/.worktrees/brainsait-shopify-relaunch/theme/blocks/_layered-slide.liquid",
+      "offenses": [
+        {
+          "check": "ValidScopedCSSClass",
+          "severity": "warning",
+          "start_row": 79,
+          "start_column": 142,
+          "end_row": 79,
+          "end_column": 164,
+          "message": "CSS class 'background-transparent' may be defined outside the scope of this file."
+        }
+      ],
+      "errorCount": 0,
+      "warningCount": 1,
+      "infoCount": 0
+    },
+    {
+      "path": "/home/fadil369/.worktrees/brainsait-shopify-relaunch/theme/sections/main-cart-footer.liquid",
+      "offenses": [
+        {
+          "check": "ValidScopedCSSClass",
+          "severity": "warning",
+          "start_row": 106,
+          "start_column": 26,
+          "end_row": 106,
+          "end_column": 36,
+          "message": "CSS class 'cart__ctas' may be defined outside the scope of this file."
+        },
+        {
+          "check": "ValidScopedCSSClass",
+          "severity": "warning",
+          "start_row": 110,
+          "start_column": 25,
+          "end_row": 110,
+          "end_column": 46,
+          "message": "CSS class 'cart__checkout-button' may be defined outside the scope of this file."
+        }
+      ],
+      "errorCount": 0,
+      "warningCount": 2,
+      "infoCount": 0
+    },
+    {
+      "path": "/home/fadil369/.worktrees/brainsait-shopify-relaunch/theme/sections/announcement-bar.liquid",
+      "offenses": [
+        {
+          "check": "ValidScopedCSSClass",
+          "severity": "warning",
+          "start_row": 33,
+          "start_column": 17,
+          "end_row": 33,
+          "end_column": 39,
+          "message": "CSS class 'announcement-bar__link' may be defined outside the scope of this file."
+        },
+        {
+          "check": "ValidScopedCSSClass",
+          "severity": "warning",
+          "start_row": 54,
+          "start_column": 21,
+          "end_row": 54,
+          "end_column": 43,
+          "message": "CSS class 'announcement-bar__link' may be defined outside the scope of this file."
+        },
+        {
+          "check": "ValidScopedCSSClass",
+          "severity": "warning",
+          "start_row": 114,
+          "start_column": 31,
+          "end_row": 114,
+          "end_column": 53,
+          "message": "CSS class 'announcement-bar__link' may be defined outside the scope of this file."
+        },
+        {
+          "check": "ValidScopedCSSClass",
+          "severity": "warning",
+          "start_row": 154,
+          "start_column": 16,
+          "end_row": 154,
+          "end_column": 36,
+          "message": "CSS class 'localization-wrapper' may be defined outside the scope of this file."
+        }
+      ],
+      "errorCount": 0,
+      "warningCount": 4,
+      "infoCount": 0
+    },
+    {
+      "path": "/home/fadil369/.worktrees/brainsait-shopify-relaunch/theme/sections/footer.liquid",
+      "offenses": [
+        {
+          "check": "ValidScopedCSSClass",
+          "severity": "warning",
+          "start_row": 201,
+          "start_column": 53,
+          "end_row": 201,
+          "end_column": 66,
+          "message": "CSS class 'field__button' may be defined outside the scope of this file."
+        }
+      ],
+      "errorCount": 0,
+      "warningCount": 1,
+      "infoCount": 0
+    },
+    {
+      "path": "/home/fadil369/.worktrees/brainsait-shopify-relaunch/theme/snippets/country-localization.liquid",
+      "offenses": [
+        {
+          "check": "ValidScopedCSSClass",
+          "severity": "warning",
+          "start_row": 11,
+          "start_column": 18,
+          "end_row": 11,
+          "end_column": 28,
+          "message": "CSS class 'disclosure' may be defined outside the scope of this file."
+        },
+        {
+          "check": "ValidScopedCSSClass",
+          "severity": "warning",
+          "start_row": 12,
+          "start_column": 82,
+          "end_row": 12,
+          "end_column": 103,
+          "message": "CSS class 'localization-selector' may be defined outside the scope of this file."
+        }
+      ],
+      "errorCount": 0,
+      "warningCount": 2,
+      "infoCount": 0
+    },
+    {
+      "path": "/home/fadil369/.worktrees/brainsait-shopify-relaunch/theme/snippets/language-localization.liquid",
+      "offenses": [
+        {
+          "check": "ValidScopedCSSClass",
+          "severity": "warning",
+          "start_row": 10,
+          "start_column": 18,
+          "end_row": 10,
+          "end_column": 28,
+          "message": "CSS class 'disclosure' may be defined outside the scope of this file."
+        },
+        {
+          "check": "ValidScopedCSSClass",
+          "severity": "warning",
+          "start_row": 11,
+          "start_column": 82,
+          "end_row": 11,
+          "end_column": 103,
+          "message": "CSS class 'localization-selector' may be defined outside the scope of this file."
+        }
+      ],
+      "errorCount": 0,
+      "warningCount": 2,
+      "infoCount": 0
+    },
+    {
+      "path": "/home/fadil369/.worktrees/brainsait-shopify-relaunch/theme/snippets/card-collection.liquid",
+      "offenses": [
+        {
+          "check": "ValidScopedCSSClass",
+          "severity": "warning",
+          "start_row": 20,
+          "start_column": 12,
+          "end_row": 20,
+          "end_column": 16,
+          "message": "CSS class 'card' may be defined outside the scope of this file."
+        },
+        {
+          "check": "ValidScopedCSSClass",
+          "severity": "warning",
+          "start_row": 21,
+          "start_column": 45,
+          "end_row": 21,
+          "end_column": 64,
+          "message": "CSS class 'card__media-wrapper' may be defined outside the scope of this file."
+        }
+      ],
+      "errorCount": 0,
+      "warningCount": 2,
+      "infoCount": 0
+    },
+    {
+      "path": "/home/fadil369/.worktrees/brainsait-shopify-relaunch/theme/sections/email-signup-banner.liquid",
+      "offenses": [
+        {
+          "check": "ValidScopedCSSClass",
+          "severity": "warning",
+          "start_row": 103,
+          "start_column": 53,
+          "end_row": 103,
+          "end_column": 66,
+          "message": "CSS class 'field__button' may be defined outside the scope of this file."
+        }
+      ],
+      "errorCount": 0,
+      "warningCount": 1,
+      "infoCount": 0
+    },
+    {
+      "path": "/home/fadil369/.worktrees/brainsait-shopify-relaunch/theme/snippets/pagination.liquid",
+      "offenses": [
+        {
+          "check": "ValidScopedCSSClass",
+          "severity": "warning",
+          "start_row": 6,
+          "start_column": 14,
+          "end_row": 6,
+          "end_column": 24,
+          "message": "CSS class 'pagination' may be defined outside the scope of this file."
+        },
+        {
+          "check": "ValidScopedCSSClass",
+          "severity": "warning",
+          "start_row": 7,
+          "start_column": 15,
+          "end_row": 7,
+          "end_column": 31,
+          "message": "CSS class 'pagination__list' may be defined outside the scope of this file."
+        },
+        {
+          "check": "ValidScopedCSSClass",
+          "severity": "warning",
+          "start_row": 9,
+          "start_column": 96,
+          "end_row": 9,
+          "end_column": 112,
+          "message": "CSS class 'pagination__item' may be defined outside the scope of this file."
+        },
+        {
+          "check": "ValidScopedCSSClass",
+          "severity": "warning",
+          "start_row": 15,
+          "start_column": 83,
+          "end_row": 15,
+          "end_column": 99,
+          "message": "CSS class 'pagination__item' may be defined outside the scope of this file."
+        },
+        {
+          "check": "ValidScopedCSSClass",
+          "severity": "warning",
+          "start_row": 17,
+          "start_column": 25,
+          "end_row": 17,
+          "end_column": 41,
+          "message": "CSS class 'pagination__item' may be defined outside the scope of this file."
+        },
+        {
+          "check": "ValidScopedCSSClass",
+          "severity": "warning",
+          "start_row": 19,
+          "start_column": 25,
+          "end_row": 19,
+          "end_column": 41,
+          "message": "CSS class 'pagination__item' may be defined outside the scope of this file."
+        },
+        {
+          "check": "ValidScopedCSSClass",
+          "severity": "warning",
+          "start_row": 25,
+          "start_column": 92,
+          "end_row": 25,
+          "end_column": 108,
+          "message": "CSS class 'pagination__item' may be defined outside the scope of this file."
+        }
+      ],
+      "errorCount": 0,
+      "warningCount": 7,
+      "infoCount": 0
+    },
+    {
+      "path": "/home/fadil369/.worktrees/brainsait-shopify-relaunch/theme/sections/main-cart-items.liquid",
+      "offenses": [
+        {
+          "check": "ValidScopedCSSClass",
+          "severity": "warning",
+          "start_row": 54,
+          "start_column": 26,
+          "end_row": 54,
+          "end_column": 36,
+          "message": "CSS class 'cart-items' may be defined outside the scope of this file."
+        },
+        {
+          "check": "ValidScopedCSSClass",
+          "severity": "warning",
+          "start_row": 200,
+          "start_column": 38,
+          "end_row": 200,
+          "end_column": 48,
+          "message": "CSS class 'unit-price' may be defined outside the scope of this file."
+        },
+        {
+          "check": "ValidScopedCSSClass",
+          "severity": "warning",
+          "start_row": 318,
+          "start_column": 45,
+          "end_row": 318,
+          "end_column": 52,
+          "message": "CSS class 'divider' may be defined outside the scope of this file."
+        },
+        {
+          "check": "ValidScopedCSSClass",
+          "severity": "warning",
+          "start_row": 326,
+          "start_column": 45,
+          "end_row": 326,
+          "end_column": 52,
+          "message": "CSS class 'divider' may be defined outside the scope of this file."
+        },
+        {
+          "check": "ValidScopedCSSClass",
+          "severity": "warning",
+          "start_row": 334,
+          "start_column": 45,
+          "end_row": 334,
+          "end_column": 52,
+          "message": "CSS class 'divider' may be defined outside the scope of this file."
+        },
+        {
+          "check": "ValidScopedCSSClass",
+          "severity": "warning",
+          "start_row": 372,
+          "start_column": 36,
+          "end_row": 372,
+          "end_column": 52,
+          "message": "CSS class 'cart-item__error' may be defined outside the scope of this file."
+        },
+        {
+          "check": "ValidScopedCSSClass",
+          "severity": "warning",
+          "start_row": 377,
+          "start_column": 35,
+          "end_row": 377,
+          "end_column": 39,
+          "message": "CSS class 'icon' may be defined outside the scope of this file."
+        },
+        {
+          "check": "ValidScopedCSSClass",
+          "severity": "warning",
+          "start_row": 416,
+          "start_column": 38,
+          "end_row": 416,
+          "end_column": 48,
+          "message": "CSS class 'unit-price' may be defined outside the scope of this file."
+        }
+      ],
+      "errorCount": 0,
+      "warningCount": 8,
+      "infoCount": 0
+    }
+  ]
+}

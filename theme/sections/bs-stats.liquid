@@ -1,0 +1,129 @@
+{% liquid
+  assign is_ar = false
+  if request.locale.iso_code == 'ar'
+    assign is_ar = true
+  endif
+%}
+{% # theme-check-disable ValidScopedCSSClass %}
+
+<div class="bs-stats">
+  <div class="bs-stats__inner page-width">
+    <div class="bs-stat">
+      <span class="bs-stat__value">8</span>
+      <span class="bs-stat__label">
+        {% if is_ar %}
+          منتجات OID جاهزة
+        {% else %}
+          OID products, ready now
+        {% endif %}
+      </span>
+    </div>
+    <div class="bs-stat">
+      <span class="bs-stat__value">AR / EN</span>
+      <span class="bs-stat__label">
+        {% if is_ar %}
+          متجر ثنائي اللغة بالكامل
+        {% else %}
+          Fully bilingual storefront
+        {% endif %}
+      </span>
+    </div>
+    <div class="bs-stat">
+      <span class="bs-stat__value">
+        {% if is_ar %}
+          فوري
+        {% else %}
+          Instant
+        {% endif %}
+      </span>
+      <span class="bs-stat__label">
+        {% if is_ar %}
+          تسليم رقمي بعد الشراء مباشرة
+        {% else %}
+          Digital delivery right after purchase
+        {% endif %}
+      </span>
+    </div>
+    <div class="bs-stat">
+      <span class="bs-stat__value">PayPal</span>
+      <span class="bs-stat__label">
+        {% if is_ar %}
+          دفع آمن وموثوق
+        {% else %}
+          Secured, trusted checkout
+        {% endif %}
+      </span>
+    </div>
+  </div>
+</div>
+
+{% stylesheet %}
+  .bs-stats {
+    background-color: var(--bs-surface);
+    border-block: 1px solid var(--bs-border);
+  }
+
+  .bs-stats__inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem 1.5rem;
+    padding-block: 2.5rem;
+  }
+
+  .bs-stat {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    text-align: center;
+    padding-inline: 0.5rem;
+    border-inline-end: 1px solid var(--bs-border);
+  }
+
+  .bs-stat:nth-child(2n) {
+    border-inline-end: none;
+  }
+
+  .bs-stat__value {
+    font-family: var(--font-heading--family);
+    font-size: clamp(1.5rem, 4vw, 2.25rem);
+    font-weight: 700;
+    background: var(--bs-grad-brand);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .bs-stat__label {
+    font-size: 0.85rem;
+    color: var(--bs-muted);
+    line-height: 1.4;
+  }
+
+  @media screen and (min-width: 750px) {
+    .bs-stats__inner {
+      grid-template-columns: repeat(4, 1fr);
+      padding-block: 3rem;
+    }
+
+    .bs-stat:nth-child(2n) {
+      border-inline-end: 1px solid var(--bs-border);
+    }
+
+    .bs-stat:last-child {
+      border-inline-end: none;
+    }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "BrainSAIT Stats",
+  "tag": "section",
+  "settings": [],
+  "presets": [
+    {
+      "name": "BrainSAIT Stats"
+    }
+  ]
+}
+{% endschema %}

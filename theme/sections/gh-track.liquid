@@ -1,0 +1,181 @@
+{% liquid
+  assign is_ar = false
+  if request.locale.iso_code == 'ar'
+    assign is_ar = true
+  endif
+%}
+
+<div class="page gh-track" data-component="gh-track"
+  data-is-ar="{% if is_ar %}1{% else %}0{% endif %}"
+  data-api-base="{{ section.settings.api_base }}">
+
+  <div class="track-lookup" id="gh-track-lookup">
+    <header class="page-head reveal">
+      <h1>{% if is_ar %}لوحة تقدمك{% else %}Your Progress Dashboard{% endif %}</h1>
+      <p class="lede">
+        {% if is_ar %}أدخل رقم طلبك لمتابعة تقدمك، أقساطك، وشهاداتك.{% else %}Enter your application ref to track progress, installments, and certificates.{% endif %}
+      </p>
+    </header>
+    <div class="track-ref-box reveal">
+      <input type="text" id="gh-track-ref" autocomplete="off"
+        placeholder="{% if is_ar %}مثال: BS-2026-XXXX{% else %}e.g. BS-2026-XXXX{% endif %}">
+      <button type="button" class="button primary" id="gh-track-go">
+        {% if is_ar %}تتبّع{% else %}Track{% endif %}
+      </button>
+    </div>
+    <p class="track-ref-hint">
+      {% if is_ar %}وجدت رقم طلبك في بريدك؟ ألصقه هنا أو افتح الرابط الذي وصلتك.{% else %}Found your ref in your email? Paste it here or open the link you received.{% endif %}
+    </p>
+  </div>
+
+  <div id="gh-track-dash" hidden></div>
+</div>
+
+{% stylesheet %}
+  .track-ref-box {
+    display: flex; gap: 0.7rem; justify-content: center; flex-wrap: wrap;
+    max-width: 560px; margin: 0 auto;
+  }
+  .track-ref-box input {
+    flex: 1; min-width: 240px;
+    background: var(--surface-2); border: 1px solid var(--line); border-radius: 999px;
+    padding: 0.8rem 1.3rem; color: var(--ink); font-size: 1rem; outline: none;
+    font-family: var(--font-body);
+  }
+  .track-ref-box input:focus { border-color: var(--gold); }
+  .track-ref-hint { text-align: center; color: var(--muted); font-size: 0.85rem; margin-top: 0.9rem; }
+
+  .track-loading {
+    display: flex; align-items: center; justify-content: center;
+    min-height: 40vh; color: var(--gold); font-size: 1.2rem;
+  }
+  .track-error { max-width: 620px; margin: 0 auto; padding: 3rem 1rem; text-align: center; }
+  .track-error h2 { font-family: var(--font-display); margin-bottom: 0.5rem; }
+  .track-error p { color: var(--muted); margin-bottom: 2rem; }
+
+  .track-dash { max-width: 760px; margin: 0 auto; padding: 2rem 1rem; }
+  .track-head { text-align: center; margin-bottom: 2rem; }
+  .track-head h1 { font-family: var(--font-display); font-size: 2rem; margin-bottom: 0.5rem; }
+  .track-head p { color: var(--muted); }
+  .track-next {
+    display: flex; align-items: center; gap: 0.75rem;
+    background: linear-gradient(90deg, rgba(233, 196, 106, 0.12), rgba(41, 216, 255, 0.1));
+    border: 1px solid var(--gold); border-radius: 16px;
+    padding: 1rem 1.2rem; margin-bottom: 1.5rem;
+  }
+  .track-next small { display: block; font-size: 0.78rem; color: var(--muted); font-weight: 600; }
+  .track-next b { font-weight: 700; }
+  .track-card {
+    background: var(--surface); border: 1px solid var(--line); border-radius: 20px;
+    padding: 1.5rem; margin-bottom: 1.5rem;
+    -webkit-backdrop-filter: var(--glass-blur); backdrop-filter: var(--glass-blur);
+  }
+  .track-card h3 {
+    font-family: var(--font-display); font-size: 1.1rem; margin-bottom: 0.9rem;
+    display: flex; align-items: center; gap: 0.5rem;
+  }
+  .track-progress-row { display: flex; justify-content: space-between; margin-bottom: 0.75rem; font-weight: 700; }
+  .track-progress-row span:last-child { color: var(--gold); font-weight: 800; }
+  .track-bar { height: 14px; background: var(--surface-2); border-radius: 999px; overflow: hidden; }
+  .track-bar-fill {
+    height: 100%; border-radius: 999px;
+    background: linear-gradient(90deg, var(--gold), var(--cyan));
+    transition: width 0.6s ease;
+  }
+  .track-muted { color: var(--muted); font-size: 0.9rem; margin-top: 0.75rem; }
+  .track-badges { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+  .track-badge {
+    display: inline-flex; align-items: center; gap: 0.4rem;
+    background: color-mix(in srgb, var(--gold) 12%, var(--surface-2));
+    border: 1px solid var(--gold); border-radius: 999px;
+    padding: 0.5rem 1rem; font-weight: 600; font-size: 0.9rem;
+  }
+  .track-stats {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem; margin-bottom: 1.5rem;
+  }
+  .track-stat {
+    background: var(--surface); border: 1px solid var(--line); border-radius: 16px;
+    padding: 1rem; text-align: center;
+    -webkit-backdrop-filter: var(--glass-blur); backdrop-filter: var(--glass-blur);
+  }
+  .track-stat p { color: var(--muted); font-size: 0.8rem; }
+  .track-stat b { font-weight: 700; display: block; margin-top: 0.3rem; }
+  .track-access-row {
+    display: flex; align-items: center; gap: 0.6rem; font-size: 0.88rem;
+    padding: 0.35rem 0;
+  }
+  .track-access-row .lbl { flex: 1; }
+  .track-access-row.on .lbl { color: var(--ink); }
+  .track-access-row.off .lbl { color: var(--muted); }
+  .track-access-row .ico-ok { color: var(--ok); }
+  .track-access-row .ico-lock { color: #e5484d; }
+  .track-level {
+    font-size: 0.75rem; padding: 0.25rem 0.7rem; border-radius: 999px; font-weight: 700;
+    margin-inline-start: 0.5rem;
+  }
+  .track-level.full { background: color-mix(in srgb, var(--ok) 15%, var(--surface-2)); border: 1px solid var(--ok); color: var(--ok); }
+  .track-level.limited { background: color-mix(in srgb, #e5484d 14%, var(--surface-2)); border: 1px solid #e5484d; color: #e5484d; }
+  .track-level.suspended { background: color-mix(in srgb, #e5484d 14%, var(--surface-2)); border: 1px solid #e5484d; color: #e5484d; }
+  .track-suspend-flag { color: #e5484d; font-weight: 700; font-size: 0.85rem; margin-inline-start: 0.6rem; }
+  .track-installment {
+    display: flex; align-items: center; gap: 0.75rem;
+    padding: 0.7rem 0.9rem; border-radius: 12px;
+    background: var(--surface-2); border: 1px solid var(--line);
+    margin-bottom: 0.6rem;
+  }
+  .track-installment .ico-ok { color: var(--ok); }
+  .track-installment .ico-warn { color: #e5484d; font-size: 1.1rem; }
+  .track-installment .ico-pending { color: var(--muted); }
+  .track-installment .info { flex: 1; }
+  .track-installment .info b { font-size: 0.9rem; display: block; font-weight: 600; }
+  .track-installment .info small { color: var(--muted); font-size: 0.8rem; }
+  .track-installment .amount { font-weight: 700; }
+  .track-installment .amount.paid { color: var(--ok); }
+  .track-task {
+    display: flex; align-items: center; gap: 0.75rem;
+    padding: 0.6rem 0.8rem; border-radius: 12px;
+    background: var(--surface-2); border: 1px solid var(--line);
+    margin-bottom: 0.6rem; font-size: 0.92rem;
+  }
+  .track-task .ico-ok { color: var(--ok); flex-shrink: 0; }
+  .track-task .ico-pending { color: var(--muted); flex-shrink: 0; }
+  .track-task .name { flex: 1; }
+  .track-task.done .name { text-decoration: line-through; color: var(--muted); font-weight: 500; }
+  .track-task .channel { font-size: 0.75rem; color: var(--muted); }
+  .track-milestone {
+    display: flex; justify-content: space-between; padding: 0.5rem 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .track-milestone:last-child { border-bottom: 0; }
+  .track-milestone .status { font-weight: 600; }
+  .track-milestone .status.done { color: var(--ok); }
+  .track-milestone .status.pending { color: var(--muted); }
+  .track-links { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; margin-top: 1rem; }
+  .track-links .button { text-decoration: none; }
+  .track-ref-now { color: var(--muted); font-size: 0.8rem; margin-top: 0.75rem; text-align: center; }
+  .track-ref-now code {
+    background: var(--surface-2); border: 1px solid var(--line);
+    padding: 0.15rem 0.5rem; border-radius: 8px; color: var(--gold);
+    cursor: pointer;
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "GH Track",
+  "tag": "section",
+  "class": "gh-track-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "api_base",
+      "label": "Build apply API base URL",
+      "default": "https://build-apply.brainsait.org"
+    }
+  ],
+  "presets": [
+    { "name": "GH Track" }
+  ]
+}
+{% endschema %}

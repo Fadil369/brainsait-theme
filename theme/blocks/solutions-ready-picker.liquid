@@ -1,0 +1,170 @@
+{% doc %}
+  Renders a required dropdown that lets a SOLUTIONS READY buyer choose which
+  deploy-ready system they want BrainSAIT to deploy in their environment.
+  Selection is captured as a cart line item property ("Solution Choice") so
+  the order-fulfillment worker can read it straight off the Shopify order
+  payload with no extra lookup.
+
+  @example
+  {% content_for 'block', type: 'solutions-ready-picker', id: 'solutions-ready-picker' %}
+{% enddoc %}
+
+{%- liquid
+  assign product_form_id = 'BuyButtons-ProductForm-section.id' | replace: 'section.id', section.id
+  assign element_id = 'SolutionsReadyPicker-product_id' | replace: 'product_id', closest.product.id
+-%}
+
+<div
+  class="spacing-style solutions-ready-picker"
+  style="{% render 'spacing-style', settings: block.settings %}"
+  {{ block.shopify_attributes }}
+>
+  <p class="solutions-ready-picker__heading">{{ 'products.product.solutions_ready_heading' | t }}</p>
+  <p class="solutions-ready-picker__description">{{ 'products.product.solutions_ready_description' | t }}</p>
+
+  <select
+    id="{{ element_id }}"
+    name="properties[Solution Choice]"
+    class="field__input solutions-ready-picker__select"
+    form="{{ product_form_id }}"
+    required
+    aria-required="true"
+  >
+    <option value="" disabled selected>{{ 'products.product.solutions_ready_placeholder' | t }}</option>
+
+    <optgroup label="Healthcare systems">
+      <option value="BSP-HNH">Hayat National Hospitals — hospital OS</option>
+      <option value="BSP-GIVC">GIVC — Global Integrated Virtual Care</option>
+      <option value="BSP-SBS">GIVC-SBS — Saudi Billing System</option>
+      <option value="BSP-MASTERLINC-ORCHESTRATOR">MASTERLINC — Clinical Intelligence Orchestrator</option>
+      <option value="BSP-ABEER-MEDICAL-PLATFORM">Abeer Connected Healthcare Platform</option>
+      <option value="BSP-DOCTOR-HUB">Doctor's Hub</option>
+      <option value="BSP-CLINICS-DIRECTORY">Riyadh Clinics Directory — clinic system</option>
+      <option value="BSP-HEALTHCARE-DIRECTORY-V2">BrainSAIT Healthcare Directory</option>
+      <option value="BSP-AI-CLAIMS-RECONCILIATION">AI Claims Reconciliation</option>
+      <option value="BSP-TAWNIA">Tawnia × Al Tawuniya — Claims Reconciliation</option>
+    </optgroup>
+
+    <optgroup label="Identity &amp; compliance">
+      <option value="BSP-NPHIES-GATEWAY">NPHIES — Health Insurance Exchange Gateway</option>
+      <option value="BSP-OID-NPHIES-BUNDLE">NPHIES-OID Healthcare Identity Bundle</option>
+      <option value="BSP-OID-IDENTITY">BrainSAIT OID — identity &amp; badging</option>
+      <option value="BSP-OID-ENTERPRISE-BADGE">Enterprise OID Badge Management System</option>
+      <option value="BSP-WATHQ-LINC">Wathq Linc — business data API</option>
+    </optgroup>
+
+    <optgroup label="AI agents">
+      <option value="BSP-BASMA-VOICE-AGENT">Basma AI Voice Agent</option>
+      <option value="BSP-KDP-VOICE-AGENT">KDP Voice Agent</option>
+      <option value="BSP-BOOK-WRITER">Book Writer Agent</option>
+    </optgroup>
+
+    <optgroup label="Hospitality &amp; F&amp;B">
+      <option value="BSP-MOMFOOD-CLOUD-KITCHEN">MomFood — Cloud Kitchen Incubator</option>
+      <option value="BSP-NARA-CAFE">NARA Cafe &amp; Majlis</option>
+      <option value="BSP-MELISSA-HOSPITALITY">Melissa Riyadh Collection</option>
+    </optgroup>
+
+    <optgroup label="Culture &amp; travel">
+      <option value="BSP-MUSEUM-HILTON">Human &amp; Saudi Cultural Museum</option>
+      <option value="BSP-TRAVEL-CODE-SECURE-VAULT">Travel Code Secure Vault</option>
+    </optgroup>
+
+    <optgroup label="Portals">
+      <option value="BSP-PORTALS">BrainSAIT eCarePlus Portal</option>
+      <option value="BSP-NEURAL-CLOUD-PORTAL">Neural Cloud Portal</option>
+    </optgroup>
+
+    <option value="OTHER">Something else — I'll describe it after checkout</option>
+  </select>
+</div>
+
+{% stylesheet %}
+  .solutions-ready-picker {
+    display: block;
+    width: 100%;
+  }
+
+  .solutions-ready-picker__heading {
+    margin-inline: 0;
+    margin-block: 0 var(--padding-2xs);
+    font-weight: 600;
+  }
+
+  .solutions-ready-picker__description {
+    font-size: min(0.85em, var(--font-paragraph--size));
+    color: rgb(var(--color-rgb, var(--color-foreground-rgb)) / var(--opacity-subdued-text));
+    margin-inline: 0;
+    margin-block: 0 var(--padding-sm);
+  }
+
+  .solutions-ready-picker__select {
+    width: 100%;
+    border: var(--style-border-width-inputs) solid var(--color-input-border);
+    border-radius: var(--style-border-radius-inputs);
+    box-shadow: none;
+    padding: var(--padding-sm) var(--input-padding-x, var(--padding-sm));
+  }
+
+  .solutions-ready-picker__select:focus {
+    outline: var(--focus-outline-width) solid var(--color-input-background);
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "t:names.solutions_ready_picker",
+  "settings": [
+    {
+      "type": "header",
+      "content": "t:content.padding"
+    },
+    {
+      "type": "range",
+      "id": "padding-block-start",
+      "label": "t:settings.top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding-block-end",
+      "label": "t:settings.bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "padding-inline-start",
+      "label": "t:settings.left",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding-inline-end",
+      "label": "t:settings.right",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:names.solutions_ready_picker",
+      "category": "t:categories.product"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,90 @@
+{% liquid
+  assign family = product.metafields.brainsait.family.value | default: product.type
+  assign purchase_mode = product.metafields.brainsait.purchase_mode.value | default: 'direct'
+  assign billing_model = product.metafields.brainsait.billing_model.value | default: 'one-time'
+  assign billing_label = product.metafields.brainsait.billing_label.value | default: product.price | money_with_currency
+  assign outcome = product.metafields.brainsait.outcome.value | default: product.description | strip_html | truncate: 180
+  assign oid = product.metafields.brainsait.oid.value
+  assign variant = product.selected_or_first_available_variant
+%}
+<script type="application/ld+json" data-brainsait-agent-commerce>
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "@id": {{ shop.secure_url | append: product.url | json }},
+  "name": {{ product.title | json }},
+  "description": {{ outcome | strip_html | json }},
+  "sku": {{ variant.sku | default: product.handle | json }},
+  "brand": {
+    "@type": "Brand",
+    "name": "BrainSAIT"
+  },
+  "category": {{ family | json }},
+  "offers": {
+    "@type": "Offer",
+    "url": {{ shop.secure_url | append: product.url | json }},
+    "priceCurrency": {{ cart.currency.iso_code | default: shop.currency | json }},
+    "price": {{ variant.price | divided_by: 100.0 | json }},
+    "availability": "https://schema.org/{% if product.available %}InStock{% else %}OutOfStock{% endif %}",
+    "seller": {
+      "@type": "Organization",
+      "name": "BrainSAIT"
+    }
+  },
+  "additionalProperty": [
+    {
+      "@type": "PropertyValue",
+      "name": "BrainSAIT product family",
+      "value": {{ family | json }}
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Purchase mode",
+      "value": {{ purchase_mode | json }}
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Billing model",
+      "value": {{ billing_model | json }}
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Billing label",
+      "value": {{ billing_label | json }}
+    }{% if oid != blank %},
+    {
+      "@type": "PropertyValue",
+      "name": "BrainSAIT OID",
+      "value": {{ oid | json }}
+    }{% endif %}
+  ]
+}
+</script>
+<script type="application/json" data-brainsait-agent-manifest>
+{
+  "merchant": "BrainSAIT",
+  "storefront": {{ shop.secure_url | json }},
+  "product": {
+    "id": {{ product.id | json }},
+    "handle": {{ product.handle | json }},
+    "title": {{ product.title | json }},
+    "family": {{ family | json }},
+    "variantId": {{ variant.id | json }},
+    "available": {{ product.available | json }},
+    "purchaseMode": {{ purchase_mode | json }},
+    "billingModel": {{ billing_model | json }},
+    "billingLabel": {{ billing_label | json }},
+    "oid": {{ oid | default: '' | json }}
+  },
+  "commerce": {
+    "primaryAction": "{% if purchase_mode == 'consultation' %}request_consultation{% elsif purchase_mode == 'recurring' %}start_membership{% else %}add_to_cart{% endif %}",
+    "checkoutSurface": "{% if purchase_mode == 'recurring' %}gated_myfatoorah_recurring{% else %}shopify_cart{% endif %}",
+    "agentSafe": true,
+    "notes": "Use Shopify cart for one-time purchases. Recurring membership remains gated until MyFatoorah lifecycle validation is complete."
+  },
+  "identity": {
+    "pen": "61026",
+    "authority": "BrainSAIT OID & Registry"
+  }
+}
+</script>

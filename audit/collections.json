@@ -1,0 +1,271 @@
+{
+  "data": {
+    "collections": {
+      "nodes": [
+        {
+          "id": "gid://shopify/Collection/313866649683",
+          "title": "Home page",
+          "handle": "frontpage",
+          "descriptionHtml": "",
+          "updatedAt": "2026-08-26T14:24:20Z",
+          "sortOrder": "MOST_RELEVANT",
+          "ruleSet": null,
+          "productsCount": {
+            "count": 12
+          },
+          "seo": {
+            "title": "Featured AI Tools & Agents | BrainSAIT",
+            "description": "Discover BrainSAIT hand-picked AI agents, tools and blueprints - the fastest way to see what our AI platform can do for your business."
+          }
+        },
+        {
+          "id": "gid://shopify/Collection/313927434323",
+          "title": "All BrainSAIT Products",
+          "handle": "all-brainsait-products",
+          "descriptionHtml": "<p>The complete BrainSAIT digital catalog — AI agents, guides, blueprints, and enterprise platforms.</p>",
+          "updatedAt": "2026-09-03T23:48:47Z",
+          "sortOrder": "BEST_SELLING",
+          "ruleSet": {
+            "appliedDisjunctively": false,
+            "rules": [
+              {
+                "column": "TAG",
+                "condition": "brainsait-catalog",
+                "relation": "EQUALS"
+              }
+            ]
+          },
+          "productsCount": {
+            "count": 191
+          },
+          "seo": {
+            "title": "All BrainSAIT AI Products & Digital Tools",
+            "description": "Browse the full BrainSAIT catalog: 100+ AI agents, blueprints, courses and platforms for healthcare, business, marketing and engineering. Instant digital delivery."
+          }
+        },
+        {
+          "id": "gid://shopify/Collection/315759886419",
+          "title": "LEARN",
+          "handle": "learn",
+          "descriptionHtml": "<p>Explore BrainSAIT's curated digital library — eBooks, study guides, medical novels, and bilingual knowledge resources for professionals, students, and lifelong learners.</p>",
+          "updatedAt": "2026-09-03T23:46:56Z",
+          "sortOrder": "MOST_RELEVANT",
+          "ruleSet": {
+            "appliedDisjunctively": false,
+            "rules": [
+              {
+                "column": "TAG",
+                "condition": "LEARN",
+                "relation": "EQUALS"
+              }
+            ]
+          },
+          "productsCount": {
+            "count": 52
+          },
+          "seo": {
+            "title": "LEARN — Digital Library & Courses | BrainSAIT",
+            "description": "Explore BrainSAIT's digital library — eBooks, medical novels, study guides & bilingual resources for professionals and lifelong learners."
+          }
+        },
+        {
+          "id": "gid://shopify/Collection/315759919187",
+          "title": "BUILD",
+          "handle": "build",
+          "descriptionHtml": "<p>Join BrainSAIT's incubation ecosystem — hands-on workshops, guided builds, and the 14-day BUILD sprint to take your idea from concept to a live, shipped product.</p>",
+          "updatedAt": "2026-09-03T10:56:41Z",
+          "sortOrder": "MOST_RELEVANT",
+          "ruleSet": {
+            "appliedDisjunctively": false,
+            "rules": [
+              {
+                "column": "TAG",
+                "condition": "build-ticket",
+                "relation": "EQUALS"
+              }
+            ]
+          },
+          "productsCount": {
+            "count": 4
+          },
+          "seo": {
+            "title": "BUILD — Incubation & Startup Program | BrainSAIT",
+            "description": "Join BrainSAIT's incubation ecosystem. Hands-on workshops, guided builds & the 14-day BUILD sprint to ship your idea as a live product."
+          }
+        },
+        {
+          "id": "gid://shopify/Collection/315759951955",
+          "title": "SOLUTIONS",
+          "handle": "solutions",
+          "descriptionHtml": "<p>Discover BrainSAIT's enterprise AI and healthcare platforms — from NPHIES integration and clinical intelligence to digital identity, voice agents, and Saudi health tech solutions.</p>",
+          "updatedAt": "2026-09-03T23:48:32Z",
+          "sortOrder": "MOST_RELEVANT",
+          "ruleSet": {
+            "appliedDisjunctively": false,
+            "rules": [
+              {
+                "column": "TAG",
+                "condition": "SOLUTIONS",
+                "relation": "EQUALS"
+              }
+            ]
+          },
+          "productsCount": {
+            "count": 53
+          },
+          "seo": {
+            "title": "SOLUTIONS — Enterprise AI & Healthcare Platforms | BrainSAIT",
+            "description": "Discover BrainSAIT's enterprise AI & healthcare platforms — NPHIES integration, clinical intelligence, digital identity & Saudi health tech solutions."
+          }
+        },
+        {
+          "id": "gid://shopify/Collection/316761342035",
+          "title": "Knowledge Base",
+          "handle": "knowledge-base",
+          "descriptionHtml": "<p>BrainSAIT's LEARN library — masterclasses, blueprints, templates, and guides for healthcare and business builders.</p>",
+          "updatedAt": "2026-09-02T20:06:44Z",
+          "sortOrder": "CREATED_DESC",
+          "ruleSet": {
+            "appliedDisjunctively": false,
+            "rules": [
+              {
+                "column": "TYPE",
+                "condition": "LEARN",
+                "relation": "EQUALS"
+              }
+            ]
+          },
+          "productsCount": {
+            "count": 14
+          },
+          "seo": {
+            "title": null,
+            "description": null
+          }
+        },
+        {
+          "id": "gid://shopify/Collection/316978757715",
+          "title": "Digital Products example products",
+          "handle": "digital-products-example-products",
+          "descriptionHtml": "",
+          "updatedAt": "2026-08-28T04:43:02Z",
+          "sortOrder": "CREATED_DESC",
+          "ruleSet": null,
+          "productsCount": {
+            "count": 4
+          },
+          "seo": {
+            "title": null,
+            "description": null
+          }
+        },
+        {
+          "id": "gid://shopify/Collection/317031743571",
+          "title": "LEARN",
+          "handle": "brainsait-learn",
+          "descriptionHtml": "",
+          "updatedAt": "2026-09-03T23:46:56Z",
+          "sortOrder": "MOST_RELEVANT",
+          "ruleSet": null,
+          "productsCount": {
+            "count": 1
+          },
+          "seo": {
+            "title": null,
+            "description": null
+          }
+        },
+        {
+          "id": "gid://shopify/Collection/317060415571",
+          "title": "BRAINSAIT Medical Living Walls™",
+          "handle": "brainsait-medical-living-walls™",
+          "descriptionHtml": "&lt;p&gt;Museum-quality, bilingual (EN/AR) medical &amp; anatomical art — giclée prints and framed pieces designed for clinics, hospital lobbies, executive health offices, and medically-minded homes.&lt;/p&gt;&lt;p&gt;منتجات فنية طبية وتشريحية ثنائية اللغة بجودة متحفية، مصممة للعيادات وردهات المستشفيات والمكاتب التنفيذية.&lt;/p&gt;",
+          "updatedAt": "2026-08-28T20:53:14Z",
+          "sortOrder": "BEST_SELLING",
+          "ruleSet": {
+            "appliedDisjunctively": false,
+            "rules": [
+              {
+                "column": "TAG",
+                "condition": "medical-living-walls",
+                "relation": "EQUALS"
+              }
+            ]
+          },
+          "productsCount": {
+            "count": 7
+          },
+          "seo": {
+            "title": null,
+            "description": null
+          }
+        },
+        {
+          "id": "gid://shopify/Collection/317060448339",
+          "title": "SOLUTIONS READY",
+          "handle": "solutions-ready",
+          "descriptionHtml": "&lt;p&gt;One-time, SAR 24,000 deploy-ready enterprise solutions — provisioned and deployed directly into your environment. Skip the build phase.&lt;/p&gt;&lt;p&gt;حلول مؤسسية جاهزة للنشر الفوري مقابل دفعة واحدة قدرها 24,000 ريال سعودي.&lt;/p&gt;",
+          "updatedAt": "2026-09-03T23:48:47Z",
+          "sortOrder": "BEST_SELLING",
+          "ruleSet": {
+            "appliedDisjunctively": false,
+            "rules": [
+              {
+                "column": "TAG",
+                "condition": "solutions-ready",
+                "relation": "EQUALS"
+              }
+            ]
+          },
+          "productsCount": {
+            "count": 11
+          },
+          "seo": {
+            "title": null,
+            "description": null
+          }
+        },
+        {
+          "id": "gid://shopify/Collection/317180739667",
+          "title": "LEARN Books (One-Time)",
+          "handle": "learn-books",
+          "descriptionHtml": "",
+          "updatedAt": "2026-09-01T19:13:34Z",
+          "sortOrder": "MOST_RELEVANT",
+          "ruleSet": {
+            "appliedDisjunctively": false,
+            "rules": [
+              {
+                "column": "TAG",
+                "condition": "learn-book",
+                "relation": "EQUALS"
+              }
+            ]
+          },
+          "productsCount": {
+            "count": 37
+          },
+          "seo": {
+            "title": null,
+            "description": null
+          }
+        }
+      ],
+      "pageInfo": {
+        "hasNextPage": false,
+        "endCursor": "eyJsYXN0X2lkIjozMTcxODA3Mzk2NjcsImxhc3RfdmFsdWUiOiIzMTcxODA3Mzk2NjcifQ=="
+      }
+    }
+  },
+  "extensions": {
+    "cost": {
+      "requestedQueryCost": 35,
+      "actualQueryCost": 4,
+      "throttleStatus": {
+        "maximumAvailable": 2000.0,
+        "currentlyAvailable": 1996,
+        "restoreRate": 100.0
+      }
+    }
+  }
+}

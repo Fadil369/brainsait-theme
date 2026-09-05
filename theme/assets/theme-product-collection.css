@@ -1,0 +1,136 @@
+/* Product card + collection grid + product page restyle.
+   CSS-only overlay on Horizon's native components (product-card, price, variant-picker,
+   buy-buttons, product-badges) — no Liquid/JS logic touched, cart/variant/filter behavior
+   is entirely native Horizon. */
+
+/* ---------- Product cards (used on collection grid, homepage, recommendations) ---------- */
+.product-card {
+  border-radius: var(--bs-radius-m);
+  overflow: hidden;
+}
+
+.product-card .product-card__content {
+  background-color: var(--bs-surface);
+  border: 1px solid var(--bs-border);
+  border-radius: var(--bs-radius-m);
+  transition: var(--bs-mode-transition), border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product-card:hover .product-card__content {
+  border-color: var(--bs-accent);
+  transform: translateY(-3px);
+  box-shadow: 0 16px 32px var(--bs-shadow);
+}
+
+.product-card .price {
+  font-weight: 700;
+  color: var(--bs-accent);
+  font-variant-numeric: tabular-nums;
+}
+
+.product-card .compare-at-price {
+  color: var(--bs-muted);
+  text-decoration: line-through;
+}
+
+.product-badges__badge {
+  border-radius: var(--bs-radius-pill);
+  font-size: 0.7rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding-inline: 0.6rem;
+  padding-block: 0.25rem;
+  backdrop-filter: blur(8px);
+}
+
+/* Product card description snippet: Horizon's dynamic-source text block doesn't allow
+   truncation filters, so the raw product description HTML is flattened to an inline
+   text flow here and clamped to 3 lines with pure CSS. */
+.product-card .text-block.paragraph {
+  display: -webkit-box !important;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  color: var(--bs-muted);
+  font-size: 0.85rem;
+  line-height: 1.5;
+  margin-block-start: 0.35rem;
+}
+
+.product-card .text-block.paragraph > * {
+  display: inline !important;
+  margin: 0 !important;
+  font: inherit !important;
+  font-size: inherit !important;
+  font-weight: inherit !important;
+  color: inherit !important;
+}
+
+.product-card .text-block.paragraph ul,
+.product-card .text-block.paragraph li {
+  display: inline !important;
+  list-style: none !important;
+  padding: 0 !important;
+}
+
+.product-card .text-block.paragraph li:not(:last-child)::after {
+  content: ' \2022 ';
+}
+
+/* ---------- Collection / product grid ---------- */
+.main-collection-grid {
+  padding-block-start: 1.5rem;
+}
+
+.product-grid {
+  row-gap: 2rem !important;
+}
+
+.main-collection-grid__empty {
+  color: var(--bs-muted);
+}
+
+/* ---------- Global buttons (add to cart, buy now, etc.) ---------- */
+.button {
+  border-radius: var(--bs-radius-pill);
+  transition: var(--bs-mode-transition), transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.button:hover {
+  transform: translateY(-1px);
+}
+
+/* ---------- Variant picker ---------- */
+.variant-option__button-label {
+  border-radius: var(--bs-radius-pill) !important;
+  transition: var(--bs-mode-transition), border-color 0.15s ease;
+}
+
+.variant-option__button-label:hover {
+  border-color: var(--bs-accent);
+}
+
+/* ---------- Product detail page ---------- */
+.product-media,
+.product-media-container,
+.product-media img,
+.product-media video {
+  border-radius: var(--bs-radius-l);
+}
+
+product-price .price {
+  font-weight: 700;
+  font-size: 1.15em;
+  color: var(--bs-accent);
+}
+
+.buy-buttons-block__bar {
+  border-radius: var(--bs-radius-l);
+}
+
+.tax-note,
+.installments {
+  color: var(--bs-muted);
+  font-size: 0.85rem;
+}

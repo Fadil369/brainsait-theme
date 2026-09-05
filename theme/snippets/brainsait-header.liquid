@@ -1,0 +1,33 @@
+<div class="brainsait-announcement" role="status">{{ 'brainsait.announcement.text' | t }}</div>
+<header class="brainsait-header" role="banner">
+  <div class="brainsait-header__inner bs-container">
+    <a class="brainsait-wordmark" href="{{ routes.root_url }}" aria-label="{{ 'brainsait.navigation.home' | t }}">Brain<span>SAIT</span></a>
+    <nav id="brainsait-primary-navigation" class="brainsait-header__nav" data-bs-menu data-open="false" aria-label="{{ 'brainsait.navigation.primary' | t }}">
+      <a href="{{ routes.root_url }}"{% if request.path == routes.root_url %} aria-current="page"{% endif %}>{{ 'brainsait.navigation.home' | t }}</a>
+      <a href="{{ routes.collections_url }}/learn"{% if request.path contains '/collections/learn' %} aria-current="page"{% endif %}>{{ 'brainsait.navigation.learn' | t }}</a>
+      <a href="{{ routes.collections_url }}/build"{% if request.path contains '/collections/build' %} aria-current="page"{% endif %}>{{ 'brainsait.navigation.build' | t }}</a>
+      <a href="{{ routes.collections_url }}/solutions"{% if request.path == '/collections/solutions' %} aria-current="page"{% endif %}>{{ 'brainsait.navigation.solutions' | t }}</a>
+      <a href="{{ routes.collections_url }}/solutions-ready"{% if request.path contains '/collections/solutions-ready' %} aria-current="page"{% endif %}>{{ 'brainsait.navigation.solutions_ready' | t }}</a>
+      <a href="{{ routes.collections_url }}/oid-registry"{% if request.path contains '/collections/oid-registry' %} aria-current="page"{% endif %}>{{ 'brainsait.navigation.oid_registry' | t }}</a>
+      <a href="/pages/about">{{ 'brainsait.navigation.about' | t }}</a>
+      <a href="/pages/support">{{ 'brainsait.navigation.support' | t }}</a>
+    </nav>
+    <div class="brainsait-header__actions">
+      <a class="brainsait-header__action" href="{{ routes.search_url }}" aria-label="{{ 'brainsait.actions.search' | t }}">
+        <svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-4-4"></path></svg><span class="brainsait-header__action-label">{{ 'brainsait.actions.search' | t }}</span>
+      </a>
+      {% if shop.customer_accounts_enabled %}
+        <a class="brainsait-header__action" href="{{ routes.account_url }}" aria-label="{{ 'brainsait.actions.account' | t }}">
+          <svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"></circle><path d="M4 21a8 8 0 0 1 16 0"></path></svg><span class="brainsait-header__action-label">{{ 'brainsait.actions.account' | t }}</span>
+        </a>
+      {% endif %}
+      <a class="brainsait-header__action" href="{{ routes.cart_url }}" aria-label="{{ 'brainsait.actions.cart' | t }}">
+        <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M3 4h2l2.4 11h10.8l2-7H7"></path><circle cx="9" cy="20" r="1"></circle><circle cx="18" cy="20" r="1"></circle></svg><span class="brainsait-header__action-label">{{ 'brainsait.actions.cart' | t }}</span>
+        {% if cart.item_count > 0 %}<span class="brainsait-cart-count" aria-hidden="true">{{ cart.item_count }}</span>{% endif %}
+      </a>
+      <button class="brainsait-menu-toggle" type="button" data-bs-menu-toggle aria-controls="brainsait-primary-navigation" aria-expanded="false" aria-label="{{ 'brainsait.actions.menu' | t }}">
+        <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"></path></svg>
+      </button>
+    </div>
+  </div>
+</header>

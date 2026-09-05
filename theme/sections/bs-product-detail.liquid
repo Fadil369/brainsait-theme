@@ -1,0 +1,1405 @@
+{%- style -%}
+  :root {
+    --bs-gold-start: #c9a84c;
+    --bs-gold-mid: #e2c36e;
+    --bs-gold-end: #f0d88c;
+    --bs-glass-bg: rgba(255, 255, 255, 0.08);
+    --bs-glass-border: rgba(255, 255, 255, 0.12);
+    --bs-glass-bg-light: rgba(255, 255, 255, 0.6);
+    --bs-glass-border-light: rgba(0, 0, 0, 0.08);
+    --bs-dark-bg: #0d1117;
+    --bs-dark-surface: #161b22;
+    --bs-dark-border: #30363d;
+    --bs-light-bg: #ffffff;
+    --bs-light-text: #1f2328;
+    --bs-light-text-secondary: #656d76;
+    --bs-dark-text: #e6edf3;
+    --bs-dark-text-secondary: #8b949e;
+    --bs-radius-sm: 8px;
+    --bs-radius-md: 12px;
+    --bs-radius-lg: 16px;
+    --bs-radius-xl: 24px;
+    --bs-transition: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    --bs-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.15);
+    --bs-shadow-md: 0 4px 12px rgba(0, 0, 0, 0.2);
+    --bs-shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.3);
+    --bs-shadow-gold: 0 0 20px rgba(201, 168, 76, 0.3);
+  }
+
+  .bs-product-detail {
+    --bg: var(--bs-dark-bg);
+    --surface: var(--bs-dark-surface);
+    --border: var(--bs-dark-border);
+    --text: var(--bs-dark-text);
+    --text-secondary: var(--bs-dark-text-secondary);
+    --glass-bg: var(--bs-glass-bg);
+    --glass-border: var(--bs-glass-border);
+  }
+
+  .bs-product-detail--light {
+    --bg: var(--bs-light-bg);
+    --surface: #f6f8fa;
+    --border: var(--bs-light-text-secondary);
+    --text: var(--bs-light-text);
+    --text-secondary: var(--bs-light-text-secondary);
+    --glass-bg: var(--bs-glass-bg-light);
+    --glass-border: var(--bs-glass-border-light);
+  }
+
+  .bs-product-detail {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif;
+    color: var(--text);
+    background: var(--bg);
+    padding: 0;
+    line-height: 1.5;
+  }
+
+  .bs-product-detail .bs-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 40px 24px;
+  }
+
+  @media (min-width: 768px) {
+    .bs-product-detail .bs-container {
+      padding: 56px 32px;
+    }
+  }
+
+  /* Bilingual toggle */
+  .bs-lang-toggle {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 100px;
+    margin: 0 auto 32px;
+    width: fit-content;
+  }
+
+  .bs-lang-toggle button {
+    padding: 6px 16px;
+    border: none;
+    border-radius: 100px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--bs-transition);
+    background: transparent;
+    color: var(--text-secondary);
+    letter-spacing: 0.5px;
+  }
+
+  .bs-lang-toggle button.active {
+    background: linear-gradient(135deg, var(--bs-gold-start), var(--bs-gold-end));
+    color: #000;
+    box-shadow: var(--bs-shadow-sm);
+  }
+
+  /* Product grid */
+  .bs-product-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  @media (min-width: 992px) {
+    .bs-product-grid {
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+    }
+  }
+
+  /* Image gallery */
+  .bs-gallery {
+    position: relative;
+  }
+
+  .bs-gallery-main {
+    position: relative;
+    border-radius: var(--bs-radius-lg);
+    overflow: hidden;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    aspect-ratio: 1 / 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .bs-gallery-main img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+  }
+
+  .bs-gallery-main:hover img {
+    transform: scale(1.03);
+  }
+
+  .bs-gallery-thumbs {
+    display: flex;
+    gap: 8px;
+    margin-top: 12px;
+    overflow-x: auto;
+    scrollbar-width: thin;
+  }
+
+  .bs-gallery-thumbs img {
+    width: 72px;
+    height: 72px;
+    object-fit: cover;
+    border-radius: var(--bs-radius-sm);
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: var(--bs-transition);
+    opacity: 0.6;
+  }
+
+  .bs-gallery-thumbs img:hover {
+    opacity: 0.85;
+  }
+
+  .bs-gallery-thumbs img.active {
+    border-color: var(--bs-gold-mid);
+    opacity: 1;
+    box-shadow: var(--bs-shadow-gold);
+  }
+
+  /* Product details */
+  .bs-product-details {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  /* Eyebrow */
+  .bs-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--bs-gold-mid);
+  }
+
+  .bs-eyebrow svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  /* Title */
+  .bs-product-title {
+    font-size: clamp(28px, 4vw, 44px);
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    color: var(--text);
+    margin: 0;
+  }
+
+  /* Gold price */
+  .bs-price-wrap {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 8px;
+  }
+
+  .bs-price {
+    font-size: clamp(28px, 3.5vw, 40px);
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--bs-gold-start) 0%, var(--bs-gold-mid) 50%, var(--bs-gold-end) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1.2;
+  }
+
+  .bs-price-original {
+    font-size: 18px;
+    color: var(--text-secondary);
+    text-decoration: line-through;
+  }
+
+  /* Tier badges */
+  .bs-tier-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .bs-tier-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 6px 14px;
+    border-radius: 100px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border: 1px solid var(--glass-border);
+    transition: var(--bs-transition);
+  }
+
+  .bs-tier-badge--learn {
+    background: rgba(139, 148, 158, 0.12);
+    color: #8b949e;
+  }
+
+  .bs-tier-badge--build {
+    background: rgba(88, 166, 255, 0.12);
+    color: #58a6ff;
+  }
+
+  .bs-tier-badge--solution {
+    background: rgba(137, 180, 250, 0.12);
+    color: #89b4fa;
+  }
+
+  .bs-tier-badge--bpr {
+    background: rgba(201, 168, 76, 0.12);
+    color: var(--bs-gold-mid);
+  }
+
+  .bs-tier-badge__icon {
+    width: 14px;
+    height: 14px;
+    flex-shrink: 0;
+  }
+
+  /* Feature list */
+  .bs-features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .bs-features li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 15px;
+    color: var(--text);
+    line-height: 1.5;
+  }
+
+  .bs-features .bs-check {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(201, 168, 76, 0.2), rgba(240, 216, 140, 0.15));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1px;
+  }
+
+  .bs-features .bs-check svg {
+    width: 12px;
+    height: 12px;
+    color: var(--bs-gold-mid);
+  }
+
+  /* Description */
+  .bs-description {
+    border-top: 1px solid var(--border);
+    padding-top: 20px;
+  }
+
+  .bs-description h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0 0 8px;
+    color: var(--text);
+  }
+
+  .bs-description-content {
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--text-secondary);
+  }
+
+  .bs-description-content.rte p {
+    margin: 0 0 12px;
+  }
+
+  .bs-description-content.rte p:last-child {
+    margin-bottom: 0;
+  }
+
+  /* Fulfillment chain */
+  .bs-fulfillment {
+    padding: 16px 20px;
+    border-radius: var(--bs-radius-md);
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  .bs-fulfillment h4 {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    color: var(--bs-gold-mid);
+    margin: 0 0 10px;
+  }
+
+  .bs-fulfillment p {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  /* How it works */
+  .bs-how-it-works {
+    margin-top: 8px;
+    padding: 24px 0;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .bs-how-it-works h3 {
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    margin: 0 0 28px;
+    color: var(--text);
+  }
+
+  .bs-steps {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  @media (min-width: 768px) {
+    .bs-steps {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+  }
+
+  .bs-step {
+    position: relative;
+    text-align: center;
+    padding: 20px 16px;
+    border-radius: var(--bs-radius-md);
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    transition: var(--bs-transition);
+  }
+
+  .bs-step:hover {
+    background: rgba(201, 168, 76, 0.06);
+    border-color: rgba(201, 168, 76, 0.25);
+  }
+
+  @media (min-width: 768px) {
+    .bs-step:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: -12px;
+      width: 24px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--bs-gold-start), var(--bs-gold-end));
+      opacity: 0.4;
+      transform: translateY(-50%);
+    }
+  }
+
+  .bs-step-num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--bs-gold-start), var(--bs-gold-end));
+    color: #000;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+
+  .bs-step-icon {
+    width: 36px;
+    height: 36px;
+    margin: 0 auto 10px;
+    color: var(--bs-gold-mid);
+  }
+
+  .bs-step-title {
+    font-size: 14px;
+    font-weight: 700;
+    margin: 0 0 4px;
+    color: var(--text);
+  }
+
+  .bs-step-desc {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  /* Dual CTAs */
+  .bs-ctas {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 8px;
+  }
+
+  @media (min-width: 480px) {
+    .bs-ctas {
+      flex-direction: row;
+      gap: 12px;
+    }
+  }
+
+  .bs-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 14px 28px;
+    border-radius: var(--bs-radius-sm);
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    transition: var(--bs-transition);
+    text-align: center;
+    flex: 1;
+    min-height: 48px;
+    letter-spacing: 0.2px;
+  }
+
+  .bs-cta svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .bs-cta--primary {
+    background: linear-gradient(135deg, var(--bs-gold-start), var(--bs-gold-mid), var(--bs-gold-end));
+    color: #000;
+    box-shadow: var(--bs-shadow-gold);
+  }
+
+  .bs-cta--primary:hover {
+    box-shadow: 0 0 30px rgba(201, 168, 76, 0.5);
+    transform: translateY(-1px);
+  }
+
+  .bs-cta--secondary {
+    background: var(--glass-bg);
+    color: var(--text);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+
+  .bs-cta--secondary:hover {
+    background: rgba(201, 168, 76, 0.08);
+    border-color: var(--bs-gold-mid);
+  }
+
+  /* Variant selector */
+  .bs-variant-section {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .bs-variant-label {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text);
+  }
+
+  .bs-variant-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .bs-variant-option {
+    padding: 8px 16px;
+    border-radius: var(--bs-radius-sm);
+    border: 1px solid var(--glass-border);
+    background: var(--glass-bg);
+    color: var(--text);
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--bs-transition);
+  }
+
+  .bs-variant-option:hover {
+    border-color: var(--bs-gold-mid);
+  }
+
+  .bs-variant-option.selected {
+    border-color: var(--bs-gold-mid);
+    background: rgba(201, 168, 76, 0.1);
+    color: var(--bs-gold-mid);
+  }
+
+  .bs-variant-option.disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+    text-decoration: line-through;
+  }
+
+  /* Quantity */
+  .bs-quantity {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    border-radius: var(--bs-radius-sm);
+    overflow: hidden;
+    border: 1px solid var(--glass-border);
+    background: var(--glass-bg);
+    width: fit-content;
+  }
+
+  .bs-qty-btn {
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: transparent;
+    color: var(--text);
+    font-size: 18px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--bs-transition);
+  }
+
+  .bs-qty-btn:hover {
+    background: rgba(201, 168, 76, 0.1);
+    color: var(--bs-gold-mid);
+  }
+
+  .bs-qty-input {
+    width: 52px;
+    height: 40px;
+    border: none;
+    border-left: 1px solid var(--glass-border);
+    border-right: 1px solid var(--glass-border);
+    background: transparent;
+    color: var(--text);
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+    outline: none;
+    -moz-appearance: textfield;
+  }
+
+  .bs-qty-input::-webkit-outer-spin-button,
+  .bs-qty-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  /* Related products */
+  .bs-related {
+    margin-top: 56px;
+    padding-top: 40px;
+    border-top: 1px solid var(--border);
+  }
+
+  .bs-related h3 {
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    margin: 0 0 32px;
+    color: var(--text);
+  }
+
+  .bs-related-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  @media (min-width: 768px) {
+    .bs-related-grid {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+  }
+
+  .bs-related-card {
+    border-radius: var(--bs-radius-md);
+    border: 1px solid var(--border);
+    background: var(--surface);
+    overflow: hidden;
+    transition: var(--bs-transition);
+    text-decoration: none;
+    color: inherit;
+    display: block;
+  }
+
+  .bs-related-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--bs-shadow-lg);
+    border-color: var(--bs-gold-mid);
+  }
+
+  .bs-related-card-img {
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    background: var(--surface);
+  }
+
+  .bs-related-card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+  }
+
+  .bs-related-card:hover .bs-related-card-img img {
+    transform: scale(1.05);
+  }
+
+  .bs-related-card-info {
+    padding: 12px;
+  }
+
+  .bs-related-card-title {
+    font-size: 13px;
+    font-weight: 600;
+    margin: 0 0 4px;
+    color: var(--text);
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .bs-related-card-price {
+    font-size: 14px;
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--bs-gold-start), var(--bs-gold-end));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Hidden lang content */
+  [data-lang] {
+    display: none;
+  }
+
+  [data-lang].visible {
+    display: inline;
+  }
+
+  .bs-product-detail--ar [data-lang="en"] {
+    display: none !important;
+  }
+
+  .bs-product-detail--ar [data-lang="ar"].visible {
+    display: inline;
+  }
+
+  .bs-product-detail--en [data-lang="en"].visible {
+    display: inline;
+  }
+
+  .bs-product-detail--en [data-lang="ar"] {
+    display: none !important;
+  }
+
+  /* Inline elements for bilingual */
+  .bs-product-detail--ar .bs-visible-ar {
+    display: inline !important;
+  }
+
+  .bs-product-detail--en .bs-visible-en {
+    display: inline !important;
+  }
+
+  /* Hide block-level bilingual containers */
+  .bs-product-detail--ar .bs-hidden-ar {
+    display: none !important;
+  }
+
+  .bs-product-detail--en .bs-hidden-en {
+    display: none !important;
+  }
+
+  /* Mobile tweaks */
+  @media (max-width: 767px) {
+    .bs-product-detail .bs-container {
+      padding: 24px 16px;
+    }
+
+    .bs-step:not(:last-child)::after {
+      display: none;
+    }
+  }
+
+  /* Animations */
+  @keyframes bs-fade-in {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .bs-product-detail .bs-animate {
+    animation: bs-fade-in 0.5s ease forwards;
+  }
+
+  .bs-product-detail .bs-animate-delay-1 { animation-delay: 0.1s; opacity: 0; }
+  .bs-product-detail .bs-animate-delay-2 { animation-delay: 0.2s; opacity: 0; }
+  .bs-product-detail .bs-animate-delay-3 { animation-delay: 0.3s; opacity: 0; }
+  .bs-product-detail .bs-animate-delay-4 { animation-delay: 0.4s; opacity: 0; }
+  .bs-product-detail .bs-animate-delay-5 { animation-delay: 0.5s; opacity: 0; }
+{%- endstyle -%}
+
+{% render 'brainsait-agent-commerce', product: product %}
+
+<div
+  class="bs-product-detail bs-product-detail--en"
+  id="BsProductDetail-{{ section.id }}"
+  data-agent-commerce-detail
+  data-product-handle="{{ product.handle | escape }}"
+  data-product-family="{{ product.metafields.brainsait.family.value | default: product.type | escape }}"
+  data-purchase-mode="{{ product.metafields.brainsait.purchase_mode.value | default: 'direct' | escape }}"
+>
+  <div class="bs-container">
+
+    {%- assign en_eyebrow = section.settings.eyebrow_en | default: 'Featured Product' -%}
+    {%- assign ar_eyebrow = section.settings.eyebrow_ar | default: 'منتج مميز' -%}
+    {%- assign en_how_title = section.settings.how_title_en | default: 'How It Works' -%}
+    {%- assign ar_how_title = section.settings.how_title_ar | default: 'كيف يعمل' -%}
+    {%- assign en_related_title = section.settings.related_title_en | default: 'You May Also Like' -%}
+    {%- assign ar_related_title = section.settings.related_title_ar | default: 'قد يعجبك أيضاً' -%}
+    {%- assign en_buy = section.settings.buy_btn_en | default: 'Buy Now' -%}
+    {%- assign ar_buy = section.settings.buy_btn_ar | default: 'اشترِ الآن' -%}
+    {%- assign en_learn = section.settings.learn_btn_en | default: 'Learn More' -%}
+    {%- assign ar_learn = section.settings.learn_btn_ar | default: 'اعرف المزيد' -%}
+    {%- assign en_payment = section.settings.step_payment_en | default: 'Payment' -%}
+    {%- assign ar_payment = section.settings.step_payment_ar | default: 'الدفع' -%}
+    {%- assign en_fulfillment = section.settings.step_fulfillment_en | default: 'Fulfillment' -%}
+    {%- assign ar_fulfillment = section.settings.step_fulfillment_ar | default: 'التنفيذ' -%}
+    {%- assign en_access = section.settings.step_access_en | default: 'Access' -%}
+    {%- assign ar_access = section.settings.step_access_ar | default: 'الوصول' -%}
+    {%- assign en_delivery = section.settings.step_delivery_en | default: 'Delivery' -%}
+    {%- assign ar_delivery = section.settings.step_delivery_ar | default: 'التسليم' -%}
+
+    <!-- Language Toggle -->
+    <div class="bs-lang-toggle bs-animate">
+      <button type="button" class="active" data-lang-btn="en">EN</button>
+      <button type="button" data-lang-btn="ar">عربي</button>
+    </div>
+
+    <!-- Product Grid: Image Left / Details Right -->
+    <div class="bs-product-grid">
+
+      <!-- Left: Image Gallery -->
+      <div class="bs-gallery bs-animate bs-animate-delay-1">
+        <div class="bs-gallery-main">
+          {%- if product.selected_or_first_available_variant.featured_media != blank -%}
+            <img
+              id="BsMainImage"
+              src="{{ product.selected_or_first_available_variant.featured_media | image_url: '1000x1000' }}"
+              alt="{{ product.selected_or_first_available_variant.featured_media.alt | escape }}"
+              loading="eager"
+            >
+          {%- elsif product.featured_media != blank -%}
+            <img
+              id="BsMainImage"
+              src="{{ product.featured_media | image_url: '1000x1000' }}"
+              alt="{{ product.featured_media.alt | escape }}"
+              loading="eager"
+            >
+          {%- else -%}
+            <img
+              id="BsMainImage"
+              src="{{ 'product-1-1' | asset_url | image_url: '1000x1000' }}"
+              alt="{{ 'products.product.media.alt' | t }}"
+              loading="eager"
+            >
+          {%- endif -%}
+        </div>
+        {%- if product.media.size > 1 -%}
+          <div class="bs-gallery-thumbs">
+            {%- for media in product.media limit: 6 -%}
+              <img
+                src="{{ media | image_url: '200x200' }}"
+                alt="{{ media.alt | escape }}"
+                class="{% if forloop.first %}active{% endif %}"
+                data-thumb-index="{{ forloop.index0 }}"
+              >
+            {%- endfor -%}
+          </div>
+        {%- endif -%}
+      </div>
+
+      <!-- Right: Product Details -->
+      <div class="bs-product-details">
+
+        <!-- Eyebrow -->
+        <div class="bs-eyebrow bs-animate bs-animate-delay-2">
+          <span class="bs-visible-en">{{ en_eyebrow }}</span>
+          <span class="bs-visible-ar">{{ ar_eyebrow }}</span>
+          <svg viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd"/>
+          </svg>
+        </div>
+
+        <!-- Title -->
+        <h1 class="bs-product-title bs-animate bs-animate-delay-2">{{ product.title | escape }}</h1>
+
+        <!-- Gold Gradient Price -->
+        <div class="bs-price-wrap bs-animate bs-animate-delay-3">
+          <span class="bs-price" id="BsPrice">
+            {%- if product.compare_at_price > product.price -%}
+              {{ product.price | money_with_currency }}
+            {%- else -%}
+              {{ product.price | money_with_currency }}
+            {%- endif -%}
+          </span>
+          {%- if product.compare_at_price > product.price -%}
+            <span class="bs-price-original">{{ product.compare_at_price | money_with_currency }}</span>
+          {%- endif -%}
+        </div>
+
+        <!-- Tier Badges from Tags -->
+        {%- assign tag_map = 'LEARN:learn,BUILD:build,SOLUTION:solution,BPR:bpr' | split: ',' -%}
+        <div class="bs-tier-badges bs-animate bs-animate-delay-3">
+          {%- for tag in product.tags -%}
+            {%- assign tag_upper = tag | upcase -%}
+            {%- for pair in tag_map -%}
+              {%- assign kv = pair | split: ':' -%}
+              {%- if tag_upper == kv[0] -%}
+                <span class="bs-tier-badge bs-tier-badge--{{ kv[1] }}">
+                  {%- if kv[0] == 'LEARN' -%}
+                    <svg class="bs-tier-badge__icon" viewBox="0 0 20 20" fill="currentColor">
+                      <path d="M10 2a3.5 3.5 0 00-3.5 3.5c0 1.473.897 2.567 1.753 3.383.532.507.897.89.897 1.117 0 .186-.518.58-1.273 1.16C7.46 12.084 6.5 13.023 6.5 14.5h7c0-1.477-.96-2.416-1.377-3.337-.755-.58-1.273-.974-1.273-1.16 0-.227.365-.61.897-1.117.856-.816 1.753-1.91 1.753-3.383A3.5 3.5 0 0010 2z"/>
+                    </svg>
+                  {%- endif -%}
+                  {%- if kv[0] == 'BUILD' -%}
+                    <svg class="bs-tier-badge__icon" viewBox="0 0 20 20" fill="currentColor">
+                      <path fill-rule="evenodd" d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7a.75.75 0 010 1.5h-7a.75.75 0 01-.75-.75zm.75-8.5a.75.75 0 000 1.5h9a.75.75 0 000-1.5h-9z" clip-rule="evenodd"/>
+                    </svg>
+                  {%- endif -%}
+                  {%- if kv[0] == 'SOLUTION' -%}
+                    <svg class="bs-tier-badge__icon" viewBox="0 0 20 20" fill="currentColor">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm.75-11.25a.75.75 0 00-1.5 0v3.5a.75.75 0 001.5 0v-3.5zm-1 4.75a1 1 0 102 0v.5a1 1 0 10-2 0v-.5z" clip-rule="evenodd"/>
+                    </svg>
+                  {%- endif -%}
+                  {%- if kv[0] == 'BPR' -%}
+                    <svg class="bs-tier-badge__icon" viewBox="0 0 20 20" fill="currentColor">
+                      <path fill-rule="evenodd" d="M10 1a4.5 4.5 0 00-4.5 4.5V9H5a2 2 0 00-2 2v6a2 2 0 002 2h10a2 2 0 002-2v-6a2 2 0 00-2-2h-.5V5.5A4.5 4.5 0 0010 1zm3 8V5.5a3 3 0 00-6 0V9h6z" clip-rule="evenodd"/>
+                    </svg>
+                  {%- endif -%}
+                  <span class="bs-visible-en">{{ kv[0] }}</span>
+                  <span class="bs-visible-ar">{{ kv[0] }}</span>
+                </span>
+              {%- endif -%}
+            {%- endfor -%}
+          {%- endfor -%}
+        </div>
+
+        <!-- Variant Picker -->
+        {%- unless product.has_only_default_variant -%}
+          {%- for option in product.options_with_values -%}
+            <div class="bs-variant-section bs-animate bs-animate-delay-3">
+              <span class="bs-variant-label">{{ option.name }}</span>
+              <div class="bs-variant-options">
+                {%- for value in option.values -%}
+                  <button
+                    type="button"
+                    class="bs-variant-option"
+                    data-value="{{ value }}"
+                    data-option-index="{{ forloop.index0 }}"
+                    onclick="BsUpdateVariant(this)"
+                  >{{ value }}</button>
+                {%- endfor -%}
+              </div>
+            </div>
+          {%- endfor -%}
+        {%- endunless -%}
+
+        <!-- Feature List -->
+        <ul class="bs-features bs-animate bs-animate-delay-4">
+          <li>
+            <span class="bs-check">
+              <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd"/></svg>
+            </span>
+            <span class="bs-visible-en">Instant digital delivery to your account</span>
+            <span class="bs-visible-ar">تسليم رقمي فوري لحسابك</span>
+          </li>
+          <li>
+            <span class="bs-check">
+              <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd"/></svg>
+            </span>
+            <span class="bs-visible-en">Premium support and documentation included</span>
+            <span class="bs-visible-ar">دعم متميز وتوثيق شامل متضمن</span>
+          </li>
+          <li>
+            <span class="bs-check">
+              <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd"/></svg>
+            </span>
+            <span class="bs-visible-en">Lifetime access to updates and upgrades</span>
+            <span class="bs-visible-ar">وصول دائم للتحديثات والترقيات</span>
+          </li>
+          <li>
+            <span class="bs-check">
+              <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd"/></svg>
+            </span>
+            <span class="bs-visible-en">Secure payment with full refund guarantee</span>
+            <span class="bs-visible-ar">دفع آمن مع ضمان استرداد كامل</span>
+          </li>
+        </ul>
+
+        <!-- Description -->
+        <div class="bs-description bs-animate bs-animate-delay-4">
+          <h3>
+            <span class="bs-visible-en">About This Product</span>
+            <span class="bs-visible-ar">نبذة عن هذا المنتج</span>
+          </h3>
+          <div class="bs-description-content rte">
+            {{ product.description }}
+          </div>
+        </div>
+
+        <!-- Fulfillment Chain -->
+        <div class="bs-fulfillment bs-animate bs-animate-delay-4">
+          <h4>
+            <span class="bs-visible-en">What You Get</span>
+            <span class="bs-visible-ar">ما ستحصل عليه</span>
+          </h4>
+          <p>
+            <span class="bs-visible-en">After purchase, you'll receive instant access to your digital product via email. Download the files, follow the included documentation, and get started within minutes. Our support team is available 24/7 to help.</span>
+            <span class="bs-visible-ar">بعد الشراء، ستتلقى وصولاً فورياً إلى منتجك الرقمي عبر البريد الإلكتروني. حمّل الملفات، اتبع التوثيق المرفق، وابدأ خلال دقائق. فريق دعمنا متاح على مدار الساعة لمساعدتك.</span>
+          </p>
+        </div>
+
+        <!-- How It Works -->
+        <div class="bs-how-it-works bs-animate bs-animate-delay-5">
+          <h3>
+            <span class="bs-visible-en">{{ en_how_title }}</span>
+            <span class="bs-visible-ar">{{ ar_how_title }}</span>
+          </h3>
+          <div class="bs-steps">
+            <!-- Step 1: Payment -->
+            <div class="bs-step">
+              <div class="bs-step-num">1</div>
+              <svg class="bs-step-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="1" y="4" width="22" height="16" rx="2" ry="2"/>
+                <line x1="1" y1="10" x2="23" y2="10"/>
+              </svg>
+              <div class="bs-step-title">
+                <span class="bs-visible-en">{{ en_payment }}</span>
+                <span class="bs-visible-ar">{{ ar_payment }}</span>
+              </div>
+              <div class="bs-step-desc">
+                <span class="bs-visible-en">Secure checkout with multiple payment options</span>
+                <span class="bs-visible-ar">دفع آمن مع خيارات متعددة</span>
+              </div>
+            </div>
+            <!-- Step 2: Fulfillment -->
+            <div class="bs-step">
+              <div class="bs-step-num">2</div>
+              <svg class="bs-step-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/>
+                <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+                <line x1="12" y1="22.08" x2="12" y2="12"/>
+              </svg>
+              <div class="bs-step-title">
+                <span class="bs-visible-en">{{ en_fulfillment }}</span>
+                <span class="bs-visible-ar">{{ ar_fulfillment }}</span>
+              </div>
+              <div class="bs-step-desc">
+                <span class="bs-visible-en">Instant order processing and preparation</span>
+                <span class="bs-visible-ar">معالجة فورية للطلب والتجهيز</span>
+              </div>
+            </div>
+            <!-- Step 3: Access -->
+            <div class="bs-step">
+              <div class="bs-step-num">3</div>
+              <svg class="bs-step-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M15 3h4a2 2 0 012 2v14a2 2 0 01-2 2h-4"/>
+                <polyline points="10 17 15 12 10 7"/>
+                <line x1="15" y1="12" x2="3" y2="12"/>
+              </svg>
+              <div class="bs-step-title">
+                <span class="bs-visible-en">{{ en_access }}</span>
+                <span class="bs-visible-ar">{{ ar_access }}</span>
+              </div>
+              <div class="bs-step-desc">
+                <span class="bs-visible-en">Receive access credentials via email</span>
+                <span class="bs-visible-ar">استلام بيانات الوصول عبر البريد</span>
+              </div>
+            </div>
+            <!-- Step 4: Delivery -->
+            <div class="bs-step">
+              <div class="bs-step-num">4</div>
+              <svg class="bs-step-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 19.5A2.5 2.5 0 016.5 17H20"/>
+                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/>
+              </svg>
+              <div class="bs-step-title">
+                <span class="bs-visible-en">{{ en_delivery }}</span>
+                <span class="bs-visible-ar">{{ ar_delivery }}</span>
+              </div>
+              <div class="bs-step-desc">
+                <span class="bs-visible-en">Start using your product immediately</span>
+                <span class="bs-visible-ar">ابدأ باستخدام منتجك فوراً</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quantity -->
+        <div class="bs-animate bs-animate-delay-5">
+          <span class="bs-variant-label">
+            <span class="bs-visible-en">Quantity</span>
+            <span class="bs-visible-ar">الكمية</span>
+          </span>
+          <div class="bs-quantity">
+            <button type="button" class="bs-qty-btn" onclick="BsQtyChange(-1)">−</button>
+            <input
+              type="number"
+              class="bs-qty-input"
+              id="BsQtyInput"
+              value="1"
+              min="1"
+              max="99"
+              form="product-form-{{ section.id }}"
+            >
+            <button type="button" class="bs-qty-btn" onclick="BsQtyChange(1)">+</button>
+          </div>
+        </div>
+
+        <!-- Dual CTA Buttons -->
+        <div class="bs-ctas bs-animate bs-animate-delay-5">
+          {%- form 'product', product, id: 'product-form-' | append: section.id, class: 'product-form' -%}
+            <input type="hidden" name="id" value="{{ product.first_available_variant.id }}">
+            <input type="hidden" name="quantity" id="BsQtyField" value="1">
+            <button
+              type="submit"
+              name="add"
+              class="bs-cta bs-cta--primary"
+            >
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
+                <path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/>
+              </svg>
+              <span class="bs-visible-en">{{ en_buy }}</span>
+              <span class="bs-visible-ar">{{ ar_buy }}</span>
+            </button>
+          {%- endform -%}
+          <a href="{{ product.url }}" class="bs-cta bs-cta--secondary">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M12 16v-4"/><path d="M12 8h.01"/>
+            </svg>
+            <span class="bs-visible-en">{{ en_learn }}</span>
+            <span class="bs-visible-ar">{{ ar_learn }}</span>
+          </a>
+        </div>
+
+      </div><!-- /product-details -->
+    </div><!-- /product-grid -->
+
+    <!-- Related Products -->
+    {%- assign related_products = section.settings.related_products -%}
+    {%- if related_products != blank -%}
+      <div class="bs-related bs-animate">
+        <h3>
+          <span class="bs-visible-en">{{ en_related_title }}</span>
+          <span class="bs-visible-ar">{{ ar_related_title }}</span>
+        </h3>
+        <div class="bs-related-grid">
+          {%- for product in related_products limit: 4 -%}
+            <a href="{{ product.url }}" class="bs-related-card">
+              <div class="bs-related-card-img">
+                {%- if product.featured_media != blank -%}
+                  <img
+                    src="{{ product.featured_media | image_url: '400x400' }}"
+                    alt="{{ product.featured_media.alt | escape }}"
+                    loading="lazy"
+                  >
+                {%- else -%}
+                  <img
+                    src="{{ 'product-1-1' | asset_url | image_url: '400x400' }}"
+                    alt="{{ product.title | escape }}"
+                    loading="lazy"
+                  >
+                {%- endif -%}
+              </div>
+              <div class="bs-related-card-info">
+                <div class="bs-related-card-title">{{ product.title | escape }}</div>
+                <div class="bs-related-card-price">{{ product.price | money_with_currency }}</div>
+              </div>
+            </a>
+          {%- endfor -%}
+        </div>
+      </div>
+    {%- endif -%}
+
+  </div><!-- /container -->
+</div>
+
+<script>
+  (function() {
+    var section = document.getElementById('BsProductDetail-{{ section.id }}');
+    if (!section) return;
+
+    // ---- Language Toggle ----
+    var langBtns = section.querySelectorAll('[data-lang-btn]');
+    var currentLang = 'en';
+
+    langBtns.forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var lang = this.getAttribute('data-lang-btn');
+        if (lang === currentLang) return;
+        currentLang = lang;
+
+        langBtns.forEach(function(b) { b.classList.remove('active'); });
+        this.classList.add('active');
+
+        section.classList.remove('bs-product-detail--en', 'bs-product-detail--ar');
+        section.classList.add('bs-product-detail--' + lang);
+
+        // Update visible spans
+        var spans = section.querySelectorAll('[class*="bs-visible-"]');
+        spans.forEach(function(span) {
+          span.classList.remove('bs-visible-en', 'bs-visible-ar');
+          span.classList.add('bs-visible-' + lang);
+        });
+      });
+    });
+
+    // ---- Gallery Thumbnails ----
+    var thumbs = section.querySelectorAll('.bs-gallery-thumbs img');
+    var mainImg = document.getElementById('BsMainImage');
+    if (thumbs.length > 0 && mainImg) {
+      thumbs.forEach(function(thumb) {
+        thumb.addEventListener('click', function() {
+          thumbs.forEach(function(t) { t.classList.remove('active'); });
+          this.classList.add('active');
+
+          var thumbSrc = this.src.replace(/\/200x200/, '/1000x1000').replace(/_200x200\./, '_1000x1000.');
+          mainImg.src = thumbSrc;
+          mainImg.alt = this.alt;
+        });
+      });
+    }
+
+    // ---- Quantity ----
+    window.BsQtyChange = function(delta) {
+      var input = document.getElementById('BsQtyInput');
+      var field = document.getElementById('BsQtyField');
+      if (!input || !field) return;
+      var val = parseInt(input.value) || 1;
+      val = Math.max(1, Math.min(99, val + delta));
+      input.value = val;
+      field.value = val;
+    };
+
+    document.getElementById('BsQtyInput') && document.getElementById('BsQtyInput').addEventListener('change', function() {
+      var val = Math.max(1, Math.min(99, parseInt(this.value) || 1));
+      this.value = val;
+      var field = document.getElementById('BsQtyField');
+      if (field) field.value = val;
+    });
+
+    // ---- Variant Selection ----
+    window.BsUpdateVariant = function(btn) {
+      var options = section.querySelectorAll('.bs-variant-option');
+      options.forEach(function(o) { o.classList.remove('selected'); });
+      btn.classList.add('selected');
+
+      // Build variant form hidden input
+      var form = document.getElementById('product-form-{{ section.id }}');
+      if (form) {
+        var variantInput = form.querySelector('input[name="id"]');
+        // Find matching variant
+        var optionValues = [];
+        options.forEach(function(o) {
+          if (o.classList.contains('selected')) {
+            optionValues.push(o.getAttribute('data-value'));
+          }
+        });
+        // Use Shopify's built-in variant selection
+        if (variantInput && btn.getAttribute('data-variant-id')) {
+          variantInput.value = btn.getAttribute('data-variant-id');
+        }
+      }
+    };
+
+    // ---- Price Update on Variant Change ----
+    var priceEl = document.getElementById('BsPrice');
+    var allOptionBtns = section.querySelectorAll('.bs-variant-option');
+    allOptionBtns.forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        // Trigger native Shopify variant form submit for price update
+        var form = document.getElementById('product-form-{{ section.id }}');
+        if (form && this.getAttribute('data-variant-id')) {
+          var hidden = form.querySelector('input[name="id"]');
+          if (hidden) {
+            hidden.value = this.getAttribute('data-variant-id');
+            // Use native form action for proper price/variant update
+            form.submit();
+          }
+        }
+      });
+    });
+
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "bs-product-detail",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "Branded product detail section with gh.io-style design, gold accents, and bilingual (AR/EN) support."
+    },
+    {
+      "type": "text",
+      "id": "eyebrow_en",
+      "label": "Eyebrow (EN)",
+      "default": "Featured Product"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow_ar",
+      "label": "Eyebrow (AR)",
+      "default": "منتج مميز"
+    },
+    {
+      "type": "text",
+      "id": "buy_btn_en",
+      "label": "Buy Button Text (EN)",
+      "default": "Buy Now"
+    },
+    {
+      "type": "text",
+      "id": "buy_btn_ar",
+      "label": "Buy Button Text (AR)",
+      "default": "اشترِ الآن"
+    },
+    {
+      "type": "text",
+      "id": "learn_btn_en",
+      "label": "Learn More Button Text (EN)",
+      "default": "Learn More"
+    },
+    {
+      "type": "text",
+      "id": "learn_btn_ar",
+      "label": "Learn More Button Text (AR)",
+      "default": "اعرف المزيد"
+    },
+    {
+      "type": "text",
+      "id": "how_title_en",
+      "label": "How It Works Title (EN)",
+      "default": "How It Works"
+    },
+    {
+      "type": "text",
+      "id": "how_title_ar",
+      "label": "How It Works Title (AR)",
+      "default": "كيف يعمل"
+    },
+    {
+      "type": "text",
+      "id": "step_payment_en",
+      "label": "Step 1 Label (EN)",
+      "default": "Payment"
+    },
+    {
+      "type": "text",
+      "id": "step_payment_ar",
+      "label": "Step 1 Label (AR)",
+      "default": "الدفع"
+    },
+    {
+      "type": "text",
+      "id": "step_fulfillment_en",
+      "label": "Step 2 Label (EN)",
+      "default": "Fulfillment"
+    },
+    {
+      "type": "text",
+      "id": "step_fulfillment_ar",
+      "label": "Step 2 Label (AR)",
+      "default": "التنفيذ"
+    },
+    {
+      "type": "text",
+      "id": "step_access_en",
+      "label": "Step 3 Label (EN)",
+      "default": "Access"
+    },
+    {
+      "type": "text",
+      "id": "step_access_ar",
+      "label": "Step 3 Label (AR)",
+      "default": "الوصول"
+    },
+    {
+      "type": "text",
+      "id": "step_delivery_en",
+      "label": "Step 4 Label (EN)",
+      "default": "Delivery"
+    },
+    {
+      "type": "text",
+      "id": "step_delivery_ar",
+      "label": "Step 4 Label (AR)",
+      "default": "التسليم"
+    },
+    {
+      "type": "product_list",
+      "id": "related_products",
+      "label": "Related Products"
+    },
+    {
+      "type": "text",
+      "id": "related_title_en",
+      "label": "Related Products Title (EN)",
+      "default": "You May Also Like"
+    },
+    {
+      "type": "text",
+      "id": "related_title_ar",
+      "label": "Related Products Title (AR)",
+      "default": "قد يعجبك أيضاً"
+    }
+  ],
+  "presets": [
+    {
+      "name": "bs-product-detail"
+    }
+  ]
+}
+{% endschema %}

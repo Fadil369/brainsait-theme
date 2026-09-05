@@ -1,0 +1,30 @@
+{% liquid
+  assign kb = blogs['knowledge-base']
+  assign reports = kb.articles | where: 'tags', 'report'
+  assign articles_by_tag = kb.articles | where: 'tags', 'article'
+  assign blog_by_tag = kb.articles | where: 'tags', 'blog'
+  assign podcasts = kb.articles | where: 'tags', 'podcast'
+  assign videos = kb.articles | where: 'tags', 'video'
+%}
+{% # theme-check-disable ValidScopedCSSClass %}
+<div style="padding:2rem;font-family:monospace;white-space:pre-wrap;">
+DEBUG2
+kb.articles.size: {{ kb.articles.size }}
+reports.size: {{ reports.size }}
+articles_by_tag.size: {{ articles_by_tag.size }}
+blog_by_tag.size: {{ blog_by_tag.size }}
+podcasts.size: {{ podcasts.size }}
+videos.size: {{ videos.size }}
+---
+{% for a in kb.articles %}
+{% if a.tags contains 'report' %}HASREPORT{% else %}no{% endif %} - {{ forloop.index }}. tags=[{{ a.tags | join: '|' }}]
+{% endfor %}
+</div>
+{% schema %}
+{
+  "name": "KB Debug",
+  "tag": "section",
+  "settings": [],
+  "presets": [{"name": "KB Debug"}]
+}
+{% endschema %}

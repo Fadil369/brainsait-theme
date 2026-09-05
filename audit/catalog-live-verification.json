@@ -1,0 +1,15 @@
+{
+  "checkedProducts": 116,
+  "failures": [],
+  "duplicateLiveCanonicalSkus": [],
+  "remaining": {
+    "products": 0,
+    "collectionWrites": 0,
+    "collectionAdds": 0,
+    "collectionRemoves": 0,
+    "redirects": 0,
+    "archive": 0
+  },
+  "publicationLookupAvailable": false,
+  "checkedAt": "2026-09-05T08:54:39.926Z"
+}

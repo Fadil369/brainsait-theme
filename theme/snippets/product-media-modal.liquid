@@ -1,0 +1,18 @@
+{%- comment -%}
+  Product media modal — opens the featured image / gallery in a lightbox.
+  Used by main-product when the product has media.
+{%- endcomment -%}
+<product-modal class="product-media-modal" data-modal id="ProductMediaModal-{{ section.id | default: 'main' }}">
+  <div class="product-media-modal__dialog" role="dialog" aria-modal="true" aria-label="{{ 'products.product.media.view_full' | t | default: 'Media gallery' }}" tabindex="-1">
+    <button id="ModalClose-{{ section.id | default: 'main' }}" type="button" class="product-media-modal__toggle" aria-label="{{ 'accessibility.close' | t | default: 'Close' }}">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
+    </button>
+    <div class="product-media-modal__content" role="document" aria-label="{{ 'products.product.media.gallery' | t | default: 'Media gallery' }}" tabindex="0">
+      {%- if product.featured_media -%}
+        {{ product.featured_media | image_url: width: 1500 | image_tag: loading: 'lazy', sizes: '100vw, (min-width: 750px) 60vw' }}
+      {%- else -%}
+        {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+      {%- endif -%}
+    </div>
+  </div>
+</product-modal>

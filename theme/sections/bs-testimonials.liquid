@@ -1,0 +1,233 @@
+{% liquid
+  assign is_ar = false
+  if request.locale.iso_code == 'ar'
+    assign is_ar = true
+  endif
+%}
+{% # theme-check-disable ValidScopedCSSClass %}
+
+<div class="bs-testimonials">
+  <div class="bs-testimonials__inner page-width">
+    <h2 class="bs-testimonials__heading">
+      {% if is_ar %}
+        ماذا يقول عملاؤنا
+      {% else %}
+        What Our Clients Say
+      {% endif %}
+    </h2>
+
+    <div class="bs-testimonials__grid">
+
+      <article class="bs-testimonial" aria-label="{% if is_ar %}شهادة عميل{% else %}Client testimonial{% endif %}">
+        <div class="bs-testimonial__body">
+          <span class="bs-testimonial__quote-mark" aria-hidden="true">"</span>
+          <blockquote class="bs-testimonial__text">
+            {% if is_ar %}
+              منتجات BrainSAIT غيّرت طريقة عملنا في إدارة هوية المرضى. التسليم الفوري والتوثيق الشامل وفّرا علينا أسابيع من التطوير.
+            {% else %}
+              BrainSAIT's products transformed how we manage patient identity. The instant delivery and comprehensive documentation saved us weeks of development work.
+            {% endif %}
+          </blockquote>
+        </div>
+        <footer class="bs-testimonial__footer">
+          <div class="bs-testimonial__avatar" aria-hidden="true">M</div>
+          <div class="bs-testimonial__meta">
+            <span class="bs-testimonial__name">
+              {% if is_ar %}مدير العمليات{% else %}Operations Director{% endif %}
+            </span>
+            <span class="bs-testimonial__role">
+              {% if is_ar %}مستشفى الملك فهد، الرياض{% else %}King Fahd Medical City, Riyadh{% endif %}
+            </span>
+          </div>
+        </footer>
+      </article>
+
+      <article class="bs-testimonial" aria-label="{% if is_ar %}شهادة عميل{% else %}Client testimonial{% endif %}">
+        <div class="bs-testimonial__body">
+          <span class="bs-testimonial__quote-mark" aria-hidden="true">"</span>
+          <blockquote class="bs-testimonial__text">
+            {% if is_ar %}
+              سجلّ OID وحزم FHIR كانت بالضبط ما احتجناه للامتثال مع NPHIES. الدعم الثنائي اللغة يجعل التطبيق في فريقنا سلساً للغاية.
+            {% else %}
+              The OID registry and FHIR bundles were exactly what we needed for NPHIES compliance. The bilingual support makes adoption seamless across our team.
+            {% endif %}
+          </blockquote>
+        </div>
+        <footer class="bs-testimonial__footer">
+          <div class="bs-testimonial__avatar" aria-hidden="true">A</div>
+          <div class="bs-testimonial__meta">
+            <span class="bs-testimonial__name">
+              {% if is_ar %}مدير تقنية المعلومات{% else %}IT Manager{% endif %}
+            </span>
+            <span class="bs-testimonial__role">
+              {% if is_ar %}مجموعة المواساة، جدة{% else %}Al-Mouwasat Group, Jeddah{% endif %}
+            </span>
+          </div>
+        </footer>
+      </article>
+
+      <article class="bs-testimonial" aria-label="{% if is_ar %}شهادة عميل{% else %}Client testimonial{% endif %}">
+        <div class="bs-testimonial__body">
+          <span class="bs-testimonial__quote-mark" aria-hidden="true">"</span>
+          <blockquote class="bs-testimonial__text">
+            {% if is_ar %}
+              منذ اعتمدنا حزمة هوية الذكاء الاصطناعي الصحي، تسارعت دورة إيراداتنا الإكلينيكية بشكل ملحوظ. الحلّ مصمَّم فعلاً للسوق السعودي.
+            {% else %}
+              Since adopting the Healthcare AI Identity Suite, our revenue cycle has accelerated noticeably. This solution is truly built for the Saudi market.
+            {% endif %}
+          </blockquote>
+        </div>
+        <footer class="bs-testimonial__footer">
+          <div class="bs-testimonial__avatar" aria-hidden="true">S</div>
+          <div class="bs-testimonial__meta">
+            <span class="bs-testimonial__name">
+              {% if is_ar %}قائد RCM{% else %}RCM Lead{% endif %}
+            </span>
+            <span class="bs-testimonial__role">
+              {% if is_ar %}مركز طبي إقليمي، الدمام{% else %}Regional Medical Center, Dammam{% endif %}
+            </span>
+          </div>
+        </footer>
+      </article>
+
+    </div>
+  </div>
+</div>
+
+{% stylesheet %}
+  .bs-testimonials {
+    padding-block: 4rem 4.5rem;
+    background-color: var(--color-background, #0a0a0f);
+  }
+
+  .bs-testimonials__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+  }
+
+  .bs-testimonials__heading {
+    margin: 0;
+    font-family: var(--font-heading--family);
+    font-size: clamp(1.5rem, 3.5vw, 2.25rem);
+    color: var(--color-foreground, #f0f0ff);
+    text-align: center;
+    text-wrap: balance;
+  }
+
+  .bs-testimonials__grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  @media screen and (min-width: 750px) {
+    .bs-testimonials__grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .bs-testimonial {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1.25rem;
+    padding: 1.75rem;
+    border-radius: 12px;
+    border: 1px solid var(--bs-border, #2a2a3e);
+    background-color: var(--bs-surface, #0d0d1a);
+    transition: border-color 0.2s ease;
+  }
+
+  .bs-testimonial:hover {
+    border-color: rgba(124, 111, 255, 0.4);
+  }
+
+  .bs-testimonial__body {
+    position: relative;
+    flex: 1;
+  }
+
+  .bs-testimonial__quote-mark {
+    position: absolute;
+    top: -0.5rem;
+    inset-inline-start: -0.25rem;
+    font-size: 3.5rem;
+    line-height: 1;
+    font-family: Georgia, serif;
+    color: var(--bs-accent, #7c6fff);
+    opacity: 0.4;
+    pointer-events: none;
+    user-select: none;
+  }
+
+  .bs-testimonial__text {
+    margin: 0;
+    padding-block-start: 1.25rem;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: rgba(240, 240, 255, 0.85);
+    font-style: normal;
+  }
+
+  .bs-testimonial__footer {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding-block-start: 1rem;
+    border-block-start: 1px solid var(--bs-border, #2a2a3e);
+  }
+
+  .bs-testimonial__avatar {
+    flex-shrink: 0;
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #7c6fff, #22d3ee);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-heading--family);
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #ffffff;
+  }
+
+  .bs-testimonial__meta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    min-width: 0;
+  }
+
+  .bs-testimonial__name {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-foreground, #f0f0ff);
+    line-height: 1.3;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .bs-testimonial__role {
+    font-size: 0.8rem;
+    color: var(--bs-muted, rgba(240,240,255,0.55));
+    line-height: 1.3;
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "BrainSAIT Testimonials",
+  "tag": "section",
+  "settings": [],
+  "presets": [
+    {
+      "name": "BrainSAIT Testimonials"
+    }
+  ]
+}
+{% endschema %}

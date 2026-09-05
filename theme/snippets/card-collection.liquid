@@ -1,0 +1,57 @@
+{%- comment -%}
+  Collection card used by collection-list. Renders the collection image,
+  title and a link, with an optional product count.
+  @param {object} card_collection — the collection object
+  @param {string} media_aspect_ratio — e.g. 'square' | 'portrait' | 'adapt'
+  @param {string} columns — number of columns
+  @param {string} placeholder_image — placeholder key
+{%- endcomment -%}
+{%- liquid
+  assign is_ar = false
+  if request.locale.iso_code == 'ar'
+    assign is_ar = true
+  endif
+  assign ratio = media_aspect_ratio | default: 'square'
+  assign card_title = card_collection.title
+  if card_title == blank
+    assign card_title = 'general.placeholder_collection' | t
+  endif
+-%}
+
+<div class="card card--collection">
+  <a href="{{ card_collection.url }}" class="card__media-wrapper" aria-label="{{ card_title | escape }}">
+    <div class="card__media{% if ratio == 'portrait' %} card__media--portrait{% elsif ratio == 'adapt' %} card__media--adapt{% endif %}">
+      {%- if card_collection.featured_image -%}
+        {{ card_collection.featured_image | image_url: width: 800 | image_tag: loading: 'lazy', sizes: '(min-width: 750px) 25vw, 50vw', class: 'card__media-image' }}
+      {%- elsif placeholder_image != blank -%}
+        {{ placeholder_image | placeholder_svg_tag: 'placeholder-svg card__media-placeholder' }}
+      {%- else -%}
+        <span class="card__media-placeholder" style="display:block;width:100%;height:100%;background:linear-gradient(135deg, rgb(var(--color-background-rgb,255 255 255)/.4), rgb(var(--color-border-rgb,0 0 0)/.08));" aria-hidden="true"></span>
+      {%- endif -%}
+    </div>
+    <span class="card__overlay" aria-hidden="true"></span>
+    <span class="card__label">
+      {{ card_title | escape }}
+      <span class="card__count">
+        {%- if card_collection.products_count > 0 -%}
+          {{ card_collection.products_count }} {% if is_ar %}{% if card_collection.products_count == 1 %}عنوان{% else %}عنواناً{% endif %}{% else %}{{ 'general.count' | t: count: card_collection.products_count | default: card_collection.products_count }}{% endif %}
+        {%- endif -%}
+      </span>
+      <span class="card__arrow">→</span>
+    </span>
+  </a>
+</div>
+
+{% style %}
+  .card--collection { border-radius: 14px; overflow: hidden; border: 1px solid rgb(var(--color-border-rgb, 0 0 0) / .12); background: rgb(var(--color-background-rgb, 255 255 255) / .6); transition: transform .3s ease, box-shadow .3s ease; }
+  .card--collection:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgb(0 0 0 / .12); }
+  .card__media-wrapper { position: relative; display: block; }
+  .card__media { aspect-ratio: 1; overflow: hidden; }
+  .card__media--portrait { aspect-ratio: 3 / 4; }
+  .card__media--adapt { aspect-ratio: auto; }
+  .card__media-image, .card__media-placeholder { width: 100%; height: 100%; object-fit: cover; }
+  .card__overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgb(0 0 0 / .45), transparent 55%); }
+  .card__label { position: absolute; inset-inline-start: 1rem; bottom: 1rem; color: #fff; font-weight: 700; display: flex; align-items: center; gap: .5rem; }
+  .card__count { font-weight: 400; opacity: .85; font-size: .8rem; }
+  .card__arrow { font-size: 1.1rem; }
+{% endstyle %}

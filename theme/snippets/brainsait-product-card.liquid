@@ -1,0 +1,45 @@
+{% liquid
+  assign outcome = product.metafields.brainsait.outcome.value | default: product.description | strip_html | truncate: 112
+  assign billing_label = product.metafields.brainsait.billing_label.value
+  assign purchase_mode = product.metafields.brainsait.purchase_mode.value | default: 'direct'
+  assign family = product.metafields.brainsait.family.value | default: product.type
+%}
+<article
+  class="brainsait-product-card"
+  data-reveal
+  data-agent-commerce-card
+  data-product-handle="{{ product.handle | escape }}"
+  data-product-family="{{ family | escape }}"
+  data-purchase-mode="{{ purchase_mode | escape }}"
+  data-variant-id="{{ product.selected_or_first_available_variant.id }}"
+>
+  <a class="brainsait-product-card__media" href="{{ product.url }}" aria-label="{{ product.title | escape }}">
+    {% if product.featured_image %}
+      {{ product.featured_image | image_url: width: 900 | image_tag: widths: '360, 540, 720, 900', loading: 'lazy', alt: product.featured_image.alt | default: product.title }}
+    {% else %}
+      {{ 'product-1' | placeholder_svg_tag: 'brainsait-product-card__placeholder' }}
+    {% endif %}
+  </a>
+  <div class="brainsait-product-card__body">
+    {% if family != blank %}<p class="brainsait-product-card__family">{{ family }}</p>{% endif %}
+    <h3><a href="{{ product.url }}">{{ product.title }}</a></h3>
+    <p class="brainsait-product-card__outcome">{{ outcome }}</p>
+    <div class="brainsait-product-card__commercial">
+      <div>
+        <strong>{{ product.price | money_with_currency }}</strong>
+        {% if billing_label != blank %}<span>{{ billing_label }}</span>{% endif %}
+      </div>
+      <a class="brainsait-link" href="{{ product.url }}">View details</a>
+    </div>
+    {% if purchase_mode == 'consultation' %}
+      <a class="brainsait-button brainsait-button--secondary" href="/pages/contact?offer={{ product.handle | url_encode }}">Request consultation</a>
+    {% elsif product.available %}
+      {% form 'product', product, class: 'brainsait-product-card__form' %}
+        <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+        <button class="brainsait-button" type="submit">Add to cart</button>
+      {% endform %}
+    {% else %}
+      <span class="brainsait-button brainsait-button--disabled" aria-disabled="true">Unavailable</span>
+    {% endif %}
+  </div>
+</article>

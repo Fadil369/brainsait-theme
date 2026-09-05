@@ -1,0 +1,54 @@
+mutation CollectionCreate($input: CollectionInput!) {
+  collectionCreate(input: $input) {
+    collection {
+      id
+      handle
+      title
+    }
+    userErrors {
+      field
+      message
+    }
+  }
+}
+
+mutation CollectionUpdate($input: CollectionInput!) {
+  collectionUpdate(input: $input) {
+    collection {
+      id
+      handle
+      title
+    }
+    userErrors {
+      field
+      message
+    }
+  }
+}
+
+mutation CollectionAddProducts($id: ID!, $productIds: [ID!]!) {
+  collectionAddProducts(id: $id, productIds: $productIds) {
+    collection {
+      id
+      handle
+      title
+    }
+    userErrors {
+      field
+      message
+    }
+  }
+}
+
+mutation CollectionRemoveProducts($id: ID!, $productIds: [ID!]!) {
+  collectionRemoveProducts(id: $id, productIds: $productIds) {
+    job {
+      id
+      done
+    }
+    userErrors {
+      field
+      message
+    }
+  }
+}

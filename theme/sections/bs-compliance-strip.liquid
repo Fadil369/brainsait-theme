@@ -1,0 +1,118 @@
+{% liquid
+  assign is_ar = false
+  if request.locale.iso_code == 'ar'
+    assign is_ar = true
+  endif
+%}
+{% # theme-check-disable ValidScopedCSSClass %}
+
+<div class="bs-compliance">
+  <div class="bs-compliance__inner page-width">
+    <ul class="bs-compliance__list" role="list" aria-label="{% if is_ar %}شهادات الامتثال{% else %}Compliance certifications{% endif %}">
+      <li class="bs-compliance__pill">
+        <span class="bs-compliance__icon" aria-hidden="true">⚕</span>
+        <span class="bs-compliance__label">
+          {% if is_ar %}NPHIES v3.2{% else %}NPHIES v3.2{% endif %}
+        </span>
+      </li>
+      <li class="bs-compliance__pill">
+        <span class="bs-compliance__icon" aria-hidden="true">🔗</span>
+        <span class="bs-compliance__label">
+          {% if is_ar %}FHIR R4{% else %}FHIR R4{% endif %}
+        </span>
+      </li>
+      <li class="bs-compliance__pill">
+        <span class="bs-compliance__icon" aria-hidden="true">🔢</span>
+        <span class="bs-compliance__label">
+          {% if is_ar %}IANA PEN 61026{% else %}IANA PEN 61026{% endif %}
+        </span>
+      </li>
+      <li class="bs-compliance__pill">
+        <span class="bs-compliance__icon" aria-hidden="true">🛡</span>
+        <span class="bs-compliance__label">
+          {% if is_ar %}متوافق HIPAA/PDPL{% else %}HIPAA/PDPL-aligned{% endif %}
+        </span>
+      </li>
+      <li class="bs-compliance__pill">
+        <span class="bs-compliance__icon" aria-hidden="true">☁</span>
+        <span class="bs-compliance__label">Cloudflare</span>
+      </li>
+      <li class="bs-compliance__pill">
+        <span class="bs-compliance__icon" aria-hidden="true">🇸🇦</span>
+        <span class="bs-compliance__label">
+          {% if is_ar %}رؤية 2030{% else %}Vision 2030{% endif %}
+        </span>
+      </li>
+    </ul>
+  </div>
+</div>
+
+{% stylesheet %}
+  .bs-compliance {
+    background-color: var(--bs-surface, #0d0d1a);
+    border-block-end: 1px solid var(--bs-border, #2a2a3e);
+    padding-block: 0.9rem;
+  }
+
+  .bs-compliance__inner {
+    display: flex;
+    justify-content: center;
+  }
+
+  .bs-compliance__list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .bs-compliance__pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding-inline: 0.75rem;
+    padding-block: 0.3rem;
+    border-radius: 999px;
+    border: 1px solid rgba(124, 111, 255, 0.35);
+    background-color: rgba(124, 111, 255, 0.08);
+    color: rgba(240, 240, 255, 0.82);
+    font-size: 0.78rem;
+    font-weight: 500;
+    white-space: nowrap;
+    transition: border-color 0.15s ease, background-color 0.15s ease;
+  }
+
+  .bs-compliance__pill:hover {
+    border-color: rgba(124, 111, 255, 0.65);
+    background-color: rgba(124, 111, 255, 0.16);
+  }
+
+  .bs-compliance__icon {
+    font-size: 0.85rem;
+    line-height: 1;
+  }
+
+  @media screen and (max-width: 749px) {
+    .bs-compliance__pill {
+      font-size: 0.73rem;
+      padding-inline: 0.6rem;
+    }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "BS Compliance Strip",
+  "tag": "section",
+  "settings": [],
+  "presets": [
+    {
+      "name": "BS Compliance Strip"
+    }
+  ]
+}
+{% endschema %}

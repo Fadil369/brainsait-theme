@@ -1,0 +1,39 @@
+{%- comment -%}
+  Functional pagination. Used by main-list-collections, main-article, main-search.
+  @param {paginate} paginate — the paginate object
+  @param {string} anchor — optional anchor suffix
+{%- endcomment -%}
+{%- if paginate.pages > 1 -%}
+  <nav class="pagination" role="navigation" aria-label="{{ 'general.pagination.label' | t | default: 'Pagination' }}">
+    <ul class="pagination__list list-unstyled" role="list">
+      {%- if paginate.previous -%}
+        <li><a href="{{ paginate.previous.url }}{% if anchor %}#{{ anchor }}{% endif %}" class="pagination__item pagination__item--prev" aria-label="{{ 'general.pagination.previous' | t | default: 'Previous' }}">←</a></li>
+      {%- endif -%}
+
+      {%- for part in paginate.parts -%}
+        <li>
+          {%- if part.is_link -%}
+            <a href="{{ part.url }}{% if anchor %}#{{ anchor }}{% endif %}" class="pagination__item" aria-label="{{ 'general.pagination.page' | t | default: 'Page' }} {{ part.title }}">{{ part.title }}</a>
+          {%- elsif part.title == paginate.current_page -%}
+            <span class="pagination__item pagination__item--current" aria-current="page">{{ part.title }}</span>
+          {%- else -%}
+            <span class="pagination__item pagination__item--ellipsis">…</span>
+          {%- endif -%}
+        </li>
+      {%- endfor -%}
+
+      {%- if paginate.next -%}
+        <li><a href="{{ paginate.next.url }}{% if anchor %}#{{ anchor }}{% endif %}" class="pagination__item pagination__item--next" aria-label="{{ 'general.pagination.next' | t | default: 'Next' }}">→</a></li>
+      {%- endif -%}
+    </ul>
+  </nav>
+{%- endif -%}
+
+{% style %}
+  .pagination { margin: 2rem 0; }
+  .pagination__list { display: flex; gap: .4rem; justify-content: center; flex-wrap: wrap; list-style: none; margin: 0; padding: 0; }
+  .pagination__item { display: inline-flex; align-items: center; justify-content: center; min-width: 2.4rem; height: 2.4rem; padding: 0 .6rem; border: 1px solid rgb(var(--color-border-rgb, 0 0 0) / .2); border-radius: 8px; text-decoration: none; font-weight: 600; }
+  .pagination__item--current { background: var(--gold, #e9c46a); border-color: var(--gold, #e9c46a); color: #111; }
+  .pagination__item:hover { border-color: var(--gold, #e9c46a); }
+  .pagination__item--ellipsis { border: none; }
+{% endstyle %}

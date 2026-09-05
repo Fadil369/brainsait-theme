@@ -1,0 +1,3806 @@
+[
+  {
+    "sourceProductId": "gid://shopify/Product/8104895348819",
+    "title": "BUILD — Forge Incubator Founders Program",
+    "handle": "build-forge-incubator-founders-program-1",
+    "productType": "BUILD Membership",
+    "family": "BUILD",
+    "vendor": "BrainSAIT",
+    "variants": [
+      {
+        "sourceVariantId": "gid://shopify/ProductVariant/46139191328851",
+        "sku": "BRN-BUILD-SUB-M",
+        "price": 499,
+        "billingModel": "monthly",
+        "billingLabel": "499 SAR / month"
+      }
+    ],
+    "tags": [
+      "build",
+      "monthly",
+      "brainsait",
+      "relaunch-2026"
+    ],
+    "imageAspectRatio": "3:2",
+    "templateSuffix": "membership",
+    "customerCopy": "Build Incubation — Monthly Founders Program — 499 SAR/month Full incubation access: Notion founder OS, 2nd Brain tracking, Telegram bot integration, hands-on simulators, and Forge Incubator curriculum. Full Learn library access (Frame.io PDFs) Notion Founder OS + 2nd Brain workspace Telegram bot (brainsait_forge_bot) for progress tracking Hands-on simulators &amp; theory/practice/action tracking Monthly mentorship check-ins",
+    "seo": {
+      "title": "BUILD — Forge Incubator Founders Program",
+      "description": "Build Incubation — Monthly Founders Program — 499 SAR/month Full incubation access: Notion founder OS, 2nd Brain tracking, Telegram bot integration, hands-"
+    },
+    "disclaimer": null,
+    "sourceUpdatedAt": "2026-09-03T13:35:06Z"
+  },
+  {
+    "sourceProductId": "gid://shopify/Product/8046917353555",
+    "title": "BUILD Ticket — Incubation Pass",
+    "handle": "build-ticket",
+    "productType": "BUILD Membership",
+    "family": "BUILD",
+    "vendor": "BrainSAIT",
+    "variants": [
+      {
+        "sourceVariantId": "gid://shopify/ProductVariant/45947217870931",
+        "sku": "BSP-BUILD-TICKET-IDENTITY",
+        "price": 9630,
+        "billingModel": "one_time",
+        "billingLabel": "One-time purchase"
+      }
+    ],
+    "tags": [
+      "build",
+      "one_time",
+      "brainsait",
+      "relaunch-2026"
+    ],
+    "imageAspectRatio": "3:2",
+    "templateSuffix": "membership",
+    "customerCopy": "🚀 BUILD TICKET: The Founder's Execution OS Stop Dreaming. Start Architecting. You have the vision. You've skimmed the playbooks. But between knowing and doing lies the graveyard of startups. The BUILD Ticket is your digital bulldozer—a meticulously engineered, living ecosystem designed to collapse the gap from abstract thought to tangible, trackable action. This isn't a course. This is your Second Brain in hyperdrive. 🧠 What's Inside the Build Ecosystem? When you activate your BUILD Ticket, you plug into a high-voltage automation grid that manages your theory, practice, and execution simultaneously. The Unified Vault (Learn Access): Instant, unlimited access to our entire library of PDF blueprints via a single Frame.io link. Your foundational theory layer. The \"2nd Brain\" Command Center (Notion): Exclusive, pre-built access to curated Forge Incubator founder courses. Fully tracked program architecture with every module and milestone meticulously laid out to guide your weekly progress. The Brainsait_Forge_Bot (Telegram): Your AI accountability partner. Tracks your build velocity, delivers micro-lessons, and keeps your momentum firing on all cylinders—directly to your pocket. ⚙️ Theory → Practice → Action (The Simulation Loop) Built on a proprietary Feedback Guiding Plan, the BUILD Ticket gives you hands-on simulators that replicate real-world business mechanics. Test hypotheses, run numbers, and make mistakes in a risk-free sandbox before deploying live. Every action is tracked, analyzed, and fed back into your 2nd Brain, creating a continuous loop of improvement. 🎯 The Ultimate Deliverable: A Well-Built System By the time you complete the build cycle, you won't just have learned—you will have constructed a fully operational, custom-tailored execution system that runs on autopilot. Focus on high-leverage strategy while we handle the cognitive load. 💎 Choose Your Build Trajectory: Monthly Subscription (182 SAR): Stay agile with full ecosystem access month-by-month, perfect for iterating as you grow. Full Ticket (9,630 SAR): Commit to the forge. Secure lifetime access to the BUILD ecosystem and lock in your progress without recurring billing. Ready to stop studying the map and start building the road? Ignite your Build Engine and turn your potential into a powerhouse.",
+    "seo": {
+      "title": "BUILD Ticket — Flat 9,630 SAR (was 14,960)",
+      "description": "Stage 02 — BUILD. One standard incubation ticket at a flat 9,630 SAR (was 14,960). 14-day sprint, Second Brain, Notion onboarding and GitHub repo after payment."
+    },
+    "disclaimer": null,
+    "sourceUpdatedAt": "2026-09-04T07:07:03Z"
+  },
+  {
+    "sourceProductId": "gid://shopify/Product/8057400918099",
+    "title": "FHIR & NPHIES — Hands-On Lab",
+    "handle": "fhir-and-nphies-lab",
+    "productType": "BUILD Membership",
+    "family": "BUILD",
+    "vendor": "BrainSAIT",
+    "variants": [
+      {
+        "sourceVariantId": "gid://shopify/ProductVariant/45997973045331",
+        "sku": "BRN-BUILD-FHIR-AND-NPHIES-HANDS-ON-LAB-1",
+        "price": 49,
+        "billingModel": "one_time",
+        "billingLabel": "One-time purchase"
+      }
+    ],
+    "tags": [
+      "build",
+      "one_time",
+      "brainsait",
+      "relaunch-2026"
+    ],
+    "imageAspectRatio": "3:2",
+    "templateSuffix": "membership",
+    "customerCopy": "Map a real claim to FHIR R4 and walk it through the NPHIES flow — guided, bilingual. A guided, hands-on lab for healthcare teams and developers: FHIR R4 resources, NPHIES claims flow, and a working example built together.",
+    "seo": {
+      "title": "FHIR & NPHIES — Hands-On Lab | BrainSAIT BUILD",
+      "description": "Map a real claim to FHIR R4 & walk it through the NPHIES flow. Guided, bilingual lab for healthcare teams & developers. BrainSAIT BUILD."
+    },
+    "disclaimer": null,
+    "sourceUpdatedAt": "2026-09-02T22:43:50Z"
+  },
+  {
+    "sourceProductId": "gid://shopify/Product/8057392595027",
+    "title": "Solo AI Business Workshop",
+    "handle": "solo-ai-business-workshop",
+    "productType": "BUILD Membership",
+    "family": "BUILD",
+    "vendor": "BrainSAIT",
+    "variants": [
+      {
+        "sourceVariantId": "gid://shopify/ProductVariant/45997964394579",
+        "sku": "BRN-BUILD-SOLO-AI-BUSINESS-WORKSHOP-1",
+        "price": 49,
+        "billingModel": "one_time",
+        "billingLabel": "One-time purchase"
+      }
+    ],
+    "tags": [
+      "build",
+      "one_time",
+      "brainsait",
+      "relaunch-2026"
+    ],
+    "imageAspectRatio": "3:2",
+    "templateSuffix": "membership",
+    "customerCopy": "The Solo AI Business Workshop is a free BrainSAIT Build-stage guided workshop designed to take you from idea to your first AI-powered income stream — in a single live session. Includes hands-on building, a structured workbook, and a finished deliverable you can launch immediately. Bilingual (AR/EN). Register now and show up ready to build. BrainSAIT — . . (AR/EN). .",
+    "seo": {
+      "title": "Solo AI Business Workshop — Launch Your AI Income | BrainSAIT",
+      "description": "Hands-on guided build: launch your first AI-powered income stream. Live sessions, workbook & finished deliverable. Bilingual. BrainSAIT BUILD."
+    },
+    "disclaimer": null,
+    "sourceUpdatedAt": "2026-09-02T22:44:31Z"
+  },
+  {
+    "sourceProductId": "gid://shopify/Product/8053984460883",
+    "title": "SPARK — AI Startup Builder",
+    "handle": "spark-ai-startup-builder",
+    "productType": "BUILD Membership",
+    "family": "BUILD",
+    "vendor": "BrainSAIT",
+    "variants": [
+      {
+        "sourceVariantId": "gid://shopify/ProductVariant/45976568070227",
+        "sku": "BSP-SPARK-AI-STARTUP-BUILDER",
+        "price": 299,
+        "billingModel": "one_time",
+        "billingLabel": "One-time purchase"
+      }
+    ],
+    "tags": [
+      "build",
+      "one_time",
+      "brainsait",
+      "relaunch-2026"
+    ],
+    "imageAspectRatio": "3:2",
+    "templateSuffix": "membership",
+    "customerCopy": "The AI game that walks you from idea to a launched product (DeepSeek). Included with BUILD. Enterprise / demo access — contact BrainSAIT for a live walkthrough. / — .",
+    "seo": {
+      "title": "SPARK — AI Startup Builder | BrainSAIT BUILD",
+      "description": "The AI game that walks you from idea to a launched product using DeepSeek. Included with BUILD. Enterprise demo access available. BrainSAIT."
+    },
+    "disclaimer": null,
+    "sourceUpdatedAt": "2026-08-23T02:08:01Z"
+  },
+  {
+    "sourceProductId": "gid://shopify/Product/8037211734099",
+    "title": "AI System Architect",
+    "handle": "ai-system-architect",
+    "productType": "LEARN Item",
+    "family": "LEARN",
+    "vendor": "BrainSAIT",
+    "variants": [
+      {
+        "sourceVariantId": "gid://shopify/ProductVariant/45912825659475",
+        "sku": "BSP-AI-ARCHITECT",
+        "price": 249,
+        "billingModel": "one_time",
+        "billingLabel": "One-time purchase"
+      }
+    ],
+    "tags": [
+      "learn",
+      "one_time",
+      "brainsait",
+      "relaunch-2026"
+    ],
+    "imageAspectRatio": "3:2",
+    "templateSuffix": "learn",
+    "customerCopy": "EN Unlock the full potential of AI with AI System Architect This comprehensive guide provides you with the expertise and knowledge needed to design, build, and deploy AI systems that drive business success. With AI System Architect, you will be able to harness the power of AI to automate processes, enhance decision-making, and drive innovation. Curriculum: System design for AI applications (scalability, latency, cost) LLM integration: prompt engineering, RAG, fine-tuning MLOps: monitoring, testing, CI/CD for ML systems Multimodal AI: text, vision, speech, and code models Written by AI architects who have shipped 50+ production systems in the region. Digital delivery Includes architecture review templates Price: 249 SAR . . : ( ) LLM: prompts RAG MLOps: CI/CD ML : +50 . : 249",
+    "seo": {
+      "title": "AI System Architect — Multi-Agent Design Tool | BrainSAIT",
+      "description": "Multi-agent AI system architecture designed for enterprises. Build scalable, intelligent automation frameworks for complex business operations via BrainSAIT."
+    },
+    "disclaimer": null,
+    "sourceUpdatedAt": "2026-09-02T22:43:16Z"
+  },
+  {
+    "sourceProductId": "gid://shopify/Product/8089480527955",
+    "title": "all-men",
+    "handle": "all-men-1",
+    "productType": "LEARN Item",
+    "family": "LEARN",
+    "vendor": "BrainSAIT",
+    "variants": [
+      {
+        "sourceVariantId": "gid://shopify/ProductVariant/46089529131091",
+        "sku": "LEARN-BOOK-ALL-MEN",
+        "price": 99,
+        "billingModel": "one_time",
+        "billingLabel": "One-time purchase"
+      }
+    ],
+    "tags": [
+      "learn",
+      "one_time",
+      "brainsait",
+      "relaunch-2026"
+    ],
+    "imageAspectRatio": "3:2",
+    "templateSuffix": "learn",
+    "customerCopy": "BrainSAIT LEARN digital book — instant download from R2 after payment.",
+    "seo": {
+      "title": "all-men",
+      "description": "BrainSAIT LEARN digital book — instant download from R2 after payment."
+    },
+    "disclaimer": null,
+    "sourceUpdatedAt": "2026-09-02T22:43:17Z"
+  },
+  {
+    "sourceProductId": "gid://shopify/Product/8089480331347",
+    "title": "all-men-cover",
+    "handle": "all-men-cover",
+    "productType": "LEARN Item",
+    "family": "LEARN",
+    "vendor": "BrainSAIT",
+    "variants": [
+      {
+        "sourceVariantId": "gid://shopify/ProductVariant/46089528901715",
+        "sku": "LEARN-BOOK-ALL-MEN-COVER",
+        "price": 99,
+        "billingModel": "one_time",
+        "billingLabel": "One-time purchase"
+      }
+    ],
+    "tags": [
+      "learn",
+      "one_time",
+      "brainsait",
+      "relaunch-2026"
+    ],
+    "imageAspectRatio": "3:2",
+    "templateSuffix": "learn",
+    "customerCopy": "BrainSAIT LEARN digital book — instant download from R2 after payment.",
+    "seo": {
+      "title": "all-men-cover",
+      "description": "BrainSAIT LEARN digital book — instant download from R2 after payment."
+    },
+    "disclaimer": null,
+    "sourceUpdatedAt": "2026-09-02T22:43:18Z"
+  },
+  {
+    "sourceProductId": "gid://shopify/Product/8089476497491",
+    "title": "API Revision Notebook",
+    "handle": "api-revision-notebook-1",
+    "productType": "LEARN Item",
+    "family": "LEARN",
+    "vendor": "BrainSAIT",
+    "variants": [
+      {
+        "sourceVariantId": "gid://shopify/ProductVariant/46089524641875",
+        "sku": "LEARN-BOOK-API-REVISION-NOTEBOOK",
+        "price": 99,
+        "billingModel": "one_time",
+        "billingLabel": "One-time purchase"
+      }
+    ],
+    "tags": [
+      "learn",
+      "one_time",
+      "brainsait",
+      "relaunch-2026"
+    ],
+    "imageAspectRatio": "3:2",
+    "templateSuffix": "learn",
+    "customerCopy": "BrainSAIT LEARN digital book — instant download from R2 after payment.",
+    "seo": {
+      "title": "API Revision Notebook",
+      "description": "BrainSAIT LEARN digital book — instant download from R2 after payment."
+    },
+    "disclaimer": null,
+    "sourceUpdatedAt": "2026-09-02T22:43:19Z"
+  },
+  {
+    "sourceProductId": "gid://shopify/Product/8089476563027",
+    "title": "Apple AI Anatomy",
+    "handle": "apple-ai-anatomy",
+    "productType": "LEARN Item",
+    "family": "LEARN",
+    "vendor": "BrainSAIT",
+    "variants": [
+      {
+        "sourceVariantId": "gid://shopify/ProductVariant/46089524772947",
+        "sku": "LEARN-BOOK-APPLE-AI-ANATOMY",
+        "price": 99,
+        "billingModel": "one_time",
+        "billingLabel": "One-time purchase"
+      }
+    ],
+    "tags": [
+      "learn",
+      "one_time",
+      "brainsait",
+      "relaunch-2026"
+    ],
+    "imageAspectRatio": "3:2",
+    "templateSuffix": "learn",
+    "customerCopy": "BrainSAIT LEARN digital book — instant download from R2 after payment.",
+    "seo": {
+      "title": "Apple AI Anatomy",
+      "description": "BrainSAIT LEARN digital book — instant download from R2 after payment."
+    },
+    "disclaimer": null,
+    "sourceUpdatedAt": "2026-09-02T22:43:20Z"
+  },
+  {
+    "sourceProductId": "gid://shopify/Product/8089480593491",
+    "title": "Between One Beat and Another English (5)",
+    "handle": "between-one-beat-and-another-english-1",
+    "productType": "LEARN Item",
+    "family": "LEARN",
+    "vendor": "BrainSAIT",
+    "variants": [
+      {
+        "sourceVariantId": "gid://shopify/ProductVariant/46089529196627",
+        "sku": "LEARN-BOOK-BETWEEN-ONE-BEAT-AND-ANOTHER",
+        "price": 99,
+        "billingModel": "one_time",
+        "billingLabel": "One-time purchase"
+      }
+    ],
+    "tags": [
+      "learn",
+      "one_time",
+      "brainsait",
+      "relaunch-2026"
+    ],
+    "imageAspectRatio": "3:2",
+    "templateSuffix": "learn",
+    "customerCopy": "BrainSAIT LEARN digital book — instant download from R2 after payment.",
+    "seo": {
+      "title": "Between One Beat and Another English (5)",
+      "description": "BrainSAIT LEARN digital book — instant download from R2 after payment."
+    },
+    "disclaimer": null,
+    "sourceUpdatedAt": "2026-09-02T22:43:24Z"
+  },
+  {
+    "sourceProductId": "gid://shopify/Product/8037217599571",
+    "title": "Book Writer Agent",
+    "handle": "book-writer-agent",
+    "productType": "LEARN Item",
+    "family": "LEARN",
+    "vendor": "BrainSAIT",
+    "variants": [
+      {
+        "sourceVariantId": "gid://shopify/ProductVariant/45912856199251",
+        "sku": "BSP-BOOK-WRITER",
+        "price": 199,
+        "billingModel": "one_time",
+        "billingLabel": "One-time purchase"
+      }
+    ],
+    "tags": [
+      "learn",
+      "one_time",
+      "brainsait",
+      "relaunch-2026"
+    ],
+    "imageAspectRatio": "3:2",
+    "templateSuffix": "learn",
+    "customerCopy": "AI agent that writes, structures, and publishes your book. Book Writer Agent is a complete AI-powered authoring system that takes you from raw idea to a publish-ready manuscript — chapter structure, drafting workflows, editing passes, and publishing preparation. What you get Structured agent prompts for outlining, chapter drafting, and revision Editorial workflow for tone, consistency, and readability passes Publishing-preparation checklist (formatting, metadata, distribution readiness) Licensed for commercial use on books you author Who it's for Authors, experts, consultants, and professionals who want to ship a non-fiction book without hiring a ghostwriting team. Delivery Instant digital delivery via secure link after payment. Support: brainsait@icloud.com. Accepted payments: mada · Apple Pay · STC Pay · Visa · Mastercard · PayPal : · Apple Pay · STC Pay · · · PayPal",
+    "seo": {
+      "title": "Book Writer Agent — AI Chapter Writing Tool | BrainSAIT",
+      "description": "Chapter-by-chapter book writing assistant powered by AI. Turn your ideas into a complete, polished manuscript with structured guidance via BrainSAIT."
+    },
+    "disclaimer": null,
+    "sourceUpdatedAt": "2026-08-24T08:09:01Z"
+  },
+  {
+    "sourceProductId": "gid://shopify/Product/8037212258387",
+    "title": "BrainSAIT × Abeer Group — Saudi Healthcare Transformation Blueprint",
+    "handle": "brainsait-abeer-group-saudi-healthcare-transformation-blueprint",
+    "productType": "LEARN Item",
+    "family": "LEARN",
+    "vendor": "BrainSAIT",
+    "variants": [
+      {
+        "sourceVariantId": "gid://shopify/ProductVariant/45912827101267",
+        "sku": "BSP-SAUDI-HC-TRANSFORM",
+        "price": 299,
+        "billingModel": "one_time",
+        "billingLabel": "One-time purchase"
+      }
+    ],
+    "tags": [
+      "learn",
+      "one_time",
+      "brainsait",
+      "relaunch-2026"
+    ],
+    "imageAspectRatio": "3:2",
+    "templateSuffix": "learn",
+    "customerCopy": "Saudi healthcare transformation blueprint — BrainSAIT × Abeer Group. The flagship BrainSAIT × Abeer Group collaboration: a comprehensive transformation blueprint for healthcare organizations modernizing care delivery in Saudi Arabia. Built from real-world digital health deployment experience, aligned with NPHIES requirements, FHIR interoperability standards, and Vision 2030 health sector goals. Inside the blueprint Digital transformation roadmap for hospitals and healthcare groups NPHIES integration and insurance-claim readiness guidance FHIR R4 interoperability architecture patterns Operational and clinical workflow redesign frameworks Who it's for Executives, CIOs, digital health leads, and consultants driving transformation programs in Saudi healthcare organizations. Delivery Instant digital delivery via secure link after payment. For advisory or enterprise engagement built on this blueprint, contact brainsait@icloud.com. Accepted payments: mada · Apple Pay · STC Pay · Visa · Mastercard · PayPal : · Apple Pay · STC Pay · · · PayPal",
+    "seo": {
+      "title": "BrainSAIT × Abeer Group — Saudi Health Blueprint | BrainSAIT",
+      "description": "Saudi Healthcare Transformation Blueprint co-developed with Abeer Group. Enterprise-grade insights for healthcare leaders driving Vision 2030 transformation."
+    },
+    "disclaimer": null,
+    "sourceUpdatedAt": "2026-08-24T08:08:11Z"
+  },
+  {
+    "sourceProductId": "gid://shopify/Product/8089478398035",
+    "title": "BrainSAIT AI Masterclass",
+    "handle": "brainsait-ai-masterclass",
+    "productType": "LEARN Item",
+    "family": "LEARN",
+    "vendor": "BrainSAIT",
+    "variants": [
+      {
+        "sourceVariantId": "gid://shopify/ProductVariant/46089526771795",
+        "sku": "LEARN-BOOK-BRAINSAIT-AI-MASTERCLASS",
+        "price": 99,
+        "billingModel": "one_time",
+        "billingLabel": "One-time purchase"
+      }
+    ],
+    "tags": [
+      "learn",
+      "one_time",
+      "brainsait",
+      "relaunch-2026"
+    ],
+    "imageAspectRatio": "3:2",
+    "templateSuffix": "learn",
+    "customerCopy": "BrainSAIT LEARN digital book — instant download from R2 after payment.",
+    "seo": {
+      "title": "BrainSAIT AI Masterclass",
+      "description": "BrainSAIT LEARN digital book — instant download from R2 after payment."
+    },
+    "disclaimer": null,
+    "sourceUpdatedAt": "2026-09-02T22:43:26Z"
+  },
+  {
+    "sourceProductId": "gid://shopify/Product/8089478463571",
+    "title": "BrainSAIT Health OS",
+    "handle": "brainsait-health-os",
+    "productType": "LEARN Item",
+    "family": "LEARN",
+    "vendor": "BrainSAIT",
+    "variants": [
+      {
+        "sourceVariantId": "gid://shopify/ProductVariant/46089526837331",
+        "sku": "LEARN-BOOK-BRAINSAIT-HEALTH-OS",
+        "price": 99,
+        "billingModel": "one_time",
+        "billingLabel": "One-time purchase"
+      }
+    ],
+    "tags": [
+      "learn",
+      "one_time",
+      "brainsait",
+      "relaunch-2026"
+    ],
+    "imageAspectRatio": "3:2",
+    "templateSuffix": "learn",
+    "customerCopy": "BrainSAIT LEARN digital book — instant download from R2 after payment.",
+    "seo": {
+      "title": "BrainSAIT Health OS",
+      "description": "BrainSAIT LEARN digital book — instant download from R2 after payment."
+    },
+    "disclaimer": null,
+    "sourceUpdatedAt": "2026-09-02T22:43:28Z"
+  },
+  {
+    "sourceProductId": "gid://shopify/Product/8104895217747",
+    "title": "BrainSAIT LEARN Pass",
+    "handle": "brainsait-learn-digital-access-library-membership",
+    "productType": "LEARN Membership",
+    "family": "LEARN",
+    "vendor": "BrainSAIT",
+    "variants": [
+      {
+        "sourceVariantId": "gid://shopify/ProductVariant/46139191197779",
+        "sku": "BRN-LEARN-SUB-M",
+        "price": 182,
+        "billingModel": "monthly",
+        "billingLabel": "182 SAR / month"
+      }
+    ],
+    "tags": [
+      "learn",
+      "monthly",
+      "brainsait",
+      "relaunch-2026"
+    ],
+    "imageAspectRatio": "3:2",
+    "templateSuffix": "learn",
+    "customerCopy": "Complete Learn Library Access — 182 SAR/month Get instant access to the full BrainSAIT Learn digital library including all 40+ books, courses, and guides. Delivered via our Frame.io platform with direct PDF streaming and download links. All 40+ Learn products (books, courses, guides) Frame.io streaming &amp; PDF download access Monthly payment with automatic renewal Cancel anytime — no contracts",
+    "seo": {
+      "title": "BrainSAIT LEARN Pass",
+      "description": "Complete Learn Library Access — 182 SAR/month Get instant access to the full BrainSAIT Learn digital library including all 40+ books, courses, and guides. "
+    },
+    "disclaimer": null,
+    "sourceUpdatedAt": "2026-09-03T13:35:07Z"
+  },
+  {
+    "sourceProductId": "gid://shopify/Product/8037223432275",
+    "title": "BrainSAIT Operating System (BOS) — Complete Course",
+    "handle": "brainsait-operating-system-bos-complete-course",
+    "productType": "LEARN Item",
+    "family": "LEARN",
+    "vendor": "BrainSAIT",
+    "variants": [
+      {
+        "sourceVariantId": "gid://shopify/ProductVariant/45912901517395",
+        "sku": "BSP-BOS-COURSE",
+        "price": 749,
+        "billingModel": "one_time",
+        "billingLabel": "One-time purchase"
+      }
+    ],
+    "tags": [
+      "learn",
+      "one_time",
+      "brainsait",
+      "relaunch-2026"
+    ],
+    "imageAspectRatio": "3:2",
+    "templateSuffix": "learn",
+    "customerCopy": "The complete BOS operating system course — AI-native healthcare workflows. BrainSAIT Operating System (BOS) is our full course on running an organization on AI-native workflows: identity, agents, integrations, and operations — with a focus on healthcare environments in Saudi Arabia. What you'll learn BOS architecture: how identity (OID), agents, and workflows fit together Building AI-native operational workflows step by step Healthcare-grade practices: NPHIES/FHIR context and compliance awareness Deployment patterns you can reuse across projects Includes Full course material with worked examples Practical templates from real BrainSAIT deployments Post-purchase support via email Delivery Instant access via secure link after payment. Support: brainsait@icloud.com — replies within 24–48 hours on business days.",
+    "seo": {
+      "title": "BrainSAIT Operating System (BOS) — Complete Course | BrainSAIT",
+      "description": "The complete curriculum for building an AI-native healthcare and business operating system. Comprehensive training for professionals via BrainSAIT."
+    },
+    "disclaimer": null,
+    "sourceUpdatedAt": "2026-08-23T13:43:57Z"
+  },
+  {
+    "sourceProductId": "gid://shopify/Product/8089478496339",
+    "title": "Clinical Code",
+    "handle": "clinical-code",
+    "productType": "LEARN Item",
+    "family": "LEARN",
+    "vendor": "BrainSAIT",
+    "variants": [
+      {
+        "sourceVariantId": "gid://shopify/ProductVariant/46089526870099",
+        "sku": "LEARN-BOOK-CLINICAL-CODE",
+        "price": 99,
+        "billingModel": "one_time",
+        "billingLabel": "One-time purchase"
+      }
+    ],
+    "tags": [
+      "learn",
+      "one_time",
+      "brainsait",
+      "relaunch-2026"
+    ],
+    "imageAspectRatio": "3:2",
+    "templateSuffix": "learn",
+    "customerCopy": "BrainSAIT LEARN digital book — instant download from R2 after payment.",
+    "seo": {
+      "title": "Clinical Code",
+      "description": "BrainSAIT LEARN digital book — instant download from R2 after payment."
+    },
+    "disclaimer": null,
+    "sourceUpdatedAt": "2026-09-02T22:43:38Z"
+  },
+  {
+    "sourceProductId": "gid://shopify/Product/8089476661331",
+    "title": "Digital Autonomy Blueprint",
+    "handle": "digital-autonomy-blueprint",
+    "productType": "LEARN Item",
+    "family": "LEARN",
+    "vendor": "BrainSAIT",
+    "variants": [
+      {
+        "sourceVariantId": "gid://shopify/ProductVariant/46089524904019",
+        "sku": "LEARN-BOOK-DIGITAL-AUTONOMY-BLUEPRINT",
+        "price": 99,
+        "billingModel": "one_time",
+        "billingLabel": "One-time purchase"
+      }
+    ],
+    "tags": [
+      "learn",
+      "one_time",
+      "brainsait",
+      "relaunch-2026"
+    ],
+    "imageAspectRatio": "3:2",
+    "templateSuffix": "learn",
+    "customerCopy": "BrainSAIT LEARN digital book — instant download from R2 after payment.",
+    "seo": {
+      "title": "Digital Autonomy Blueprint",
+      "description": "BrainSAIT LEARN digital book — instant download from R2 after payment."
+    },
+    "disclaimer": null,
+    "sourceUpdatedAt": "2026-09-02T22:43:41Z"
+  },
+  {
+    "sourceProductId": "gid://shopify/Product/8089478529107",
+    "title": "Digital Health Bridge",
+    "handle": "digital-health-bridge",
+    "productType": "LEARN Item",
+    "family": "LEARN",
+    "vendor": "BrainSAIT",
+    "variants": [
+      {
+        "sourceVariantId": "gid://shopify/ProductVariant/46089526935635",
+        "sku": "LEARN-BOOK-DIGITAL-HEALTH-BRIDGE",
+        "price": 99,
+        "billingModel": "one_time",
+        "billingLabel": "One-time purchase"
+      }
+    ],
+    "tags": [
+      "learn",
+      "one_time",
+      "brainsait",
+      "relaunch-2026"
+    ],
+    "imageAspectRatio": "3:2",
+    "templateSuffix": "learn",
+    "customerCopy": "BrainSAIT LEARN digital book — instant download from R2 after payment.",
+    "seo": {
+      "title": "Digital Health Bridge",
+      "description": "BrainSAIT LEARN digital book — instant download from R2 after payment."
+    },
+    "disclaimer": null,
+    "sourceUpdatedAt": "2026-09-02T22:43:42Z"
+  },
+  {
+    "sourceProductId": "gid://shopify/Product/8036253565011",
+    "title": "Digital Healthcare Masterclass",
+    "handle": "digital-healthcare-masterclass",
+    "productType": "LEARN Item",
+    "family": "LEARN",
+    "vendor": "BrainSAIT",
+    "variants": [
+      {
+        "sourceVariantId": "gid://shopify/ProductVariant/45906168873043",
+        "sku": "BSP-DIGITAL-HC-MASTERCLASS",
+        "price": 5,
+        "billingModel": "one_time",
+        "billingLabel": "One-time purchase"
+      }
+    ],
+    "tags": [
+      "learn",
+      "one_time",
+      "brainsait",
+      "relaunch-2026"
+    ],
+    "imageAspectRatio": "3:2",
+    "templateSuffix": "learn",
+    "customerCopy": "EN Unlock the future of healthcare with our Digital Healthcare Masterclass Learn how to leverage technology to improve patient outcomes and streamline clinical workflows. This comprehensive training program is designed to equip healthcare professionals with the skills and knowledge needed to thrive in a rapidly evolving industry. What you will learn: Digital transformation in Saudi healthcare (Vision 2030 aligned) Patient engagement platforms and telemedicine integration AI-powered clinical workflows and automation Patient retention and service excellence strategies Duration: Self-paced with live Q&amp;A sessions Price: 5 SAR Instant access via secure link Certificate of completion included . . : ( 2030) : : 5",
+    "seo": {
+      "title": "Digital Healthcare Masterclass — AI Health Guide | BrainSAIT",
+      "description": "Master digital health essentials with this comprehensive eBook. Learn telemedicine, medical data, and informed health decisions for professionals and families."
+    },
+    "disclaimer": null,
+    "sourceUpdatedAt": "2026-09-02T22:43:43Z"
+  },
+  {
+    "sourceProductId": "gid://shopify/Product/8089474400339",
+    "title": "Digital Income Strategy Your Three Pathways",
+    "handle": "digital-income-strategy-your-three-pathways",
+    "productType": "LEARN Item",
+    "family": "LEARN",
+    "vendor": "BrainSAIT",
+    "variants": [
+      {
+        "sourceVariantId": "gid://shopify/ProductVariant/46089522053203",
+        "sku": "LEARN-BOOK-DIGITAL-INCOME-STRATEGY-YOUR",
+        "price": 99,
+        "billingModel": "one_time",
+        "billingLabel": "One-time purchase"
+      }
+    ],
+    "tags": [
+      "learn",
+      "one_time",
+      "brainsait",
+      "relaunch-2026"
+    ],
+    "imageAspectRatio": "3:2",
+    "templateSuffix": "learn",
+    "customerCopy": "BrainSAIT LEARN digital book — instant download from R2 after payment.",
+    "seo": {
+      "title": "Digital Income Strategy Your Three Pathways — BrainSAIT LEARN",
+      "description": "Download PDF instantly."
+    },
+    "disclaimer": null,
+    "sourceUpdatedAt": "2026-09-02T22:43:44Z"
+  },
+  {
+    "sourceProductId": "gid://shopify/Product/8089474433107",
+    "title": "Digital Organization Handbook",
+    "handle": "digital-organization-handbook",
+    "productType": "LEARN Item",
+    "family": "LEARN",
+    "vendor": "BrainSAIT",
+    "variants": [
+      {
+        "sourceVariantId": "gid://shopify/ProductVariant/46089522217043",
+        "sku": "LEARN-BOOK-DIGITAL-ORGANIZATION-HANDBOO",
+        "price": 99,
+        "billingModel": "one_time",
+        "billingLabel": "One-time purchase"
+      }
+    ],
+    "tags": [
+      "learn",
+      "one_time",
+      "brainsait",
+      "relaunch-2026"
+    ],
+    "imageAspectRatio": "3:2",
+    "templateSuffix": "learn",
+    "customerCopy": "BrainSAIT LEARN digital book — instant download from R2 after payment.",
+    "seo": {
+      "title": "Digital Organization Handbook",
+      "description": "BrainSAIT LEARN digital book — instant download from R2 after payment."
+    },
+    "disclaimer": null,
+    "sourceUpdatedAt": "2026-09-02T22:43:45Z"
+  },
+  {
+    "sourceProductId": "gid://shopify/Product/8089477152851",
+    "title": "DOM Study Notes",
+    "handle": "dom-study-notes",
+    "productType": "LEARN Item",
+    "family": "LEARN",
+    "vendor": "BrainSAIT",
+    "variants": [
+      {
+        "sourceVariantId": "gid://shopify/ProductVariant/46089525395539",
+        "sku": "LEARN-BOOK-DOM-STUDY-NOTES",
+        "price": 99,
+        "billingModel": "one_time",
+        "billingLabel": "One-time purchase"
+      }
+    ],
+    "tags": [
+      "learn",
+      "one_time",
+      "brainsait",
+      "relaunch-2026"
+    ],
+    "imageAspectRatio": "3:2",
+    "templateSuffix": "learn",
+    "customerCopy": "BrainSAIT LEARN digital book — instant download from R2 after payment.",
+    "seo": {
+      "title": "DOM Study Notes",
+      "description": "BrainSAIT LEARN digital book — instant download from R2 after payment."
+    },
+    "disclaimer": null,
+    "sourceUpdatedAt": "2026-09-02T22:43:47Z"
+  },
+  {
+    "sourceProductId": "gid://shopify/Product/8089478561875",
+    "title": "Etimad and NPHIES Integration",
+    "handle": "etimad-and-nphies-integration",
+    "productType": "LEARN Item",
+    "family": "LEARN",
+    "vendor": "BrainSAIT",
+    "variants": [
+      {
+        "sourceVariantId": "gid://shopify/ProductVariant/46089526968403",
+        "sku": "LEARN-BOOK-ETIMAD-AND-NPHIES-INTEGRATIO",
+        "price": 99,
+        "billingModel": "one_time",
+        "billingLabel": "One-time purchase"
+      }
+    ],
+    "tags": [
+      "learn",
+      "one_time",
+      "brainsait",
+      "relaunch-2026"
+    ],
+    "imageAspectRatio": "3:2",
+    "templateSuffix": "learn",
+    "customerCopy": "BrainSAIT LEARN digital book — instant download from R2 after payment.",
+    "seo": {
+      "title": "Etimad and NPHIES Integration",
+      "description": "BrainSAIT LEARN digital book — instant download from R2 after payment."
+    },
+    "disclaimer": null,
+    "sourceUpdatedAt": "2026-09-02T22:43:48Z"
+  },
+  {
+    "sourceProductId": "gid://shopify/Product/8089474498643",
+    "title": "Etimad Digital Governance Blueprint",
+    "handle": "etimad-digital-governance-blueprint",
+    "productType": "LEARN Item",
+    "family": "LEARN",
+    "vendor": "BrainSAIT",
+    "variants": [
+      {
+        "sourceVariantId": "gid://shopify/ProductVariant/46089522282579",
+        "sku": "LEARN-BOOK-ETIMAD-DIGITAL-GOVERNANCE-BL",
+        "price": 99,
+        "billingModel": "one_time",
+        "billingLabel": "One-time purchase"
+      }
+    ],
+    "tags": [
+      "learn",
+      "one_time",
+      "brainsait",
+      "relaunch-2026"
+    ],
+    "imageAspectRatio": "3:2",
+    "templateSuffix": "learn",
+    "customerCopy": "BrainSAIT LEARN digital book — instant download from R2 after payment.",
+    "seo": {
+      "title": "Etimad Digital Governance Blueprint",
+      "description": "BrainSAIT LEARN digital book — instant download from R2 after payment."
+    },
+    "disclaimer": null,
+    "sourceUpdatedAt": "2026-09-02T22:43:49Z"
+  },
+  {
+    "sourceProductId": "gid://shopify/Product/8089474531411",
+    "title": "From Mind to Market",
+    "handle": "from-mind-to-market",
+    "productType": "LEARN Item",
+    "family": "LEARN",
+    "vendor": "BrainSAIT",
+    "variants": [
+      {
+        "sourceVariantId": "gid://shopify/ProductVariant/46089522315347",
+        "sku": "LEARN-BOOK-FROM-MIND-TO-MARKET",
+        "price": 99,
+        "billingModel": "one_time",
+        "billingLabel": "One-time purchase"
+      }
+    ],
+    "tags": [
+      "learn",
+      "one_time",
+      "brainsait",
+      "relaunch-2026"
+    ],
+    "imageAspectRatio": "3:2",
+    "templateSuffix": "learn",
+    "customerCopy": "BrainSAIT LEARN digital book — instant download from R2 after payment.",
+    "seo": {
+      "title": "From Mind to Market",
+      "description": "BrainSAIT LEARN digital book — instant download from R2 after payment."
+    },
+    "disclaimer": null,
+    "sourceUpdatedAt": "2026-09-02T22:43:51Z"
+  },
+  {
+    "sourceProductId": "gid://shopify/Product/8057395249235",
+    "title": "From Mind to Market — Guided Build",
+    "handle": "from-mind-to-market-build",
+    "productType": "LEARN Item",
+    "family": "LEARN",
+    "vendor": "BrainSAIT",
+    "variants": [
+      {
+        "sourceVariantId": "gid://shopify/ProductVariant/45997967343699",
+        "sku": "BRN-LEARN-FROM-MIND-TO-MARKET-GUIDED-BUILD-1",
+        "price": 49,
+        "billingModel": "one_time",
+        "billingLabel": "One-time purchase"
+      }
+    ],
+    "tags": [
+      "learn",
+      "one_time",
+      "brainsait",
+      "relaunch-2026"
+    ],
+    "imageAspectRatio": "3:2",
+    "templateSuffix": "learn",
+    "customerCopy": "From Mind to Market — Guided Build is a free BrainSAIT Build-stage workshop that takes your idea through validation, packaging, and first sale — step by step, with live guidance. The hands-on companion to the From Mind to Market mini-book. Walk away with a real offer, a real price, and your first paying customer in sight. Bilingual (AR/EN). — BrainSAIT — . \" \". . (AR/EN).",
+    "seo": {
+      "title": "From Mind to Market — Guided Build | BrainSAIT",
+      "description": "Take your idea from concept to first paying customer. Guided step-by-step through validation, packaging & first sale. BrainSAIT BUILD stage."
+    },
+    "disclaimer": null,
+    "sourceUpdatedAt": "2026-09-02T22:43:52Z"
+  },
+  {
+    "sourceProductId": "gid://shopify/Product/8052889714771",
+    "title": "GTM Playbook — Saudi Health AI",
+    "handle": "gtm-playbook",
+    "productType": "LEARN Item",
+    "family": "LEARN",
+    "vendor": "BrainSAIT",
+    "variants": [
+      {
+        "sourceVariantId": "gid://shopify/ProductVariant/45967661170771",
+        "sku": "BSP-GTM-PLAYBOOK",
+        "price": 7990,
+        "billingModel": "one_time",
+        "billingLabel": "One-time purchase"
+      }
+    ],
+    "tags": [
+      "learn",
+      "one_time",
+      "brainsait",
+      "relaunch-2026"
+    ],
+    "imageAspectRatio": "3:2",
+    "templateSuffix": "learn",
+    "customerCopy": "A practical GTM framework for Saudi health-AI founders — courses, tools and SEO content. GTM Playbook — Saudi Health AI: a complete go-to-market course with tools, posts, SEO content and a readiness assessment for Saudi health-AI founders. GTM — : SEO . Enterprise / demo access — contact BrainSAIT for a live walkthrough. / — .",
+    "seo": {
+      "title": "GTM Playbook — Saudi Health AI Go-To-Market | BrainSAIT",
+      "description": "Complete go-to-market course for Saudi health-AI founders. Tools, SEO content, posts & readiness assessment included. Enterprise demo available."
+    },
+    "disclaimer": null,
+    "sourceUpdatedAt": "2026-09-02T22:43:55Z"
+  },
+  {
+    "sourceProductId": "gid://shopify/Product/8089478594643",
+    "title": "Healthcare AI 2025",
+    "handle": "healthcare-ai",
+    "productType": "LEARN Item",
+    "family": "LEARN",
+    "vendor": "BrainSAIT",
+    "variants": [
+      {
+        "sourceVariantId": "gid://shopify/ProductVariant/46089527001171",
+        "sku": "LEARN-BOOK-HEALTHCARE-AI-2025",
+        "price": 99,
+        "billingModel": "one_time",
+        "billingLabel": "One-time purchase"
+      }
+    ],
+    "tags": [
+      "learn",
+      "one_time",
+      "brainsait",
+      "relaunch-2026"
+    ],
+    "imageAspectRatio": "3:2",
+    "templateSuffix": "learn",
+    "customerCopy": "BrainSAIT LEARN digital book — instant download from R2 after payment.",
+    "seo": {
+      "title": "Healthcare AI 2025",
+      "description": "BrainSAIT LEARN digital book — instant download from R2 after payment."
+    },
+    "disclaimer": null,
+    "sourceUpdatedAt": "2026-09-02T22:43:57Z"
+  },
+  {
+    "sourceProductId": "gid://shopify/Product/8052890599507",
+    "title": "Hetzner Guide",
+    "handle": "hetzner-guide",
+    "productType": "LEARN Item",
+    "family": "LEARN",
+    "vendor": "BrainSAIT",
+    "variants": [
+      {
+        "sourceVariantId": "gid://shopify/ProductVariant/45967662055507",
+        "sku": "BSP-HETZNER-GUIDE",
+        "price": 7990,
+        "billingModel": "one_time",
+        "billingLabel": "One-time purchase"
+      }
+    ],
+    "tags": [
+      "learn",
+      "one_time",
+      "brainsait",
+      "relaunch-2026"
+    ],
+    "imageAspectRatio": "3:2",
+    "templateSuffix": "learn",
+    "customerCopy": "Arabic cloud infrastructure guide — SSH, firewall, Fail2Ban, Nginx/SSL and deployment. Hetzner Guide — a comprehensive Arabic cloud infrastructure guide covering SSH, firewall, Fail2Ban, Nginx/SSL and deployment. Hetzner — SSH Fail2Ban Nginx/SSL . Enterprise / demo access — contact BrainSAIT for a live walkthrough. / — .",
+    "seo": {
+      "title": "Hetzner Cloud Infrastructure Guide | BrainSAIT",
+      "description": "Comprehensive Arabic cloud infrastructure guide covering SSH, firewall, Fail2Ban, Nginx/SSL & deployment. Instant digital delivery. BrainSAIT."
+    },
+    "disclaimer": null,
+    "sourceUpdatedAt": "2026-09-02T22:43:58Z"
+  },
+  {
+    "sourceProductId": "gid://shopify/Product/8089474564179",
+    "title": "Hyper-Scalable Agency System",
+    "handle": "hyper-scalable-agency-system",
+    "productType": "LEARN Item",
+    "family": "LEARN",
+    "vendor": "BrainSAIT",
+    "variants": [
+      {
+        "sourceVariantId": "gid://shopify/ProductVariant/46089522380883",
+        "sku": "LEARN-BOOK-HYPER-SCALABLE-AGENCY-SYSTEM",
+        "price": 99,
+        "billingModel": "one_time",
+        "billingLabel": "One-time purchase"
+      }
+    ],
+    "tags": [
+      "learn",
+      "one_time",
+      "brainsait",
+      "relaunch-2026"
+    ],
+    "imageAspectRatio": "3:2",
+    "templateSuffix": "learn",
+    "customerCopy": "BrainSAIT LEARN digital book — instant download from R2 after payment.",
+    "seo": {
+      "title": "Hyper-Scalable Agency System",
+      "description": "BrainSAIT LEARN digital book — instant download from R2 after payment."
+    },
+    "disclaimer": null,
+    "sourceUpdatedAt": "2026-09-02T22:44:02Z"
+  },
+  {
+    "sourceProductId": "gid://shopify/Product/8089478627411",
+    "title": "Leading Joy in Healthcare",
+    "handle": "leading-joy-in-healthcare",
+    "productType": "LEARN Item",
+    "family": "LEARN",
+    "vendor": "BrainSAIT",
+    "variants": [
+      {
+        "sourceVariantId": "gid://shopify/ProductVariant/46089527033939",
+        "sku": "LEARN-BOOK-LEADING-JOY-IN-HEALTHCARE",
+        "price": 99,
+        "billingModel": "one_time",
+        "billingLabel": "One-time purchase"
+      }
+    ],
+    "tags": [
+      "learn",
+      "one_time",
+      "brainsait",
+      "relaunch-2026"
+    ],
+    "imageAspectRatio": "3:2",
+    "templateSuffix": "learn",
+    "customerCopy": "BrainSAIT LEARN digital book — instant download from R2 after payment.",
+    "seo": {
+      "title": "Leading Joy in Healthcare",
+      "description": "BrainSAIT LEARN digital book — instant download from R2 after payment."
+    },
+    "disclaimer": null,
+    "sourceUpdatedAt": "2026-09-02T22:44:07Z"
+  },
+  {
+    "sourceProductId": "gid://shopify/Product/8038263259219",
+    "title": "OID Integration Blueprint — Developer Guide",
+    "handle": "oid-integration-blueprint-developer-guide",
+    "productType": "LEARN Item",
+    "family": "LEARN",
+    "vendor": "BrainSAIT",
+    "variants": [
+      {
+        "sourceVariantId": "gid://shopify/ProductVariant/45918505762899",
+        "sku": "BSP-OID-INTEGRATION-BLUEPRINT",
+        "price": 399,
+        "billingModel": "one_time",
+        "billingLabel": "One-time purchase"
+      }
+    ],
+    "tags": [
+      "learn",
+      "one_time",
+      "brainsait",
+      "relaunch-2026"
+    ],
+    "imageAspectRatio": "3:2",
+    "templateSuffix": "learn",
+    "customerCopy": "Developer guide for integrating OID identifiers with FHIR/NPHIES (x509, MCP). Integrate Globally-Unique Identifiers Into Your Systems A comprehensive technical guide for developers and architects who need to embed OIDs (Object Identifiers) into production systems. Built on BrainSAIT's IANA-registered PEN 61026 namespace, this guide delivers six complete integration patterns with copy-paste-ready code. What's Included FHIR Extension Pattern — StructureDefinition templates for NPHIES-compliant resource tagging MCP URN Pattern — Tool metadata for AI agent systems and multi-agent architectures X.509 Certificate OID — Certificate signing configuration with OID policy extensions API Header Standard — HTTP header conventions for service identity across microservices Database Schema Pattern — PostgreSQL and SQL Server OID column definitions with indexes QR / RFID Encoding — Physical asset tag data structures and scanner format specs Code Examples Every pattern includes working code in JavaScript, Python, CURL, and SQL. Bilingual (AR/EN) documentation throughout. Instant digital delivery. A BrainSAIT technical guide from the OID Registry Platform.",
+    "seo": {
+      "title": "OID Integration Blueprint — Developer Guide | BrainSAIT",
+      "description": "Complete developer guide for integrating OID identifiers with FHIR & NPHIES. 6 patterns, copy-paste code in JS, Python, SQL & CURL. Instant delivery."
+    },
+    "disclaimer": null,
+    "sourceUpdatedAt": "2026-09-02T20:06:44Z"
+  },
+  {
+    "sourceProductId": "gid://shopify/Product/8089474596947",
+    "title": "One Ecosystem Limitless Intelligence",
+    "handle": "one-ecosystem-limitless-intelligence",
+    "productType": "LEARN Item",
+    "family": "LEARN",
+    "vendor": "BrainSAIT",
+    "variants": [
+      {
+        "sourceVariantId": "gid://shopify/ProductVariant/46089522413651",
+        "sku": "LEARN-BOOK-ONE-ECOSYSTEM-LIMITLESS-INTE",
+        "price": 99,
+        "billingModel": "one_time",
+        "billingLabel": "One-time purchase"
+      }
+    ],
+    "tags": [
+      "learn",
+      "one_time",
+      "brainsait",
+      "relaunch-2026"
+    ],
+    "imageAspectRatio": "3:2",
+    "templateSuffix": "learn",
+    "customerCopy": "BrainSAIT LEARN digital book — instant download from R2 after payment.",
+    "seo": {
+      "title": "One Ecosystem Limitless Intelligence",
+      "description": "BrainSAIT LEARN digital book — instant download from R2 after payment."
+    },
+    "disclaimer": null,
+    "sourceUpdatedAt": "2026-09-02T22:44:18Z"
+  },
+  {
+    "sourceProductId": "gid://shopify/Product/8089477251155",
+    "title": "One Million RPS Achieved",
+    "handle": "one-million-rps-achieved",
+    "productType": "LEARN Item",
+    "family": "LEARN",
+    "vendor": "BrainSAIT",
+    "variants": [
+      {
+        "sourceVariantId": "gid://shopify/ProductVariant/46089525592147",
+        "sku": "LEARN-BOOK-ONE-MILLION-RPS-ACHIEVED",
+        "price": 99,
+        "billingModel": "one_time",
+        "billingLabel": "One-time purchase"
+      }
+    ],
+    "tags": [
+      "learn",
+      "one_time",
+      "brainsait",
+      "relaunch-2026"
+    ],
+    "imageAspectRatio": "3:2",
+    "templateSuffix": "learn",
+    "customerCopy": "BrainSAIT LEARN digital book — instant download from R2 after payment.",
+    "seo": {
+      "title": "One Million RPS Achieved",
+      "description": "BrainSAIT LEARN digital book — instant download from R2 after payment."
+    },
+    "disclaimer": null,
+    "sourceUpdatedAt": "2026-09-02T22:44:20Z"
+  },
+  {
+    "sourceProductId": "gid://shopify/Product/8089475186771",
+    "title": "Private AI Blueprint",
+    "handle": "private-ai-blueprint",
+    "productType": "LEARN Item",
+    "family": "LEARN",
+    "vendor": "BrainSAIT",
+    "variants": [
+      {
+        "sourceVariantId": "gid://shopify/ProductVariant/46089523003475",
+        "sku": "LEARN-BOOK-PRIVATE-AI-BLUEPRINT",
+        "price": 99,
+        "billingModel": "one_time",
+        "billingLabel": "One-time purchase"
+      }
+    ],
+    "tags": [
+      "learn",
+      "one_time",
+      "brainsait",
+      "relaunch-2026"
+    ],
+    "imageAspectRatio": "3:2",
+    "templateSuffix": "learn",
+    "customerCopy": "BrainSAIT LEARN digital book — instant download from R2 after payment.",
+    "seo": {
+      "title": "Private AI Blueprint",
+      "description": "BrainSAIT LEARN digital book — instant download from R2 after payment."
+    },
+    "disclaimer": null,
+    "sourceUpdatedAt": "2026-09-02T22:44:20Z"
+  },
+  {
+    "sourceProductId": "gid://shopify/Product/8089475252307",
+    "title": "Professional Writing Mastery",
+    "handle": "professional-writing-mastery",
+    "productType": "LEARN Item",
+    "family": "LEARN",
+    "vendor": "BrainSAIT",
+    "variants": [
+      {
+        "sourceVariantId": "gid://shopify/ProductVariant/46089523069011",
+        "sku": "LEARN-BOOK-PROFESSIONAL-WRITING-MASTERY",
+        "price": 99,
+        "billingModel": "one_time",
+        "billingLabel": "One-time purchase"
+      }
+    ],
+    "tags": [
+      "learn",
+      "one_time",
+      "brainsait",
+      "relaunch-2026"
+    ],
+    "imageAspectRatio": "3:2",
+    "templateSuffix": "learn",
+    "customerCopy": "BrainSAIT LEARN digital book — instant download from R2 after payment.",
+    "seo": {
+      "title": "Professional Writing Mastery",
+      "description": "BrainSAIT LEARN digital book — instant download from R2 after payment."
+    },
+    "disclaimer": null,
+    "sourceUpdatedAt": "2026-09-02T22:44:22Z"
+  },
+  {
+    "sourceProductId": "gid://shopify/Product/8052888830035",
+    "title": "Republic of Cells — Complete Edition",
+    "handle": "republic-of-cells",
+    "productType": "LEARN Item",
+    "family": "LEARN",
+    "vendor": "BrainSAIT",
+    "variants": [
+      {
+        "sourceVariantId": "gid://shopify/ProductVariant/45967660286035",
+        "sku": "REPUBLIC-OF-CELLS",
+        "price": 369,
+        "billingModel": "one_time",
+        "billingLabel": "One-time purchase"
+      }
+    ],
+    "tags": [
+      "learn",
+      "one_time",
+      "brainsait",
+      "relaunch-2026"
+    ],
+    "imageAspectRatio": "3:2",
+    "templateSuffix": "learn",
+    "customerCopy": "A 1,352-page literary-scientific novel in 30 chapters across nine movements, telling the story of the human body as a republic of cells: immunity as army, DNA as constitution, inflammation as civil war. A 1,352-page literary-scientific novel in 30 chapters across nine movements, telling the story of the human body as a republic of cells: immunity as army, DNA as constitution, inflammation as civil war. Written for physicians and health professionals — immunological precision married to Arabic literary craft.",
+    "seo": {
+      "title": "Republic of Cells — Complete Edition | BrainSAIT",
+      "description": "1,352-page literary-scientific novel in 30 chapters. The human body as a republic — immunity, DNA & inflammation. Written for physicians. Instant delivery."
+    },
+    "disclaimer": null,
+    "sourceUpdatedAt": "2026-09-02T22:44:23Z"
+  },
+  {
+    "sourceProductId": "gid://shopify/Product/8089478692947",
+    "title": "Saudi Health Innovation Guide",
+    "handle": "saudi-health-innovation-guide",
+    "productType": "LEARN Item",
+    "family": "LEARN",
+    "vendor": "BrainSAIT",
+    "variants": [
+      {
+        "sourceVariantId": "gid://shopify/ProductVariant/46089527099475",
+        "sku": "LEARN-BOOK-SAUDI-HEALTH-INNOVATION-GUID",
+        "price": 99,
+        "billingModel": "one_time",
+        "billingLabel": "One-time purchase"
+      }
+    ],
+    "tags": [
+      "learn",
+      "one_time",
+      "brainsait",
+      "relaunch-2026"
+    ],
+    "imageAspectRatio": "3:2",
+    "templateSuffix": "learn",
+    "customerCopy": "BrainSAIT LEARN digital book — instant download from R2 after payment.",
+    "seo": {
+      "title": "Saudi Health Innovation Guide",
+      "description": "BrainSAIT LEARN digital book — instant download from R2 after payment."
+    },
+    "disclaimer": null,
+    "sourceUpdatedAt": "2026-09-02T22:44:25Z"
+  },
+  {
+    "sourceProductId": "gid://shopify/Product/8089479086163",
+    "title": "Saudi Health Transformation",
+    "handle": "saudi-health-transformation",
+    "productType": "LEARN Item",
+    "family": "LEARN",
+    "vendor": "BrainSAIT",
+    "variants": [
+      {
+        "sourceVariantId": "gid://shopify/ProductVariant/46089527590995",
+        "sku": "LEARN-BOOK-SAUDI-HEALTH-TRANSFORMATION",
+        "price": 99,
+        "billingModel": "one_time",
+        "billingLabel": "One-time purchase"
+      }
+    ],
+    "tags": [
+      "learn",
+      "one_time",
+      "brainsait",
+      "relaunch-2026"
+    ],
+    "imageAspectRatio": "3:2",
+    "templateSuffix": "learn",
+    "customerCopy": "BrainSAIT LEARN digital book — instant download from R2 after payment.",
+    "seo": {
+      "title": "Saudi Health Transformation",
+      "description": "BrainSAIT LEARN digital book — instant download from R2 after payment."
+    },
+    "disclaimer": null,
+    "sourceUpdatedAt": "2026-09-02T22:44:26Z"
+  },
+  {
+    "sourceProductId": "gid://shopify/Product/8089479381075",
+    "title": "SBS NPHIES Integration Blueprint",
+    "handle": "sbs-nphies-integration-blueprint",
+    "productType": "LEARN Item",
+    "family": "LEARN",
+    "vendor": "BrainSAIT",
+    "variants": [
+      {
+        "sourceVariantId": "gid://shopify/ProductVariant/46089527820371",
+        "sku": "LEARN-BOOK-SBS-NPHIES-INTEGRATION-BLUEP",
+        "price": 99,
+        "billingModel": "one_time",
+        "billingLabel": "One-time purchase"
+      }
+    ],
+    "tags": [
+      "learn",
+      "one_time",
+      "brainsait",
+      "relaunch-2026"
+    ],
+    "imageAspectRatio": "3:2",
+    "templateSuffix": "learn",
+    "customerCopy": "BrainSAIT LEARN digital book — instant download from R2 after payment.",
+    "seo": {
+      "title": "SBS NPHIES Integration Blueprint",
+      "description": "BrainSAIT LEARN digital book — instant download from R2 after payment."
+    },
+    "disclaimer": null,
+    "sourceUpdatedAt": "2026-09-02T22:44:27Z"
+  },
+  {
+    "sourceProductId": "gid://shopify/Product/8089479577683",
+    "title": "SDC FHIR STU 4 Notes",
+    "handle": "sdc-fhir-stu-4-notes",
+    "productType": "LEARN Item",
+    "family": "LEARN",
+    "vendor": "BrainSAIT",
+    "variants": [
+      {
+        "sourceVariantId": "gid://shopify/ProductVariant/46089528082515",
+        "sku": "LEARN-BOOK-SDC-FHIR-STU-4-NOTES",
+        "price": 99,
+        "billingModel": "one_time",
+        "billingLabel": "One-time purchase"
+      }
+    ],
+    "tags": [
+      "learn",
+      "one_time",
+      "brainsait",
+      "relaunch-2026"
+    ],
+    "imageAspectRatio": "3:2",
+    "templateSuffix": "learn",
+    "customerCopy": "BrainSAIT LEARN digital book — instant download from R2 after payment.",
+    "seo": {
+      "title": "SDC FHIR STU 4 Notes",
+      "description": "BrainSAIT LEARN digital book — instant download from R2 after payment."
+    },
+    "disclaimer": null,
+    "sourceUpdatedAt": "2026-09-02T22:44:28Z"
+  },
+  {
+    "sourceProductId": "gid://shopify/Product/8089475579987",
+    "title": "Solo AI Business Blueprint",
+    "handle": "solo-ai-business-blueprint",
+    "productType": "LEARN Item",
+    "family": "LEARN",
+    "vendor": "BrainSAIT",
+    "variants": [
+      {
+        "sourceVariantId": "gid://shopify/ProductVariant/46089523462227",
+        "sku": "LEARN-BOOK-SOLO-AI-BUSINESS-BLUEPRINT",
+        "price": 99,
+        "billingModel": "one_time",
+        "billingLabel": "One-time purchase"
+      }
+    ],
+    "tags": [
+      "learn",
+      "one_time",
+      "brainsait",
+      "relaunch-2026"
+    ],
+    "imageAspectRatio": "3:2",
+    "templateSuffix": "learn",
+    "customerCopy": "BrainSAIT LEARN digital book — instant download from R2 after payment.",
+    "seo": {
+      "title": "Solo AI Business Blueprint",
+      "description": "BrainSAIT LEARN digital book — instant download from R2 after payment."
+    },
+    "disclaimer": null,
+    "sourceUpdatedAt": "2026-09-02T22:44:31Z"
+  },
+  {
+    "sourceProductId": "gid://shopify/Product/8089477611603",
+    "title": "Stealth Python Networking",
+    "handle": "stealth-python-networking",
+    "productType": "LEARN Item",
+    "family": "LEARN",
+    "vendor": "BrainSAIT",
+    "variants": [
+      {
+        "sourceVariantId": "gid://shopify/ProductVariant/46089525952595",
+        "sku": "LEARN-BOOK-STEALTH-PYTHON-NETWORKING",
+        "price": 99,
+        "billingModel": "one_time",
+        "billingLabel": "One-time purchase"
+      }
+    ],
+    "tags": [
+      "learn",
+      "one_time",
+      "brainsait",
+      "relaunch-2026"
+    ],
+    "imageAspectRatio": "3:2",
+    "templateSuffix": "learn",
+    "customerCopy": "BrainSAIT LEARN digital book — instant download from R2 after payment.",
+    "seo": {
+      "title": "Stealth Python Networking — BrainSAIT LEARN",
+      "description": "Download Stealth Python Networking as a PDF instantly."
+    },
+    "disclaimer": null,
+    "sourceUpdatedAt": "2026-09-02T22:44:35Z"
+  },
+  {
+    "sourceProductId": "gid://shopify/Product/8057406226515",
+    "title": "Stealth Python Networking — Guided Build",
+    "handle": "stealth-python-networking-build",
+    "productType": "LEARN Item",
+    "family": "LEARN",
+    "vendor": "BrainSAIT",
+    "variants": [
+      {
+        "sourceVariantId": "gid://shopify/ProductVariant/45997978255443",
+        "sku": "BSP-STEALTH-PYTHON-NETWORKING-BUILD",
+        "price": 99,
+        "billingModel": "one_time",
+        "billingLabel": "One-time purchase"
+      }
+    ],
+    "tags": [
+      "learn",
+      "one_time",
+      "brainsait",
+      "relaunch-2026"
+    ],
+    "imageAspectRatio": "3:2",
+    "templateSuffix": "learn",
+    "customerCopy": "Guided labs for systems builders: sockets, protocols, and production patterns in Python. A guided Build-stage course for systems builders: Python networking fundamentals and production patterns, built hands-on.",
+    "seo": {
+      "title": "Stealth Python Networking — Guided Build | BrainSAIT",
+      "description": "Guided labs for systems builders: sockets, protocols & production patterns in Python. Hands-on BUILD-stage course. BrainSAIT."
+    },
+    "disclaimer": null,
+    "sourceUpdatedAt": "2026-09-02T22:44:36Z"
+  },
+  {
+    "sourceProductId": "gid://shopify/Product/8089475711059",
+    "title": "The AI Skill Economy",
+    "handle": "the-ai-skill-economy",
+    "productType": "LEARN Item",
+    "family": "LEARN",
+    "vendor": "BrainSAIT",
+    "variants": [
+      {
+        "sourceVariantId": "gid://shopify/ProductVariant/46089523691603",
+        "sku": "LEARN-BOOK-THE-AI-SKILL-ECONOMY",
+        "price": 99,
+        "billingModel": "one_time",
+        "billingLabel": "One-time purchase"
+      }
+    ],
+    "tags": [
+      "learn",
+      "one_time",
+      "brainsait",
+      "relaunch-2026"
+    ],
+    "imageAspectRatio": "3:2",
+    "templateSuffix": "learn",
+    "customerCopy": "BrainSAIT LEARN digital book — instant download from R2 after payment.",
+    "seo": {
+      "title": "The AI Skill Economy",
+      "description": "BrainSAIT LEARN digital book — instant download from R2 after payment."
+    },
+    "disclaimer": null,
+    "sourceUpdatedAt": "2026-09-02T22:44:38Z"
+  },
+  {
+    "sourceProductId": "gid://shopify/Product/8089478070355",
+    "title": "The API Blueprint",
+    "handle": "the-api-blueprint",
+    "productType": "LEARN Item",
+    "family": "LEARN",
+    "vendor": "BrainSAIT",
+    "variants": [
+      {
+        "sourceVariantId": "gid://shopify/ProductVariant/46089526444115",
+        "sku": "LEARN-BOOK-THE-API-BLUEPRINT",
+        "price": 99,
+        "billingModel": "one_time",
+        "billingLabel": "One-time purchase"
+      }
+    ],
+    "tags": [
+      "learn",
+      "one_time",
+      "brainsait",
+      "relaunch-2026"
+    ],
+    "imageAspectRatio": "3:2",
+    "templateSuffix": "learn",
+    "customerCopy": "BrainSAIT LEARN digital book — instant download from R2 after payment.",
+    "seo": {
+      "title": "The API Blueprint",
+      "description": "BrainSAIT LEARN digital book — instant download from R2 after payment."
+    },
+    "disclaimer": null,
+    "sourceUpdatedAt": "2026-09-02T22:44:39Z"
+  },
+  {
+    "sourceProductId": "gid://shopify/Product/8057397674067",
+    "title": "The API Blueprint — Hands-On Lab",
+    "handle": "api-blueprint-hands-on",
+    "productType": "LEARN Item",
+    "family": "LEARN",
+    "vendor": "BrainSAIT",
+    "variants": [
+      {
+        "sourceVariantId": "gid://shopify/ProductVariant/45997969768531",
+        "sku": "BRN-LEARN-THE-API-BLUEPRINT-HANDS-ON-LAB-1",
+        "price": 49,
+        "billingModel": "one_time",
+        "billingLabel": "One-time purchase"
+      }
+    ],
+    "tags": [
+      "learn",
+      "one_time",
+      "brainsait",
+      "relaunch-2026"
+    ],
+    "imageAspectRatio": "3:2",
+    "templateSuffix": "learn",
+    "customerCopy": "Build a real, deployable API in one lab — auth, rate limits, docs, and a live endpoint. A hands-on lab for builders: design, build, and ship a real API with authentication, rate limiting, and documentation.",
+    "seo": {
+      "title": "The API Blueprint — Hands-On Lab | BrainSAIT BUILD",
+      "description": "Build a real, deployable API in one lab — auth, rate limits, docs & a live endpoint. Hands-on for builders. BrainSAIT BUILD stage."
+    },
+    "disclaimer": null,
+    "sourceUpdatedAt": "2026-09-02T22:44:40Z"
+  },
+  {
+    "sourceProductId": "gid://shopify/Product/8089479970899",
+    "title": "The Decentralized Hospital (1)",
+    "handle": "the-decentralized-hospital",
+    "productType": "LEARN Item",
+    "family": "LEARN",
+    "vendor": "BrainSAIT",
+    "variants": [
+      {
+        "sourceVariantId": "gid://shopify/ProductVariant/46089528541267",
+        "sku": "LEARN-BOOK-THE-DECENTRALIZED-HOSPITAL",
+        "price": 99,
+        "billingModel": "one_time",
+        "billingLabel": "One-time purchase"
+      }
+    ],
+    "tags": [
+      "learn",
+      "one_time",
+      "brainsait",
+      "relaunch-2026"
+    ],
+    "imageAspectRatio": "3:2",
+    "templateSuffix": "learn",
+    "customerCopy": "BrainSAIT LEARN digital book — instant download from R2 after payment.",
+    "seo": {
+      "title": "The Decentralized Hospital (1)",
+      "description": "BrainSAIT LEARN digital book — instant download from R2 after payment."
+    },
+    "disclaimer": null,
+    "sourceUpdatedAt": "2026-09-02T22:44:41Z"
+  },
+  {
+    "sourceProductId": "gid://shopify/Product/8089480298579",
+    "title": "The Hospital at Home",
+    "handle": "the-hospital-at-home",
+    "productType": "LEARN Item",
+    "family": "LEARN",
+    "vendor": "BrainSAIT",
+    "variants": [
+      {
+        "sourceVariantId": "gid://shopify/ProductVariant/46089528868947",
+        "sku": "LEARN-BOOK-THE-HOSPITAL-AT-HOME",
+        "price": 99,
+        "billingModel": "one_time",
+        "billingLabel": "One-time purchase"
+      }
+    ],
+    "tags": [
+      "learn",
+      "one_time",
+      "brainsait",
+      "relaunch-2026"
+    ],
+    "imageAspectRatio": "3:2",
+    "templateSuffix": "learn",
+    "customerCopy": "BrainSAIT LEARN digital book — instant download from R2 after payment.",
+    "seo": {
+      "title": "The Hospital at Home",
+      "description": "BrainSAIT LEARN digital book — instant download from R2 after payment."
+    },
+    "disclaimer": null,
+    "sourceUpdatedAt": "2026-09-02T22:44:42Z"
+  },
+  {
+    "sourceProductId": "gid://shopify/Product/8089476268115",
+    "title": "The Outlier Equation",
+    "handle": "the-outlier-equation",
+    "productType": "LEARN Item",
+    "family": "LEARN",
+    "vendor": "BrainSAIT",
+    "variants": [
+      {
+        "sourceVariantId": "gid://shopify/ProductVariant/46089524346963",
+        "sku": "LEARN-BOOK-THE-OUTLIER-EQUATION",
+        "price": 99,
+        "billingModel": "one_time",
+        "billingLabel": "One-time purchase"
+      }
+    ],
+    "tags": [
+      "learn",
+      "one_time",
+      "brainsait",
+      "relaunch-2026"
+    ],
+    "imageAspectRatio": "3:2",
+    "templateSuffix": "learn",
+    "customerCopy": "BrainSAIT LEARN digital book — instant download from R2 after payment.",
+    "seo": {
+      "title": "The Outlier Equation",
+      "description": "BrainSAIT LEARN digital book — instant download from R2 after payment."
+    },
+    "disclaimer": null,
+    "sourceUpdatedAt": "2026-09-02T22:44:43Z"
+  },
+  {
+    "sourceProductId": "gid://shopify/Product/8089476431955",
+    "title": "The Ultimate Persistent AI Agent",
+    "handle": "the-ultimate-persistent-ai-agent",
+    "productType": "LEARN Item",
+    "family": "LEARN",
+    "vendor": "BrainSAIT",
+    "variants": [
+      {
+        "sourceVariantId": "gid://shopify/ProductVariant/46089524478035",
+        "sku": "LEARN-BOOK-THE-ULTIMATE-PERSISTENT-AI-A",
+        "price": 99,
+        "billingModel": "one_time",
+        "billingLabel": "One-time purchase"
+      }
+    ],
+    "tags": [
+      "learn",
+      "one_time",
+      "brainsait",
+      "relaunch-2026"
+    ],
+    "imageAspectRatio": "3:2",
+    "templateSuffix": "learn",
+    "customerCopy": "BrainSAIT LEARN digital book — instant download from R2 after payment.",
+    "seo": {
+      "title": "The Ultimate Persistent AI Agent",
+      "description": "BrainSAIT LEARN digital book — instant download from R2 after payment."
+    },
+    "disclaimer": null,
+    "sourceUpdatedAt": "2026-09-02T22:44:44Z"
+  },
+  {
+    "sourceProductId": "gid://shopify/Product/8089476464723",
+    "title": "Voice Agent Production Blueprint",
+    "handle": "voice-agent-production-blueprint",
+    "productType": "LEARN Item",
+    "family": "LEARN",
+    "vendor": "BrainSAIT",
+    "variants": [
+      {
+        "sourceVariantId": "gid://shopify/ProductVariant/46089524609107",
+        "sku": "LEARN-BOOK-VOICE-AGENT-PRODUCTION-BLUEP",
+        "price": 99,
+        "billingModel": "one_time",
+        "billingLabel": "One-time purchase"
+      }
+    ],
+    "tags": [
+      "learn",
+      "one_time",
+      "brainsait",
+      "relaunch-2026"
+    ],
+    "imageAspectRatio": "3:2",
+    "templateSuffix": "learn",
+    "customerCopy": "BrainSAIT LEARN digital book — instant download from R2 after payment.",
+    "seo": {
+      "title": "Voice Agent Production Blueprint",
+      "description": "BrainSAIT LEARN digital book — instant download from R2 after payment."
+    },
+    "disclaimer": null,
+    "sourceUpdatedAt": "2026-09-02T22:44:51Z"
+  },
+  {
+    "sourceProductId": "gid://shopify/Product/8052890894419",
+    "title": "BrainSAIT OID",
+    "handle": "oid-identity",
+    "productType": "OID & Registry",
+    "family": "OID & REGISTRY",
+    "vendor": "BrainSAIT",
+    "variants": [
+      {
+        "sourceVariantId": "gid://shopify/ProductVariant/45967662350419",
+        "sku": "BSP-OID-IDENTITY",
+        "price": 499,
+        "billingModel": "one_time",
+        "billingLabel": "One-time purchase"
+      }
+    ],
+    "tags": [
+      "oid-&-registry",
+      "one_time",
+      "brainsait",
+      "relaunch-2026"
+    ],
+    "imageAspectRatio": "3:2",
+    "templateSuffix": "oid-registry",
+    "customerCopy": "BrainSAIT OID is the entry-level digital health identity and badging platform for the Saudi healthcare ecosystem. Built on BrainSAIT's globally-registered IANA PEN (1.3.6.1.4.1.61026), it provides organizations with a verified OID namespace, digital identity badges, and registry access — the foundation for FHIR-compliant, interoperable healthcare identity infrastructure. Contact BrainSAIT for a live walkthrough. BrainSAIT OID . BrainSAIT IANA (1.3.6.1.4.1.61026) OID — FHIR . BrainSAIT .",
+    "seo": {
+      "title": "BrainSAIT OID — Digital Health Identity Platform",
+      "description": "Digital health identity & badging platform for the Saudi healthcare ecosystem. Enterprise demo access available. Contact BrainSAIT for a walkthrough."
+    },
+    "disclaimer": "BrainSAIT verification does not replace an independent credential authority or professional licence.",
+    "sourceUpdatedAt": "2026-09-02T22:43:31Z"
+  },
+  {
+    "sourceProductId": "gid://shopify/Product/8108043665491",
+    "title": "BrainSAIT Provider Registry (BPR) — Junior Doctor Plan",
+    "handle": "provider-registry-junior",
+    "productType": "OID & Registry",
+    "family": "OID & REGISTRY",
+    "vendor": "BrainSAIT",
+    "variants": [
+      {
+        "sourceVariantId": "gid://shopify/ProductVariant/46145292697683",
+        "sku": "BPR-JR-MONTHLY",
+        "price": 163,
+        "billingModel": "monthly",
+        "billingLabel": "Monthly"
+      },
+      {
+        "sourceVariantId": "gid://shopify/ProductVariant/46145292730451",
+        "sku": "BPR-JR-ANNUAL",
+        "price": 3960,
+        "billingModel": "annual",
+        "billingLabel": "Annual"
+      }
+    ],
+    "tags": [
+      "oid-&-registry",
+      "monthly",
+      "brainsait",
+      "relaunch-2026"
+    ],
+    "imageAspectRatio": "3:2",
+    "templateSuffix": "oid-registry",
+    "customerCopy": "BrainSAIT Provider Registry (BPR) — Junior Doctor Plan Standard registry membership is billed annually at 3,960 SAR. Junior doctors — physicians whose graduation certificate shows they graduated within the last 3 years — may qualify to pay monthly at 163 SAR after submitting a verifiable graduation certificate through the qualification application. Eligibility: graduation certificate proving graduation ≤ 3 years ago, verified before approval Junior monthly plan: 163 SAR/month Junior annual plan: 3,960 SAR/year Includes: SPID + OID professional identity under IANA PEN 61026, QR + shareable badges, public verified profile page, multilingual clinical copilot, LEARN·BUILD·SOLUTION ecosystem access — 3,960 . ( 3 ) 163 . : 163 /. : 3,960 /. : SPID + OID IANA PEN 61026 QR LEARN·BUILD·SOLUTION.",
+    "seo": {
+      "title": "BrainSAIT Provider Registry (BPR) — Junior Doctor Plan",
+      "description": "BrainSAIT Provider Registry (BPR) — Junior Doctor Plan Standard registry membership is billed annually at 3,960 SAR. Junior doctors — physicians whose grad"
+    },
+    "disclaimer": "BrainSAIT verification does not replace an independent credential authority or professional licence.",
+    "sourceUpdatedAt": "2026-09-04T00:44:51Z"
+  },
+  {
+    "sourceProductId": "gid://shopify/Product/8103998390355",
+    "title": "BrainSAIT Provider Registry (BPR) — Membership",
+    "handle": "provider-registry",
+    "productType": "OID & Registry",
+    "family": "OID & REGISTRY",
+    "vendor": "BrainSAIT",
+    "variants": [
+      {
+        "sourceVariantId": "gid://shopify/ProductVariant/46135696752723",
+        "sku": "BPR-ANNUAL",
+        "price": 3960,
+        "billingModel": "annual",
+        "billingLabel": "Annual"
+      },
+      {
+        "sourceVariantId": "gid://shopify/ProductVariant/46135696785491",
+        "sku": "BPR-MONTHLY",
+        "price": 163,
+        "billingModel": "monthly",
+        "billingLabel": "Monthly"
+      }
+    ],
+    "tags": [
+      "oid-&-registry",
+      "annual",
+      "brainsait",
+      "relaunch-2026"
+    ],
+    "imageAspectRatio": "3:2",
+    "templateSuffix": "oid-registry",
+    "customerCopy": "Saudi healthcare-worker professional identity, verification &amp; discovery under IANA PEN 61026 — SPID + OID, QR + shareable badges, luxury public verified page, always-on multilingual clinical copilot, plus LEARN·BUILD·SOLUTION ecosystem access.",
+    "seo": {
+      "title": "BrainSAIT Provider Registry (BPR) — Membership",
+      "description": "Saudi healthcare-worker professional identity, verification &amp; discovery under IANA PEN 61026 — SPID + OID, QR + shareable badges, luxury public verifie"
+    },
+    "disclaimer": "BrainSAIT verification does not replace an independent credential authority or professional licence.",
+    "sourceUpdatedAt": "2026-09-03T10:06:28Z"
+  },
+  {
+    "sourceProductId": "gid://shopify/Product/8038263521363",
+    "title": "NPHIES-OID Healthcare Identity Bundle",
+    "handle": "nphies-oid-healthcare-identity-bundle",
+    "productType": "OID & Registry",
+    "family": "OID & REGISTRY",
+    "vendor": "BrainSAIT",
+    "variants": [
+      {
+        "sourceVariantId": "gid://shopify/ProductVariant/45918506123347",
+        "sku": "OID-NPHIES",
+        "price": 180000,
+        "billingModel": "one_time",
+        "billingLabel": "180,000 SAR one time"
+      },
+      {
+        "sourceVariantId": null,
+        "sku": "OID-NPHIES-SUPPORT",
+        "price": 48000,
+        "billingModel": "support_annual",
+        "billingLabel": "48,000 SAR / year support"
+      }
+    ],
+    "tags": [
+      "oid-and-registry",
+      "one_time",
+      "identity",
+      "governance",
+      "relaunch-2026"
+    ],
+    "imageAspectRatio": "3:2",
+    "templateSuffix": "oid-registry",
+    "customerCopy": "NPHIES-OID Healthcare Identity Bundle provides governed identity infrastructure for claims volume.",
+    "seo": {
+      "title": "NPHIES-OID Healthcare Identity Bundle",
+      "description": "NPHIES-OID Healthcare Identity Bundle from BrainSAIT for governed, auditable digital identity."
+    },
+    "disclaimer": "BrainSAIT verification does not replace an independent credential authority or professional licence.",
+    "oid": "1.3.6.1.4.1.61026.14.4",
+    "gates": [
+      "eligibility+auth+claims",
+      "CCHI conformance",
+      "training"
+    ],
+    "overage": "extra payer/transaction tier"
+  },
+  {
+    "sourceProductId": "gid://shopify/Product/8038265913427",
+    "title": "OID Enterprise Namespace License",
+    "handle": "oid-enterprise-namespace-license",
+    "productType": "OID & Registry",
+    "family": "OID & REGISTRY",
+    "vendor": "BrainSAIT",
+    "variants": [
+      {
+        "sourceVariantId": "gid://shopify/ProductVariant/45918511202387",
+        "sku": "OID-NAMESPACE",
+        "price": 240000,
+        "billingModel": "annual",
+        "billingLabel": "240,000 SAR / year"
+      },
+      {
+        "sourceVariantId": null,
+        "sku": "OID-NAMESPACE-SETUP",
+        "price": 48000,
+        "billingModel": "setup",
+        "billingLabel": "48,000 SAR setup"
+      }
+    ],
+    "tags": [
+      "oid-and-registry",
+      "annual",
+      "identity",
+      "governance",
+      "relaunch-2026"
+    ],
+    "imageAspectRatio": "3:2",
+    "templateSuffix": "oid-registry",
+    "customerCopy": "OID Enterprise Namespace License provides governed identity infrastructure for namespaces + child arcs.",
+    "seo": {
+      "title": "OID Enterprise Namespace License",
+      "description": "OID Enterprise Namespace License from BrainSAIT for governed, auditable digital identity."
+    },
+    "disclaimer": "BrainSAIT verification does not replace an independent credential authority or professional licence.",
+    "oid": "1.3.6.1.4.1.61026.14.5",
+    "gates": [
+      "1 namespace + 18 children",
+      "oid-base registration via BS-AGT-000002",
+      "DID + QR"
+    ],
+    "overage": "extra namespace 240000/yr"
+  },
+  {
+    "sourceProductId": "gid://shopify/Product/8038266142803",
+    "title": "OID FHIR Integration Platform",
+    "handle": "oid-fhir-integration-platform",
+    "productType": "OID & Registry",
+    "family": "OID & REGISTRY",
+    "vendor": "BrainSAIT",
+    "variants": [
+      {
+        "sourceVariantId": "gid://shopify/ProductVariant/45918511693907",
+        "sku": "OID-FHIR",
+        "price": 120000,
+        "billingModel": "one_time",
+        "billingLabel": "120,000 SAR one time"
+      }
+    ],
+    "tags": [
+      "oid-and-registry",
+      "one_time",
+      "identity",
+      "governance",
+      "relaunch-2026"
+    ],
+    "imageAspectRatio": "3:2",
+    "templateSuffix": "oid-registry",
+    "customerCopy": "OID FHIR Integration Platform provides governed identity infrastructure for integrations.",
+    "seo": {
+      "title": "OID FHIR Integration Platform",
+      "description": "OID FHIR Integration Platform from BrainSAIT for governed, auditable digital identity."
+    },
+    "disclaimer": "BrainSAIT verification does not replace an independent credential authority or professional licence.",
+    "oid": "1.3.6.1.4.1.61026.14.3",
+    "gates": [
+      "FHIR R4 profiles",
+      "code mapping",
+      "go-live"
+    ],
+    "overage": "extra integration scoped"
+  },
+  {
+    "sourceProductId": "gid://shopify/Product/8038263324755",
+    "title": "OID Registry Explorer Seat",
+    "handle": "oid-registry-explorer-seat",
+    "productType": "OID & Registry",
+    "family": "OID & REGISTRY",
+    "vendor": "BrainSAIT",
+    "variants": [
+      {
+        "sourceVariantId": "gid://shopify/ProductVariant/45918505828435",
+        "sku": "OID-EXPLORER",
+        "price": 24000,
+        "billingModel": "annual",
+        "billingLabel": "24,000 SAR / year"
+      }
+    ],
+    "tags": [
+      "oid-and-registry",
+      "annual",
+      "identity",
+      "governance",
+      "relaunch-2026"
+    ],
+    "imageAspectRatio": "3:2",
+    "templateSuffix": "oid-registry",
+    "customerCopy": "OID Registry Explorer Seat provides governed identity infrastructure for facilities.",
+    "seo": {
+      "title": "OID Registry Explorer Seat",
+      "description": "OID Registry Explorer Seat from BrainSAIT for governed, auditable digital identity."
+    },
+    "disclaimer": "BrainSAIT verification does not replace an independent credential authority or professional licence.",
+    "oid": "1.3.6.1.4.1.61026.14.2",
+    "gates": [
+      "1 facility",
+      "audit trail",
+      "dashboard"
+    ],
+    "overage": "extra facility 24000/yr"
+  },
+  {
+    "sourceProductId": "gid://shopify/Product/8038263652435",
+    "title": "OID Verification Badge",
+    "handle": "oid-verification-badge",
+    "productType": "OID & Registry",
+    "family": "OID & REGISTRY",
+    "vendor": "BrainSAIT",
+    "variants": [
+      {
+        "sourceVariantId": "gid://shopify/ProductVariant/45918506287187",
+        "sku": "OID-BADGE",
+        "price": 9900,
+        "billingModel": "annual",
+        "billingLabel": "9,900 SAR / year"
+      }
+    ],
+    "tags": [
+      "oid-and-registry",
+      "annual",
+      "identity",
+      "governance",
+      "relaunch-2026"
+    ],
+    "imageAspectRatio": "3:2",
+    "templateSuffix": "oid-registry",
+    "customerCopy": "OID Verification Badge provides governed identity infrastructure for verified providers.",
+    "seo": {
+      "title": "OID Verification Badge",
+      "description": "OID Verification Badge from BrainSAIT for governed, auditable digital identity."
+    },
+    "disclaimer": "BrainSAIT verification does not replace an independent credential authority or professional licence.",
+    "oid": "1.3.6.1.4.1.61026.14.1",
+    "gates": [
+      "1 provider",
+      "QR verify",
+      "directory listing",
+      "monitoring"
+    ],
+    "overage": "extra provider 9900/yr pro-rata"
+  },
+  {
+    "sourceProductId": "gid://shopify/Product/8038266077267",
+    "title": "OID White-Label Enterprise",
+    "handle": "oid-white-label-enterprise",
+    "productType": "OID & Registry",
+    "family": "OID & REGISTRY",
+    "vendor": "BrainSAIT",
+    "variants": [
+      {
+        "sourceVariantId": "gid://shopify/ProductVariant/45918511628371",
+        "sku": "OID-WHITELABEL",
+        "price": 480000,
+        "billingModel": "annual",
+        "billingLabel": "480,000 SAR / year"
+      }
+    ],
+    "tags": [
+      "oid-and-registry",
+      "annual",
+      "identity",
+      "governance",
+      "relaunch-2026"
+    ],
+    "imageAspectRatio": "3:2",
+    "templateSuffix": "oid-registry",
+    "customerCopy": "OID White-Label Enterprise provides governed identity infrastructure for territory + volume.",
+    "seo": {
+      "title": "OID White-Label Enterprise",
+      "description": "OID White-Label Enterprise from BrainSAIT for governed, auditable digital identity."
+    },
+    "disclaimer": "BrainSAIT verification does not replace an independent credential authority or professional licence.",
+    "oid": "1.3.6.1.4.1.61026.14.6",
+    "gates": [
+      "white-label registry+verify",
+      "SSO/residency/SLA",
+      "training"
+    ],
+    "overage": "committed spend + revenue share"
+  },
+  {
+    "sourceProductId": "gid://shopify/Product/8037218549843",
+    "title": "Abeer Connected Healthcare Platform",
+    "handle": "abeer-connected-healthcare-platform",
+    "productType": "SOLUTIONS Membership",
+    "family": "SOLUTIONS",
+    "vendor": "BrainSAIT",
+    "variants": [
+      {
+        "sourceVariantId": "gid://shopify/ProductVariant/45912860491859",
+        "sku": "BSP-ABEER-MEDICAL-PLATFORM",
+        "price": 4999,
+        "billingModel": "one_time",
+        "billingLabel": "One-time purchase"
+      }
+    ],
+    "tags": [
+      "solutions",
+      "one_time",
+      "brainsait",
+      "relaunch-2026"
+    ],
+    "imageAspectRatio": "3:2",
+    "templateSuffix": "membership",
+    "customerCopy": "Connected healthcare platform — patient engagement + telemedicine. Abeer Connected Healthcare Platform unifies patient engagement and telemedicine into one connected care experience for clinics and hospital groups — appointment journeys, remote consultations, follow-ups, and patient communication under your brand. Capabilities Patient engagement portal and communication workflows Telemedicine consultation flows Integration-ready design for existing clinical systems Deployment scoped to your organization How purchase works This is an enterprise platform listing . After checkout, our team contacts you to scope requirements, integration needs, and rollout. Contact Prefer to talk first? Email brainsait@icloud.com — we respond within 24–48 hours on business days. Accepted payments: mada · Apple Pay · STC Pay · Visa · Mastercard · PayPal : · Apple Pay · STC Pay · · · PayPal",
+    "seo": {
+      "title": "Abeer Connected Healthcare Platform — Enterprise | BrainSAIT",
+      "description": "Fully-connected healthcare ecosystem with bookings, medical market, and unified profile engine. Enterprise solution for care groups via BrainSAIT."
+    },
+    "disclaimer": null,
+    "sourceUpdatedAt": "2026-08-24T08:09:20Z"
+  },
+  {
+    "sourceProductId": "gid://shopify/Product/8052889452627",
+    "title": "AI Claims Reconciliation",
+    "handle": "ai-claims-reconciliation",
+    "productType": "SOLUTIONS Membership",
+    "family": "SOLUTIONS",
+    "vendor": "BrainSAIT",
+    "variants": [
+      {
+        "sourceVariantId": "gid://shopify/ProductVariant/45967660908627",
+        "sku": "BSP-AI-CLAIMS-RECONCILIATION",
+        "price": 24900,
+        "billingModel": "one_time",
+        "billingLabel": "One-time purchase"
+      }
+    ],
+    "tags": [
+      "solutions",
+      "one_time",
+      "brainsait",
+      "relaunch-2026"
+    ],
+    "imageAspectRatio": "3:2",
+    "templateSuffix": "membership",
+    "customerCopy": "BrainSAIT's enterprise-grade automated insurance claims processing platform, purpose-built for the Saudi healthcare market. Powered by GPT-4o and trained on Saudi Revenue Cycle Management (RCM) guidelines, AI Claims Reconciliation reconciles insurance claims from major payers including Al Tawuniya — dramatically reducing rejection rates, accelerating reimbursements, and cutting manual review time. BrainSAIT . GPT-4o (RCM) — . What's Included: GPT-4o powered claims analysis engine Saudi RCM rules integration (NPHIES-aligned) Al Tawuniya and major payer reconciliation workflows Automated rejection reason classification Resubmission recommendation engine Audit trail and compliance reporting dashboard Enterprise onboarding and live walkthrough : GPT-4o RCM ( NPHIES) Enterprise / demo access — contact BrainSAIT at Support@brainsait.org / — Support@brainsait.org",
+    "seo": {
+      "title": "AI Claims Reconciliation — Saudi Health Insurance | BrainSAIT",
+      "description": "Automated AI-powered insurance claims reconciliation using GPT-4o & Saudi RCM guidelines. Enterprise demo available. Contact BrainSAIT."
+    },
+    "disclaimer": null,
+    "sourceUpdatedAt": "2026-09-02T22:43:15Z"
+  },
+  {
+    "sourceProductId": "gid://shopify/Product/8037218746451",
+    "title": "Anatomy of a Torn Soul",
+    "handle": "anatomy-of-a-torn-soul",
+    "productType": "SOLUTIONS Membership",
+    "family": "SOLUTIONS",
+    "vendor": "BrainSAIT",
+    "variants": [
+      {
+        "sourceVariantId": "gid://shopify/ProductVariant/45912864620627",
+        "sku": "BSP-ANATOMY-TORN-SOUL",
+        "price": 79,
+        "billingModel": "one_time",
+        "billingLabel": "One-time purchase"
+      }
+    ],
+    "tags": [
+      "solutions",
+      "one_time",
+      "brainsait",
+      "relaunch-2026"
+    ],
+    "imageAspectRatio": "3:2",
+    "templateSuffix": "membership",
+    "customerCopy": "EN A BrainSAIT creative — crafted for Vision 2030 Unlock profound transformation with \"Anatomy of a Torn Soul\". Discover inner healing. Instant delivery via secure Google Drive link 79.0 SAR BrainSAIT — creative 2030 \" \". . Google Drive 79.0 SAR Original: A BrainSAIT novel from the digital library. Instant delivery via secure link after payment.",
+    "seo": {
+      "title": "Anatomy of a Torn Soul — AI Novel | BrainSAIT",
+      "description": "A BrainSAIT novel from the digital library exploring emotional depth and healing. Instant delivery via secure link — a powerful literary experience."
+    },
+    "disclaimer": null,
+    "sourceUpdatedAt": "2026-08-27T00:39:31Z"
+  },
+  {
+    "sourceProductId": "gid://shopify/Product/8037219500115",
+    "title": "Autonomous AI Blogging Engine",
+    "handle": "autonomous-ai-blogging-engine",
+    "productType": "SOLUTIONS Membership",
+    "family": "SOLUTIONS",
+    "vendor": "BrainSAIT",
+    "variants": [
+      {
+        "sourceVariantId": "gid://shopify/ProductVariant/45912869568595",
+        "sku": "BSP-AUTONOMOUS-AI-BLOGGING",
+        "price": 89,
+        "billingModel": "one_time",
+        "billingLabel": "One-time purchase"
+      }
+    ],
+    "tags": [
+      "solutions",
+      "one_time",
+      "brainsait",
+      "relaunch-2026"
+    ],
+    "imageAspectRatio": "3:2",
+    "templateSuffix": "membership",
+    "customerCopy": "EN A BrainSAIT development — crafted for Vision 2030 Elevate your content with our Autonomous AI Blogging Engine, transforming your online presence. Unlock effortless publishing and amplified reach. Instant delivery via secure Google Drive link 89.0 SAR BrainSAIT — development 2030 光 . . Google Drive 89.0 SAR Original: A BrainSAIT skill guide from the digital library. Instant delivery via secure link after payment.",
+    "seo": {
+      "title": "Autonomous AI Blogging Engine — Skill Guide | BrainSAIT",
+      "description": "A BrainSAIT skill guide on building autonomous AI blogging systems. Instant delivery via secure link for content creators and digital marketers."
+    },
+    "disclaimer": null,
+    "sourceUpdatedAt": "2026-08-27T00:39:39Z"
+  },
+  {
+    "sourceProductId": "gid://shopify/Product/8052889845843",
+    "title": "Basma AI Voice Agent",
+    "handle": "basma-voice-agent",
+    "productType": "SOLUTIONS Membership",
+    "family": "SOLUTIONS",
+    "vendor": "BrainSAIT",
+    "variants": [
+      {
+        "sourceVariantId": "gid://shopify/ProductVariant/45967661301843",
+        "sku": "BSP-BASMA-VOICE-AGENT",
+        "price": 24900,
+        "billingModel": "one_time",
+        "billingLabel": "One-time purchase"
+      }
+    ],
+    "tags": [
+      "solutions",
+      "one_time",
+      "brainsait",
+      "relaunch-2026"
+    ],
+    "imageAspectRatio": "3:2",
+    "templateSuffix": "membership",
+    "customerCopy": "BrainSAIT's bilingual AI healthcare voice assistant — a fully conversational agent that handles the complete patient journey in both Arabic and English. From appointment booking and insurance eligibility verification to claims submission, medical records retrieval, lab results, and radiology reports, Basma delivers hospital-grade automation with a human touch. BrainSAIT — . . What's Included: Bilingual (AR/EN) conversational voice AI Appointment scheduling and management Insurance eligibility verification Claims submission and status tracking Medical records and lab results retrieval Radiology report integration NPHIES-compatible architecture Enterprise onboarding and live walkthrough : (AR/EN) NPHIES Enterprise / demo access — contact BrainSAIT at Support@brainsait.org / — Support@brainsait.org",
+    "seo": {
+      "title": "Basma AI Voice Agent — Bilingual Health Assistant",
+      "description": "Bilingual AI healthcare voice assistant handling appointments, eligibility, claims, records, labs & radiology. Enterprise demo available. BrainSAIT."
+    },
+    "disclaimer": null,
+    "sourceUpdatedAt": "2026-09-02T22:43:21Z"
+  },
+  {
+    "sourceProductId": "gid://shopify/Product/8052890009683",
+    "title": "BoneForge — Vol. 07 · Orthopedics",
+    "handle": "boneforge",
+    "productType": "SOLUTIONS Membership",
+    "family": "SOLUTIONS",
+    "vendor": "BrainSAIT",
+    "variants": [
+      {
+        "sourceVariantId": "gid://shopify/ProductVariant/45967661465683",
+        "sku": "BSP-BONEFORGE",
+        "price": 7990,
+        "billingModel": "one_time",
+        "billingLabel": "One-time purchase"
+      }
+    ],
+    "tags": [
+      "solutions",
+      "one_time",
+      "brainsait",
+      "relaunch-2026"
+    ],
+    "imageAspectRatio": "3:2",
+    "templateSuffix": "membership",
+    "customerCopy": "Cinematic medical novelist engine for Orthopedics. Bilingual EN+AR. BoneForge: a cinematic medical novelist engine for Orthopedics — Vol. 07, bilingual EN+AR, by BrainSAIT. BoneForge: — 07 BrainSAIT. Enterprise / demo access — contact BrainSAIT for a live walkthrough. / — .",
+    "seo": {
+      "title": "BoneForge Vol. 07 — Orthopedics Medical Novel | BrainSAIT",
+      "description": "Cinematic medical novelist engine for Orthopedics. Bilingual EN+AR. Vol. 07 by BrainSAIT. Enterprise demo access available."
+    },
+    "disclaimer": null,
+    "sourceUpdatedAt": "2026-09-02T22:43:25Z"
+  },
+  {
+    "sourceProductId": "gid://shopify/Product/8052889059411",
+    "title": "BrainSAIT Cognitive Healthcare",
+    "handle": "healthcare-directory",
+    "productType": "SOLUTIONS Membership",
+    "family": "SOLUTIONS",
+    "vendor": "BrainSAIT",
+    "variants": [
+      {
+        "sourceVariantId": "gid://shopify/ProductVariant/45967660515411",
+        "sku": "BSP-HEALTHCARE-DIRECTORY",
+        "price": 7990,
+        "billingModel": "one_time",
+        "billingLabel": "One-time purchase"
+      }
+    ],
+    "tags": [
+      "solutions",
+      "one_time",
+      "brainsait",
+      "relaunch-2026"
+    ],
+    "imageAspectRatio": "3:2",
+    "templateSuffix": "membership",
+    "customerCopy": "Cognitive healthcare systems — bridging human wisdom and agentic intelligence. BrainSAIT — Cognitive Healthcare Systems: a digital healthcare incubator bridging human wisdom and agentic intelligence for Saudi Vision 2030. — : 2030. Enterprise / demo access — contact BrainSAIT for a live walkthrough. / — .",
+    "seo": {
+      "title": "BrainSAIT Cognitive Healthcare — AI Health Incubator",
+      "description": "Digital healthcare incubator bridging human wisdom & agentic AI for Saudi Vision 2030. Enterprise demo access available. Contact BrainSAIT."
+    },
+    "disclaimer": null,
+    "sourceUpdatedAt": "2026-09-02T22:43:27Z"
+  },
+  {
+    "sourceProductId": "gid://shopify/Product/8052889780307",
+    "title": "BrainSAIT eCarePlus Portal",
+    "handle": "portals",
+    "productType": "SOLUTIONS Membership",
+    "family": "SOLUTIONS",
+    "vendor": "BrainSAIT",
+    "variants": [
+      {
+        "sourceVariantId": "gid://shopify/ProductVariant/45967661236307",
+        "sku": "BSP-PORTALS",
+        "price": 24900,
+        "billingModel": "one_time",
+        "billingLabel": "One-time purchase"
+      }
+    ],
+    "tags": [
+      "solutions",
+      "one_time",
+      "brainsait",
+      "relaunch-2026"
+    ],
+    "imageAspectRatio": "3:2",
+    "templateSuffix": "membership",
+    "customerCopy": "A smart healthcare routing portal for BOS, BOT, Oracle and MCP. BrainSAIT eCarePlus — a smart healthcare operating portal for BOS, BOT, Oracle and MCP routing in Saudi Arabia. eCarePlus BrainSAIT — BOS BOT Oracle MCP . Enterprise / demo access — contact BrainSAIT for a live walkthrough. / — .",
+    "seo": {
+      "title": "BrainSAIT eCarePlus Portal — Smart Healthcare OS",
+      "description": "Smart healthcare operating portal for BOS, BOT, Oracle & MCP routing in Saudi Arabia. Enterprise demo access available. Contact BrainSAIT."
+    },
+    "disclaimer": null,
+    "sourceUpdatedAt": "2026-09-02T22:43:27Z"
+  },
+  {
+    "sourceProductId": "gid://shopify/Product/8052889321555",
+    "title": "BrainSAIT Healthcare Directory",
+    "handle": "healthcare-directory-v2",
+    "productType": "SOLUTIONS Membership",
+    "family": "SOLUTIONS",
+    "vendor": "BrainSAIT",
+    "variants": [
+      {
+        "sourceVariantId": "gid://shopify/ProductVariant/45967660777555",
+        "sku": "BSP-HEALTHCARE-DIRECTORY-V2",
+        "price": 11900,
+        "billingModel": "one_time",
+        "billingLabel": "One-time purchase"
+      }
+    ],
+    "tags": [
+      "solutions",
+      "one_time",
+      "brainsait",
+      "relaunch-2026"
+    ],
+    "imageAspectRatio": "3:2",
+    "templateSuffix": "membership",
+    "customerCopy": "Provider and facility discovery for the Saudi healthcare ecosystem. BrainSAIT Healthcare Directory — a provider and facility discovery platform for the Saudi healthcare ecosystem. — . Enterprise / demo access — contact BrainSAIT for a live walkthrough. / — .",
+    "seo": {
+      "title": "BrainSAIT Healthcare Directory — Saudi Provider Search",
+      "description": "Discover healthcare providers & facilities across the Saudi ecosystem. Enterprise demo access available. Contact BrainSAIT for a live walkthrough."
+    },
+    "disclaimer": null,
+    "sourceUpdatedAt": "2026-09-02T22:43:29Z"
+  },
+  {
+    "sourceProductId": "gid://shopify/Product/8055015407699",
+    "title": "BRAINSAIT Identity Cloud — MailOTP",
+    "handle": "brainsait-mail-otp-api",
+    "productType": "SOLUTIONS Membership",
+    "family": "SOLUTIONS",
+    "vendor": "BrainSAIT",
+    "variants": [
+      {
+        "sourceVariantId": "gid://shopify/ProductVariant/45985762082899",
+        "sku": "BSP-IDC-DEVELOPER",
+        "price": 490,
+        "billingModel": "one_time",
+        "billingLabel": "One-time purchase"
+      },
+      {
+        "sourceVariantId": "gid://shopify/ProductVariant/45985765294163",
+        "sku": "BSP-IDC-FOUNDER",
+        "price": 2990,
+        "billingModel": "one_time",
+        "billingLabel": "One-time purchase"
+      },
+      {
+        "sourceVariantId": "gid://shopify/ProductVariant/45985765359699",
+        "sku": "BSP-IDC-BUSINESS",
+        "price": 11990,
+        "billingModel": "one_time",
+        "billingLabel": "One-time purchase"
+      },
+      {
+        "sourceVariantId": "gid://shopify/ProductVariant/45986175385683",
+        "sku": "BSP-IDC-ENTERPRISE",
+        "price": 19990,
+        "billingModel": "one_time",
+        "billingLabel": "One-time purchase"
+      }
+    ],
+    "tags": [
+      "solutions",
+      "one_time",
+      "brainsait",
+      "relaunch-2026"
+    ],
+    "imageAspectRatio": "3:2",
+    "templateSuffix": "membership",
+    "customerCopy": "Sovereign, Arabic-first email OTP &amp; passwordless MagicLink authentication API — provisioned instantly, billed monthly. BRAINSAIT Identity Cloud — MailOTP: a sovereign, Arabic-first email OTP and passwordless authentication API for KSA and MENA. Pay on store.brainsait.org and your tenant + API key are provisioned automatically. Monthly subscription billing. — MailOTP: . store.brainsait.org API .",
+    "seo": {
+      "title": "BRAINSAIT Identity Cloud MailOTP | Email OTP API (KSA, SAR/month)",
+      "description": "Sovereign Arabic-first email OTP & passwordless MagicLink authentication API. Provisioned instantly, billed monthly. Saudi-hosted, NPHIES-friendly identity for your apps."
+    },
+    "disclaimer": null,
+    "sourceUpdatedAt": "2026-09-02T22:43:30Z"
+  },
+  {
+    "sourceProductId": "gid://shopify/Product/8052889387091",
+    "title": "Browser UI",
+    "handle": "browser-ui",
+    "productType": "SOLUTIONS Membership",
+    "family": "SOLUTIONS",
+    "vendor": "BrainSAIT",
+    "variants": [
+      {
+        "sourceVariantId": "gid://shopify/ProductVariant/45967660843091",
+        "sku": "BSP-BROWSER-UI",
+        "price": 7990,
+        "billingModel": "one_time",
+        "billingLabel": "One-time purchase"
+      }
+    ],
+    "tags": [
+      "solutions",
+      "one_time",
+      "brainsait",
+      "relaunch-2026"
+    ],
+    "imageAspectRatio": "3:2",
+    "templateSuffix": "membership",
+    "customerCopy": "A browser-style interface prototype. Browser UI — a browser-style interface prototype exploring navigation and shell patterns. — . Enterprise / demo access — contact BrainSAIT for a live walkthrough. / — .",
+    "seo": {
+      "title": "Browser UI — Interface Design Prototype | BrainSAIT",
+      "description": "Browser-style interface prototype exploring modern navigation & shell patterns. Enterprise demo access available. Contact BrainSAIT for a walkthrough."
+    },
+    "disclaimer": null,
+    "sourceUpdatedAt": "2026-09-02T22:43:32Z"
+  },
+  {
+    "sourceProductId": "gid://shopify/Product/8052890501203",
+    "title": "BSA-RCP Academy",
+    "handle": "bsa-rcp-academy",
+    "productType": "SOLUTIONS Membership",
+    "family": "SOLUTIONS",
+    "vendor": "BrainSAIT",
+    "variants": [
+      {
+        "sourceVariantId": "gid://shopify/ProductVariant/45967661957203",
+        "sku": "BSP-BSA-RCP-ACADEMY",
+        "price": 7990,
+        "billingModel": "one_time",
+        "billingLabel": "One-time purchase"
+      }
+    ],
+    "tags": [
+      "solutions",
+      "one_time",
+      "brainsait",
+      "relaunch-2026"
+    ],
+    "imageAspectRatio": "3:2",
+    "templateSuffix": "membership",
+    "customerCopy": "Saudi Healthcare AI &amp; Revenue Cycle Professional Certification (12 weeks). BSA-RCP Academy — a 12-week Saudi Healthcare AI &amp; Revenue Cycle Professional Certification program. BSA-RCP — 12 . Enterprise / demo access — contact BrainSAIT for a live walkthrough. / — .",
+    "seo": {
+      "title": "BSA-RCP Academy — Saudi Healthcare AI Certification",
+      "description": "12-week Saudi Healthcare AI & Revenue Cycle Professional Certification. Enterprise demo access available. Contact BrainSAIT for details."
+    },
+    "disclaimer": null,
+    "sourceUpdatedAt": "2026-09-02T22:43:33Z"
+  },
+  {
+    "sourceProductId": "gid://shopify/Product/8052890206291",
+    "title": "CellForge — Vol. 04 · Oncology",
+    "handle": "cellforge",
+    "productType": "SOLUTIONS Membership",
+    "family": "SOLUTIONS",
+    "vendor": "BrainSAIT",
+    "variants": [
+      {
+        "sourceVariantId": "gid://shopify/ProductVariant/45967661662291",
+        "sku": "BSP-CELLFORGE",
+        "price": 7990,
+        "billingModel": "one_time",
+        "billingLabel": "One-time purchase"
+      }
+    ],
+    "tags": [
+      "solutions",
+      "one_time",
+      "brainsait",
+      "relaunch-2026"
+    ],
+    "imageAspectRatio": "3:2",
+    "templateSuffix": "membership",
+    "customerCopy": "Cinematic medical novelist engine for Oncology. Bilingual EN+AR. CellForge: a cinematic medical novelist engine for Oncology — Vol. 04, bilingual EN+AR, by BrainSAIT. CellForge: — 04 BrainSAIT. Enterprise / demo access — contact BrainSAIT for a live walkthrough. / — .",
+    "seo": {
+      "title": "CellForge Vol. 04 — Oncology Medical Novel | BrainSAIT",
+      "description": "Cinematic medical novelist engine for Oncology. Bilingual EN+AR. Vol. 04 by BrainSAIT. Enterprise demo access available."
+    },
+    "disclaimer": null,
+    "sourceUpdatedAt": "2026-09-02T22:43:36Z"
+  },
+  {
+    "sourceProductId": "gid://shopify/Product/8037211668563",
+    "title": "Clinical Documentation Agent",
+    "handle": "clinical-documentation-agent",
+    "productType": "SOLUTIONS Membership",
+    "family": "SOLUTIONS",
+    "vendor": "BrainSAIT",
+    "variants": [
+      {
+        "sourceVariantId": "gid://shopify/ProductVariant/45912825561171",
+        "sku": "BSP-CLINICAL-DOC",
+        "price": 199,
+        "billingModel": "one_time",
+        "billingLabel": "One-time purchase"
+      }
+    ],
+    "tags": [
+      "solutions",
+      "one_time",
+      "brainsait",
+      "relaunch-2026"
+    ],
+    "imageAspectRatio": "3:2",
+    "templateSuffix": "membership",
+    "customerCopy": "EN Enhance clinical documentation with Clinical Documentation Agent This AI-powered solution helps you automate and optimize clinical note-taking, reducing errors and increasing productivity. With Clinical Documentation Agent, you will be able to focus on providing high-quality patient care while minimizing administrative burdens. Capabilities: Real-time voice-to-structured-notes conversion Automatic ICD-11 and SNOMED CT code assignment Compliance checking against Saudi MOH and NPHIES standards Integration with major EHR systems (Cerner, Epic, NextGen) Designed for physicians, nurses, and medical coders in hospitals and clinics. Enterprise pricing Compliance certification included Price: 199 SAR . . : ICD-11 SNOMED CT NPHIES . : 199",
+    "seo": {
+      "title": "Clinical Documentation Agent — AI Notes Tool | BrainSAIT",
+      "description": "AI-powered clinical note generation with built-in compliance standards. Streamline medical documentation for healthcare professionals via BrainSAIT."
+    },
+    "disclaimer": null,
+    "sourceUpdatedAt": "2026-09-02T22:43:39Z"
+  },
+  {
+    "sourceProductId": "gid://shopify/Product/8052890730579",
+    "title": "Coding KSA Academy",
+    "handle": "coding-ksa-academy",
+    "productType": "SOLUTIONS Membership",
+    "family": "SOLUTIONS",
+    "vendor": "BrainSAIT",
+    "variants": [
+      {
+        "sourceVariantId": "gid://shopify/ProductVariant/45967662186579",
+        "sku": "BSP-CODING-KSA-ACADEMY",
+        "price": 7990,
+        "billingModel": "one_time",
+        "billingLabel": "One-time purchase"
+      }
+    ],
+    "tags": [
+      "solutions",
+      "one_time",
+      "brainsait",
+      "relaunch-2026"
+    ],
+    "imageAspectRatio": "3:2",
+    "templateSuffix": "membership",
+    "customerCopy": "Saudi coding education platform and course guide. Coding KSA Academy — a Saudi coding education platform with a structured course guide. — . Enterprise / demo access — contact BrainSAIT for a live walkthrough. / — .",
+    "seo": {
+      "title": "Coding KSA Academy — Saudi Coding Education Platform",
+      "description": "Saudi coding education platform with a structured course guide. Learn to code in Arabic. Enterprise demo access available. Contact BrainSAIT."
+    },
+    "disclaimer": null,
+    "sourceUpdatedAt": "2026-09-02T22:43:40Z"
+  },
+  {
+    "sourceProductId": "gid://shopify/Product/8052889124947",
+    "title": "Doctor's Hub",
+    "handle": "doctor-hub",
+    "productType": "SOLUTIONS Membership",
+    "family": "SOLUTIONS",
+    "vendor": "BrainSAIT",
+    "variants": [
+      {
+        "sourceVariantId": "gid://shopify/ProductVariant/45967660580947",
+        "sku": "BSP-DOCTOR-HUB",
+        "price": 11900,
+        "billingModel": "one_time",
+        "billingLabel": "One-time purchase"
+      }
+    ],
+    "tags": [
+      "solutions",
+      "one_time",
+      "brainsait",
+      "relaunch-2026"
+    ],
+    "imageAspectRatio": "3:2",
+    "templateSuffix": "membership",
+    "customerCopy": "A unified doctor-facing platform for clinics and practitioners. Doctor's Hub — a unified doctor-facing platform bringing clinical, admin and patient tools into one dashboard. — . Enterprise / demo access — contact BrainSAIT for a live walkthrough. / — .",
+    "seo": {
+      "title": "Doctor's Hub — Unified Clinical Platform | BrainSAIT",
+      "description": "Unified doctor-facing platform combining clinical, admin & patient tools in one dashboard. Enterprise demo access available. Contact BrainSAIT."
+    },
+    "disclaimer": null,
+    "sourceUpdatedAt": "2026-09-02T22:43:46Z"
+  },
+  {
+    "sourceProductId": "gid://shopify/Product/8057315262547",
+    "title": "GIVC — Global Integrated Virtual Care",
+    "handle": "givc",
+    "productType": "SOLUTIONS Membership",
+    "family": "SOLUTIONS",
+    "vendor": "BrainSAIT",
+    "variants": [
+      {
+        "sourceVariantId": "gid://shopify/ProductVariant/45997742456915",
+        "sku": "BSP-GIVC",
+        "price": 24900,
+        "billingModel": "one_time",
+        "billingLabel": "One-time purchase"
+      }
+    ],
+    "tags": [
+      "solutions",
+      "one_time",
+      "brainsait",
+      "relaunch-2026"
+    ],
+    "imageAspectRatio": "3:2",
+    "templateSuffix": "membership",
+    "customerCopy": "Sovereign, Arabic-first virtual-care OS — appointments, telemedicine, insurance and unified records. GIVC (givc.de) — the Global Integrated Virtual Care platform by BrainSAIT: a sovereign, Arabic-first virtual-care operating system unifying appointments, telemedicine, insurance eligibility and unified medical records in one cloud. GIVC (givc.de) — : . Enterprise / demo access — contact BrainSAIT for a live walkthrough. / — .",
+    "seo": {
+      "title": "GIVC — Global Integrated Virtual Care | BrainSAIT",
+      "description": "Sovereign, Arabic-first virtual-care OS unifying appointments, telemedicine, insurance & medical records. Enterprise demo available. BrainSAIT."
+    },
+    "disclaimer": null,
+    "sourceUpdatedAt": "2026-09-02T22:43:53Z"
+  },
+  {
+    "sourceProductId": "gid://shopify/Product/8052889649235",
+    "title": "GIVC-SBS — Saudi Billing System",
+    "handle": "sbs",
+    "productType": "SOLUTIONS Membership",
+    "family": "SOLUTIONS",
+    "vendor": "BrainSAIT",
+    "variants": [
+      {
+        "sourceVariantId": "gid://shopify/ProductVariant/45967661105235",
+        "sku": "BSP-SBS",
+        "price": 24900,
+        "billingModel": "one_time",
+        "billingLabel": "One-time purchase"
+      }
+    ],
+    "tags": [
+      "solutions",
+      "one_time",
+      "brainsait",
+      "relaunch-2026"
+    ],
+    "imageAspectRatio": "3:2",
+    "templateSuffix": "membership",
+    "customerCopy": "BrainSAIT's comprehensive billing and revenue cycle management platform for Saudi healthcare providers. GIVC-SBS (Global Integrated Virtual Care · Saudi Billing System) is fully aligned with NPHIES, ZATCA e-invoicing requirements, and Saudi RCM standards, automating the complete billing lifecycle — from charge capture to claim submission, adjudication, and payment posting. GIVC-SBS ( · ) BrainSAIT . NPHIES RCM — . What's Included: NPHIES-integrated claims submission engine ZATCA-compliant e-invoicing module Saudi RCM rules engine and payer contract management Charge capture and coding automation Denial management and appeals workflow Real-time eligibility verification Financial reporting and KPI dashboard Enterprise onboarding and live walkthrough : NPHIES RCM Enterprise / demo access — contact BrainSAIT at Support@brainsait.org / — Support@brainsait.org",
+    "seo": {
+      "title": "GIVC-SBS — Saudi Billing System | BrainSAIT",
+      "description": "Global Integrated Virtual Care Saudi Billing System powered by BrainSAIT. Enterprise demo access available. Contact BrainSAIT for a live walkthrough."
+    },
+    "disclaimer": null,
+    "sourceUpdatedAt": "2026-09-02T22:43:54Z"
+  },
+  {
+    "sourceProductId": "gid://shopify/Product/8052889911379",
+    "title": "Hayat National Hospitals",
+    "handle": "hnh",
+    "productType": "SOLUTIONS Membership",
+    "family": "SOLUTIONS",
+    "vendor": "BrainSAIT",
+    "variants": [
+      {
+        "sourceVariantId": "gid://shopify/ProductVariant/45967661367379",
+        "sku": "BSP-HNH",
+        "price": 11900,
+        "billingModel": "one_time",
+        "billingLabel": "One-time purchase"
+      }
+    ],
+    "tags": [
+      "solutions",
+      "one_time",
+      "brainsait",
+      "relaunch-2026"
+    ],
+    "imageAspectRatio": "3:2",
+    "templateSuffix": "membership",
+    "customerCopy": "Hospital digital experience — booking, doctors, branches and Basma AI. Hayat National Hospitals — a full hospital digital experience with online booking, doctors, branches and the Basma AI voice assistant. — . Enterprise / demo access — contact BrainSAIT for a live walkthrough. / — .",
+    "seo": {
+      "title": "Hayat National Hospitals — Digital Hospital Platform",
+      "description": "Full hospital digital experience with online booking, doctors, branches & Basma AI voice assistant. Enterprise demo available. Contact BrainSAIT."
+    },
+    "disclaimer": null,
+    "sourceUpdatedAt": "2026-09-02T22:43:56Z"
+  },
+  {
+    "sourceProductId": "gid://shopify/Product/8037211537491",
+    "title": "Hook Architect",
+    "handle": "hook-architect",
+    "productType": "SOLUTIONS Membership",
+    "family": "SOLUTIONS",
+    "vendor": "BrainSAIT",
+    "variants": [
+      {
+        "sourceVariantId": "gid://shopify/ProductVariant/45912825004115",
+        "sku": "BSP-HOOK-ARCHITECT",
+        "price": 49,
+        "billingModel": "one_time",
+        "billingLabel": "One-time purchase"
+      }
+    ],
+    "tags": [
+      "solutions",
+      "one_time",
+      "brainsait",
+      "relaunch-2026"
+    ],
+    "imageAspectRatio": "3:2",
+    "templateSuffix": "membership",
+    "customerCopy": "EN Elevate your copywriting game with Hook Architect This powerful tool helps you craft compelling headlines, product descriptions, and marketing copy that drives results. With Hook Architect, you will be able to create engaging content that resonates with your target audience and sets your brand apart from the competition. What is included: 50+ proven hook formulas by industry and audience Psychological trigger mapping (curiosity, urgency, FOMO) A/B testing recommendations and performance tips Platform-specific optimization (email, social, landing pages) Perfect for marketers, copywriters, and founders who need to capture attention in seconds. Instant delivery Lifetime access to updates Price: 49 SAR . . : +50 ( ) A/B ( ) . : 49",
+    "seo": {
+      "title": "Hook Architect — AI Marketing Hooks Generator | BrainSAIT",
+      "description": "Generate 15-20 high-impact hooks for any marketing content with this AI tool. Instant digital delivery for content creators and marketers via BrainSAIT."
+    },
+    "disclaimer": null,
+    "sourceUpdatedAt": "2026-09-02T22:43:59Z"
+  },
+  {
+    "sourceProductId": "gid://shopify/Product/8052890435667",
+    "title": "Human & Saudi Cultural Museum",
+    "handle": "museum-hilton",
+    "productType": "SOLUTIONS Membership",
+    "family": "SOLUTIONS",
+    "vendor": "BrainSAIT",
+    "variants": [
+      {
+        "sourceVariantId": "gid://shopify/ProductVariant/45967661891667",
+        "sku": "BSP-MUSEUM-HILTON",
+        "price": 11900,
+        "billingModel": "one_time",
+        "billingLabel": "One-time purchase"
+      }
+    ],
+    "tags": [
+      "solutions",
+      "one_time",
+      "brainsait",
+      "relaunch-2026"
+    ],
+    "imageAspectRatio": "3:2",
+    "templateSuffix": "membership",
+    "customerCopy": "AI-powered immersive Saudi cultural museum concept for Hilton. Human &amp; Saudi Cultural Museum @ Hilton — transforming hotel spaces into immersive cultural museums, powered by AI, rooted in heritage and aligned with Vision 2030. @ — 2030. Enterprise / demo access — contact BrainSAIT for a live walkthrough. / — .",
+    "seo": {
+      "title": "Human & Saudi Cultural Museum — AI Heritage | BrainSAIT",
+      "description": "AI-powered immersive Saudi cultural museum concept for Hilton. Aligned with Vision 2030. Enterprise demo access available. Contact BrainSAIT."
+    },
+    "disclaimer": null,
+    "sourceUpdatedAt": "2026-09-02T22:44:01Z"
+  },
+  {
+    "sourceProductId": "gid://shopify/Product/8052890665043",
+    "title": "InterSystems IRIS Academy",
+    "handle": "iris-academy",
+    "productType": "SOLUTIONS Membership",
+    "family": "SOLUTIONS",
+    "vendor": "BrainSAIT",
+    "variants": [
+      {
+        "sourceVariantId": "gid://shopify/ProductVariant/45967662121043",
+        "sku": "BSP-IRIS-ACADEMY",
+        "price": 11900,
+        "billingModel": "one_time",
+        "billingLabel": "One-time purchase"
+      }
+    ],
+    "tags": [
+      "solutions",
+      "one_time",
+      "brainsait",
+      "relaunch-2026"
+    ],
+    "imageAspectRatio": "3:2",
+    "templateSuffix": "membership",
+    "customerCopy": "30 Arabic courses, six tracks, 150+ hours. InterSystems IRIS Academy — a comprehensive Arabic learning platform with 30 courses across six tracks, from zero to professional. InterSystems IRIS — 30 6 . Enterprise / demo access — contact BrainSAIT for a live walkthrough. / — .",
+    "seo": {
+      "title": "InterSystems IRIS Academy — 30 Arabic Courses | BrainSAIT",
+      "description": "30 Arabic courses across 6 tracks, 150+ hours. From zero to professional on InterSystems IRIS. Enterprise demo access available. BrainSAIT."
+    },
+    "disclaimer": null,
+    "sourceUpdatedAt": "2026-09-02T22:44:03Z"
+  },
+  {
+    "sourceProductId": "gid://shopify/Product/8037211635795",
+    "title": "Investor Pitch Agent",
+    "handle": "investor-pitch-agent",
+    "productType": "SOLUTIONS Membership",
+    "family": "SOLUTIONS",
+    "vendor": "BrainSAIT",
+    "variants": [
+      {
+        "sourceVariantId": "gid://shopify/ProductVariant/45912825397331",
+        "sku": "BSP-INVESTOR-PITCH",
+        "price": 199,
+        "billingModel": "one_time",
+        "billingLabel": "One-time purchase"
+      }
+    ],
+    "tags": [
+      "solutions",
+      "one_time",
+      "brainsait",
+      "relaunch-2026"
+    ],
+    "imageAspectRatio": "3:2",
+    "templateSuffix": "membership",
+    "customerCopy": "EN Perfect your investor pitch with Investor Pitch Agent This innovative tool helps you create a compelling pitch deck that showcases your vision and attracts investors. With Investor Pitch Agent, you will be able to craft a clear and persuasive narrative that sets your startup apart from the competition. Features: 15-slide pitch deck template optimized for Saudi VCs Market sizing tools specific to Saudi sectors (Vision 2030 aligned) Financial projection builder with GCC benchmarks AI-generated speaker notes and Q&amp;A prep Trusted by startups raising from Saudi Venture Capital Company, STV, and Misk Ventures. Digital delivery Includes 1-hour strategy session Price: 199 SAR . . : 15 ( 2030) venture STV . : 199",
+    "seo": {
+      "title": "Investor Pitch Agent — AI Pitch Deck Creator | BrainSAIT",
+      "description": "Create a complete investor pitch with narrative and templates using AI. Ideal for founders and startups seeking funding with professional presentations."
+    },
+    "disclaimer": null,
+    "sourceUpdatedAt": "2026-09-02T22:44:04Z"
+  },
+  {
+    "sourceProductId": "gid://shopify/Product/8052890763347",
+    "title": "KDP Voice Agent",
+    "handle": "kdp-voice-agent",
+    "productType": "SOLUTIONS Membership",
+    "family": "SOLUTIONS",
+    "vendor": "BrainSAIT",
+    "variants": [
+      {
+        "sourceVariantId": "gid://shopify/ProductVariant/45967662219347",
+        "sku": "BSP-KDP-VOICE-AGENT",
+        "price": 24900,
+        "billingModel": "one_time",
+        "billingLabel": "One-time purchase"
+      }
+    ],
+    "tags": [
+      "solutions",
+      "one_time",
+      "brainsait",
+      "relaunch-2026"
+    ],
+    "imageAspectRatio": "3:2",
+    "templateSuffix": "membership",
+    "customerCopy": "BrainSAIT's AI-powered book publishing assistant, designed to take authors from manuscript to published book with voice-first interaction. Whether you're publishing on Amazon KDP or regional platforms, KDP Voice Agent handles formatting, cover design briefing, metadata optimization, and publishing workflow — all through natural voice commands, with seamless Canva integration. KDP BrainSAIT Canva. Amazon KDP — . What's Included: Voice-first AI publishing assistant Amazon KDP workflow automation Canva integration for cover design and layout Metadata and keyword optimization engine Manuscript formatting and structure guidance Multi-language publishing support (AR/EN) Enterprise onboarding and live walkthrough : Amazon KDP Canva (AR/EN) Enterprise / demo access — contact BrainSAIT at Support@brainsait.org / — Support@brainsait.org",
+    "seo": {
+      "title": "KDP Voice Agent — AI Book Publishing Assistant | BrainSAIT",
+      "description": "AI book-publishing assistant with voice interaction & Canva integration. Publish smarter and faster. Enterprise demo available. Contact BrainSAIT."
+    },
+    "disclaimer": null,
+    "sourceUpdatedAt": "2026-09-02T22:44:05Z"
+  },
+  {
+    "sourceProductId": "gid://shopify/Product/8037211701331",
+    "title": "Landing Page Engineer",
+    "handle": "landing-page-engineer",
+    "productType": "SOLUTIONS Membership",
+    "family": "SOLUTIONS",
+    "vendor": "BrainSAIT",
+    "variants": [
+      {
+        "sourceVariantId": "gid://shopify/ProductVariant/45912825626707",
+        "sku": "BSP-LANDING-PAGE",
+        "price": 99,
+        "billingModel": "one_time",
+        "billingLabel": "One-time purchase"
+      }
+    ],
+    "tags": [
+      "solutions",
+      "one_time",
+      "brainsait",
+      "relaunch-2026"
+    ],
+    "imageAspectRatio": "3:2",
+    "templateSuffix": "membership",
+    "customerCopy": "EN Optimize your landing pages with Landing Page Engineer This innovative tool provides you with conversion-optimized templates and expert guidance to help you create high-performing landing pages that drive results. With Landing Page Engineer, you will be able to increase conversions, boost sales, and grow your business. What you get: 25+ conversion-optimized landing page templates Mobile-first design with RTL Arabic support AI copy generator trained on high-performing Saudi ads Heatmap analysis and conversion rate optimization tips Used by 500+ Saudi businesses to launch high-converting campaigns. Instant delivery Lifetime access + updates Price: 99 SAR . . : +25 mobile-first RTL Heatmap +500 . + : 99",
+    "seo": {
+      "title": "Landing Page Engineer — AI Copy Tool | BrainSAIT",
+      "description": "Complete landing page copy with conversion optimization powered by AI. Perfect for marketers and businesses seeking higher conversion rates via BrainSAIT."
+    },
+    "disclaimer": null,
+    "sourceUpdatedAt": "2026-09-02T22:44:06Z"
+  },
+  {
+    "sourceProductId": "gid://shopify/Product/8057315328083",
+    "title": "MASTERLINC — Clinical Intelligence Orchestrator",
+    "handle": "masterlinc-orchestrator",
+    "productType": "SOLUTIONS Membership",
+    "family": "SOLUTIONS",
+    "vendor": "BrainSAIT",
+    "variants": [
+      {
+        "sourceVariantId": "gid://shopify/ProductVariant/45997742522451",
+        "sku": "BSP-MASTERLINC-ORCHESTRATOR",
+        "price": 24900,
+        "billingModel": "one_time",
+        "billingLabel": "One-time purchase"
+      }
+    ],
+    "tags": [
+      "solutions",
+      "one_time",
+      "brainsait",
+      "relaunch-2026"
+    ],
+    "imageAspectRatio": "3:2",
+    "templateSuffix": "membership",
+    "customerCopy": "Agentic clinical intelligence — visits, coding, claims and AI-assisted documentation. MASTERLINC (masterlinc.de) — a clinical intelligence platform and agentic orchestrator covering visits, coding, claims and AI-assisted documentation, wired into the BrainSAIT integration bus. MASTERLINC (masterlinc.de) — . Enterprise / demo access — contact BrainSAIT for a live walkthrough. / — .",
+    "seo": {
+      "title": "MASTERLINC — Clinical Intelligence Orchestrator | BrainSAIT",
+      "description": "Agentic clinical intelligence platform covering visits, coding, claims & AI-assisted documentation. Wired into BrainSAIT integration bus."
+    },
+    "disclaimer": null,
+    "sourceUpdatedAt": "2026-09-02T22:44:09Z"
+  },
+  {
+    "sourceProductId": "gid://shopify/Product/8052890271827",
+    "title": "Melissa Riyadh Collection",
+    "handle": "melissa-hospitality",
+    "productType": "SOLUTIONS Membership",
+    "family": "SOLUTIONS",
+    "vendor": "BrainSAIT",
+    "variants": [
+      {
+        "sourceVariantId": "gid://shopify/ProductVariant/45967661727827",
+        "sku": "BSP-MELISSA-HOSPITALITY",
+        "price": 7990,
+        "billingModel": "one_time",
+        "billingLabel": "One-time purchase"
+      }
+    ],
+    "tags": [
+      "solutions",
+      "one_time",
+      "brainsait",
+      "relaunch-2026"
+    ],
+    "imageAspectRatio": "3:2",
+    "templateSuffix": "membership",
+    "customerCopy": "Luxury Riyadh hospitality rooted in Arabian heritage. Melissa — the Riyadh luxury hospitality collection: an unforgettable experience in the heart of the capital. — : . Enterprise / demo access — contact BrainSAIT for a live walkthrough. / — .",
+    "seo": {
+      "title": "Melissa Riyadh Collection — Luxury Hospitality | BrainSAIT",
+      "description": "Luxury Riyadh hospitality collection rooted in Arabian heritage. An unforgettable experience in the heart of the capital. Enterprise demo available."
+    },
+    "disclaimer": null,
+    "sourceUpdatedAt": "2026-09-02T22:44:10Z"
+  },
+  {
+    "sourceProductId": "gid://shopify/Product/8052890959955",
+    "title": "MomFood /",
+    "handle": "momfood",
+    "productType": "SOLUTIONS Membership",
+    "family": "SOLUTIONS",
+    "vendor": "BrainSAIT",
+    "variants": [
+      {
+        "sourceVariantId": "gid://shopify/ProductVariant/45967662415955",
+        "sku": "BSP-MOMFOOD",
+        "price": 11900,
+        "billingModel": "one_time",
+        "billingLabel": "One-time purchase"
+      }
+    ],
+    "tags": [
+      "solutions",
+      "one_time",
+      "brainsait",
+      "relaunch-2026"
+    ],
+    "imageAspectRatio": "3:2",
+    "templateSuffix": "membership",
+    "customerCopy": "Authentic Sudanese cloud kitchen — traditional stews, fresh breads and desserts. MomFood — an authentic Sudanese cloud kitchen platform delivering traditional stews, fresh breads and handcrafted desserts. MomFood — . Enterprise / demo access — contact BrainSAIT for a live walkthrough. / — .",
+    "seo": {
+      "title": "MomFood — Authentic Sudanese Cloud Kitchen Platform",
+      "description": "Authentic Sudanese cloud kitchen delivering traditional stews, fresh breads & handcrafted desserts. Enterprise demo access available. BrainSAIT."
+    },
+    "disclaimer": null,
+    "sourceUpdatedAt": "2026-09-02T22:44:11Z"
+  },
+  {
+    "sourceProductId": "gid://shopify/Product/8037218582611",
+    "title": "MomFood Cloud Kitchen Incubator",
+    "handle": "momfood-cloud-kitchen-incubator",
+    "productType": "SOLUTIONS Membership",
+    "family": "SOLUTIONS",
+    "vendor": "BrainSAIT",
+    "variants": [
+      {
+        "sourceVariantId": "gid://shopify/ProductVariant/45912861507667",
+        "sku": "BSP-MOMFOOD-CLOUD-KITCHEN",
+        "price": 3999,
+        "billingModel": "one_time",
+        "billingLabel": "One-time purchase"
+      }
+    ],
+    "tags": [
+      "solutions",
+      "one_time",
+      "brainsait",
+      "relaunch-2026"
+    ],
+    "imageAspectRatio": "3:2",
+    "templateSuffix": "membership",
+    "customerCopy": "Cloud kitchen incubator — launch your food brand on MomFood. MomFood Cloud Kitchen Incubator takes your food concept from recipe to revenue: brand setup, menu engineering, cloud-kitchen operations, and delivery-platform readiness — powered by the MomFood platform. The incubation covers Brand identity and menu development for delivery-first operations Cloud kitchen setup, SOPs, and quality workflows MomFood platform onboarding and order operations Growth playbooks for delivery channels Who it's for Aspiring restaurant founders, home-based chefs going commercial, and F&amp;B entrepreneurs launching delivery-first brands in Saudi Arabia. How purchase works This is a program listing . After checkout, our team contacts you to schedule onboarding and next steps. Questions? Email brainsait@icloud.com. Accepted payments: mada · Apple Pay · STC Pay · Visa · Mastercard · PayPal : · Apple Pay · STC Pay · · · PayPal",
+    "seo": {
+      "title": "MomFood Cloud Kitchen Incubator — Platform | BrainSAIT",
+      "description": "Voice-first cloud-kitchen incubator for home-cooked orders and driver delivery. Social impact platform connected to the BrainSAIT ecosystem."
+    },
+    "disclaimer": null,
+    "sourceUpdatedAt": "2026-08-24T08:09:34Z"
+  },
+  {
+    "sourceProductId": "gid://shopify/Product/8052891025491",
+    "title": "NARA Cafe & Majlis",
+    "handle": "nara-cafe",
+    "productType": "SOLUTIONS Membership",
+    "family": "SOLUTIONS",
+    "vendor": "BrainSAIT",
+    "variants": [
+      {
+        "sourceVariantId": "gid://shopify/ProductVariant/45967662481491",
+        "sku": "BSP-NARA-CAFE",
+        "price": 7990,
+        "billingModel": "one_time",
+        "billingLabel": "One-time purchase"
+      }
+    ],
+    "tags": [
+      "solutions",
+      "one_time",
+      "brainsait",
+      "relaunch-2026"
+    ],
+    "imageAspectRatio": "3:2",
+    "templateSuffix": "membership",
+    "customerCopy": "Premium bilingual coffee, majlis, tasting and concierge experience. NARA Cafe &amp; Majlis — a premium bilingual coffee, majlis, tasting and concierge experience with a modern luxury interface. — . Enterprise / demo access — contact BrainSAIT for a live walkthrough. / — .",
+    "seo": {
+      "title": "NARA Cafe & Majlis — Premium Saudi Hospitality",
+      "description": "Premium bilingual coffee, majlis, tasting & concierge experience with a modern luxury interface. Enterprise demo available. Contact BrainSAIT."
+    },
+    "disclaimer": null,
+    "sourceUpdatedAt": "2026-09-02T22:44:11Z"
+  },
+  {
+    "sourceProductId": "gid://shopify/Product/8052888961107",
+    "title": "Neural Cloud Portal",
+    "handle": "neural-cloud-portal",
+    "productType": "SOLUTIONS Membership",
+    "family": "SOLUTIONS",
+    "vendor": "BrainSAIT",
+    "variants": [
+      {
+        "sourceVariantId": "gid://shopify/ProductVariant/45967660417107",
+        "sku": "BSP-NEURAL-CLOUD-PORTAL",
+        "price": 11900,
+        "billingModel": "one_time",
+        "billingLabel": "One-time purchase"
+      }
+    ],
+    "tags": [
+      "solutions",
+      "one_time",
+      "brainsait",
+      "relaunch-2026"
+    ],
+    "imageAspectRatio": "3:2",
+    "templateSuffix": "membership",
+    "customerCopy": "Bilingual, voice-ready interface to your Gemini-powered Neural Cloud cortex. BrainSAIT Neural Cloud — a bilingual, voice-ready portal to your Gemini-powered cortex, with facilities, incubation and MCP integration links. Neural Cloud BrainSAIT — Gemini MCP. Enterprise / demo access — contact BrainSAIT for a live walkthrough. / — .",
+    "seo": {
+      "title": "Neural Cloud Portal — Gemini AI Platform | BrainSAIT",
+      "description": "Bilingual, voice-ready portal to your Gemini-powered AI cortex. Incubation & MCP integration links. Enterprise demo access available. BrainSAIT."
+    },
+    "disclaimer": null,
+    "sourceUpdatedAt": "2026-09-02T22:44:12Z"
+  },
+  {
+    "sourceProductId": "gid://shopify/Product/8057315295315",
+    "title": "NPHIES — Health Insurance Exchange Gateway",
+    "handle": "nphies-gateway",
+    "productType": "SOLUTIONS Membership",
+    "family": "SOLUTIONS",
+    "vendor": "BrainSAIT",
+    "variants": [
+      {
+        "sourceVariantId": "gid://shopify/ProductVariant/45997742489683",
+        "sku": "BSP-NPHIES-GATEWAY",
+        "price": 24900,
+        "billingModel": "one_time",
+        "billingLabel": "One-time purchase"
+      }
+    ],
+    "tags": [
+      "solutions",
+      "one_time",
+      "brainsait",
+      "relaunch-2026"
+    ],
+    "imageAspectRatio": "3:2",
+    "templateSuffix": "membership",
+    "customerCopy": "Production NPHIES integration — eligibility, claims, prior-auth and COC endpoints. NPHIES (nphies.de) — a BrainSAIT gateway to the Saudi National Platform for Health Insurance &amp; Exchange Services, exposing eligibility, claims, prior-authorization and COC endpoints for HIS-to-NPHIES middleware. NPHIES (nphies.de) — COC NPHIES. Enterprise / demo access — contact BrainSAIT for a live walkthrough. / — .",
+    "seo": {
+      "title": "NPHIES — Health Insurance Exchange Gateway | BrainSAIT",
+      "description": "BrainSAIT gateway to Saudi NPHIES: eligibility, claims, prior-auth & COC endpoints for HIS-to-NPHIES middleware. Enterprise demo available."
+    },
+    "disclaimer": null,
+    "sourceUpdatedAt": "2026-09-02T22:44:16Z"
+  },
+  {
+    "sourceProductId": "gid://shopify/Product/8037211603027",
+    "title": "NPHIES Assistant",
+    "handle": "nphies-assistant",
+    "productType": "SOLUTIONS Membership",
+    "family": "SOLUTIONS",
+    "vendor": "BrainSAIT",
+    "variants": [
+      {
+        "sourceVariantId": "gid://shopify/ProductVariant/45912825364563",
+        "sku": "BSP-NPHIES-ASSISTANT",
+        "price": 249,
+        "billingModel": "one_time",
+        "billingLabel": "One-time purchase"
+      }
+    ],
+    "tags": [
+      "solutions",
+      "one_time",
+      "brainsait",
+      "relaunch-2026"
+    ],
+    "imageAspectRatio": "3:2",
+    "templateSuffix": "membership",
+    "customerCopy": "EN Streamline your claims process with NPHIES Assistant This AI-powered solution helps you automate and optimize claims management, reducing errors and increasing efficiency. With NPHIES Assistant, you will be able to focus on providing high-quality patient care while minimizing administrative burdens. Key capabilities: Real-time eligibility verification and prior authorization Intelligent claims scrubbing and error detection Automated resubmission with corrected codes Real-time claim status tracking and appeals Built for clinics, hospitals, and RCM companies serving Saudi patients. Enterprise pricing Demo available upon request Price: 249 SAR . . : . : 249",
+    "seo": {
+      "title": "NPHIES Assistant — Saudi Insurance Claims AI Tool | BrainSAIT",
+      "description": "Navigate Saudi NPHIES insurance claims platform and validate submissions with AI. Essential tool for healthcare providers and billing teams via BrainSAIT."
+    },
+    "disclaimer": null,
+    "sourceUpdatedAt": "2026-09-02T22:44:14Z"
+  },
+  {
+    "sourceProductId": "gid://shopify/Product/8052890566739",
+    "title": "NPHIES DRG Knowledge Base",
+    "handle": "nphies-drg-kb",
+    "productType": "SOLUTIONS Membership",
+    "family": "SOLUTIONS",
+    "vendor": "BrainSAIT",
+    "variants": [
+      {
+        "sourceVariantId": "gid://shopify/ProductVariant/45967662022739",
+        "sku": "BSP-NPHIES-DRG-KB",
+        "price": 7990,
+        "billingModel": "one_time",
+        "billingLabel": "One-time purchase"
+      }
+    ],
+    "tags": [
+      "solutions",
+      "one_time",
+      "brainsait",
+      "relaunch-2026"
+    ],
+    "imageAspectRatio": "3:2",
+    "templateSuffix": "membership",
+    "customerCopy": "DRG use cases, validation rules, AR-DRG codes and payer workflows. NPHIES DRG Knowledge Base — DRG use cases, validation rules, AR-DRG codes and payer workflows. NPHIES DRG — DRG AR-DRG . Enterprise / demo access — contact BrainSAIT for a live walkthrough. / — .",
+    "seo": {
+      "title": "NPHIES DRG Knowledge Base — AR-DRG Codes | BrainSAIT",
+      "description": "DRG use cases, validation rules, AR-DRG codes & payer workflows for Saudi health insurance. Enterprise demo access available. Contact BrainSAIT."
+    },
+    "disclaimer": null,
+    "sourceUpdatedAt": "2026-09-02T22:44:15Z"
+  },
+  {
+    "sourceProductId": "gid://shopify/Product/8052889190483",
+    "title": "Private Strategy Session",
+    "handle": "private-strategy-session",
+    "productType": "SOLUTIONS Membership",
+    "family": "SOLUTIONS",
+    "vendor": "BrainSAIT",
+    "variants": [
+      {
+        "sourceVariantId": "gid://shopify/ProductVariant/45967660646483",
+        "sku": "BSP-PRIVATE-STRATEGY-SESSION",
+        "price": 2390,
+        "billingModel": "one_time",
+        "billingLabel": "One-time purchase"
+      }
+    ],
+    "tags": [
+      "solutions",
+      "one_time",
+      "brainsait",
+      "relaunch-2026"
+    ],
+    "imageAspectRatio": "3:2",
+    "templateSuffix": "membership",
+    "customerCopy": "Book a 60-minute healthcare AI / NPHIES / architecture consultation. A private 60-minute consultation with Dr. Mohamed El Fadil on healthcare AI, NPHIES integration or system architecture (SAR 2,390). (60 ) . NPHIES (2390 .).",
+    "seo": {
+      "title": "Private Strategy Session — Healthcare AI Consulting",
+      "description": "60-minute private consultation with Dr. Mohamed El Fadil on healthcare AI, NPHIES integration or system architecture. SAR 2,390. Book now."
+    },
+    "disclaimer": null,
+    "sourceUpdatedAt": "2026-09-02T22:44:21Z"
+  },
+  {
+    "sourceProductId": "gid://shopify/Product/8052889518163",
+    "title": "Riyadh Clinics Directory",
+    "handle": "clinics-directory",
+    "productType": "SOLUTIONS Membership",
+    "family": "SOLUTIONS",
+    "vendor": "BrainSAIT",
+    "variants": [
+      {
+        "sourceVariantId": "gid://shopify/ProductVariant/45967660974163",
+        "sku": "BSP-CLINICS-DIRECTORY",
+        "price": 11900,
+        "billingModel": "one_time",
+        "billingLabel": "One-time purchase"
+      }
+    ],
+    "tags": [
+      "solutions",
+      "one_time",
+      "brainsait",
+      "relaunch-2026"
+    ],
+    "imageAspectRatio": "3:2",
+    "templateSuffix": "membership",
+    "customerCopy": "Riyadh healthcare clinics directory with online booking. Riyadh Clinics Directory — a directory of specialized Riyadh healthcare clinics with online booking. — . Enterprise / demo access — contact BrainSAIT for a live walkthrough. / — .",
+    "seo": {
+      "title": "Riyadh Clinics Directory — Book Specialist Appointments",
+      "description": "Find specialized clinics across Riyadh with online booking. Comprehensive healthcare directory for the Saudi capital. Enterprise demo available."
+    },
+    "disclaimer": null,
+    "sourceUpdatedAt": "2026-09-02T22:44:24Z"
+  },
+  {
+    "sourceProductId": "gid://shopify/Product/8052890140755",
+    "title": "ShadowForge — Vol. 05 · Radiology",
+    "handle": "shadowforge",
+    "productType": "SOLUTIONS Membership",
+    "family": "SOLUTIONS",
+    "vendor": "BrainSAIT",
+    "variants": [
+      {
+        "sourceVariantId": "gid://shopify/ProductVariant/45967661596755",
+        "sku": "BSP-SHADOWFORGE",
+        "price": 7990,
+        "billingModel": "one_time",
+        "billingLabel": "One-time purchase"
+      }
+    ],
+    "tags": [
+      "solutions",
+      "one_time",
+      "brainsait",
+      "relaunch-2026"
+    ],
+    "imageAspectRatio": "3:2",
+    "templateSuffix": "membership",
+    "customerCopy": "Cinematic medical novelist engine for Radiology. Bilingual EN+AR. ShadowForge: a cinematic medical novelist engine for Radiology — Vol. 05, bilingual EN+AR, by BrainSAIT. ShadowForge: — 05 BrainSAIT. Enterprise / demo access — contact BrainSAIT for a live walkthrough. / — .",
+    "seo": {
+      "title": "ShadowForge Vol. 05 — Radiology Medical Novel | BrainSAIT",
+      "description": "Cinematic medical novelist engine for Radiology. Bilingual EN+AR. Vol. 05 by BrainSAIT. Enterprise demo access available."
+    },
+    "disclaimer": null,
+    "sourceUpdatedAt": "2026-09-02T22:44:29Z"
+  },
+  {
+    "sourceProductId": "gid://shopify/Product/8104922415187",
+    "title": "SOLUTIONS — BrainSAIT Super Partner Program",
+    "handle": "solutions-brainsait-super-partner-program-1",
+    "productType": "SOLUTIONS Membership",
+    "family": "SOLUTIONS",
+    "vendor": "BrainSAIT",
+    "variants": [
+      {
+        "sourceVariantId": "gid://shopify/ProductVariant/46139264991315",
+        "sku": "BRN-SOL-SUB-M",
+        "price": 1999,
+        "billingModel": "monthly",
+        "billingLabel": "1,999 SAR / month"
+      }
+    ],
+    "tags": [
+      "solutions",
+      "monthly",
+      "brainsait",
+      "relaunch-2026"
+    ],
+    "imageAspectRatio": "3:2",
+    "templateSuffix": "membership",
+    "customerCopy": "Solutions Super Partner — 1,999 SAR/month Complete ecosystem access: Learn library, Build incubation, plus Lark super-partner workspace, dedicated code platform subdomain, Shopify customer accounts, and 1:1 founder journey mentoring. Full Learn library (Frame.io PDFs) Full Build incubation (Notion, 2nd Brain, Telegram bot) Lark super-partner company incubation Dedicated code platform subdomain + dispatch worker Dedicated Shopify customer account management Company incubation: deployment, marketing, certifications, badge release 1:1 founder journey mentoring",
+    "seo": {
+      "title": "SOLUTIONS — BrainSAIT Super Partner Program",
+      "description": "Solutions Super Partner — 1,999 SAR/month Complete ecosystem access: Learn library, Build incubation, plus Lark super-partner workspace, dedicated code pla"
+    },
+    "disclaimer": null,
+    "sourceUpdatedAt": "2026-09-03T13:38:46Z"
+  },
+  {
+    "sourceProductId": "gid://shopify/Product/8052891156563",
+    "title": "Tawnia × Al Tawuniya — AI Claims Reconciliation",
+    "handle": "tawnia",
+    "productType": "SOLUTIONS Membership",
+    "family": "SOLUTIONS",
+    "vendor": "BrainSAIT",
+    "variants": [
+      {
+        "sourceVariantId": "gid://shopify/ProductVariant/45967662612563",
+        "sku": "BSP-TAWNIA",
+        "price": 24900,
+        "billingModel": "one_time",
+        "billingLabel": "One-time purchase"
+      }
+    ],
+    "tags": [
+      "solutions",
+      "one_time",
+      "brainsait",
+      "relaunch-2026"
+    ],
+    "imageAspectRatio": "3:2",
+    "templateSuffix": "membership",
+    "customerCopy": "Automated AI-powered claims reconciliation for Al Tawuniya insurance. AI Claims Reconciliation — automated claims reconciliation for Al Tawuniya insurance using GPT-4o and Saudi RCM guidelines. — GPT-4o . Enterprise / demo access — contact BrainSAIT for a live walkthrough. / — .",
+    "seo": {
+      "title": "Tawnia × Al Tawuniya — AI Claims Reconciliation",
+      "description": "Automated claims reconciliation for Al Tawuniya insurance using GPT-4o & Saudi RCM guidelines. Enterprise demo access available. BrainSAIT."
+    },
+    "disclaimer": null,
+    "sourceUpdatedAt": "2026-09-02T22:44:37Z"
+  },
+  {
+    "sourceProductId": "gid://shopify/Product/8052890075219",
+    "title": "TraumaForge — Vol. 06 · Emergency Medicine",
+    "handle": "traumaforge",
+    "productType": "SOLUTIONS Membership",
+    "family": "SOLUTIONS",
+    "vendor": "BrainSAIT",
+    "variants": [
+      {
+        "sourceVariantId": "gid://shopify/ProductVariant/45967661531219",
+        "sku": "BSP-TRAUMAFORGE",
+        "price": 7990,
+        "billingModel": "one_time",
+        "billingLabel": "One-time purchase"
+      }
+    ],
+    "tags": [
+      "solutions",
+      "one_time",
+      "brainsait",
+      "relaunch-2026"
+    ],
+    "imageAspectRatio": "3:2",
+    "templateSuffix": "membership",
+    "customerCopy": "Cinematic medical novelist engine for Emergency Medicine. Bilingual EN+AR. TraumaForge: a cinematic medical novelist engine for Emergency Medicine — Vol. 06, bilingual EN+AR, by BrainSAIT. TraumaForge: — 06 BrainSAIT. Enterprise / demo access — contact BrainSAIT for a live walkthrough. / — .",
+    "seo": {
+      "title": "TraumaForge Vol. 06 — Emergency Medicine Novel | BrainSAIT",
+      "description": "Cinematic medical novelist engine for Emergency Medicine. Bilingual EN+AR. Vol. 06 by BrainSAIT. Enterprise demo access available."
+    },
+    "disclaimer": null,
+    "sourceUpdatedAt": "2026-09-02T22:44:45Z"
+  },
+  {
+    "sourceProductId": "gid://shopify/Product/8052889256019",
+    "title": "Travel Code Secure Vault",
+    "handle": "travel-code-secure-vault",
+    "productType": "SOLUTIONS Membership",
+    "family": "SOLUTIONS",
+    "vendor": "BrainSAIT",
+    "variants": [
+      {
+        "sourceVariantId": "gid://shopify/ProductVariant/45967660712019",
+        "sku": "BSP-TRAVEL-CODE-SECURE-VAULT",
+        "price": 24900,
+        "billingModel": "one_time",
+        "billingLabel": "One-time purchase"
+      }
+    ],
+    "tags": [
+      "solutions",
+      "one_time",
+      "brainsait",
+      "relaunch-2026"
+    ],
+    "imageAspectRatio": "3:2",
+    "templateSuffix": "membership",
+    "customerCopy": "A premium Saudi heritage and modernity travel experience platform built for the Vision 2030 era. Travel Code Secure Vault combines augmented reality (AR) exploration, an AI-powered concierge, secure digital travel vaults, and smart connectivity hubs to deliver an unmatched end-to-end travel intelligence solution for enterprises, hospitality groups, and tourism authorities. 2030. (AR) — . What's Included: AR-powered Saudi heritage and destination experiences AI concierge for personalized travel recommendations Secure digital vault for travel documents and credentials Smart connectivity hub integration Enterprise access with live walkthrough onboarding Dedicated BrainSAIT support team : BrainSAIT Enterprise / demo access — contact BrainSAIT for a live walkthrough at Support@brainsait.org / — Support@brainsait.org",
+    "seo": {
+      "title": "Travel Code Secure Vault — Saudi Travel Platform",
+      "description": "Saudi heritage & modernity travel platform with AR, AI concierge & secure travel vaults. Enterprise demo access available. Contact BrainSAIT."
+    },
+    "disclaimer": null,
+    "sourceUpdatedAt": "2026-09-02T22:44:46Z"
+  },
+  {
+    "sourceProductId": "gid://shopify/Product/8052889583699",
+    "title": "UN Innovation Toolkit",
+    "handle": "un-innovation-toolkit",
+    "productType": "SOLUTIONS Membership",
+    "family": "SOLUTIONS",
+    "vendor": "BrainSAIT",
+    "variants": [
+      {
+        "sourceVariantId": "gid://shopify/ProductVariant/45967661039699",
+        "sku": "BSP-UN-INNOVATION-TOOLKIT",
+        "price": 7990,
+        "billingModel": "one_time",
+        "billingLabel": "One-time purchase"
+      }
+    ],
+    "tags": [
+      "solutions",
+      "one_time",
+      "brainsait",
+      "relaunch-2026"
+    ],
+    "imageAspectRatio": "3:2",
+    "templateSuffix": "membership",
+    "customerCopy": "21 innovation tools, five pillars, diagnostics and 10 learning modules. UN Innovation Toolkit — a BrainSAIT innovation course: 21 tools, five pillars, diagnostics and 10 learning modules. — BrainSAIT: 21 . Enterprise / demo access — contact BrainSAIT for a live walkthrough. / — .",
+    "seo": {
+      "title": "UN Innovation Toolkit — 21 Tools & 10 Modules | BrainSAIT",
+      "description": "BrainSAIT innovation course: 21 tools, 5 pillars, diagnostics & 10 learning modules. Enterprise demo access available. Contact BrainSAIT."
+    },
+    "disclaimer": null,
+    "sourceUpdatedAt": "2026-09-02T22:44:47Z"
+  },
+  {
+    "sourceProductId": "gid://shopify/Product/8052889944147",
+    "title": "VeinForge — Vol. 08 · Hematology",
+    "handle": "veinforge",
+    "productType": "SOLUTIONS Membership",
+    "family": "SOLUTIONS",
+    "vendor": "BrainSAIT",
+    "variants": [
+      {
+        "sourceVariantId": "gid://shopify/ProductVariant/45967661400147",
+        "sku": "BSP-VEINFORGE",
+        "price": 7990,
+        "billingModel": "one_time",
+        "billingLabel": "One-time purchase"
+      }
+    ],
+    "tags": [
+      "solutions",
+      "one_time",
+      "brainsait",
+      "relaunch-2026"
+    ],
+    "imageAspectRatio": "3:2",
+    "templateSuffix": "membership",
+    "customerCopy": "Cinematic medical novelist engine for Hematology. Bilingual EN+AR. VeinForge: a cinematic medical novelist engine for Hematology — Vol. 08, bilingual EN+AR, by BrainSAIT. VeinForge: — 08 BrainSAIT. Enterprise / demo access — contact BrainSAIT for a live walkthrough. / — .",
+    "seo": {
+      "title": "VeinForge Vol. 08 — Hematology Medical Novel | BrainSAIT",
+      "description": "Cinematic medical novelist engine for Hematology. Bilingual EN+AR. Vol. 08 by BrainSAIT. Enterprise demo access available."
+    },
+    "disclaimer": null,
+    "sourceUpdatedAt": "2026-09-02T22:44:48Z"
+  },
+  {
+    "sourceProductId": "gid://shopify/Product/8037211799635",
+    "title": "Vision 2030 Aligner",
+    "handle": "vision-2030-aligner",
+    "productType": "SOLUTIONS Membership",
+    "family": "SOLUTIONS",
+    "vendor": "BrainSAIT",
+    "variants": [
+      {
+        "sourceVariantId": "gid://shopify/ProductVariant/45912825725011",
+        "sku": "BSP-VISION2030",
+        "price": 199,
+        "billingModel": "one_time",
+        "billingLabel": "One-time purchase"
+      }
+    ],
+    "tags": [
+      "solutions",
+      "one_time",
+      "brainsait",
+      "relaunch-2026"
+    ],
+    "imageAspectRatio": "3:2",
+    "templateSuffix": "membership",
+    "customerCopy": "EN Align your business with Saudi Arabia's Vision 2030 with Vision 2030 Aligner This strategic tool helps you develop a customized plan to achieve your business goals while contributing to the Kingdom's economic diversification and growth. With Vision 2030 Aligner, you will be able to identify opportunities, mitigate risks, and make informed decisions that drive success. Includes: Interactive mapping tool for Vision 2030 goals alignment Sector analysis: healthcare, tourism, entertainment, tech, mining Government funding and grant programs directory Regulatory compliance checklist for new ventures Essential for companies seeking to operate, expand, or invest in Saudi Arabia. Digital delivery Annual strategy review session included Price: 199 SAR 2030 2030 . 2030 . : 2030 : . : 199",
+    "seo": {
+      "title": "Vision 2030 Aligner — Saudi Strategy AI Tool | BrainSAIT",
+      "description": "Align products and proposals with Saudi Vision 2030 using AI. Essential for businesses and consultants targeting the Saudi market via BrainSAIT."
+    },
+    "disclaimer": null,
+    "sourceUpdatedAt": "2026-09-02T22:44:49Z"
+  },
+  {
+    "sourceProductId": "gid://shopify/Product/8062550540371",
+    "title": "Vision 2030 Healthcare AI — Quick-Start Bundle",
+    "handle": "vision-2030-healthcare-ai-quick-start-bundle",
+    "productType": "SOLUTIONS Membership",
+    "family": "SOLUTIONS",
+    "vendor": "BrainSAIT",
+    "variants": [
+      {
+        "sourceVariantId": "gid://shopify/ProductVariant/46012145107027",
+        "sku": "BSP-VISION-2030-HEALTHCARE-AI-QUICK-START-BU",
+        "price": 499,
+        "billingModel": "one_time",
+        "billingLabel": "One-time purchase"
+      }
+    ],
+    "tags": [
+      "solutions",
+      "one_time",
+      "brainsait",
+      "relaunch-2026"
+    ],
+    "imageAspectRatio": "3:2",
+    "templateSuffix": "membership",
+    "customerCopy": "Everything to launch Healthcare AI in Saudi Arabia — in one bundle. Includes: Digital Healthcare Masterclass + Saudi Health Transformation Blueprint + FHIR &amp; NPHIES Lab + 30-min Strategy Call. Bilingual AR/EN · Instant Drive delivery + calendar booking. Vision 2030 · NPHIES v3.2 · FHIR R4 · PDPL/HIPAA · IANA PEN 61026",
+    "seo": {
+      "title": "Vision 2030 Healthcare AI Quick-Start Bundle | BrainSAIT (SAR 499)",
+      "description": "Everything to launch Healthcare AI in Saudi Arabia in one bundle: Digital Healthcare Masterclass + Saudi Health Transformation Blueprint + FHIR & NPHIES Lab + 30-min Strategy Call. Bilingual AR/EN, instant delivery."
+    },
+    "disclaimer": null,
+    "sourceUpdatedAt": "2026-09-02T22:44:50Z"
+  },
+  {
+    "sourceProductId": "gid://shopify/Product/8052891091027",
+    "title": "Wathq Linc",
+    "handle": "wathq-linc",
+    "productType": "SOLUTIONS Membership",
+    "family": "SOLUTIONS",
+    "vendor": "BrainSAIT",
+    "variants": [
+      {
+        "sourceVariantId": "gid://shopify/ProductVariant/45967662547027",
+        "sku": "BSP-WATHQ-LINC",
+        "price": 24900,
+        "billingModel": "one_time",
+        "billingLabel": "One-time purchase"
+      }
+    ],
+    "tags": [
+      "solutions",
+      "one_time",
+      "brainsait",
+      "relaunch-2026"
+    ],
+    "imageAspectRatio": "3:2",
+    "templateSuffix": "membership",
+    "customerCopy": "BrainSAIT's Saudi business intelligence API platform, providing real-time programmatic access to the Kingdom's most critical commercial data. Built for developers, compliance teams, and enterprise operations, Wathq Linc covers commercial registrations, contracts, legal agencies, property records, and employee data — all through a unified, secure API layer. BrainSAIT . — API . What's Included: Commercial registration lookup and verification API Contract and legal agency data access Property records integration Employee and workforce data endpoints Real-time data refresh and audit logging Secure API key management Developer documentation and sandbox environment Enterprise onboarding and live walkthrough : API API Enterprise / demo access — contact BrainSAIT at Support@brainsait.org / — Support@brainsait.org",
+    "seo": {
+      "title": "Wathq Linc — Saudi Business Intelligence API | BrainSAIT",
+      "description": "Saudi business-intelligence API covering commercial registrations, contracts, agencies, property & employee data. Enterprise demo available."
+    },
+    "disclaimer": null,
+    "sourceUpdatedAt": "2026-09-02T22:44:52Z"
+  },
+  {
+    "sourceProductId": "gid://shopify/Product/8072360329299",
+    "title": "Basma Voice — Solutions Ready",
+    "handle": "solutions-ready-basma-voice",
+    "productType": "SOLUTIONS READY",
+    "family": "SOLUTIONS READY",
+    "vendor": "BrainSAIT",
+    "variants": [
+      {
+        "sourceVariantId": "gid://shopify/ProductVariant/46052331028563",
+        "sku": "BSP-SR-BASMA-VOICE",
+        "price": 24000,
+        "billingModel": "one_time",
+        "billingLabel": "One-time purchase"
+      }
+    ],
+    "tags": [
+      "solutions-ready",
+      "one_time",
+      "brainsait",
+      "relaunch-2026"
+    ],
+    "imageAspectRatio": "3:2",
+    "templateSuffix": "solution-ready",
+    "customerCopy": "Basma Voice — deploy-ready Arabic-first AI voice assistant platform. — . Advanced voice AI with Gulf Arabic dialect support, medical terminology, call automation, and conversational workflows. Powers intelligent voice interactions across healthcare, customer service, and operations. One-time deployment — no recurring subscription required.",
+    "seo": {
+      "title": "Basma Voice — Solutions Ready",
+      "description": "Basma Voice — deploy-ready Arabic-first AI voice assistant platform. — . Advanced voice AI with Gulf Arabic dialect support, medical terminology, call auto"
+    },
+    "disclaimer": null,
+    "sourceUpdatedAt": "2026-09-02T22:43:22Z"
+  },
+  {
+    "sourceProductId": "gid://shopify/Product/8072360230995",
+    "title": "Clinic OS — Solutions Ready",
+    "handle": "solutions-ready-clinic-os",
+    "productType": "SOLUTIONS READY",
+    "family": "SOLUTIONS READY",
+    "vendor": "BrainSAIT",
+    "variants": [
+      {
+        "sourceVariantId": "gid://shopify/ProductVariant/46052330930259",
+        "sku": "BSP-SR-CLINIC-OS",
+        "price": 24000,
+        "billingModel": "one_time",
+        "billingLabel": "One-time purchase"
+      }
+    ],
+    "tags": [
+      "solutions-ready",
+      "one_time",
+      "brainsait",
+      "relaunch-2026"
+    ],
+    "imageAspectRatio": "3:2",
+    "templateSuffix": "solution-ready",
+    "customerCopy": "Clinic OS — deploy-ready outpatient clinic operating system. — . Lightweight yet powerful clinic management with patient records, scheduling, telemedicine integration, and NPHIES claims. Designed for small-to-mid clinics requiring rapid deployment. One-time deployment — no recurring subscription required.",
+    "seo": {
+      "title": "Clinic OS — Solutions Ready",
+      "description": "Clinic OS — deploy-ready outpatient clinic operating system. — . Lightweight yet powerful clinic management with patient records, scheduling, telemedicine "
+    },
+    "disclaimer": null,
+    "sourceUpdatedAt": "2026-09-02T22:43:37Z"
+  },
+  {
+    "sourceProductId": "gid://shopify/Product/8072360099923",
+    "title": "Cloud Kitchen — Solutions Ready",
+    "handle": "solutions-ready-cloud-kitchen",
+    "productType": "SOLUTIONS READY",
+    "family": "SOLUTIONS READY",
+    "vendor": "BrainSAIT",
+    "variants": [
+      {
+        "sourceVariantId": "gid://shopify/ProductVariant/46052330799187",
+        "sku": "BSP-SR-CLOUD-KITCHEN",
+        "price": 24000,
+        "billingModel": "one_time",
+        "billingLabel": "One-time purchase"
+      }
+    ],
+    "tags": [
+      "solutions-ready",
+      "one_time",
+      "brainsait",
+      "relaunch-2026"
+    ],
+    "imageAspectRatio": "3:2",
+    "templateSuffix": "solution-ready",
+    "customerCopy": "Cloud Kitchen — deploy-ready multi-brand food service operating system. — . End-to-end cloud kitchen management with multi-brand support, order aggregation, kitchen display systems, and delivery fleet integration. Optimized for Saudi market compliance. One-time deployment — no recurring subscription required.",
+    "seo": {
+      "title": "Cloud Kitchen — Solutions Ready",
+      "description": "Cloud Kitchen — deploy-ready multi-brand food service operating system. — . End-to-end cloud kitchen management with multi-brand support, order aggregation"
+    },
+    "disclaimer": null,
+    "sourceUpdatedAt": "2026-09-02T22:43:40Z"
+  },
+  {
+    "sourceProductId": "gid://shopify/Product/8072356331603",
+    "title": "Hospital OS — Solutions Ready",
+    "handle": "solutions-ready-hospital-os",
+    "productType": "SOLUTIONS READY",
+    "family": "SOLUTIONS READY",
+    "vendor": "BrainSAIT",
+    "variants": [
+      {
+        "sourceVariantId": "gid://shopify/ProductVariant/46052327030867",
+        "sku": "BSP-SR-HOSPITAL-OS",
+        "price": 24000,
+        "billingModel": "one_time",
+        "billingLabel": "One-time purchase"
+      }
+    ],
+    "tags": [
+      "solutions-ready",
+      "one_time",
+      "brainsait",
+      "relaunch-2026"
+    ],
+    "imageAspectRatio": "3:2",
+    "templateSuffix": "solution-ready",
+    "customerCopy": "Hayat National Hospitals — deploy-ready hospital operating system. — . Comprehensive hospital management platform with NPHIES integration, patient management, clinical workflows, and full RCM capabilities. One-time deployment — no recurring subscription required.",
+    "seo": {
+      "title": "Hospital OS — Solutions Ready | Pre-built Deployment",
+      "description": "Deploy-ready hospital operating system for your infrastructure. BrainSAIT SOLUTION, one-time 24,000 SAR, includes Lark onboarding."
+    },
+    "disclaimer": null,
+    "sourceUpdatedAt": "2026-09-02T22:44:00Z"
+  },
+  {
+    "sourceProductId": "gid://shopify/Product/8072360067155",
+    "title": "NPHIES Platform — Solutions Ready",
+    "handle": "solutions-ready-nphies-platform",
+    "productType": "SOLUTIONS READY",
+    "family": "SOLUTIONS READY",
+    "vendor": "BrainSAIT",
+    "variants": [
+      {
+        "sourceVariantId": "gid://shopify/ProductVariant/46052330766419",
+        "sku": "BSP-SR-NPHIES",
+        "price": 24000,
+        "billingModel": "one_time",
+        "billingLabel": "One-time purchase"
+      }
+    ],
+    "tags": [
+      "solutions-ready",
+      "one_time",
+      "brainsait",
+      "relaunch-2026"
+    ],
+    "imageAspectRatio": "3:2",
+    "templateSuffix": "solution-ready",
+    "customerCopy": "NPHIES — deploy-ready national health insurance exchange platform. — . Full NPHIES interoperability platform with eligibility verification, claims adjudication, and real-time settlement. Seamless integration with healthcare providers and insurers. One-time deployment — no recurring subscription required.",
+    "seo": {
+      "title": "NPHIES Platform — Solutions Ready",
+      "description": "NPHIES — deploy-ready national health insurance exchange platform. — . Full NPHIES interoperability platform with eligibility verification, claims adjudica"
+    },
+    "disclaimer": null,
+    "sourceUpdatedAt": "2026-09-02T22:44:16Z"
+  },
+  {
+    "sourceProductId": "gid://shopify/Product/8072360165459",
+    "title": "OID — Solutions Ready",
+    "handle": "solutions-ready-oid",
+    "productType": "SOLUTIONS READY",
+    "family": "SOLUTIONS READY",
+    "vendor": "BrainSAIT",
+    "variants": [
+      {
+        "sourceVariantId": "gid://shopify/ProductVariant/46052330864723",
+        "sku": "BSP-SR-OID",
+        "price": 24000,
+        "billingModel": "one_time",
+        "billingLabel": "One-time purchase"
+      }
+    ],
+    "tags": [
+      "solutions-ready",
+      "one_time",
+      "brainsait",
+      "relaunch-2026"
+    ],
+    "imageAspectRatio": "3:2",
+    "templateSuffix": "solution-ready",
+    "customerCopy": "OID (OpenID Provider) — deploy-ready identity and access management system. — . Complete OIDC/SAML identity provider with MFA, single sign-on, and federation capabilities. Integrated with Saudi National Single Sign-On (NSSO) standards. One-time deployment — no recurring subscription required.",
+    "seo": {
+      "title": "OID — Solutions Ready",
+      "description": "OID (OpenID Provider) — deploy-ready identity and access management system. — . Complete OIDC/SAML identity provider with MFA, single sign-on, and federati"
+    },
+    "disclaimer": null,
+    "sourceUpdatedAt": "2026-09-02T22:44:17Z"
+  },
+  {
+    "sourceProductId": "gid://shopify/Product/8104922546259",
+    "title": "SOLUTIONS READY — Enterprise Deployment",
+    "handle": "solutions-ready-enterprise-deployment-1",
+    "productType": "SOLUTIONS READY",
+    "family": "SOLUTIONS READY",
+    "vendor": "BrainSAIT",
+    "variants": [
+      {
+        "sourceVariantId": "gid://shopify/ProductVariant/46139265155155",
+        "sku": "BRN-SOL-READY-ENT",
+        "price": 24000,
+        "billingModel": "one_time",
+        "billingLabel": "24,000 SAR one time"
+      }
+    ],
+    "tags": [
+      "solutions-ready",
+      "one_time",
+      "brainsait",
+      "relaunch-2026"
+    ],
+    "imageAspectRatio": "3:2",
+    "templateSuffix": "solution-ready",
+    "customerCopy": "Solutions Ready — Pre-Built Enterprise Deployment — 24,000 SAR A fully pre-built, production-ready solution deployed to your infrastructure. Includes kickoff session, infrastructure setup, and complete packaging. One-time payment — 24,000 SAR Instant Google Calendar booking for kickoff meeting Google Form for infrastructure requirements Source code integration and deployment Complete packaging and documentation",
+    "seo": {
+      "title": "SOLUTIONS READY — Enterprise Deployment",
+      "description": "Solutions Ready — Pre-Built Enterprise Deployment — 24,000 SAR A fully pre-built, production-ready solution deployed to your infrastructure. Includes kicko"
+    },
+    "disclaimer": null,
+    "sourceUpdatedAt": "2026-09-03T13:38:48Z"
+  }
+]

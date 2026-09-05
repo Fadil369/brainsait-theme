@@ -1,0 +1,16 @@
+{
+  "shop": {
+    "id": 73052880979,
+    "name": "BrainSAIT",
+    "myshopify_domain": "f3rbxp-n1.myshopify.com",
+    "domain": "store.brainsait.de",
+    "currency": "SAR",
+    "iana_timezone": "Asia/Riyadh",
+    "plan_name": "basic",
+    "country_name": "Saudi Arabia",
+    "enabled_presentment_currencies": [
+      "SAR"
+    ],
+    "primary_location_id": 82872107091
+  }
+}

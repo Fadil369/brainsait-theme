@@ -1,0 +1,86 @@
+{% liquid
+  assign is_ar = false
+  if request.locale.iso_code == 'ar'
+    assign is_ar = true
+  endif
+%}
+{% # theme-check-disable ValidScopedCSSClass %}
+{% if product.type == 'SOLUTIONS' or product.tags contains 'SOLUTIONS' %}
+  {% comment %} Placeholder-price takeover: products under 5 SAR are consultation
+     placeholders — prevent accidental micro-purchases and route to booking. {% endcomment %}
+  {% if product.price < 500 %}
+    <div class="gh-book__frame gh-book__takeover" data-component="gh-book-takeover">
+      <h2 class="gh-book__title">{% if is_ar %}📅 هذا منتج استشاري{% else %}📅 This is a consultation service{% endif %}</h2>
+      <p class="gh-book__note">
+        {% if is_ar %}
+          يُستخدم هذا السعر الرمزي لحجز موعدك فقط — لا حاجة للدفع هنا. اختر وقتًا يناسبك على التقويم لمناقشة احتياجاتك.
+        {% else %}
+          The symbolic price only reserves your slot — no need to pay here. Pick a time on the calendar to discuss your needs.
+        {% endif %}
+      </p>
+      <a class="button primary lg" href="{{ section.settings.booking_url }}" target="_blank" rel="noopener noreferrer">
+        {% if is_ar %}احجز الآن على Google Calendar →{% else %}Book now on Google Calendar →{% endif %}
+      </a>
+      <script type="application/json" data-takeover-config>
+        {"redirectUrl": {{ section.settings.booking_url | json }}, "countdownSec": 8}
+      </script>
+    </div>
+    <script>
+      (() => {
+        const frame = document.querySelector('[data-component="gh-book-takeover"]');
+        if (!frame) return;
+        try {
+          const cfg = JSON.parse(frame.querySelector('[data-takeover-config]').textContent);
+          const params = new URLSearchParams(window.location.search);
+          if (params.get('noauto') === '1') return;
+          setTimeout(() => { window.location.href = cfg.redirectUrl; }, cfg.countdownSec * 1000);
+        } catch { /* stay on page */ }
+      })();
+    </script>
+  {% else %}
+  <div class="gh-book__frame">
+    <h2 class="gh-book__title">{% if is_ar %}احجز جلسة تعارف{% else %}Book a session{% endif %}</h2>
+    <p class="gh-book__note">{% if is_ar %}احجز جلسة استشارية مجانية للبدء مع {{ product.title }}.{% else %}Book a free consultation session to get started with {{ product.title }}.{% endif %}</p>
+    <iframe
+      class="gh-book__iframe"
+      src="{{ section.settings.booking_url }}"
+      width="100%"
+      height="600"
+      style="border:0"
+      loading="lazy"
+      title="{% if is_ar %}حجز جلسة{% else %}Book a session{% endif %}"
+    ></iframe>
+  </div>
+  {% endif %}
+{% endif %}
+
+{% stylesheet %}
+  .gh-book__frame {
+    max-width: var(--page-width, 1200px);
+    margin: 40px auto;
+    padding: 24px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-l);
+    box-shadow: var(--shadow-1);
+  }
+  .gh-book__title { margin: 0 0 8px; font-size: 1.3rem; }
+  .gh-book__note { color: var(--muted); margin: 0 0 16px; }
+  .gh-book__iframe { border-radius: var(--radius-m); background: #fff; }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "BS Book Session",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "booking_url",
+      "label": "Booking calendar URL",
+      "info": "Google Calendar appointment link shown on SOLUTIONS product pages",
+      "default": "https://calendar.app.google/Ve9KSKmaVA6ehDP48"
+    }
+  ]
+}
+{% endschema %}

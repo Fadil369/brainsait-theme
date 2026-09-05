@@ -1,0 +1,7 @@
+{% assign faq = product.metafields.brainsait.faq.value %}
+{% if faq != blank %}
+  <section class="brainsait-product-section"><div class="bs-container brainsait-product-copy" data-reveal>
+    <p class="brainsait-eyebrow">FAQ</p><h2>{{ section.settings.heading }}</h2><div class="rte">{{ faq | metafield_tag }}</div>
+  </div></section>
+{% endif %}
+{% schema %}{"name":"Product FAQ","settings":[{"type":"text","id":"heading","label":"Heading","default":"Questions before you continue"}],"presets":[{"name":"Product FAQ"}]}{% endschema %}

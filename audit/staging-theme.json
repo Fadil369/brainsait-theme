@@ -1,0 +1,31 @@
+{
+  "theme": {
+    "id": 149785313363,
+    "name": "BrainSAIT Relaunch 2026-09-05",
+    "role": "unpublished",
+    "shop": "f3rbxp-n1.myshopify.com",
+    "created_at": "2026-09-05T11:07:07+03:00",
+    "updated_at": "2026-09-05T12:04:04+03:00",
+    "editor_url": "https://f3rbxp-n1.myshopify.com/admin/themes/149785313363/editor",
+    "preview_url": "https://f3rbxp-n1.myshopify.com?preview_theme_id=149785313363",
+    "preview_resolved_url": "https://store.brainsait.de/",
+    "preview_http_status": 200
+  },
+  "verification": {
+    "admin_api_theme_status": 200,
+    "theme_check": {
+      "errors": 0,
+      "warnings": 135,
+      "files": 36
+    },
+    "preview_contains": [
+      "BrainSAIT",
+      "Learn",
+      "Build",
+      "Solutions",
+      "OID",
+      "Registry"
+    ],
+    "published": false
+  }
+}

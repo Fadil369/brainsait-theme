@@ -1,0 +1,66 @@
+mutation ProductUpdate($product: ProductUpdateInput!) {
+  productUpdate(product: $product) {
+    product {
+      id
+      title
+      handle
+      status
+      templateSuffix
+    }
+    userErrors {
+      field
+      message
+    }
+  }
+}
+
+mutation ProductVariantsBulkUpdate($productId: ID!, $variants: [ProductVariantsBulkInput!]!) {
+  productVariantsBulkUpdate(productId: $productId, variants: $variants) {
+    product {
+      id
+    }
+    productVariants {
+      id
+      price
+      sku
+    }
+    userErrors {
+      field
+      message
+    }
+  }
+}
+
+mutation ProductVariantsBulkCreate($productId: ID!, $variants: [ProductVariantsBulkInput!]!) {
+  productVariantsBulkCreate(productId: $productId, variants: $variants) {
+    product {
+      id
+    }
+    productVariants {
+      id
+      price
+      sku
+    }
+    userErrors {
+      field
+      message
+      code
+    }
+  }
+}
+
+mutation MetafieldsSet($metafields: [MetafieldsSetInput!]!) {
+  metafieldsSet(metafields: $metafields) {
+    metafields {
+      id
+      key
+      namespace
+      type
+      value
+    }
+    userErrors {
+      field
+      message
+    }
+  }
+}

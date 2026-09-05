@@ -1,0 +1,138 @@
+{
+  "checkedAt": "2026-09-05T16:06:22.182Z",
+  "storefront": "https://store.brainsait.de",
+  "themeId": "149785313363",
+  "summary": {
+    "PASS": 13,
+    "BLOCKED": 1
+  },
+  "results": [
+    {
+      "name": "preview homepage renders canonical positioning",
+      "status": "PASS",
+      "evidence": {
+        "status": 200,
+        "finalUrl": "https://store.brainsait.de/",
+        "needles": [
+          "BrainSAIT",
+          "Learn",
+          "Build",
+          "Solutions",
+          "OID",
+          "Registry"
+        ]
+      }
+    },
+    {
+      "name": "collection route learn",
+      "status": "PASS",
+      "evidence": {
+        "status": 200,
+        "finalUrl": "https://store.brainsait.de/collections/learn"
+      }
+    },
+    {
+      "name": "collection route build",
+      "status": "PASS",
+      "evidence": {
+        "status": 200,
+        "finalUrl": "https://store.brainsait.de/collections/build"
+      }
+    },
+    {
+      "name": "collection route solutions",
+      "status": "PASS",
+      "evidence": {
+        "status": 200,
+        "finalUrl": "https://store.brainsait.de/collections/solutions"
+      }
+    },
+    {
+      "name": "collection route solutions-ready",
+      "status": "PASS",
+      "evidence": {
+        "status": 200,
+        "finalUrl": "https://store.brainsait.de/collections/solutions-ready"
+      }
+    },
+    {
+      "name": "collection route oid-registry",
+      "status": "PASS",
+      "evidence": {
+        "status": 200,
+        "finalUrl": "https://store.brainsait.de/collections/oid-registry"
+      }
+    },
+    {
+      "name": "product route ai-system-architect",
+      "status": "PASS",
+      "evidence": {
+        "family": "LEARN",
+        "status": 200,
+        "title": "AI System Architect"
+      }
+    },
+    {
+      "name": "product route build-forge-incubator-founders-program-1",
+      "status": "PASS",
+      "evidence": {
+        "family": "BUILD",
+        "status": 200,
+        "title": "BUILD — Forge Incubator Founders Program"
+      }
+    },
+    {
+      "name": "product route abeer-connected-healthcare-platform",
+      "status": "PASS",
+      "evidence": {
+        "family": "SOLUTIONS",
+        "status": 200,
+        "title": "Abeer Connected Healthcare Platform"
+      }
+    },
+    {
+      "name": "product route solutions-ready-basma-voice",
+      "status": "PASS",
+      "evidence": {
+        "family": "SOLUTIONS READY",
+        "status": 200,
+        "title": "Basma Voice — Solutions Ready"
+      }
+    },
+    {
+      "name": "product route oid-identity",
+      "status": "PASS",
+      "evidence": {
+        "family": "OID & REGISTRY",
+        "status": 200,
+        "title": "BrainSAIT OID"
+      }
+    },
+    {
+      "name": "cart add entry accepts representative LEARN product",
+      "status": "PASS",
+      "evidence": {
+        "productHandle": "ai-system-architect",
+        "variantId": 45912825659475,
+        "status": 200
+      }
+    },
+    {
+      "name": "recurring payment live execution",
+      "status": "BLOCKED",
+      "evidence": {
+        "status": 503,
+        "reason": "recurring subscriptions are not confirmed for live mode yet — complete a full test-mode subscription cycle first (see RUNBOOK.md), then set RECURRING_LIVE_CONFIRMED=true"
+      }
+    },
+    {
+      "name": "published theme unchanged",
+      "status": "PASS",
+      "evidence": {
+        "mainThemeId": 149735112787,
+        "stagingThemeId": 149785313363,
+        "stagingRole": "unpublished"
+      }
+    }
+  ]
+}

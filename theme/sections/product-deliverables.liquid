@@ -1,0 +1,18 @@
+{% liquid
+  assign inclusions = product.metafields.brainsait.inclusions.value
+  assign delivery = product.metafields.brainsait.delivery.value
+  assign prerequisites = product.metafields.brainsait.prerequisites.value
+  assign support = product.metafields.brainsait.support.value
+%}
+{% if inclusions != blank or delivery != blank or prerequisites != blank or support != blank %}
+  <section class="brainsait-product-section brainsait-section--surface"><div class="bs-container" data-reveal>
+    <p class="brainsait-eyebrow">Scope</p><h2>{{ section.settings.heading }}</h2>
+    <div class="brainsait-detail-grid">
+      {% if inclusions != blank %}<div><h3>Included</h3>{{ inclusions | metafield_tag }}</div>{% endif %}
+      {% if delivery != blank %}<div><h3>Delivery</h3>{{ delivery | metafield_tag }}</div>{% endif %}
+      {% if prerequisites != blank %}<div><h3>Prerequisites and exclusions</h3>{{ prerequisites | metafield_tag }}</div>{% endif %}
+      {% if support != blank %}<div><h3>Support boundary</h3>{{ support | metafield_tag }}</div>{% endif %}
+    </div>
+  </div></section>
+{% endif %}
+{% schema %}{"name":"Product deliverables","settings":[{"type":"text","id":"heading","label":"Heading","default":"What is included and how it is delivered"}],"presets":[{"name":"Product deliverables"}]}{% endschema %}

@@ -1,0 +1,224 @@
+/* BrainSAIT dark/light theming layer.
+   Dark is the default (Horizon's own :root palette, set via config/settings_data.json).
+   [data-theme="light"] overrides the same custom properties Horizon's components
+   already consume (see snippets/color-palette.liquid), so no component markup changes
+   are needed for light mode to take effect. */
+
+:root {
+  --bs-surface: #14141c;
+  --bs-surface-2: #1c1c28;
+  --bs-muted: #9b9aad;
+  --bs-accent: #e9c46a;
+  --bs-accent-strong: #f5dd9d;
+  --bs-accent-soft: rgba(233, 196, 106, 0.14);
+  --bs-border: rgba(255, 255, 255, 0.09);
+  --bs-shadow: rgba(0, 0, 0, 0.45);
+  --bs-radius-s: 8px;
+  --bs-radius-m: 14px;
+  --bs-radius-l: 22px;
+  --bs-radius-pill: 999px;
+  --bs-grad-brand: linear-gradient(135deg, #e9c46a 0%, #b8860b 100%);
+  --bs-mode-transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+}
+
+:root[data-theme="light"] {
+  --color-background: #faf9fc;
+  --color-background-rgb: 250, 249, 252;
+  --color-foreground: #14121f;
+  --color-foreground-rgb: 20, 18, 31;
+  --color-border: #14121f;
+  --color-border-rgb: 20, 18, 31;
+
+  --color-primary-button-text: #ffffff;
+  --color-primary-button-background: #5b4fd6;
+  --color-primary-button-border: #5b4fd6;
+  --color-primary-button-focus-outline: #5b4fd6;
+  --color-primary-button-hover-text: #ffffff;
+  --color-primary-button-hover-background: #453aad;
+  --color-primary-button-hover-border: #453aad;
+
+  --color-secondary-button-text: #5b4fd6;
+  --color-secondary-button-background: rgba(0, 0, 0, 0);
+  --color-secondary-button-border: #5b4fd6;
+  --color-secondary-button-hover-text: #ffffff;
+  --color-secondary-button-hover-background: #5b4fd6;
+  --color-secondary-button-hover-border: #5b4fd6;
+
+  --color-input-background: #ffffff;
+  --color-input-text: #14121f;
+  --color-input-text-rgb: 20, 18, 31;
+  --color-input-border: #d8d5e6;
+
+  --color-variant-background: #ffffff;
+  --color-variant-border: #d8d5e6;
+  --color-variant-text: #14121f;
+  --color-variant-text-rgb: 20, 18, 31;
+  --color-variant-hover-background: #f2f0f9;
+  --color-variant-hover-text: #14121f;
+  --color-variant-hover-border: #5b4fd6;
+
+  --color-selected-variant-background: #5b4fd6;
+  --color-selected-variant-border: #5b4fd6;
+  --color-selected-variant-text: #ffffff;
+  --color-selected-variant-text-rgb: 255, 255, 255;
+  --color-selected-variant-hover-background: #453aad;
+  --color-selected-variant-hover-text: #ffffff;
+  --color-selected-variant-hover-border: #453aad;
+
+  --color-drawer-shadow-rgb: 20, 18, 31;
+  --color-popover-shadow-rgb: 20, 18, 31;
+
+  --bs-surface: #ffffff;
+  --bs-surface-2: #f2f0f9;
+  --bs-muted: #63607a;
+  --bs-accent: #b8860b;
+  --bs-accent-strong: #9a7208;
+  --bs-accent-soft: rgba(184, 134, 11, 0.1);
+  --bs-border: rgba(20, 18, 31, 0.08);
+  --bs-shadow: rgba(20, 18, 31, 0.1);
+  --bs-grad-brand: linear-gradient(135deg, #d4a437 0%, #b8860b 100%);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  body,
+  .shopify-section {
+    transition: var(--bs-mode-transition);
+  }
+}
+
+/* Dark/light toggle button, injected by assets/theme-mode-toggle.js next to the
+   language switcher in the header utility row. */
+.bs-theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  margin-inline-end: var(--margin-2xs, 0.5rem);
+  padding: 0;
+  border: 1px solid var(--bs-border);
+  border-radius: var(--bs-radius-pill);
+  background-color: var(--bs-surface);
+  color: var(--color-foreground);
+  cursor: pointer;
+  transition: var(--bs-mode-transition), border-color 0.25s ease, transform 0.15s ease;
+}
+
+.bs-theme-toggle:hover {
+  border-color: var(--bs-accent);
+  color: var(--bs-accent);
+  transform: translateY(-1px);
+}
+
+.bs-theme-toggle:focus-visible {
+  outline: 2px solid var(--bs-accent);
+  outline-offset: 2px;
+}
+
+.bs-theme-toggle__icon {
+  width: 1.1rem;
+  height: 1.1rem;
+}
+
+.bs-theme-toggle__icon--moon {
+  display: none;
+}
+
+:root[data-theme="light"] .bs-theme-toggle__icon--sun {
+  display: none;
+}
+
+:root[data-theme="light"] .bs-theme-toggle__icon--moon {
+  display: block;
+}
+
+/* Language switcher: restyle Horizon's native <select> (rendered when show_country is
+   off) into a premium pill to match the toggle button beside it. Markup/behavior are
+   untouched — snippets/localization-form.liquid — only presentation changes here. */
+.language-selector--collapse-space {
+  padding: 0;
+  border: 1px solid var(--bs-border);
+  border-radius: var(--bs-radius-pill);
+  background-color: var(--bs-surface);
+  transition: var(--bs-mode-transition), border-color 0.25s ease;
+}
+
+.language-selector--collapse-space:hover {
+  border-color: var(--bs-accent);
+}
+
+.language-selector--collapse-space .localization-form__select {
+  background-color: transparent;
+  border-radius: var(--bs-radius-pill);
+  padding-inline: 1rem 1.75rem;
+  padding-block: 0.5rem;
+  font-weight: 500;
+  color: var(--color-foreground);
+}
+
+.language-selector--collapse-space .svg-wrapper.icon-caret {
+  color: var(--bs-muted);
+}
+
+.dropdown-localization {
+  display: flex;
+  align-items: center;
+}
+
+/* Footer newsletter heading/subtext (custom-liquid blocks, bilingual). */
+.bs-footer-heading {
+  margin: 0;
+  font-family: var(--font-heading--family);
+  font-size: 1.1rem;
+  color: var(--color-foreground);
+}
+
+.bs-footer-subtext {
+  margin: 0.25rem 0 0;
+  font-size: 0.9rem;
+  color: var(--bs-muted);
+}
+
+/* Knowledge Base: article lead callouts and media embeds (used inside blog article bodies). */
+.kb-lead {
+  padding: 1rem 1.25rem;
+  margin-block-end: 1.5rem;
+  border-inline-start: 3px solid var(--bs-accent);
+  background-color: var(--bs-surface);
+  border-radius: var(--bs-radius-s);
+}
+
+.kb-lead p {
+  margin: 0;
+  color: var(--bs-muted);
+}
+
+.kb-embed {
+  position: relative;
+  width: 100%;
+  margin-block: 1.5rem;
+  border-radius: var(--bs-radius-m);
+  overflow: hidden;
+  background-color: var(--bs-surface-2);
+}
+
+.kb-embed--video {
+  aspect-ratio: 16 / 9;
+}
+
+.kb-embed--audio {
+  height: 100px;
+}
+
+.kb-embed iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.kb-embed__fallback {
+  color: var(--bs-accent);
+  font-size: 0.9rem;
+}

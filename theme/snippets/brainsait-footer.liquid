@@ -1,0 +1,41 @@
+<div class="brainsait-footer">
+  <div class="brainsait-footer__inner bs-container">
+    <div class="brainsait-footer__grid">
+      <div class="brainsait-footer__brand"><h2>BrainSAIT</h2><p>{{ 'brainsait.footer.description' | t }}</p></div>
+      <div>
+        <h3>{{ 'brainsait.footer.explore' | t }}</h3>
+        <ul>
+          <li><a href="{{ routes.collections_url }}/learn">{{ 'brainsait.navigation.learn' | t }}</a></li>
+          <li><a href="{{ routes.collections_url }}/build">{{ 'brainsait.navigation.build' | t }}</a></li>
+          <li><a href="{{ routes.collections_url }}/solutions">{{ 'brainsait.navigation.solutions' | t }}</a></li>
+          <li><a href="{{ routes.collections_url }}/solutions-ready">{{ 'brainsait.navigation.solutions_ready' | t }}</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>{{ 'brainsait.footer.trust' | t }}</h3>
+        <ul>
+          <li><a href="{{ routes.collections_url }}/oid-registry">{{ 'brainsait.navigation.oid_registry' | t }}</a></li>
+          <li><a href="https://registry.brainsait.org">{{ 'brainsait.footer.public_registry' | t }}</a></li>
+          <li><a href="/pages/credential-policy">{{ 'brainsait.footer.credential_policy' | t }}</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>{{ 'brainsait.footer.company' | t }}</h3>
+        <ul>
+          <li><a href="/pages/about">{{ 'brainsait.navigation.about' | t }}</a></li>
+          <li><a href="/pages/support">{{ 'brainsait.navigation.support' | t }}</a></li>
+          <li><a href="/pages/contact">{{ 'brainsait.footer.contact' | t }}</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="brainsait-footer__legal">
+      <p>{{ 'brainsait.footer.credential_disclaimer' | t }}</p>
+      <div class="brainsait-footer__legal-links">
+        {% if shop.privacy_policy %}<a href="{{ shop.privacy_policy.url }}">{{ shop.privacy_policy.title }}</a>{% endif %}
+        {% if shop.terms_of_service %}<a href="{{ shop.terms_of_service.url }}">{{ shop.terms_of_service.title }}</a>{% endif %}
+        {% if shop.refund_policy %}<a href="{{ shop.refund_policy.url }}">{{ shop.refund_policy.title }}</a>{% endif %}
+        <span>&copy; {{ 'now' | date: '%Y' }} BrainSAIT</span>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+{% comment %}Wrapper for variant picker — renders product variant options {% endcomment %}
+{% if product.has_only_default_variant == false %}
+  {% for option in product.options_with_values %}
+    <div class="product-variant-picker">
+      <label>{{ option.name }}</label>
+      <div class="product-variant-options">
+        {% for value in option.values %}
+          <label><input type="radio" name="{{ option.name }}" value="{{ value | escape }}" {% if option.selected_value == value %}checked{% endif %}> {{ value }}</label>
+        {% endfor %}
+      </div>
+    </div>
+  {% endfor %}
+{% endif %}
