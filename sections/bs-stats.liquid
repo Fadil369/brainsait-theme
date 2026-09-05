@@ -1,8 +1,4 @@
 {% liquid
-  assign is_ar = false
-  if request.locale.iso_code == 'ar'
-    assign is_ar = true
-  endif
 %}
 {% # theme-check-disable ValidScopedCSSClass %}
 
@@ -11,47 +7,37 @@
     <div class="bs-stat">
       <span class="bs-stat__value">8</span>
       <span class="bs-stat__label">
-        {% if is_ar %}
-          منتجات OID جاهزة
-        {% else %}
+        
           OID products, ready now
-        {% endif %}
+        
       </span>
     </div>
     <div class="bs-stat">
       <span class="bs-stat__value">AR / EN</span>
       <span class="bs-stat__label">
-        {% if is_ar %}
-          متجر ثنائي اللغة بالكامل
-        {% else %}
+        
           Fully bilingual storefront
-        {% endif %}
+        
       </span>
     </div>
     <div class="bs-stat">
       <span class="bs-stat__value">
-        {% if is_ar %}
-          فوري
-        {% else %}
+        
           Instant
-        {% endif %}
+        
       </span>
       <span class="bs-stat__label">
-        {% if is_ar %}
-          تسليم رقمي بعد الشراء مباشرة
-        {% else %}
+        
           Digital delivery right after purchase
-        {% endif %}
+        
       </span>
     </div>
     <div class="bs-stat">
       <span class="bs-stat__value">PayPal</span>
       <span class="bs-stat__label">
-        {% if is_ar %}
-          دفع آمن وموثوق
-        {% else %}
+        
           Secured, trusted checkout
-        {% endif %}
+        
       </span>
     </div>
   </div>

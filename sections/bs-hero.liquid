@@ -1,8 +1,4 @@
 {% liquid
-  assign is_ar = false
-  if request.locale.iso_code == 'ar'
-    assign is_ar = true
-  endif
 %}
 {% # theme-check-disable ValidScopedCSSClass %}
 
@@ -30,78 +26,60 @@
 
   <div class="bs-hero__inner page-width">
     <p class="bs-hero__eyebrow">
-      {% if is_ar %}
-        بنية تحتية لهوية الرعاية الصحية
-      {% else %}
+      
         Healthcare identity infrastructure
-      {% endif %}
+      
     </p>
 
     <h1 class="bs-hero__heading">
-      {% if is_ar %}
-        سجلّات OID وأدوات متوافقة مع FHIR، مصمَّمة للمملكة
-      {% else %}
+      
         OID registries and FHIR-aligned tooling, built for Saudi Arabia
-      {% endif %}
+      
     </h1>
 
     <p class="bs-hero__subheading">
-      {% if is_ar %}
-        منتجات رقمية جاهزة لمطوري الرعاية الصحية والمؤسسات — تسليم فوري، وتجربة تسوّق ثنائية اللغة بالكامل.
-      {% else %}
+      
         Ready-to-use digital products for healthcare developers and enterprises — instant delivery, fully bilingual storefront.
-      {% endif %}
+      
     </p>
 
     <div class="bs-hero__actions">
       <a href="{{ routes.all_products_collection_url }}" class="button bs-hero__cta">
-        {% if is_ar %}
-          تصفّح الكتالوج
-        {% else %}
+        
           Explore the catalog
-        {% endif %}
+        
       </a>
       <a href="{{ pages['knowledge-base'].url | default: '/pages/knowledge-base' }}" class="bs-hero__cta-secondary">
-        {% if is_ar %}
-          قاعدة المعرفة المجانية
-        {% else %}
+        
           Free knowledge base
-        {% endif %}
+        
       </a>
     </div>
 
     <ul class="bs-badge-row" role="list">
       <li class="bs-badge">
         <span class="bs-badge__dot" aria-hidden="true"></span>
-        {% if is_ar %}
-          حماية آمنة عبر PayPal
-        {% else %}
+        
           PayPal secured checkout
-        {% endif %}
+        
       </li>
       <li class="bs-badge">
         <span class="bs-badge__dot" aria-hidden="true"></span>
-        {% if is_ar %}
-          تسليم رقمي فوري
-        {% else %}
+        
           Instant digital delivery
-        {% endif %}
+        
       </li>
       <li class="bs-badge">
         <span class="bs-badge__dot" aria-hidden="true"></span>
-        {% if is_ar %}
-          أدوات متوافقة مع FHIR
-        {% else %}
+        
           FHIR-aligned tooling
-        {% endif %}
+        
       </li>
       <li class="bs-badge">
         <span class="bs-badge__dot" aria-hidden="true"></span>
-        {% if is_ar %}
-          عربي / إنجليزي بالكامل
-        {% else %}
+        
           Fully bilingual AR / EN
-        {% endif %}
+        
       </li>
     </ul>
   </div>

@@ -1,90 +1,78 @@
 {% liquid
-  assign is_ar = false
-  if request.locale.iso_code == 'ar'
-    assign is_ar = true
-  endif
 %}
 {% # theme-check-disable ValidScopedCSSClass %}
 
 <div class="bs-testimonials">
   <div class="bs-testimonials__inner page-width">
     <h2 class="bs-testimonials__heading">
-      {% if is_ar %}
-        ماذا يقول عملاؤنا
-      {% else %}
+      
         What Our Clients Say
-      {% endif %}
+      
     </h2>
 
     <div class="bs-testimonials__grid">
 
-      <article class="bs-testimonial" aria-label="{% if is_ar %}شهادة عميل{% else %}Client testimonial{% endif %}">
+      <article class="bs-testimonial" aria-label="Client testimonial">
         <div class="bs-testimonial__body">
           <span class="bs-testimonial__quote-mark" aria-hidden="true">"</span>
           <blockquote class="bs-testimonial__text">
-            {% if is_ar %}
-              منتجات BrainSAIT غيّرت طريقة عملنا في إدارة هوية المرضى. التسليم الفوري والتوثيق الشامل وفّرا علينا أسابيع من التطوير.
-            {% else %}
+            
               BrainSAIT's products transformed how we manage patient identity. The instant delivery and comprehensive documentation saved us weeks of development work.
-            {% endif %}
+            
           </blockquote>
         </div>
         <footer class="bs-testimonial__footer">
           <div class="bs-testimonial__avatar" aria-hidden="true">M</div>
           <div class="bs-testimonial__meta">
             <span class="bs-testimonial__name">
-              {% if is_ar %}مدير العمليات{% else %}Operations Director{% endif %}
+              Operations Director
             </span>
             <span class="bs-testimonial__role">
-              {% if is_ar %}مستشفى الملك فهد، الرياض{% else %}King Fahd Medical City, Riyadh{% endif %}
+              King Fahd Medical City, Riyadh
             </span>
           </div>
         </footer>
       </article>
 
-      <article class="bs-testimonial" aria-label="{% if is_ar %}شهادة عميل{% else %}Client testimonial{% endif %}">
+      <article class="bs-testimonial" aria-label="Client testimonial">
         <div class="bs-testimonial__body">
           <span class="bs-testimonial__quote-mark" aria-hidden="true">"</span>
           <blockquote class="bs-testimonial__text">
-            {% if is_ar %}
-              سجلّ OID وحزم FHIR كانت بالضبط ما احتجناه للامتثال مع NPHIES. الدعم الثنائي اللغة يجعل التطبيق في فريقنا سلساً للغاية.
-            {% else %}
+            
               The OID registry and FHIR bundles were exactly what we needed for NPHIES compliance. The bilingual support makes adoption seamless across our team.
-            {% endif %}
+            
           </blockquote>
         </div>
         <footer class="bs-testimonial__footer">
           <div class="bs-testimonial__avatar" aria-hidden="true">A</div>
           <div class="bs-testimonial__meta">
             <span class="bs-testimonial__name">
-              {% if is_ar %}مدير تقنية المعلومات{% else %}IT Manager{% endif %}
+              IT Manager
             </span>
             <span class="bs-testimonial__role">
-              {% if is_ar %}مجموعة المواساة، جدة{% else %}Al-Mouwasat Group, Jeddah{% endif %}
+              Al-Mouwasat Group, Jeddah
             </span>
           </div>
         </footer>
       </article>
 
-      <article class="bs-testimonial" aria-label="{% if is_ar %}شهادة عميل{% else %}Client testimonial{% endif %}">
+      <article class="bs-testimonial" aria-label="Client testimonial">
         <div class="bs-testimonial__body">
           <span class="bs-testimonial__quote-mark" aria-hidden="true">"</span>
           <blockquote class="bs-testimonial__text">
-            {% if is_ar %}
-              منذ اعتمدنا حزمة هوية الذكاء الاصطناعي الصحي، تسارعت دورة إيراداتنا الإكلينيكية بشكل ملحوظ. الحلّ مصمَّم فعلاً للسوق السعودي.
-            {% else %}
+            
               Since adopting the Healthcare AI Identity Suite, our revenue cycle has accelerated noticeably. This solution is truly built for the Saudi market.
-            {% endif %}
+            
           </blockquote>
         </div>
         <footer class="bs-testimonial__footer">
           <div class="bs-testimonial__avatar" aria-hidden="true">S</div>
           <div class="bs-testimonial__meta">
             <span class="bs-testimonial__name">
-              {% if is_ar %}قائد RCM{% else %}RCM Lead{% endif %}
+              RCM Lead
             </span>
             <span class="bs-testimonial__role">
-              {% if is_ar %}مركز طبي إقليمي، الدمام{% else %}Regional Medical Center, Dammam{% endif %}
+              Regional Medical Center, Dammam
             </span>
           </div>
         </footer>

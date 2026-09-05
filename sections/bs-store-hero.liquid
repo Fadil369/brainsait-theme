@@ -1,8 +1,4 @@
 {%- liquid
-  assign is_ar = false
-  if request.locale.iso_code == 'ar'
-    assign is_ar = true
-  endif
   assign learn_url = shop.url | append: '/collections/learn'
   assign build_url = shop.url | append: '/collections/build'
   assign sol_url = shop.url | append: '/collections/solutions'
@@ -17,66 +13,62 @@
 
   <div class="bs-store-hero__inner page-width">
     <p class="bs-store-hero__eyebrow">
-      {% if is_ar %}منصة الحلول — تعلّم · ابنِ · حلول{% else %}The Resolution Platform — Learn · Build · Solutions{% endif %}
+      The Resolution Platform — Learn · Build · Solutions
     </p>
 
     <h1 class="bs-store-hero__heading">
-      {% if is_ar %}تعلّم · <span class="gold">ابنِ</span> · حلول{% else %}Learn · <span class="gold">Build</span> · Solutions{% endif %}
+      Learn · <span class="gold">Build</span> · Solutions
     </h1>
 
     <p class="bs-store-hero__subheading">
-      {% if is_ar %}
-        40 بطاقة LEARN، وحاضنة BUILD، وأكثر من 37 عرض حلول حيّة — متصلة كلها بمتجر Shopify نفسه، مع دفع واضح، وتسليم، وأتمتة بعد الشراء.
-      {% else %}
+      
         40 LEARN cards, a BUILD incubator, and 37+ live solution demos — all connected to the same Shopify store, with clear checkout, delivery, and post-purchase automation.
-      {% endif %}
+      
     </p>
 
     <div class="bs-store-hero__actions">
       <a href="{{ learn_url }}" class="button bs-store-hero__cta">
-        {% if is_ar %}ابدأ مع LEARN{% else %}Start with LEARN{% endif %}
+        Start with LEARN
       </a>
       <a href="{{ benefits_url }}" class="bs-store-hero__cta-secondary">
-        {% if is_ar %}قارن المزايا{% else %}Compare benefits{% endif %}
+        Compare benefits
       </a>
     </div>
 
     <p class="bs-store-hero__note">
-      {% if is_ar %}
-        بعد الدفع: LEARN يرسل إيميل شكراً + رابط Frame.io/‏R2، BUILD يضيف Notion + العقل الثاني + بوت Telegram، وSOLUTION يضيف Lark + Calendar + Form + توجيه الحضانة.
-      {% else %}
+      
         After payment: LEARN sends a thank-you email + Frame.io/R2 access, BUILD adds Notion + 2nd Brain + Telegram, and SOLUTION adds Lark + Calendar + Form + incubation guidance.
-      {% endif %}
+      
     </p>
 
     <ul class="bs-store-hero__tiers" role="list">
       <li class="bs-store-hero__tier" style="--tier-accent: var(--gold, #e9c46a);">
         <span class="bs-store-hero__tier-label">LEARN</span>
-        <span class="bs-store-hero__tier-price">{% if is_ar %}182 ر.س/شهر أو 99 ر.س للملف الفردي{% else %}182 SAR/mo or 99 SAR single file{% endif %}</span>
-        <a href="{{ learn_url }}" class="bs-store-hero__tier-link">{% if is_ar %}تصفّح الكتب{% else %}Browse books{% endif %} →</a>
+        <span class="bs-store-hero__tier-price">182 SAR/mo or 99 SAR single file</span>
+        <a href="{{ learn_url }}" class="bs-store-hero__tier-link">Browse books →</a>
       </li>
       <li class="bs-store-hero__tier" style="--tier-accent: #f59e0b;">
         <span class="bs-store-hero__tier-label">BUILD</span>
-        <span class="bs-store-hero__tier-price">{% if is_ar %}شهري 499 ر.س أو 9,630 ر.س تذكرة{% else %}499 SAR/mo or 9,630 SAR ticket{% endif %}</span>
-        <a href="{{ build_url }}" class="bs-store-hero__tier-link">{% if is_ar %}انضم للحاضنة{% else %}Join the incubator{% endif %} →</a>
+        <span class="bs-store-hero__tier-price">499 SAR/mo or 9,630 SAR ticket</span>
+        <a href="{{ build_url }}" class="bs-store-hero__tier-link">Join the incubator →</a>
       </li>
       <li class="bs-store-hero__tier" style="--tier-accent: #10b981;">
         <span class="bs-store-hero__tier-label">SOLUTION</span>
-        <span class="bs-store-hero__tier-price">{% if is_ar %}1,999 ر.س/شهر أو 24,000 ر.س جاهز{% else %}1,999 SAR/mo or 24,000 SAR ready{% endif %}</span>
-        <a href="{{ sol_url }}" class="bs-store-hero__tier-link">{% if is_ar %}استكشف الحلول{% else %}Explore solutions{% endif %} →</a>
+        <span class="bs-store-hero__tier-price">1,999 SAR/mo or 24,000 SAR ready</span>
+        <a href="{{ sol_url }}" class="bs-store-hero__tier-link">Explore solutions →</a>
       </li>
       <li class="bs-store-hero__tier bs-store-hero__tier--bpr" style="--tier-accent: #b8f14e;">
         <span class="bs-store-hero__tier-label">BPR <span style="font-size:10px; opacity:.7; font-weight:700; letter-spacing:.04em;">PROVIDER ID</span></span>
-        <span class="bs-store-hero__tier-price">{% if is_ar %}3,960 ر.س/سنة أو 163 ر.س/شهر · هوية دائمة{% else %}3,960 SAR/yr or 163 SAR/mo · permanent identity{% endif %}</span>
-        <a href="/products/provider-registry" class="bs-store-hero__tier-link">{% if is_ar %}فعّل هويتك{% else %}Activate identity{% endif %} →</a>
+        <span class="bs-store-hero__tier-price">3,960 SAR/yr or 163 SAR/mo · permanent identity</span>
+        <a href="/products/provider-registry" class="bs-store-hero__tier-link">Activate identity →</a>
       </li>
     </ul>
     <div class="bs-store-hero__flow" aria-hidden="true">
-      <span class="bs-store-hero__flow-step"><i>۞</i> {% if is_ar %}الدفع{% else %}Pay{% endif %}</span>
+      <span class="bs-store-hero__flow-step"><i>۞</i> Pay</span>
       <span class="bs-store-hero__flow-arrow">→</span>
-      <span class="bs-store-hero__flow-step"><i>✉</i> {% if is_ar %}شكراً + ترحيب{% else %}Thank-you + welcome{% endif %}</span>
+      <span class="bs-store-hero__flow-step"><i>✉</i> Thank-you + welcome</span>
       <span class="bs-store-hero__flow-arrow">→</span>
-      <span class="bs-store-hero__flow-step"><i>◉</i> {% if is_ar %}الوصول والتنفيذ{% else %}Access & delivery{% endif %}</span>
+      <span class="bs-store-hero__flow-step"><i>◉</i> Access & delivery</span>
       <span class="bs-store-hero__flow-arrow">→</span>
       <span class="bs-store-hero__flow-step"><i>◎</i> BPR</span>
     </div>

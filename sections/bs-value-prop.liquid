@@ -1,8 +1,4 @@
 {%- liquid
-  assign is_ar = false
-  if request.locale.iso_code == 'ar'
-    assign is_ar = true
-  endif
   assign learn_url = shop.url | append: '/collections/learn'
   assign sol_url = shop.url | append: '/collections/solutions'
   assign benefits_url = shop.url | append: '/pages/benefits'
@@ -14,47 +10,47 @@
 
     <div class="bs-value__head">
       <p class="bs-value__eyebrow">
-        {% if is_ar %}لماذا برينسايت؟{% else %}Why BrainSAIT?{% endif %}
+        Why BrainSAIT?
       </p>
       <h2 class="bs-value__heading">
-        {% if is_ar %}منصة حلول متكاملة، صُمّمت للمملكة{% else %}One platform for Learn, Build &amp; Solution{% endif %}
+        One platform for Learn, Build &amp; Solution
       </h2>
     </div>
 
     <div class="bs-value__stats" role="list">
       <div class="bs-value__stat">
         <span class="bs-value__num">40+</span>
-        <span class="bs-value__label">{% if is_ar %}كتاب LEARN{% else %}LEARN books{% endif %}</span>
+        <span class="bs-value__label">LEARN books</span>
       </div>
       <div class="bs-value__stat">
         <span class="bs-value__num">65+</span>
-        <span class="bs-value__label">{% if is_ar %}حلاً جاهزاً{% else %}solutions{% endif %}</span>
+        <span class="bs-value__label">solutions</span>
       </div>
       <div class="bs-value__stat">
         <span class="bs-value__num">16</span>
-        <span class="bs-value__label">{% if is_ar %}يوماً للبناء{% else %}day BUILD sprint{% endif %}</span>
+        <span class="bs-value__label">day BUILD sprint</span>
       </div>
       <div class="bs-value__stat" style="border-color: rgba(184,241,78,.35); background: linear-gradient(135deg, rgba(184,241,78,.09), rgba(255,255,255,.6));">
         <span class="bs-value__num" style="-webkit-text-fill-color:#5a7a00; background:none;">◎∞</span>
-        <span class="bs-value__label">{% if is_ar %}هوية BPR دائمة{% else %}BPR permanent identity{% endif %}</span>
+        <span class="bs-value__label">BPR permanent identity</span>
       </div>
     </div>
 
     <div class="bs-value__trust" role="list">
-      <span class="bs-value__badge">🛡️ {% if is_ar %}متوافق مع PDPL{% else %}PDPL-aligned{% endif %}</span>
-      <span class="bs-value__badge" style="border-color: rgba(184,241,78,.3);">◎ {% if is_ar %}BPR: IANA 61026{% else %}BPR: IANA 61026{% endif %}</span>
-      <span class="bs-value__badge">💳 {% if is_ar %}دفع سعودي{% else %}Saudi pay{% endif %} · STC Pay · mada</span>
-      <span class="bs-value__badge">⚡ {% if is_ar %}تسليم فوري{% else %}instant delivery{% endif %}</span>
-      <span class="bs-value__badge">🌐 {% if is_ar %}عربي / إنجليزي{% else %}AR/EN{% endif %}</span>
-      <span class="bs-value__badge">◎ {% if is_ar %}QR موثَّق{% else %}QR-verified{% endif %}</span>
+      <span class="bs-value__badge">🛡️ PDPL-aligned</span>
+      <span class="bs-value__badge" style="border-color: rgba(184,241,78,.3);">◎ BPR: IANA 61026</span>
+      <span class="bs-value__badge">💳 Saudi pay · STC Pay · mada</span>
+      <span class="bs-value__badge">⚡ instant delivery</span>
+      <span class="bs-value__badge">🌐 AR/EN</span>
+      <span class="bs-value__badge">◎ QR-verified</span>
     </div>
 
     <div class="bs-value__actions">
       <a href="{{ learn_url }}" class="button bs-value__cta">
-        {% if is_ar %}ابدأ مع LEARN{% else %}Start with LEARN{% endif %}
+        Start with LEARN
       </a>
       <a href="{{ benefits_url }}" class="bs-value__cta-secondary">
-        {% if is_ar %}قارن المزايا{% else %}Compare benefits{% endif %}
+        Compare benefits
       </a>
     </div>
 

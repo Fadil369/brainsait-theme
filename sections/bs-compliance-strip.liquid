@@ -1,36 +1,32 @@
 {% liquid
-  assign is_ar = false
-  if request.locale.iso_code == 'ar'
-    assign is_ar = true
-  endif
 %}
 {% # theme-check-disable ValidScopedCSSClass %}
 
 <div class="bs-compliance">
   <div class="bs-compliance__inner page-width">
-    <ul class="bs-compliance__list" role="list" aria-label="{% if is_ar %}شهادات الامتثال{% else %}Compliance certifications{% endif %}">
+    <ul class="bs-compliance__list" role="list" aria-label="Compliance certifications">
       <li class="bs-compliance__pill">
         <span class="bs-compliance__icon" aria-hidden="true">⚕</span>
         <span class="bs-compliance__label">
-          {% if is_ar %}NPHIES v3.2{% else %}NPHIES v3.2{% endif %}
+          NPHIES v3.2
         </span>
       </li>
       <li class="bs-compliance__pill">
         <span class="bs-compliance__icon" aria-hidden="true">🔗</span>
         <span class="bs-compliance__label">
-          {% if is_ar %}FHIR R4{% else %}FHIR R4{% endif %}
+          FHIR R4
         </span>
       </li>
       <li class="bs-compliance__pill">
         <span class="bs-compliance__icon" aria-hidden="true">🔢</span>
         <span class="bs-compliance__label">
-          {% if is_ar %}IANA PEN 61026{% else %}IANA PEN 61026{% endif %}
+          IANA PEN 61026
         </span>
       </li>
       <li class="bs-compliance__pill">
         <span class="bs-compliance__icon" aria-hidden="true">🛡</span>
         <span class="bs-compliance__label">
-          {% if is_ar %}متوافق HIPAA/PDPL{% else %}HIPAA/PDPL-aligned{% endif %}
+          HIPAA/PDPL-aligned
         </span>
       </li>
       <li class="bs-compliance__pill">
@@ -40,7 +36,7 @@
       <li class="bs-compliance__pill">
         <span class="bs-compliance__icon" aria-hidden="true">🇸🇦</span>
         <span class="bs-compliance__label">
-          {% if is_ar %}رؤية 2030{% else %}Vision 2030{% endif %}
+          Vision 2030
         </span>
       </li>
     </ul>

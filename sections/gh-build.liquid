@@ -1,8 +1,4 @@
 {%- liquid
-  assign is_ar = false
-  if request.locale.iso_code == 'ar'
-    assign is_ar = true
-  endif
   assign build_monthly = all_products['build-forge-incubator-founders-program']
   assign build_ticket = all_products['build-ticket']
   assign learn_url = shop.url | append: '/collections/learn'
@@ -11,73 +7,69 @@
 
 <div class="page build-page bs-build" data-component="gh-build">
   <section class="bs-build__hero">
-    <p class="bs-build__eyebrow"><span class="dot"></span> {% if is_ar %}برنامج الاحتضان — فورج{% else %}The Forge Incubation Program{% endif %}</p>
-    <h1 class="bs-build__heading">{% if is_ar %}ابنِ منتجاً حقيقياً في <span class="gold">16 يوماً</span>{% else %}Build a real product in <span class="gold">16 days</span>{% endif %}</h1>
+    <p class="bs-build__eyebrow"><span class="dot"></span> The Forge Incubation Program</p>
+    <h1 class="bs-build__heading">Build a real product in <span class="gold">16 days</span></h1>
     <p class="bs-build__lede">
-      {% if is_ar %}
-        اشترك شهرياً أو ادفع تذكرة واحدة — احصل على وصول كامل لـ LEARN + دورات فورج + عقلك الثاني + تتبع عبر بوت تليجرام، مع إيميل شكراً وترحيب وربط تلقائي بالاستحقاقات.
-      {% else %}
+      
         Subscribe monthly or pay a one-time ticket — get full LEARN access + Forge courses + your 2nd Brain + Telegram bot tracking, with thank-you/welcome email automation and entitlement routing.
-      {% endif %}
+      
     </p>
   </section>
 
   <section class="bs-build__plans">
     <div class="bs-build__plan bs-build__plan--featured">
-      <span class="bs-build__badge">{% if is_ar %}الأكثر طلباً · متجدد{% else %}Most popular · Recurring{% endif %}</span>
-      <h3>{% if is_ar %}BUILD شهري{% else %}BUILD Monthly{% endif %}</h3>
-      <p class="bs-build__price">499 {% if is_ar %}ر.س{% else %}SAR{% endif %} <small>{% if is_ar %}/ شهر{% else %}/mo{% endif %}</small></p>
-      <p class="bs-build__tagline">{% if is_ar %}دخول فورج لمدة 30 يوماً يتجدد تلقائياً، مع Notion و2nd Brain وTelegram{% else %}30-day Forge access, renews automatically, with Notion, 2nd Brain, and Telegram{% endif %}</p>
+      <span class="bs-build__badge">Most popular · Recurring</span>
+      <h3>BUILD Monthly</h3>
+      <p class="bs-build__price">499 SAR <small>/mo</small></p>
+      <p class="bs-build__tagline">30-day Forge access, renews automatically, with Notion, 2nd Brain, and Telegram</p>
       <ul class="bs-build__list">
-        <li>📚 {% if is_ar %}كل كتب LEARN{% else %}All LEARN books{% endif %}</li>
-        <li>🧠 {% if is_ar %}دورات فورج في Notion{% else %}Forge courses on Notion{% endif %}</li>
-        <li>🗂️ {% if is_ar %}العقل الثاني{% else %}2nd Brain{% endif %}</li>
-        <li>✈️ {% if is_ar %}تتبع بوت تليجرام{% else %}Telegram bot tracking{% endif %}</li>
+        <li>📚 All LEARN books</li>
+        <li>🧠 Forge courses on Notion</li>
+        <li>🗂️ 2nd Brain</li>
+        <li>✈️ Telegram bot tracking</li>
       </ul>
       <a class="button bs-build__cta" href="{{ build_monthly.url | default: '/products/build-forge-incubator-founders-program' }}">
-        {% if is_ar %}اشترك شهرياً{% else %}Subscribe monthly{% endif %} →
+        Subscribe monthly →
       </a>
     </div>
 
     <div class="bs-build__plan">
-      <h3>{% if is_ar %}تذكرة BUILD{% else %}BUILD Ticket{% endif %}</h3>
-      <p class="bs-build__price">9,630 {% if is_ar %}ر.س{% else %}SAR{% endif %} <small>{% if is_ar %}لمرة واحدة{% else %}one-time{% endif %}</small></p>
-      <p class="bs-build__tagline">{% if is_ar %}نفس وصول فورج، بدفعة واحدة، مع تسليم بعد الشراء{% else %}The same Forge access, one payment, with post-purchase delivery{% endif %}</p>
+      <h3>BUILD Ticket</h3>
+      <p class="bs-build__price">9,630 SAR <small>one-time</small></p>
+      <p class="bs-build__tagline">The same Forge access, one payment, with post-purchase delivery</p>
       <ul class="bs-build__list">
-        <li>📚 {% if is_ar %}كل كتب LEARN{% else %}All LEARN books{% endif %}</li>
-        <li>🧠 {% if is_ar %}دورات فورج في Notion{% else %}Forge courses on Notion{% endif %}</li>
-        <li>🗂️ {% if is_ar %}العقل الثاني{% else %}2nd Brain{% endif %}</li>
-        <li>✈️ {% if is_ar %}تتبع بوت تليجرام{% else %}Telegram bot tracking{% endif %}</li>
+        <li>📚 All LEARN books</li>
+        <li>🧠 Forge courses on Notion</li>
+        <li>🗂️ 2nd Brain</li>
+        <li>✈️ Telegram bot tracking</li>
       </ul>
       <a class="button bs-build__cta" href="{{ build_ticket.url | default: '/products/build-ticket' }}">
-        {% if is_ar %}اشترِ التذكرة{% else %}Buy the ticket{% endif %} →
+        Buy the ticket →
       </a>
     </div>
   </section>
 
   <section class="bs-build__sprint">
-    <h2>{% if is_ar %}سباق البناء — 16 يوماً{% else %}Your build sprint — 16 days{% endif %}</h2>
+    <h2>Your build sprint — 16 days</h2>
     <div class="bs-build__track">
-      <div class="bs-build__phase"><span class="bs-build__flag">{% if is_ar %}الأسبوع 1{% else %}Week 1{% endif %}</span><h3>{% if is_ar %}البناء والإطلاق{% else %}Build &amp; Launch{% endif %}</h3><p>{% if is_ar %}رحلة فورج من الفكرة إلى إطلاق المنتج.{% else %}The Forge journey — idea to shipped product.{% endif %}</p></div>
-      <div class="bs-build__phase"><span class="bs-build__flag">{% if is_ar %}الأسبوع 2{% else %}Week 2{% endif %}</span><h3>{% if is_ar %}التسويق والتسليم{% else %}Marketing &amp; Delivery{% endif %}</h3><p>{% if is_ar %}خطة تسويق وإطلاق القنوات وتسليم المشروع.{% else %}Marketing plan, channel launch, and delivery.{% endif %}</p></div>
-      <div class="bs-build__phase"><span class="bs-build__flag">{% if is_ar %}التخرج{% else %}Graduation{% endif %}</span><h3>{% if is_ar %}شهادة الإتمام{% else %}Completion certificate{% endif %}</h3><p>{% if is_ar %}شهادة دائمة عند إتمام المعالم الـ16.{% else %}A permanent certificate once all 16 milestones are complete.{% endif %}</p></div>
+      <div class="bs-build__phase"><span class="bs-build__flag">Week 1</span><h3>Build &amp; Launch</h3><p>The Forge journey — idea to shipped product.</p></div>
+      <div class="bs-build__phase"><span class="bs-build__flag">Week 2</span><h3>Marketing &amp; Delivery</h3><p>Marketing plan, channel launch, and delivery.</p></div>
+      <div class="bs-build__phase"><span class="bs-build__flag">Graduation</span><h3>Completion certificate</h3><p>A permanent certificate once all 16 milestones are complete.</p></div>
     </div>
   </section>
 
   <section class="bs-build__brain">
-    <h2>🧠 {% if is_ar %}عقلك الثاني — هدية كل بنّاء{% else %}Your Second Brain — every builder's gift{% endif %}</h2>
+    <h2>🧠 Your Second Brain — every builder's gift</h2>
     <p>
-      {% if is_ar %}
-        حسابك الدائم، مستودع GitHub الخاص بك، دورات فورج المنظمة في Notion، وتتبع التقدم عبر بوت تليجرام — كلها تبقى معك.
-      {% else %}
+      
         Your permanent account, your own GitHub repo, Forge courses organized in Notion, and progress tracking via the Telegram bot — all stay with you.
-      {% endif %}
+      
     </p>
   </section>
 
   <section class="bs-build__trust">
-    <h2>{% if is_ar %}الأمان والسياسات{% else %}Security &amp; Policy{% endif %}</h2>
-      <p>🛡️ {% if is_ar %}دفع سعودي آمن (STC Pay · mada · بطاقة) · متوافق مع PDPL · تسليم رقمي فوري · تحديثات حالة تلقائية{% else %}Secure Saudi pay (STC Pay · mada · Card) · PDPL-aligned · instant digital delivery · automatic status updates{% endif %}</p>
+    <h2>Security &amp; Policy</h2>
+      <p>🛡️ Secure Saudi pay (STC Pay · mada · Card) · PDPL-aligned · instant digital delivery · automatic status updates</p>
   </section>
 </div>
 

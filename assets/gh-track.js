@@ -2,7 +2,7 @@
   const root = document.querySelector('[data-component="gh-track"]');
   if (!root) return;
 
-  const isAr = root.dataset.isAr === '1';
+  const isAr = false;
   const API_BASE = root.dataset.apiBase || 'https://build-apply.brainsait.org';
   const lookupEl = document.getElementById('gh-track-lookup');
   const dashEl = document.getElementById('gh-track-dash');

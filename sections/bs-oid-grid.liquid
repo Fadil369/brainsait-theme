@@ -1,8 +1,4 @@
 {% liquid
-  assign is_ar = false
-  if request.locale.iso_code == 'ar'
-    assign is_ar = true
-  endif
   assign oid_collection = collections['oid-enterprise-identity']
 %}
 {% # theme-check-disable ValidScopedCSSClass %}
@@ -11,15 +7,13 @@
   <div class="bs-oid-grid__inner page-width">
     <div class="bs-oid-grid__header">
       <h2 class="bs-oid-grid__heading">
-        {% if is_ar %}
-          منتجات هوية الرعاية الصحية
-        {% else %}
+        
           Healthcare Identity Products
-        {% endif %}
+        
       </h2>
       {% if oid_collection != blank %}
         <a href="{{ oid_collection.url }}" class="bs-oid-grid__view-all">
-          {% if is_ar %}عرض الكل{% else %}View all{% endif %}
+          View all
         </a>
       {% endif %}
     </div>
@@ -32,35 +26,19 @@
             assign badge_class = ''
 
             if product.tags contains 'platform'
-              if is_ar
-                assign badge_label = 'مميز'
-              else
                 assign badge_label = 'Featured'
-              endif
               assign badge_class = 'bs-oid-card__badge--featured'
 
             elsif product.tags contains 'self-hosted'
-              if is_ar
-                assign badge_label = 'معتمد نفيس'
-              else
                 assign badge_label = 'Certified'
-              endif
               assign badge_class = 'bs-oid-card__badge--certified'
 
             elsif product.tags contains 'x509' and product.tags contains 'mcp'
-              if is_ar
-                assign badge_label = 'مفتوح المصدر'
-              else
                 assign badge_label = 'Open Source'
-              endif
               assign badge_class = 'bs-oid-card__badge--opensource'
 
             elsif product.tags contains 'hipaa'
-              if is_ar
-                assign badge_label = 'جديد'
-              else
                 assign badge_label = 'New'
-              endif
               assign badge_class = 'bs-oid-card__badge--new'
             endif
           -%}

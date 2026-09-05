@@ -1,10 +1,8 @@
 {% doc %}
   Renders a single Knowledge Base card.
   @param {object} article
-  @param {string} kicker_ar
   @param {string} kicker_en
   @param {string} icon - report | article | podcast | video
-  @param {boolean} is_ar
 {% enddoc %}
 
 <a href="{{ article.url }}" class="bs-kb-card">
@@ -49,11 +47,7 @@
   {% endif %}
   <div class="bs-kb-card__body">
     <span class="bs-kb-card__kicker">
-      {% if is_ar %}
-        {{ kicker_ar }}
-      {% else %}
-        {{ kicker_en }}
-      {% endif %}
+      {{ kicker_en }}
     </span>
     <h3 class="bs-kb-card__title">{{ article.title }}</h3>
     {% if article.excerpt != blank %}

@@ -5,14 +5,7 @@
 {%- endcomment -%}
 
 {% liquid
-  assign is_ar = false
-  if request.locale.iso_code == 'ar'
-    assign is_ar = true
-  endif
   assign locale_dir = 'ltr'
-  if is_ar
-    assign locale_dir = 'rtl'
-  endif
 %}
 
 <style>
@@ -340,20 +333,20 @@
     <!-- Desktop nav -->
     <nav class="brainsait-header__nav" id="brainsait-nav" aria-label="Main navigation">
       <a href="/collections/learn" class="{% if request.path contains '/collections/learn' or request.path contains '/learn' %}active{% endif %}">
-        {% if is_ar %}تعلّم{% else %}Learn{% endif %}
+        Learn
       </a>
       <a href="/collections/build" class="{% if request.path contains '/collections/build' or request.path contains '/build' %}active{% endif %}">
-        {% if is_ar %}ابنِ{% else %}Build{% endif %}
+        Build
       </a>
       <a href="/collections/solutions" class="{% if request.path contains '/collections/solutions' or request.path contains '/solutions' %}active{% endif %}">
-        {% if is_ar %}حلول{% else %}Solutions{% endif %}
+        Solutions
       </a>
       <a href="/pages/benefits" class="{% if request.path contains '/benefits' or request.path contains '/pages/benefits' %}active{% endif %}">
-        {% if is_ar %}المزايا{% else %}Benefits{% endif %}
+        Benefits
       </a>
       <a href="https://registry.brainsait.org" target="_blank" rel="noopener noreferrer" class="brainsait-header__registry">
         <span>BPR</span>
-        <span aria-hidden="true">{% if is_ar %}↗{% else %}↗{% endif %}</span>
+        <span aria-hidden="true">↗</span>
       </a>
     </nav>
 

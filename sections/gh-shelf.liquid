@@ -1,8 +1,4 @@
 {% liquid
-  assign is_ar = false
-  if request.locale.iso_code == 'ar'
-    assign is_ar = true
-  endif
   assign col = closest.collection
   assign col_handle = col.handle | default: ''
   assign show_book = false
@@ -25,11 +21,7 @@
   assign chip_list = chip_list | uniq | compact
 
   if col.title == blank or col.title == empty
-    if is_ar
-      assign col_title = 'المكتبة'
-    else
       assign col_title = 'The Library'
-    endif
   else
     assign col_title = col.title
   endif
@@ -45,24 +37,24 @@
 
   {% if col_handle == 'learn' or col_handle == 'brainsait-learn' %}
     <section class="bs-shelf-banner reveal" style="margin: 0 0 1.5rem; padding: 1.2rem 1.3rem; border: 1px solid rgb(var(--color-border-rgb,0 0 0)/.12); border-radius: 16px; background: rgb(var(--color-background-rgb,255 255 255)/.72); backdrop-filter: blur(12px);">
-      <p class="hero-eyebrow" style="margin:0 0 .4rem;"><span class="dot"></span> {% if is_ar %}وصول كامل{% else %}Complete access{% endif %}</p>
-      <h2 style="margin:0 0 .35rem;">{% if is_ar %}40 بطاقة LEARN — مع الدفع والشرح في كل بطاقة{% else %}40 LEARN cards — each with payment and explanation{% endif %}</h2>
-      <p style="margin:0; opacity:.8; line-height:1.7;">{% if is_ar %}زر الدفع يفتح Shopify على 182 ر.س/شهر، وزر “اعرف المزيد” يفتح صفحة التفاصيل الكاملة أو النافذة المنبثقة الخاصة بالمنتج.{% else %}The payment button opens Shopify at 182 SAR/month, and the learn-more button opens the full detail page or product pop-up.{% endif %}</p>
+      <p class="hero-eyebrow" style="margin:0 0 .4rem;"><span class="dot"></span> Complete access</p>
+      <h2 style="margin:0 0 .35rem;">40 LEARN cards — each with payment and explanation</h2>
+      <p style="margin:0; opacity:.8; line-height:1.7;">The payment button opens Shopify at 182 SAR/month, and the learn-more button opens the full detail page or product pop-up.</p>
     </section>
   {% endif %}
 
   {% if col_handle == 'solutions' %}
     <section class="bs-shelf-banner reveal" style="margin: 0 0 1.5rem; padding: 1.2rem 1.3rem; border: 1px solid rgb(var(--color-border-rgb,0 0 0)/.12); border-radius: 16px; background: rgb(var(--color-background-rgb,255 255 255)/.72); backdrop-filter: blur(12px);">
-      <p class="hero-eyebrow" style="margin:0 0 .4rem;"><span class="dot"></span> {% if is_ar %}حلول حيّة{% else %}Live solutions{% endif %}</p>
-      <h2 style="margin:0 0 .35rem;">{% if is_ar %}37+ بطاقة حل مع روابط ديمو حيّة{% else %}37+ solution cards with live demo links{% endif %}</h2>
-      <p style="margin:0; opacity:.8; line-height:1.7;">{% if is_ar %}كل بطاقة تقود إلى الدفع الشهري 1,999 ر.س أو الحل الجاهز 24,000 ر.س، مع ديمو مباشر وخطوة تعريفية واضحة قبل الشراء.{% else %}Each card routes to the 1,999 SAR monthly plan or the 24,000 SAR ready-built plan, with a live demo and a clear walkthrough before purchase.{% endif %}</p>
+      <p class="hero-eyebrow" style="margin:0 0 .4rem;"><span class="dot"></span> Live solutions</p>
+      <h2 style="margin:0 0 .35rem;">37+ solution cards with live demo links</h2>
+      <p style="margin:0; opacity:.8; line-height:1.7;">Each card routes to the 1,999 SAR monthly plan or the 24,000 SAR ready-built plan, with a live demo and a clear walkthrough before purchase.</p>
     </section>
   {% endif %}
 
   {% if chip_list.size > 1 %}
     <div class="filters reveal" role="tablist" id="gh-shelf-filters">
       <button type="button" class="chip active" role="tab" aria-selected="true" data-sub="all">
-        {% if is_ar %}الكل{% else %}All{% endif %} ({{ col.products_count }})
+        All ({{ col.products_count }})
       </button>
       {% for tag in chip_list %}
         {% assign count = 0 %}
@@ -106,10 +98,10 @@
       </div>
       <div class="qv-cta">
         <a class="button primary" id="gh-qv-cta" href="#">
-          {% if is_ar %}اشترِ الآن ←{% else %}Buy now →{% endif %}
+          Buy now →
         </a>
       </div>
-      <p class="qv-trust">⚡ {% if is_ar %}تسليم فوري · رابط Google Drive آمن · أسعار بالريال{% else %}Instant delivery · Secure Google Drive · SAR pricing{% endif %}</p>
+      <p class="qv-trust">⚡ Instant delivery · Secure Google Drive · SAR pricing</p>
     </div>
   </div>
 </div>

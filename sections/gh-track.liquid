@@ -1,30 +1,25 @@
 {% liquid
-  assign is_ar = false
-  if request.locale.iso_code == 'ar'
-    assign is_ar = true
-  endif
 %}
 
 <div class="page gh-track" data-component="gh-track"
-  data-is-ar="{% if is_ar %}1{% else %}0{% endif %}"
   data-api-base="{{ section.settings.api_base }}">
 
   <div class="track-lookup" id="gh-track-lookup">
     <header class="page-head reveal">
-      <h1>{% if is_ar %}لوحة تقدمك{% else %}Your Progress Dashboard{% endif %}</h1>
+      <h1>Your Progress Dashboard</h1>
       <p class="lede">
-        {% if is_ar %}أدخل رقم طلبك لمتابعة تقدمك، أقساطك، وشهاداتك.{% else %}Enter your application ref to track progress, installments, and certificates.{% endif %}
+        Enter your application ref to track progress, installments, and certificates.
       </p>
     </header>
     <div class="track-ref-box reveal">
       <input type="text" id="gh-track-ref" autocomplete="off"
-        placeholder="{% if is_ar %}مثال: BS-2026-XXXX{% else %}e.g. BS-2026-XXXX{% endif %}">
+        placeholder="e.g. BS-2026-XXXX">
       <button type="button" class="button primary" id="gh-track-go">
-        {% if is_ar %}تتبّع{% else %}Track{% endif %}
+        Track
       </button>
     </div>
     <p class="track-ref-hint">
-      {% if is_ar %}وجدت رقم طلبك في بريدك؟ ألصقه هنا أو افتح الرابط الذي وصلتك.{% else %}Found your ref in your email? Paste it here or open the link you received.{% endif %}
+      Found your ref in your email? Paste it here or open the link you received.
     </p>
   </div>
 

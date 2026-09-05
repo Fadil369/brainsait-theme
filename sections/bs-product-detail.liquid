@@ -66,38 +66,6 @@
     }
   }
 
-  /* Bilingual toggle */
-  .bs-lang-toggle {
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    padding: 4px;
-    background: var(--glass-bg);
-    border: 1px solid var(--glass-border);
-    border-radius: 100px;
-    margin: 0 auto 32px;
-    width: fit-content;
-  }
-
-  .bs-lang-toggle button {
-    padding: 6px 16px;
-    border: none;
-    border-radius: 100px;
-    font-size: 13px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: var(--bs-transition);
-    background: transparent;
-    color: var(--text-secondary);
-    letter-spacing: 0.5px;
-  }
-
-  .bs-lang-toggle button.active {
-    background: linear-gradient(135deg, var(--bs-gold-start), var(--bs-gold-end));
-    color: #000;
-    box-shadow: var(--bs-shadow-sm);
-  }
-
   /* Product grid */
   .bs-product-grid {
     display: grid;
@@ -704,49 +672,6 @@
     background-clip: text;
   }
 
-  /* Hidden lang content */
-  [data-lang] {
-    display: none;
-  }
-
-  [data-lang].visible {
-    display: inline;
-  }
-
-  .bs-product-detail--ar [data-lang="en"] {
-    display: none !important;
-  }
-
-  .bs-product-detail--ar [data-lang="ar"].visible {
-    display: inline;
-  }
-
-  .bs-product-detail--en [data-lang="en"].visible {
-    display: inline;
-  }
-
-  .bs-product-detail--en [data-lang="ar"] {
-    display: none !important;
-  }
-
-  /* Inline elements for bilingual */
-  .bs-product-detail--ar .bs-visible-ar {
-    display: inline !important;
-  }
-
-  .bs-product-detail--en .bs-visible-en {
-    display: inline !important;
-  }
-
-  /* Hide block-level bilingual containers */
-  .bs-product-detail--ar .bs-hidden-ar {
-    display: none !important;
-  }
-
-  .bs-product-detail--en .bs-hidden-en {
-    display: none !important;
-  }
-
   /* Mobile tweaks */
   @media (max-width: 767px) {
     .bs-product-detail .bs-container {
@@ -779,29 +704,16 @@
   <div class="bs-container">
 
     {%- assign en_eyebrow = section.settings.eyebrow_en | default: 'Featured Product' -%}
-    {%- assign ar_eyebrow = section.settings.eyebrow_ar | default: 'منتج مميز' -%}
     {%- assign en_how_title = section.settings.how_title_en | default: 'How It Works' -%}
-    {%- assign ar_how_title = section.settings.how_title_ar | default: 'كيف يعمل' -%}
     {%- assign en_related_title = section.settings.related_title_en | default: 'You May Also Like' -%}
-    {%- assign ar_related_title = section.settings.related_title_ar | default: 'قد يعجبك أيضاً' -%}
     {%- assign en_buy = section.settings.buy_btn_en | default: 'Buy Now' -%}
-    {%- assign ar_buy = section.settings.buy_btn_ar | default: 'اشترِ الآن' -%}
     {%- assign en_learn = section.settings.learn_btn_en | default: 'Learn More' -%}
-    {%- assign ar_learn = section.settings.learn_btn_ar | default: 'اعرف المزيد' -%}
     {%- assign en_payment = section.settings.step_payment_en | default: 'Payment' -%}
-    {%- assign ar_payment = section.settings.step_payment_ar | default: 'الدفع' -%}
     {%- assign en_fulfillment = section.settings.step_fulfillment_en | default: 'Fulfillment' -%}
-    {%- assign ar_fulfillment = section.settings.step_fulfillment_ar | default: 'التنفيذ' -%}
     {%- assign en_access = section.settings.step_access_en | default: 'Access' -%}
-    {%- assign ar_access = section.settings.step_access_ar | default: 'الوصول' -%}
     {%- assign en_delivery = section.settings.step_delivery_en | default: 'Delivery' -%}
-    {%- assign ar_delivery = section.settings.step_delivery_ar | default: 'التسليم' -%}
 
-    <!-- Language Toggle -->
-    <div class="bs-lang-toggle bs-animate">
-      <button type="button" class="active" data-lang-btn="en">EN</button>
-      <button type="button" data-lang-btn="ar">عربي</button>
-    </div>
+    
 
     <!-- Product Grid: Image Left / Details Right -->
     <div class="bs-product-grid">
@@ -852,7 +764,6 @@
         <!-- Eyebrow -->
         <div class="bs-eyebrow bs-animate bs-animate-delay-2">
           <span class="bs-visible-en">{{ en_eyebrow }}</span>
-          <span class="bs-visible-ar">{{ ar_eyebrow }}</span>
           <svg viewBox="0 0 20 20" fill="currentColor">
             <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd"/>
           </svg>
@@ -905,7 +816,6 @@
                     </svg>
                   {%- endif -%}
                   <span class="bs-visible-en">{{ kv[0] }}</span>
-                  <span class="bs-visible-ar">{{ kv[0] }}</span>
                 </span>
               {%- endif -%}
             {%- endfor -%}
@@ -939,28 +849,24 @@
               <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd"/></svg>
             </span>
             <span class="bs-visible-en">Instant digital delivery to your account</span>
-            <span class="bs-visible-ar">تسليم رقمي فوري لحسابك</span>
           </li>
           <li>
             <span class="bs-check">
               <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd"/></svg>
             </span>
             <span class="bs-visible-en">Premium support and documentation included</span>
-            <span class="bs-visible-ar">دعم متميز وتوثيق شامل متضمن</span>
           </li>
           <li>
             <span class="bs-check">
               <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd"/></svg>
             </span>
             <span class="bs-visible-en">Lifetime access to updates and upgrades</span>
-            <span class="bs-visible-ar">وصول دائم للتحديثات والترقيات</span>
           </li>
           <li>
             <span class="bs-check">
               <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd"/></svg>
             </span>
             <span class="bs-visible-en">Secure payment with full refund guarantee</span>
-            <span class="bs-visible-ar">دفع آمن مع ضمان استرداد كامل</span>
           </li>
         </ul>
 
@@ -968,7 +874,6 @@
         <div class="bs-description bs-animate bs-animate-delay-4">
           <h3>
             <span class="bs-visible-en">About This Product</span>
-            <span class="bs-visible-ar">نبذة عن هذا المنتج</span>
           </h3>
           <div class="bs-description-content rte">
             {{ product.description }}
@@ -979,11 +884,9 @@
         <div class="bs-fulfillment bs-animate bs-animate-delay-4">
           <h4>
             <span class="bs-visible-en">What You Get</span>
-            <span class="bs-visible-ar">ما ستحصل عليه</span>
           </h4>
           <p>
             <span class="bs-visible-en">After purchase, you'll receive instant access to your digital product via email. Download the files, follow the included documentation, and get started within minutes. Our support team is available 24/7 to help.</span>
-            <span class="bs-visible-ar">بعد الشراء، ستتلقى وصولاً فورياً إلى منتجك الرقمي عبر البريد الإلكتروني. حمّل الملفات، اتبع التوثيق المرفق، وابدأ خلال دقائق. فريق دعمنا متاح على مدار الساعة لمساعدتك.</span>
           </p>
         </div>
 
@@ -991,7 +894,6 @@
         <div class="bs-how-it-works bs-animate bs-animate-delay-5">
           <h3>
             <span class="bs-visible-en">{{ en_how_title }}</span>
-            <span class="bs-visible-ar">{{ ar_how_title }}</span>
           </h3>
           <div class="bs-steps">
             <!-- Step 1: Payment -->
@@ -1003,11 +905,9 @@
               </svg>
               <div class="bs-step-title">
                 <span class="bs-visible-en">{{ en_payment }}</span>
-                <span class="bs-visible-ar">{{ ar_payment }}</span>
               </div>
               <div class="bs-step-desc">
                 <span class="bs-visible-en">Secure checkout with multiple payment options</span>
-                <span class="bs-visible-ar">دفع آمن مع خيارات متعددة</span>
               </div>
             </div>
             <!-- Step 2: Fulfillment -->
@@ -1020,11 +920,9 @@
               </svg>
               <div class="bs-step-title">
                 <span class="bs-visible-en">{{ en_fulfillment }}</span>
-                <span class="bs-visible-ar">{{ ar_fulfillment }}</span>
               </div>
               <div class="bs-step-desc">
                 <span class="bs-visible-en">Instant order processing and preparation</span>
-                <span class="bs-visible-ar">معالجة فورية للطلب والتجهيز</span>
               </div>
             </div>
             <!-- Step 3: Access -->
@@ -1037,11 +935,9 @@
               </svg>
               <div class="bs-step-title">
                 <span class="bs-visible-en">{{ en_access }}</span>
-                <span class="bs-visible-ar">{{ ar_access }}</span>
               </div>
               <div class="bs-step-desc">
                 <span class="bs-visible-en">Receive access credentials via email</span>
-                <span class="bs-visible-ar">استلام بيانات الوصول عبر البريد</span>
               </div>
             </div>
             <!-- Step 4: Delivery -->
@@ -1053,11 +949,9 @@
               </svg>
               <div class="bs-step-title">
                 <span class="bs-visible-en">{{ en_delivery }}</span>
-                <span class="bs-visible-ar">{{ ar_delivery }}</span>
               </div>
               <div class="bs-step-desc">
                 <span class="bs-visible-en">Start using your product immediately</span>
-                <span class="bs-visible-ar">ابدأ باستخدام منتجك فوراً</span>
               </div>
             </div>
           </div>
@@ -1067,7 +961,6 @@
         <div class="bs-animate bs-animate-delay-5">
           <span class="bs-variant-label">
             <span class="bs-visible-en">Quantity</span>
-            <span class="bs-visible-ar">الكمية</span>
           </span>
           <div class="bs-quantity">
             <button type="button" class="bs-qty-btn" onclick="BsQtyChange(-1)">−</button>
@@ -1099,7 +992,6 @@
                 <path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/>
               </svg>
               <span class="bs-visible-en">{{ en_buy }}</span>
-              <span class="bs-visible-ar">{{ ar_buy }}</span>
             </button>
           {%- endform -%}
           <a href="{{ product.url }}" class="bs-cta bs-cta--secondary">
@@ -1108,7 +1000,6 @@
               <path d="M12 16v-4"/><path d="M12 8h.01"/>
             </svg>
             <span class="bs-visible-en">{{ en_learn }}</span>
-            <span class="bs-visible-ar">{{ ar_learn }}</span>
           </a>
         </div>
 
@@ -1121,7 +1012,6 @@
       <div class="bs-related bs-animate">
         <h3>
           <span class="bs-visible-en">{{ en_related_title }}</span>
-          <span class="bs-visible-ar">{{ ar_related_title }}</span>
         </h3>
         <div class="bs-related-grid">
           {%- for product in related_products limit: 4 -%}
@@ -1158,31 +1048,6 @@
   (function() {
     var section = document.getElementById('BsProductDetail-{{ section.id }}');
     if (!section) return;
-
-    // ---- Language Toggle ----
-    var langBtns = section.querySelectorAll('[data-lang-btn]');
-    var currentLang = 'en';
-
-    langBtns.forEach(function(btn) {
-      btn.addEventListener('click', function() {
-        var lang = this.getAttribute('data-lang-btn');
-        if (lang === currentLang) return;
-        currentLang = lang;
-
-        langBtns.forEach(function(b) { b.classList.remove('active'); });
-        this.classList.add('active');
-
-        section.classList.remove('bs-product-detail--en', 'bs-product-detail--ar');
-        section.classList.add('bs-product-detail--' + lang);
-
-        // Update visible spans
-        var spans = section.querySelectorAll('[class*="bs-visible-"]');
-        spans.forEach(function(span) {
-          span.classList.remove('bs-visible-en', 'bs-visible-ar');
-          span.classList.add('bs-visible-' + lang);
-        });
-      });
-    });
 
     // ---- Gallery Thumbnails ----
     var thumbs = section.querySelectorAll('.bs-gallery-thumbs img');
@@ -1279,97 +1144,49 @@
       "label": "Eyebrow (EN)",
       "default": "Featured Product"
     },
-    {
-      "type": "text",
-      "id": "eyebrow_ar",
-      "label": "Eyebrow (AR)",
-      "default": "منتج مميز"
-    },
-    {
+        {
       "type": "text",
       "id": "buy_btn_en",
       "label": "Buy Button Text (EN)",
       "default": "Buy Now"
     },
-    {
-      "type": "text",
-      "id": "buy_btn_ar",
-      "label": "Buy Button Text (AR)",
-      "default": "اشترِ الآن"
-    },
-    {
+        {
       "type": "text",
       "id": "learn_btn_en",
       "label": "Learn More Button Text (EN)",
       "default": "Learn More"
     },
-    {
-      "type": "text",
-      "id": "learn_btn_ar",
-      "label": "Learn More Button Text (AR)",
-      "default": "اعرف المزيد"
-    },
-    {
+        {
       "type": "text",
       "id": "how_title_en",
       "label": "How It Works Title (EN)",
       "default": "How It Works"
     },
-    {
-      "type": "text",
-      "id": "how_title_ar",
-      "label": "How It Works Title (AR)",
-      "default": "كيف يعمل"
-    },
-    {
+        {
       "type": "text",
       "id": "step_payment_en",
       "label": "Step 1 Label (EN)",
       "default": "Payment"
     },
-    {
-      "type": "text",
-      "id": "step_payment_ar",
-      "label": "Step 1 Label (AR)",
-      "default": "الدفع"
-    },
-    {
+        {
       "type": "text",
       "id": "step_fulfillment_en",
       "label": "Step 2 Label (EN)",
       "default": "Fulfillment"
     },
-    {
-      "type": "text",
-      "id": "step_fulfillment_ar",
-      "label": "Step 2 Label (AR)",
-      "default": "التنفيذ"
-    },
-    {
+        {
       "type": "text",
       "id": "step_access_en",
       "label": "Step 3 Label (EN)",
       "default": "Access"
     },
-    {
-      "type": "text",
-      "id": "step_access_ar",
-      "label": "Step 3 Label (AR)",
-      "default": "الوصول"
-    },
-    {
+        {
       "type": "text",
       "id": "step_delivery_en",
       "label": "Step 4 Label (EN)",
       "default": "Delivery"
     },
-    {
-      "type": "text",
-      "id": "step_delivery_ar",
-      "label": "Step 4 Label (AR)",
-      "default": "التسليم"
-    },
-    {
+        {
       "type": "product_list",
       "id": "related_products",
       "label": "Related Products"
@@ -1379,14 +1196,7 @@
       "id": "related_title_en",
       "label": "Related Products Title (EN)",
       "default": "You May Also Like"
-    },
-    {
-      "type": "text",
-      "id": "related_title_ar",
-      "label": "Related Products Title (AR)",
-      "default": "قد يعجبك أيضاً"
-    }
-  ],
+    }  ],
   "presets": [
     {
       "name": "bs-product-detail"
