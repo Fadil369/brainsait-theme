@@ -1,0 +1,89 @@
+:root {
+  --bs-obsidian: #0b0d10;
+  --bs-graphite: #171b21;
+  --bs-ivory: #f7f3ea;
+  --bs-champagne-gold: #c7a86b;
+  --bs-teal: #1c8b82;
+  --bs-white: #ffffff;
+  --bs-muted: #a8adb6;
+  --bs-border: rgba(247, 243, 234, 0.14);
+  --bs-surface: #11151a;
+  --bs-surface-raised: #1b2027;
+  --bs-font-display: "Bodoni Moda", Georgia, serif;
+  --bs-font-sans: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --bs-text-xs: 0.75rem;
+  --bs-text-sm: 0.875rem;
+  --bs-text-base: 1rem;
+  --bs-text-lg: clamp(1.125rem, 1.5vw, 1.375rem);
+  --bs-text-xl: clamp(1.75rem, 4vw, 3.75rem);
+  --bs-space-1: 0.25rem;
+  --bs-space-2: 0.5rem;
+  --bs-space-3: 0.75rem;
+  --bs-space-4: 1rem;
+  --bs-space-6: 1.5rem;
+  --bs-space-8: 2rem;
+  --bs-space-12: 3rem;
+  --bs-radius-sm: 0.375rem;
+  --bs-radius-md: 0.75rem;
+  --bs-radius-lg: 1.25rem;
+  --bs-shadow-soft: 0 18px 50px rgba(0, 0, 0, 0.22);
+  --bs-container: 80rem;
+  --bs-transition: 180ms ease;
+  --bs-focus: 0 0 0 3px rgba(28, 139, 130, 0.46);
+}
+html { scroll-behavior: smooth; }
+body { background: var(--bs-obsidian); color: var(--bs-ivory); font-family: var(--bs-font-sans); -webkit-font-smoothing: antialiased; }
+:where(a, button, input, select, textarea, summary):focus-visible { outline: 2px solid var(--bs-teal); outline-offset: 3px; box-shadow: var(--bs-focus); }
+.bs-container { width: min(calc(100% - 2rem), var(--bs-container)); margin-inline: auto; }
+[data-reveal] { opacity: 1; transform: none; }
+.js .brainsait-reveal-enabled [data-reveal] { opacity: 0; transform: translateY(1rem); transition: opacity 500ms ease, transform 500ms ease; }
+.js .brainsait-reveal-enabled [data-reveal].is-visible { opacity: 1; transform: none; }
+.brainsait-announcement { padding: .55rem 1rem; background: var(--bs-ivory); color: var(--bs-obsidian); font-size: var(--bs-text-xs); font-weight: 650; letter-spacing: .07em; text-align: center; text-transform: uppercase; }
+.brainsait-header { position: sticky; top: 0; z-index: 50; border-bottom: 1px solid var(--bs-border); background: rgba(11,13,16,.94); }
+@supports (backdrop-filter: blur(12px)) { .brainsait-header { background: rgba(11,13,16,.82); backdrop-filter: blur(12px); } }
+.brainsait-header__inner { min-height: 4.5rem; display: grid; grid-template-columns: auto 1fr auto; gap: var(--bs-space-6); align-items: center; }
+.brainsait-wordmark { color: var(--bs-ivory); font-family: var(--bs-font-display); font-size: 1.45rem; font-weight: 600; letter-spacing: .035em; text-decoration: none; }
+.brainsait-wordmark span { color: var(--bs-champagne-gold); }
+.brainsait-header__nav { display: flex; justify-content: center; gap: var(--bs-space-1); }
+.brainsait-header__nav a, .brainsait-header__action, .brainsait-menu-toggle { color: var(--bs-muted); border: 0; background: transparent; font: inherit; font-size: var(--bs-text-sm); text-decoration: none; }
+.brainsait-header__nav a { padding: .65rem .72rem; border-radius: var(--bs-radius-sm); }
+.brainsait-header__nav a:hover, .brainsait-header__nav a[aria-current="page"], .brainsait-header__action:hover { color: var(--bs-ivory); }
+.brainsait-header__nav a[aria-current="page"] { background: var(--bs-graphite); }
+.brainsait-header__actions { display: flex; align-items: center; gap: var(--bs-space-3); }
+.brainsait-header__action { display: inline-flex; align-items: center; gap: .35rem; padding: .5rem 0; }
+.brainsait-header__action svg, .brainsait-menu-toggle svg { width: 1.2rem; height: 1.2rem; stroke: currentColor; fill: none; }
+.brainsait-cart-count { min-width: 1.15rem; padding: .05rem .3rem; border-radius: 999px; background: var(--bs-champagne-gold); color: var(--bs-obsidian); font-size: .68rem; text-align: center; }
+.brainsait-menu-toggle { display: none; cursor: pointer; padding: .5rem; }
+.brainsait-footer { border-top: 1px solid var(--bs-border); background: var(--bs-graphite); }
+.brainsait-footer__inner { padding-block: clamp(3rem,7vw,5rem) 2rem; }
+.brainsait-footer__grid { display: grid; grid-template-columns: 1.5fr repeat(3,1fr); gap: var(--bs-space-8); }
+.brainsait-footer h2, .brainsait-footer h3 { color: var(--bs-ivory); margin: 0 0 var(--bs-space-4); }
+.brainsait-footer h2 { font-family: var(--bs-font-display); font-size: 1.75rem; }
+.brainsait-footer h3 { font-size: var(--bs-text-sm); letter-spacing: .08em; text-transform: uppercase; }
+.brainsait-footer p { color: var(--bs-muted); max-width: 32rem; line-height: 1.65; }
+.brainsait-footer ul { list-style: none; padding: 0; margin: 0; }
+.brainsait-footer li + li { margin-top: var(--bs-space-2); }
+.brainsait-footer a { color: var(--bs-muted); text-decoration: none; }
+.brainsait-footer a:hover { color: var(--bs-champagne-gold); }
+.brainsait-footer__legal { margin-top: var(--bs-space-12); padding-top: var(--bs-space-6); border-top: 1px solid var(--bs-border); }
+.brainsait-footer__legal p { font-size: var(--bs-text-xs); }
+.brainsait-footer__legal-links { display: flex; flex-wrap: wrap; gap: var(--bs-space-4); font-size: var(--bs-text-xs); }
+@media (max-width: 72rem) {
+  .brainsait-header__nav { display: none; }
+  .brainsait-header__inner { grid-template-columns: auto 1fr; }
+  .brainsait-header__actions { justify-content: end; }
+  .brainsait-menu-toggle { display: inline-flex; }
+  .brainsait-header__nav[data-open="true"] { position: absolute; inset: 100% 0 auto; display: grid; justify-content: stretch; padding: var(--bs-space-4); border-bottom: 1px solid var(--bs-border); background: var(--bs-obsidian); }
+  .brainsait-header__nav[data-open="true"] a { padding: .85rem 1rem; }
+}
+@media (max-width: 48rem) {
+  .brainsait-header__action-label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); }
+  .brainsait-footer__grid { grid-template-columns: 1fr 1fr; }
+  .brainsait-footer__brand { grid-column: 1 / -1; }
+}
+@media (max-width: 32rem) { .brainsait-footer__grid { grid-template-columns: 1fr; } .brainsait-footer__brand { grid-column: auto; } }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
+  .js .brainsait-reveal-enabled [data-reveal] { opacity: 1; transform: none; }
+}

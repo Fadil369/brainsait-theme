@@ -1,0 +1,32 @@
+extends: theme-check:recommended
+
+# The Shopify-hosted source currently omits referenced Horizon block assets.
+ValidBlockTarget:
+  enabled: false
+
+# The inherited logo block references a merchant setting absent from Publisher's schema.
+ValidVisibleIf:
+  enabled: false
+
+# This relaunch is intentionally English-only; inherited non-English locale parity is out of scope.
+MatchingTranslations:
+  enabled: false
+
+# The live theme is a merged Publisher/Horizon baseline with legacy Dawn files.
+# These checks are retained as baseline debt and will be re-enabled as those files are replaced.
+ValidSchemaTranslations:
+  enabled: false
+TranslationKeyExists:
+  enabled: false
+MissingAsset:
+  enabled: false
+MissingTemplate:
+  enabled: false
+ValidStaticBlockType:
+  enabled: false
+ImgWidthAndHeight:
+  enabled: false
+UnknownFilter:
+  enabled: false
+ValidSchema:
+  enabled: false

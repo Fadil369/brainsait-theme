@@ -442,6 +442,7 @@
       "predictive_search_enabled": true,
       "predictive_search_show_vendor": false,
       "predictive_search_show_price": false,
+      "brainsait_reveal_enabled": true,
       "currency_code_enabled": true,
       "cart_type": "drawer",
       "show_vendor": false,

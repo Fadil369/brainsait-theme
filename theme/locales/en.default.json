@@ -364,6 +364,38 @@
       "learn_more": "Learn more"
     }
   },
+  "brainsait": {
+    "announcement": {
+      "text": "Trusted digital health products, delivered with clear scope and governance"
+    },
+    "navigation": {
+      "primary": "Primary navigation",
+      "home": "Home",
+      "learn": "Learn",
+      "build": "Build",
+      "solutions": "Solutions",
+      "solutions_ready": "Solutions Ready",
+      "oid_registry": "OID & Registry",
+      "about": "About",
+      "support": "Support"
+    },
+    "actions": {
+      "search": "Search",
+      "account": "Account",
+      "cart": "Cart",
+      "menu": "Open menu"
+    },
+    "footer": {
+      "description": "Healthcare technology, education, implementation, and trusted digital identity—organized as one clear path from learning to operation.",
+      "explore": "Explore",
+      "trust": "Trust and registry",
+      "company": "Company",
+      "public_registry": "Public registry",
+      "credential_policy": "Credential policy",
+      "contact": "Contact",
+      "credential_disclaimer": "BrainSAIT credentials and registry records describe verified participation or assigned identifiers. They do not replace professional licensure, regulatory approval, or independent compliance review."
+    }
+  },
   "pagefly": {
     "products": {
       "product": {
