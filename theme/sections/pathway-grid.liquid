@@ -1,0 +1,15 @@
+<section class="brainsait-section">
+  <div class="bs-container">
+    <div class="brainsait-section__head" data-reveal><p class="brainsait-eyebrow">{{ section.settings.eyebrow }}</p><h2>{{ section.settings.heading }}</h2><p>{{ section.settings.text }}</p></div>
+    <div class="brainsait-pathway-grid">
+      <a class="brainsait-pathway-card" href="{{ routes.collections_url }}/learn"><span>01</span><h3>Learn</h3><p>Courses, playbooks, and practical healthcare technology knowledge.</p><strong>Explore Learn</strong></a>
+      <a class="brainsait-pathway-card" href="{{ routes.collections_url }}/build"><span>02</span><h3>Build</h3><p>Structured support to turn an idea into a governed working product.</p><strong>Explore Build</strong></a>
+      <a class="brainsait-pathway-card" href="{{ routes.collections_url }}/solutions"><span>03</span><h3>Solutions</h3><p>Operational services and systems for healthcare organizations.</p><strong>Explore Solutions</strong></a>
+      <a class="brainsait-pathway-card" href="{{ routes.collections_url }}/oid-registry"><span>04</span><h3>OID &amp; Registry</h3><p>Identity, verification, interoperability, and registry infrastructure.</p><strong>Explore OID &amp; Registry</strong></a>
+    </div>
+    {% if section.settings.show_support %}<p class="brainsait-section__support"><a class="brainsait-button brainsait-button--secondary" href="/pages/support">Help me choose</a></p>{% endif %}
+  </div>
+</section>
+{% schema %}
+{"name":"Pathway grid","settings":[{"type":"text","id":"eyebrow","label":"Eyebrow","default":"Choose your path"},{"type":"text","id":"heading","label":"Heading","default":"One ecosystem, four clear paths"},{"type":"textarea","id":"text","label":"Text","default":"Start where you are. Move forward with a defined outcome, scope, and delivery model."},{"type":"checkbox","id":"show_support","label":"Show support action","default":false}],"presets":[{"name":"Pathway grid"}]}
+{% endschema %}

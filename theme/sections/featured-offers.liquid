@@ -1,0 +1,15 @@
+<section class="brainsait-section brainsait-section--surface">
+  <div class="bs-container">
+    <div class="brainsait-section__head" data-reveal><p class="brainsait-eyebrow">{{ section.settings.eyebrow }}</p><h2>{{ section.settings.heading }}</h2><p>{{ section.settings.text }}</p></div>
+    {% assign featured_collection = section.settings.collection %}
+    {% if featured_collection != blank %}
+      <div class="brainsait-product-grid">
+        {% for product in featured_collection.products limit: section.settings.limit %}{% render 'brainsait-product-card', product: product %}{% endfor %}
+      </div>
+      <p class="brainsait-section__support"><a class="brainsait-link" href="{{ featured_collection.url }}">View all {{ featured_collection.title }}</a></p>
+    {% endif %}
+  </div>
+</section>
+{% schema %}
+{"name":"Featured offers","settings":[{"type":"text","id":"eyebrow","label":"Eyebrow","default":"Featured"},{"type":"text","id":"heading","label":"Heading","default":"Offers selected for momentum"},{"type":"textarea","id":"text","label":"Text","default":"Clear scope, transparent commercial terms, and an explicit next step."},{"type":"collection","id":"collection","label":"Collection"},{"type":"range","id":"limit","label":"Products","min":2,"max":8,"step":1,"default":4}],"presets":[{"name":"Featured offers"}]}
+{% endschema %}

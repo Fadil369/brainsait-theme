@@ -1,0 +1,9 @@
+<section class="brainsait-section{% if section.settings.tone == 'accent' %} brainsait-section--accent{% endif %}">
+  <div class="bs-container brainsait-trust" data-reveal>
+    <p class="brainsait-eyebrow">{{ section.settings.eyebrow }}</p><h2>{{ section.settings.heading }}</h2><div class="brainsait-trust__text">{{ section.settings.text }}</div>
+    {% if section.settings.link_label != blank %}<a class="brainsait-button brainsait-button--secondary" href="{{ section.settings.link }}">{{ section.settings.link_label }}</a>{% endif %}
+  </div>
+</section>
+{% schema %}
+{"name":"Trust and governance","settings":[{"type":"text","id":"eyebrow","label":"Eyebrow","default":"Built for accountable delivery"},{"type":"text","id":"heading","label":"Heading","default":"Trust is an operating model"},{"type":"richtext","id":"text","label":"Text","default":"<p>Defined scope, auditable events, explicit support boundaries, and clear ownership from purchase through delivery.</p>"},{"type":"text","id":"link_label","label":"Link label"},{"type":"url","id":"link","label":"Link"},{"type":"select","id":"tone","label":"Tone","options":[{"value":"default","label":"Default"},{"value":"accent","label":"Accent"}],"default":"default"}],"presets":[{"name":"Trust and governance"}]}
+{% endschema %}

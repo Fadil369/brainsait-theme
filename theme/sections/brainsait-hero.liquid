@@ -1,0 +1,14 @@
+<section class="brainsait-hero">
+  <div class="bs-container brainsait-hero__inner" data-reveal>
+    <p class="brainsait-eyebrow">{{ section.settings.eyebrow }}</p>
+    <h1>{{ section.settings.heading }}</h1>
+    <p class="brainsait-hero__lede">{{ section.settings.text }}</p>
+    <div class="brainsait-actions">
+      <a class="brainsait-button" href="{{ routes.collections_url }}/learn">Explore pathways</a>
+      <a class="brainsait-button brainsait-button--secondary" href="/pages/support">Talk to BrainSAIT</a>
+    </div>
+  </div>
+</section>
+{% schema %}
+{"name":"BrainSAIT hero","settings":[{"type":"text","id":"eyebrow","label":"Eyebrow","default":"BrainSAIT digital health ecosystem"},{"type":"text","id":"heading","label":"Heading","default":"From Knowledge to Production"},{"type":"textarea","id":"text","label":"Text","default":"Learn what matters, build with confidence, deploy governed solutions, and establish trusted digital identity."}],"presets":[{"name":"BrainSAIT hero"}]}
+{% endschema %}

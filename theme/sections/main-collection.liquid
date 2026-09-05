@@ -38,6 +38,7 @@
 <collection-component view-event-payload="{{ collection | standard_event_data: 'view' | escape }}">
   <results-list
     class="section product-grid-container{% if section.settings.background_color != blank %} color-custom-{{ section.id }}{% endif %}"
+    aria-label="{{ collection.title | escape }} products"
     style="--padding-block-start: {{ section.settings.padding-block-start }}px; --padding-block-end: {{ section.settings.padding-block-end }}px;"
     section-id="{{ section.id }}"
     infinite-scroll="{{ section.settings.enable_infinite_scroll }}"
@@ -70,12 +71,7 @@
               data-product-id="{{ product.id }}"
               ref="cards[]"
             >
-              {% content_for 'block',
-                type: '_product-card',
-                id: 'product-card',
-                closest.product: product,
-                product_view_context: 'collection'
-              %}
+              {% render 'brainsait-product-card', product: product %}
             </li>
           {% endfor %}
         {% endcapture %}

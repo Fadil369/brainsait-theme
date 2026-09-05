@@ -54,6 +54,43 @@ body { background: var(--bs-obsidian); color: var(--bs-ivory); font-family: var(
 .brainsait-header__action svg, .brainsait-menu-toggle svg { width: 1.2rem; height: 1.2rem; stroke: currentColor; fill: none; }
 .brainsait-cart-count { min-width: 1.15rem; padding: .05rem .3rem; border-radius: 999px; background: var(--bs-champagne-gold); color: var(--bs-obsidian); font-size: .68rem; text-align: center; }
 .brainsait-menu-toggle { display: none; cursor: pointer; padding: .5rem; }
+.brainsait-section { padding-block: clamp(4rem,8vw,7rem); }
+.brainsait-section--surface { background: var(--bs-surface); }
+.brainsait-section--accent { border-block: 1px solid rgba(199,168,107,.28); background: linear-gradient(110deg,var(--bs-graphite),#102824); }
+.brainsait-hero { min-height: min(48rem,80vh); display: grid; align-items: center; border-bottom: 1px solid var(--bs-border); background: radial-gradient(circle at 80% 30%,rgba(28,139,130,.18),transparent 38%),var(--bs-obsidian); }
+.brainsait-hero__inner { padding-block: clamp(5rem,12vw,10rem); }
+.brainsait-hero h1 { max-width: 14ch; margin: .3rem 0 1.25rem; color: var(--bs-ivory); font-family: var(--bs-font-display); font-size: clamp(3rem,8vw,7rem); font-weight: 500; line-height: .95; letter-spacing: -.035em; }
+.brainsait-hero__lede, .brainsait-section__head > p:last-child { max-width: 48rem; color: var(--bs-muted); font-size: var(--bs-text-lg); line-height: 1.6; }
+.brainsait-eyebrow { color: var(--bs-champagne-gold); font-size: var(--bs-text-xs); font-weight: 700; letter-spacing: .11em; text-transform: uppercase; }
+.brainsait-actions { display: flex; flex-wrap: wrap; gap: var(--bs-space-3); margin-top: var(--bs-space-8); }
+.brainsait-button { display: inline-flex; justify-content: center; align-items: center; min-height: 2.8rem; padding: .7rem 1.15rem; border: 1px solid var(--bs-champagne-gold); border-radius: var(--bs-radius-sm); background: var(--bs-champagne-gold); color: var(--bs-obsidian); font-weight: 700; text-decoration: none; cursor: pointer; }
+.brainsait-button--secondary { background: transparent; color: var(--bs-ivory); }
+.brainsait-button--disabled { opacity: .48; cursor: not-allowed; }
+.brainsait-link { color: var(--bs-champagne-gold); font-weight: 650; text-decoration: none; }
+.brainsait-section__head { max-width: 52rem; margin-bottom: var(--bs-space-12); }
+.brainsait-section__head h2, .brainsait-trust h2 { margin: .3rem 0 1rem; color: var(--bs-ivory); font-family: var(--bs-font-display); font-size: clamp(2.2rem,5vw,4.5rem); font-weight: 500; line-height: 1; }
+.brainsait-pathway-grid, .brainsait-product-grid { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: var(--bs-space-4); }
+.brainsait-pathway-card { min-height: 19rem; padding: var(--bs-space-6); border: 1px solid var(--bs-border); border-radius: var(--bs-radius-md); background: var(--bs-surface); color: var(--bs-ivory); text-decoration: none; }
+.brainsait-pathway-card:hover { border-color: var(--bs-champagne-gold); transform: translateY(-2px); }
+.brainsait-pathway-card > span { color: var(--bs-teal); font-size: var(--bs-text-xs); font-weight: 700; }
+.brainsait-pathway-card h3 { margin: 4rem 0 .75rem; font-family: var(--bs-font-display); font-size: 2rem; }
+.brainsait-pathway-card p { color: var(--bs-muted); line-height: 1.55; }
+.brainsait-pathway-card strong { display: block; margin-top: var(--bs-space-6); color: var(--bs-champagne-gold); font-size: var(--bs-text-sm); }
+.brainsait-section__support { margin-top: var(--bs-space-8); }
+.brainsait-product-card { overflow: hidden; border: 1px solid var(--bs-border); border-radius: var(--bs-radius-md); background: var(--bs-graphite); }
+.brainsait-product-card__media { display: block; aspect-ratio: 3 / 2; overflow: hidden; background: var(--bs-surface-raised); }
+.brainsait-product-card__media img, .brainsait-product-card__placeholder { width: 100%; height: 100%; object-fit: cover; }
+.brainsait-product-card__body { padding: var(--bs-space-6); }
+.brainsait-product-card__family { margin: 0 0 var(--bs-space-2); color: var(--bs-teal); font-size: var(--bs-text-xs); font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+.brainsait-product-card h3 { min-height: 3rem; margin: 0; font-size: 1.15rem; line-height: 1.35; }
+.brainsait-product-card h3 a { color: var(--bs-ivory); text-decoration: none; }
+.brainsait-product-card__outcome { min-height: 4.5rem; color: var(--bs-muted); font-size: var(--bs-text-sm); line-height: 1.55; }
+.brainsait-product-card__commercial { display: flex; justify-content: space-between; align-items: end; gap: var(--bs-space-4); margin-block: var(--bs-space-6); }
+.brainsait-product-card__commercial strong, .brainsait-product-card__commercial span { display: block; }
+.brainsait-product-card__commercial span { color: var(--bs-muted); font-size: var(--bs-text-xs); }
+.brainsait-product-card__form .brainsait-button, .brainsait-product-card__body > .brainsait-button { width: 100%; }
+.brainsait-trust { max-width: 64rem; }
+.brainsait-trust__text { max-width: 50rem; color: var(--bs-muted); font-size: var(--bs-text-lg); line-height: 1.7; }
 .brainsait-footer { border-top: 1px solid var(--bs-border); background: var(--bs-graphite); }
 .brainsait-footer__inner { padding-block: clamp(3rem,7vw,5rem) 2rem; }
 .brainsait-footer__grid { display: grid; grid-template-columns: 1.5fr repeat(3,1fr); gap: var(--bs-space-8); }
@@ -75,11 +112,13 @@ body { background: var(--bs-obsidian); color: var(--bs-ivory); font-family: var(
   .brainsait-menu-toggle { display: inline-flex; }
   .brainsait-header__nav[data-open="true"] { position: absolute; inset: 100% 0 auto; display: grid; justify-content: stretch; padding: var(--bs-space-4); border-bottom: 1px solid var(--bs-border); background: var(--bs-obsidian); }
   .brainsait-header__nav[data-open="true"] a { padding: .85rem 1rem; }
+  .brainsait-pathway-grid, .brainsait-product-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
 }
 @media (max-width: 48rem) {
   .brainsait-header__action-label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); }
   .brainsait-footer__grid { grid-template-columns: 1fr 1fr; }
   .brainsait-footer__brand { grid-column: 1 / -1; }
+  .brainsait-pathway-grid, .brainsait-product-grid { grid-template-columns: 1fr; }
 }
 @media (max-width: 32rem) { .brainsait-footer__grid { grid-template-columns: 1fr; } .brainsait-footer__brand { grid-column: auto; } }
 @media (prefers-reduced-motion: reduce) {
