@@ -1,0 +1,85 @@
+query FetchCatalogState($cursor: String) {
+  products(first: 250, after: $cursor) {
+    nodes {
+      id
+      title
+      handle
+      productType
+      vendor
+      status
+      templateSuffix
+      collections(first: 10) {
+        nodes {
+          id
+          handle
+          title
+        }
+      }
+      variants(first: 20) {
+        nodes {
+          id
+          sku
+          price
+        }
+      }
+      options {
+        id
+        name
+      }
+      metafields(first: 50, namespace: "brainsait") {
+        nodes {
+          key
+          value
+          type
+        }
+      }
+    }
+    pageInfo {
+      hasNextPage
+      endCursor
+    }
+  }
+}
+
+query FetchCollections($cursor: String) {
+  collections(first: 100, after: $cursor) {
+    nodes {
+      id
+      title
+      handle
+      descriptionHtml
+      products(first: 250) {
+        nodes {
+          id
+        }
+      }
+    }
+    pageInfo {
+      hasNextPage
+      endCursor
+    }
+  }
+}
+
+query FetchRedirects($cursor: String) {
+  urlRedirects(first: 250, after: $cursor) {
+    nodes {
+      id
+      path
+      target
+    }
+    pageInfo {
+      hasNextPage
+      endCursor
+    }
+  }
+}
+
+query FetchOnlineStorePublication {
+  publications(first: 20) {
+    nodes {
+      id
+      name
+    }
+  }
+}

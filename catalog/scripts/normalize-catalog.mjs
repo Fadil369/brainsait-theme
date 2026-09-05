@@ -180,7 +180,13 @@ for (const product of active) {
     variants,
     tags: [...new Set([family.toLowerCase().replaceAll(' ', '-'), variants[0].billingModel, 'brainsait', 'relaunch-2026'])],
     imageAspectRatio: '3:2',
-    templateSuffix: family.toLowerCase().replace(/ & /g, '-').replace(/\s+/g, '-'),
+    templateSuffix: family === 'LEARN'
+      ? 'learn'
+      : family === 'SOLUTIONS READY'
+        ? 'solution-ready'
+        : family === 'OID & REGISTRY'
+          ? 'oid-registry'
+          : 'membership',
     customerCopy: englishCopy(product, title),
     seo: { title: product.seo.title || title, description: product.seo.description || englishCopy(product, title).slice(0, 155) },
     disclaimer: family === 'OID & REGISTRY'

@@ -94,3 +94,17 @@ test('records every duplicate archive and changed-handle redirect explicitly', (
     assert.notEqual(item.path, item.target);
   }
 });
+
+test('maps every family to one of the four approved product templates', () => {
+  const { catalog } = loadOutputs();
+  const expected = new Map([
+    ['LEARN', 'learn'],
+    ['BUILD', 'membership'],
+    ['SOLUTIONS', 'membership'],
+    ['SOLUTIONS READY', 'solution-ready'],
+    ['OID & REGISTRY', 'oid-registry'],
+  ]);
+  for (const product of catalog) {
+    assert.equal(product.templateSuffix, expected.get(product.family), product.handle);
+  }
+});

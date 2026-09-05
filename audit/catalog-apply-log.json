@@ -1,0 +1,207 @@
+{
+  "mode": "apply",
+  "startedAt": "2026-09-05T08:53:42.626Z",
+  "counts": {
+    "products": 116,
+    "productBatches": 0,
+    "collections": 5,
+    "redirects": 0,
+    "archive": 0,
+    "collectionRemoves": 1
+  },
+  "operations": [
+    {
+      "operation": "MetafieldDefinitionCreate",
+      "variables": {
+        "definition": {
+          "key": "[REDACTED]",
+          "name": "BrainSAIT family",
+          "type": "single_line_text_field",
+          "namespace": "brainsait",
+          "ownerType": "PRODUCT",
+          "access": {
+            "storefront": "PUBLIC_READ"
+          }
+        }
+      },
+      "userErrorCount": 1
+    },
+    {
+      "operation": "MetafieldDefinitionCreate",
+      "variables": {
+        "definition": {
+          "key": "[REDACTED]",
+          "name": "Outcome",
+          "type": "multi_line_text_field",
+          "namespace": "brainsait",
+          "ownerType": "PRODUCT",
+          "access": {
+            "storefront": "PUBLIC_READ"
+          }
+        }
+      },
+      "userErrorCount": 1
+    },
+    {
+      "operation": "MetafieldDefinitionCreate",
+      "variables": {
+        "definition": {
+          "key": "[REDACTED]",
+          "name": "Deliverables",
+          "type": "list.single_line_text_field",
+          "namespace": "brainsait",
+          "ownerType": "PRODUCT",
+          "access": {
+            "storefront": "PUBLIC_READ"
+          }
+        }
+      },
+      "userErrorCount": 1
+    },
+    {
+      "operation": "MetafieldDefinitionCreate",
+      "variables": {
+        "definition": {
+          "key": "[REDACTED]",
+          "name": "Billing model",
+          "type": "single_line_text_field",
+          "namespace": "brainsait",
+          "ownerType": "PRODUCT",
+          "access": {
+            "storefront": "PUBLIC_READ"
+          }
+        }
+      },
+      "userErrorCount": 1
+    },
+    {
+      "operation": "MetafieldDefinitionCreate",
+      "variables": {
+        "definition": {
+          "key": "[REDACTED]",
+          "name": "Billing label",
+          "type": "single_line_text_field",
+          "namespace": "brainsait",
+          "ownerType": "PRODUCT",
+          "access": {
+            "storefront": "PUBLIC_READ"
+          }
+        }
+      },
+      "userErrorCount": 1
+    },
+    {
+      "operation": "MetafieldDefinitionCreate",
+      "variables": {
+        "definition": {
+          "key": "[REDACTED]",
+          "name": "Governance note",
+          "type": "multi_line_text_field",
+          "namespace": "brainsait",
+          "ownerType": "PRODUCT",
+          "access": {
+            "storefront": "PUBLIC_READ"
+          }
+        }
+      },
+      "userErrorCount": 1
+    },
+    {
+      "operation": "MetafieldDefinitionCreate",
+      "variables": {
+        "definition": {
+          "key": "[REDACTED]",
+          "name": "FAQ",
+          "type": "json",
+          "namespace": "brainsait",
+          "ownerType": "PRODUCT",
+          "access": {
+            "storefront": "PUBLIC_READ"
+          }
+        }
+      },
+      "userErrorCount": 1
+    },
+    {
+      "operation": "MetafieldDefinitionCreate",
+      "variables": {
+        "definition": {
+          "key": "[REDACTED]",
+          "name": "OID",
+          "type": "single_line_text_field",
+          "namespace": "brainsait",
+          "ownerType": "PRODUCT",
+          "access": {
+            "storefront": "PUBLIC_READ"
+          }
+        }
+      },
+      "userErrorCount": 1
+    },
+    {
+      "operation": "MetafieldDefinitionCreate",
+      "variables": {
+        "definition": {
+          "key": "[REDACTED]",
+          "name": "Access gates",
+          "type": "list.single_line_text_field",
+          "namespace": "brainsait",
+          "ownerType": "PRODUCT",
+          "access": {
+            "storefront": "PUBLIC_READ"
+          }
+        }
+      },
+      "userErrorCount": 1
+    },
+    {
+      "operation": "MetafieldDefinitionCreate",
+      "variables": {
+        "definition": {
+          "key": "[REDACTED]",
+          "name": "Overage policy",
+          "type": "multi_line_text_field",
+          "namespace": "brainsait",
+          "ownerType": "PRODUCT",
+          "access": {
+            "storefront": "PUBLIC_READ"
+          }
+        }
+      },
+      "userErrorCount": 1
+    },
+    {
+      "operation": "MetafieldDefinitionCreate",
+      "variables": {
+        "definition": {
+          "key": "[REDACTED]",
+          "name": "Image aspect ratio",
+          "type": "single_line_text_field",
+          "namespace": "brainsait",
+          "ownerType": "PRODUCT",
+          "access": {
+            "storefront": "PUBLIC_READ"
+          }
+        }
+      },
+      "userErrorCount": 1
+    },
+    {
+      "operation": "CollectionRemoveProducts",
+      "variables": {
+        "id": "gid://shopify/Collection/315759951955",
+        "productIds": [
+          "gid://shopify/Product/8053984460883",
+          "gid://shopify/Product/8052890894419",
+          "gid://shopify/Product/8052890599507",
+          "gid://shopify/Product/8052889714771",
+          "gid://shopify/Product/8038263521363",
+          "gid://shopify/Product/8037217599571"
+        ]
+      },
+      "userErrorCount": 0
+    }
+  ],
+  "userErrors": [],
+  "completedAt": "2026-09-05T08:53:45.468Z"
+}
