@@ -7,10 +7,6 @@
   @param {string} placeholder_image — placeholder key
 {%- endcomment -%}
 {%- liquid
-  assign is_ar = false
-  if request.locale.iso_code == 'ar'
-    assign is_ar = true
-  endif
   assign ratio = media_aspect_ratio | default: 'square'
   assign card_title = card_collection.title
   if card_title == blank
@@ -34,7 +30,7 @@
       {{ card_title | escape }}
       <span class="card__count">
         {%- if card_collection.products_count > 0 -%}
-          {{ card_collection.products_count }} {% if is_ar %}{% if card_collection.products_count == 1 %}عنوان{% else %}عنواناً{% endif %}{% else %}{{ 'general.count' | t: count: card_collection.products_count | default: card_collection.products_count }}{% endif %}
+          {{ card_collection.products_count }} {{ 'general.count' | t: count: card_collection.products_count | default: card_collection.products_count }}
         {%- endif -%}
       </span>
       <span class="card__arrow">→</span>

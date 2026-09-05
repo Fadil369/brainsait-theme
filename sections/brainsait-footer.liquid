@@ -6,14 +6,7 @@
 {%- endcomment -%}
 
 {% liquid
-  assign is_ar = false
-  if request.locale.iso_code == 'ar'
-    assign is_ar = true
-  endif
   assign locale_dir = 'ltr'
-  if is_ar
-    assign locale_dir = 'rtl'
-  endif
 %}
 
 {% style %}
@@ -372,44 +365,42 @@
         <span class="brainsait-footer__brand-name">BrainSAIT</span>
       </a>
       <p class="brainsait-footer__brand-desc">
-        {% if is_ar %}
-          المنصة الذكية لدمج وتخصيص أدوات العمل. تعلّم، ابنِ، احلّ.
-        {% else %}
+        
           The Resolution Platform — Learn, Build, Solutions.
-        {% endif %}
+        
       </p>
     </div>
 
     <!-- Store Column -->
     <div class="brainsait-footer__col">
-      <h4>{% if is_ar %}المتجر{% else %}Store{% endif %}</h4>
+      <h4>Store</h4>
       <ul>
-        <li><a href="/collections/learn">{% if is_ar %}تعلّم{% else %}Learn{% endif %}</a></li>
-        <li><a href="/collections/build">{% if is_ar %}ابنِ{% else %}Build{% endif %}</a></li>
-        <li><a href="/collections/solutions">{% if is_ar %}حلول{% else %}Solutions{% endif %}</a></li>
-        <li><a href="/collections/solutions-ready">{% if is_ar %}جاهز{% else %}Ready{% endif %}</a></li>
+        <li><a href="/collections/learn">Learn</a></li>
+        <li><a href="/collections/build">Build</a></li>
+        <li><a href="/collections/solutions">Solutions</a></li>
+        <li><a href="/collections/solutions-ready">Ready</a></li>
       </ul>
     </div>
 
     <!-- Support Column -->
     <div class="brainsait-footer__col">
-      <h4>{% if is_ar %}الدعم{% else %}Support{% endif %}</h4>
+      <h4>Support</h4>
       <ul>
-        <li><a href="/pages/benefits">{% if is_ar %}المزايا{% else %}Benefits{% endif %}</a></li>
-        <li><a href="/pages/contact">{% if is_ar %}اتصل بنا{% else %}Contact{% endif %}</a></li>
-        <li><a href="/pages/faq">{% if is_ar %}الأسئلة الشائعة{% else %}FAQ{% endif %}</a></li>
-        <li><a href="https://registry.brainsait.org" target="_blank" rel="noopener noreferrer">{% if is_ar %}السجل{% else %}Registry{% endif %} <span class="eco-arrow" aria-hidden="true">&#x2197;</span></a></li>
+        <li><a href="/pages/benefits">Benefits</a></li>
+        <li><a href="/pages/contact">Contact</a></li>
+        <li><a href="/pages/faq">FAQ</a></li>
+        <li><a href="https://registry.brainsait.org" target="_blank" rel="noopener noreferrer">Registry <span class="eco-arrow" aria-hidden="true">&#x2197;</span></a></li>
       </ul>
     </div>
 
     <!-- Ecosystem Column -->
     <div class="brainsait-footer__col">
-      <h4>{% if is_ar %}النظام الإيكولوجي{% else %}Ecosystem{% endif %}</h4>
+      <h4>Ecosystem</h4>
       <ul>
-        <li><a href="https://hub.brainsait.de" target="_blank" rel="noopener noreferrer">{% if is_ar %}الهوب{% else %}Hub{% endif %} <span class="eco-arrow" aria-hidden="true">&#x2197;</span></a></li>
+        <li><a href="https://hub.brainsait.de" target="_blank" rel="noopener noreferrer">Hub <span class="eco-arrow" aria-hidden="true">&#x2197;</span></a></li>
         <li><a href="https://registry.brainsait.org" target="_blank" rel="noopener noreferrer">BPR <span class="eco-arrow" aria-hidden="true">&#x2197;</span></a></li>
         <li><a href="https://code.brainsait.org" target="_blank" rel="noopener noreferrer">Code Platform <span class="eco-arrow" aria-hidden="true">&#x2197;</span></a></li>
-        <li><a href="https://store.brainsait.de" target="_blank" rel="noopener noreferrer">{% if is_ar %}المتجر{% else %}Store{% endif %} <span class="eco-arrow" aria-hidden="true">&#x2197;</span></a></li>
+        <li><a href="https://store.brainsait.de" target="_blank" rel="noopener noreferrer">Store <span class="eco-arrow" aria-hidden="true">&#x2197;</span></a></li>
       </ul>
     </div>
 
@@ -425,7 +416,7 @@
     <p class="brainsait-footer__copy">
       &copy; {% assign current_year = 'now' | date: '%Y' %}{{ current_year }}
       <a href="/">BrainSAIT</a>.
-      {% if is_ar %}جميع الحقوق محفوظة.{% else %}All rights reserved.{% endif %}
+      All rights reserved.
     </p>
     <div class="brainsait-footer__ecosystem" aria-label="Ecosystem partners">
       <a href="https://github.com/brainsait" target="_blank" rel="noopener noreferrer" class="brainsait-footer__eco-link">GitHub <span class="eco-arrow" aria-hidden="true">&#x2197;</span></a>

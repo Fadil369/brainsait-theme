@@ -15,11 +15,6 @@
 {% enddoc %}
 
 {% liquid
-  assign is_ar = false
-  if request.locale.iso_code == 'ar'
-    assign is_ar = true
-  endif
-
   assign sub = product.type | default: ''
   for tag in product.tags
     unless tag == 'brainsait-catalog' or tag == 'github-io' or tag == 'LEARN' or tag == 'SOLUTIONS' or tag contains 'source:'
@@ -40,13 +35,8 @@
   assign secondary_label = ''
   assign has_secondary = true
 
-  if is_ar
-    assign primary_label = 'اشترِ الآن'
-    assign secondary_label = 'اعرف المزيد'
-  else
     assign primary_label = 'Buy now'
     assign secondary_label = 'Learn more'
-  endif
 
   assign is_learn_product = false
   if product.tags contains 'LEARN'
@@ -66,11 +56,7 @@
 
   if shelf_handle == 'learn' or shelf_handle == 'brainsait-learn'
     assign primary_url = learn_monthly_url
-    if is_ar
-      assign primary_label = 'ادفع 182 ر.س/شهر'
-    else
       assign primary_label = 'Pay 182 SAR/mo'
-    endif
   elsif shelf_handle == 'solutions'
     assign primary_url = solution_monthly_url
     if product.tags contains 'solutions-ready'
@@ -78,39 +64,20 @@
     else
       assign secondary_url = solution_ready_url
     endif
-    if is_ar
-      assign primary_label = 'شهري 1,999 ر.س'
-      assign secondary_label = 'جاهز 24,000 ر.س'
-    else
       assign primary_label = 'Monthly 1,999 SAR'
       assign secondary_label = 'Ready 24,000 SAR'
-    endif
   elsif is_learn_product
     assign secondary_url = learn_monthly_url
-    if is_ar
-      assign secondary_label = 'كل الكتب 182 ر.س'
-    else
       assign secondary_label = 'All books 182 SAR'
-    endif
   elsif is_solution_product
     assign primary_url = solution_monthly_url
     assign secondary_url = solution_ready_url
-    if is_ar
-      assign primary_label = 'شهري 1,999 ر.س'
-      assign secondary_label = 'جاهز 24,000 ر.س'
-    else
       assign primary_label = 'Monthly 1,999 SAR'
       assign secondary_label = 'Ready 24,000 SAR'
-    endif
   elsif show_book and booking_url != blank
     assign secondary_url = booking_url
-    if is_ar
-      assign primary_label = 'اعرف المزيد'
-      assign secondary_label = 'احجز جلسة'
-    else
       assign primary_label = 'Learn more'
       assign secondary_label = 'Book session'
-    endif
   else
     assign has_secondary = false
   endif
@@ -131,23 +98,11 @@
   # Plan label — align with the LEARN/BUILD/SOLUTIONS/BPR subscription model.
   assign plan_label = ''
   if product.tags contains 'solutions-ready' or product.tags contains 'SOLUTIONS READY' or product.tags contains 'one-time'
-    if is_ar
-      assign plan_label = 'جاهز — دفع كامل'
-    else
       assign plan_label = 'Pre-built · one-time'
-    endif
   elsif product.handle == 'provider-registry' or product.tags contains 'BPR' or product.type == 'SaaS Membership'
-    if is_ar
-      assign plan_label = 'هوية دائمة · سنوي/شهري'
-    else
       assign plan_label = 'Permanent · yr/mo'
-    endif
   elsif product.tags contains 'SOLUTIONS' or product.tags contains 'BUILD' or product.tags contains 'LEARN' or product.tags contains 'subscription'
-    if is_ar
-      assign plan_label = 'شهري'
-    else
       assign plan_label = 'Monthly'
-    endif
   endif
 
   assign is_bpr = false
@@ -166,7 +121,7 @@
       data-qv-prop="{{ tagline | escape }}"
       data-qv-desc="{{ desc_plain | truncate: 220 | escape }}"
       data-qv-meta="{{ sub | escape }}"
-      data-qv-price="{% if is_free %}{% if is_ar %}مجاني{% else %}Free{% endif %}{% else %}{{ product.price | money }}{% endif %}"
+      data-qv-price="{% if is_free %}Free{% else %}{{ product.price | money }}{% endif %}"
       data-qv-compare="{% if product.compare_at_price > product.price %}{{ product.compare_at_price | money }}{% endif %}"
       data-qv-url="{{ primary_url }}"
       data-qv-cta="{{ primary_label | escape }}"
@@ -182,7 +137,7 @@
     {% if is_free %}
       <span class="pcard-badge pcard-badge-free">FREE</span>
     {% else %}
-      <span class="pcard-badge">{% if is_ar %}رقمي{% else %}DIGITAL{% endif %}</span>
+      <span class="pcard-badge">DIGITAL</span>
     {% endif %}
     <span class="pcard-badge pcard-format">{{ sub | upcase }}</span>
   </div>
@@ -191,7 +146,7 @@
     <p class="pcard-eyebrow">{% if is_bpr %}◎ BPR · {% endif %}{{ sub }}</p>
     <h3 class="pcard-title"><a href="{{ product.url }}">{{ product.title }}</a></h3>
     {% if is_bpr %}
-      <p class="pcard-prop" style="color: var(--ink-soft); font-weight: 600;">{% if is_ar %}هوية موثقة + SPID/OID · صفحة QR عامة · مساعد سريري ثنائي اللغة{% else %}Verified identity · SPID/OID · QR share · bilingual copilot{% endif %}</p>
+      <p class="pcard-prop" style="color: var(--ink-soft); font-weight: 600;">Verified identity · SPID/OID · QR share · bilingual copilot</p>
     {% else %}
       <p class="pcard-prop">{{ tagline }}</p>
     {% endif %}
@@ -201,23 +156,23 @@
     <div class="pcard-foot">
       {% if is_free %}
         <span class="pcard-price pcard-price-gold">
-          {% if is_ar %}مجاني{% else %}Free{% endif %}
+          Free
         </span>
       {% else %}
-        <span class="pcard-price pcard-price-gold">{% if is_bpr %}3,960 / 163 {% if is_ar %}ر.س{% else %}SAR{% endif %}{% else %}{{ product.price | money }}{% endif %}{% if plan_label != '' %} <span class="pcard-plan" {% if is_bpr %}style="background:rgba(184,241,78,.18); color:#3a5a00; border:1px solid rgba(184,241,78,.35);"{% endif %}>{{ plan_label }}</span>{% endif %}</span>
+        <span class="pcard-price pcard-price-gold">{% if is_bpr %}3,960 / 163 SAR{% else %}{{ product.price | money }}{% endif %}{% if plan_label != '' %} <span class="pcard-plan" {% if is_bpr %}style="background:rgba(184,241,78,.18); color:#3a5a00; border:1px solid rgba(184,241,78,.35);"{% endif %}>{{ plan_label }}</span>{% endif %}</span>
       {% endif %}
       <div class="pcard-cta">
         {% if is_bpr %}
           <a class="button primary sm" href="{{ product.url }}" style="background: linear-gradient(135deg, #b8f14e, #8ec800); color:#111;">
-            {% if is_ar %}السنوية 3,960{% else %}Annual 3,960{% endif %}
+            Annual 3,960
           </a>
           <a class="button secondary sm" href="{{ product.url }}?variant=monthly">
-            {% if is_ar %}شهري 163{% else %}Monthly 163{% endif %}
+            Monthly 163
           </a>
         {% else %}
           <a class="button primary sm" href="{{ primary_url }}">
             {% if is_free %}
-              {% if is_ar %}تحميل{% else %}Get{% endif %}
+              Get
             {% else %}
               {{ primary_label }}
             {% endif %}
@@ -229,7 +184,7 @@
           {% endif %}
           {% if demo_url != blank %}
             <a class="button secondary sm" href="{{ demo_url }}" target="_blank" rel="noopener">
-              {% if is_ar %}ديمو حي{% else %}Live demo{% endif %}
+              Live demo
             </a>
           {% endif %}
         {% endif %}
@@ -241,12 +196,12 @@
             data-qv-prop="{{ tagline | escape }}"
             data-qv-desc="{{ desc_plain | truncate: 220 | escape }}"
             data-qv-meta="{{ sub | escape }}"
-            data-qv-price="{% if is_free %}{% if is_ar %}مجاني{% else %}Free{% endif %}{% else %}{{ product.price | money }}{% endif %}"
+            data-qv-price="{% if is_free %}Free{% else %}{{ product.price | money }}{% endif %}"
             data-qv-compare="{% if product.compare_at_price > product.price %}{{ product.compare_at_price | money }}{% endif %}"
             data-qv-url="{{ primary_url }}"
             data-qv-cta="{{ primary_label | escape }}"
           >
-            {% if is_ar %}نظرة سريعة{% else %}Quick view{% endif %}
+            Quick view
           </button>
         {% endif %}
       </div>

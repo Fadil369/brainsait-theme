@@ -2,7 +2,7 @@
   const root = document.querySelector('[data-component="gh-build"]');
   if (!root) return;
 
-  const isAr = root.dataset.isAr === '1';
+  const isAr = false;
   const ORIGINAL_PRICE = Number(root.dataset.originalPrice || 14960);
   const BASE_PRICE = Number(root.dataset.launchPrice || 9630);
   const APPLY_API = root.dataset.applyApi;

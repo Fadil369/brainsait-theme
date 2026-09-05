@@ -3,10 +3,6 @@
 {%- endcomment -%}
 
 {% liquid
-  assign is_ar = false
-  if request.locale.iso_code == 'ar'
-    assign is_ar = true
-  endif
 %}
 
 {% stylesheet %}
@@ -99,33 +95,30 @@
 <section class="bs-404">
   <div class="bs-404__glow">404</div>
   <h1 class="bs-404__title">404</h1>
-  <h2 class="bs-404__heading">{% if is_ar %}الصفحة غير موجودة{% else %}Page Not Found{% endif %}</h2>
+  <h2 class="bs-404__heading">Page Not Found</h2>
   <p class="bs-404__desc">
-    {% if is_ar %}
-      العذر، الصفحة التي تبحث عنها لم تعد متاحة أو لم تكن موجودة أبداً.
-      جرب العودة إلى المتجر أو تصفح الفئات أدناه.
-    {% else %}
+    
       The page you're looking for doesn't exist or has been moved.
       Try heading back to the store or browse categories below.
-    {% endif %}
+    
   </p>
   <div class="bs-404__actions">
     <a href="/" class="bs-404__btn bs-404__btn--primary">
-      {% if is_ar %}↩ العودة للمتجر{% else %}↩ Back to Store{% endif %}
+      ↩ Back to Store
     </a>
     <a href="/collections/learn" class="bs-404__btn bs-404__btn--secondary">
-      📚 {% if is_ar %}تعلّم{% else %}Learn{% endif %}
+      📚 Learn
     </a>
     <a href="/collections/solutions" class="bs-404__btn bs-404__btn--secondary">
-      🚀 {% if is_ar %}حلول{% else %}Solutions{% endif %}
+      🚀 Solutions
     </a>
   </div>
   <nav class="bs-404__nav">
     <div class="bs-404__nav-links">
-      <a href="/collections/learn">{% if is_ar %}تعلّم{% else %}Learn{% endif %}</a>
-      <a href="/collections/build">{% if is_ar %}ابنِ{% else %}Build{% endif %}</a>
-      <a href="/collections/solutions">{% if is_ar %}حلول{% else %}Solutions{% endif %}</a>
-      <a href="/pages/benefits">{% if is_ar %}المزايا{% else %}Benefits{% endif %}</a>
+      <a href="/collections/learn">Learn</a>
+      <a href="/collections/build">Build</a>
+      <a href="/collections/solutions">Solutions</a>
+      <a href="/pages/benefits">Benefits</a>
       <a href="https://registry.brainsait.org">BPR Registry</a>
     </div>
   </nav>

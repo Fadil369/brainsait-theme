@@ -1,9 +1,4 @@
 {% liquid
-  assign is_ar = false
-  if request.locale.iso_code == 'ar'
-    assign is_ar = true
-  endif
-
   assign kb = blogs['knowledge-base']
 
   assign reports_count = 0
@@ -31,27 +26,20 @@
 <div class="bs-kb">
   <div class="bs-kb__hero page-width">
     <p class="bs-kb__eyebrow">
-      {% if is_ar %}
-        محتوى مجاني ومفتوح
-      {% else %}
+      
         Free & open resources
-      {% endif %}
+      
     </p>
     <h1 class="bs-kb__heading">
-      {% if is_ar %}
-        قاعدة معرفة BrainSAIT
-      {% else %}
+      
         BrainSAIT Knowledge Base
-      {% endif %}
+      
     </h1>
     <p class="bs-kb__subheading">
-      {% if is_ar %}
-        تقارير وأدلة، مقالات، حلقات بودكاست، وفيديوهات حول معرفات الكائنات (OID)، FHIR، NPHIES،
-        وهندسة الهوية الرقمية — بالكامل مجاناً.
-      {% else %}
+      
         Reports and guides, articles, podcast episodes, and videos on object identifiers (OID), FHIR,
         NPHIES, and digital identity architecture — completely free.
-      {% endif %}
+      
     </p>
   </div>
 
@@ -59,17 +47,15 @@
     <div class="bs-kb__category page-width">
       <div class="bs-kb__category-head">
         <h2>
-          {% if is_ar %}
-            تقارير وأدلة
-          {% else %}
+          
             Reports & Guides
-          {% endif %}
+          
         </h2>
       </div>
       <div class="bs-kb__grid">
         {% for article in kb.articles %}
           {% if article.tags contains 'report' %}
-            {% render 'bs-kb-card', article: article, kicker_ar: 'تقرير', kicker_en: 'Report', icon: 'report', is_ar: is_ar %}
+            {% render 'bs-kb-card', article: article, kicker_en: 'Report', icon: 'report' %}
           {% endif %}
         {% endfor %}
       </div>
@@ -80,17 +66,15 @@
     <div class="bs-kb__category page-width">
       <div class="bs-kb__category-head">
         <h2>
-          {% if is_ar %}
-            مقالات
-          {% else %}
+          
             Articles
-          {% endif %}
+          
         </h2>
       </div>
       <div class="bs-kb__grid">
         {% for article in kb.articles %}
           {% if article.tags contains 'article' or article.tags contains 'blog' %}
-            {% render 'bs-kb-card', article: article, kicker_ar: 'مقالة', kicker_en: 'Article', icon: 'article', is_ar: is_ar %}
+            {% render 'bs-kb-card', article: article, kicker_en: 'Article', icon: 'article' %}
           {% endif %}
         {% endfor %}
       </div>
@@ -101,17 +85,15 @@
     <div class="bs-kb__category page-width">
       <div class="bs-kb__category-head">
         <h2>
-          {% if is_ar %}
-            بودكاست
-          {% else %}
+          
             Podcasts
-          {% endif %}
+          
         </h2>
       </div>
       <div class="bs-kb__grid">
         {% for article in kb.articles %}
           {% if article.tags contains 'podcast' %}
-            {% render 'bs-kb-card', article: article, kicker_ar: 'بودكاست', kicker_en: 'Podcast', icon: 'podcast', is_ar: is_ar %}
+            {% render 'bs-kb-card', article: article, kicker_en: 'Podcast', icon: 'podcast' %}
           {% endif %}
         {% endfor %}
       </div>
@@ -122,17 +104,15 @@
     <div class="bs-kb__category page-width">
       <div class="bs-kb__category-head">
         <h2>
-          {% if is_ar %}
-            فيديوهات
-          {% else %}
+          
             Videos
-          {% endif %}
+          
         </h2>
       </div>
       <div class="bs-kb__grid">
         {% for article in kb.articles %}
           {% if article.tags contains 'video' %}
-            {% render 'bs-kb-card', article: article, kicker_ar: 'فيديو', kicker_en: 'Video', icon: 'video', is_ar: is_ar %}
+            {% render 'bs-kb-card', article: article, kicker_en: 'Video', icon: 'video' %}
           {% endif %}
         {% endfor %}
       </div>

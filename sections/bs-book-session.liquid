@@ -1,8 +1,4 @@
 {% liquid
-  assign is_ar = false
-  if request.locale.iso_code == 'ar'
-    assign is_ar = true
-  endif
 %}
 {% # theme-check-disable ValidScopedCSSClass %}
 {% if product.type == 'SOLUTIONS' or product.tags contains 'SOLUTIONS' %}
@@ -10,16 +6,14 @@
      placeholders — prevent accidental micro-purchases and route to booking. {% endcomment %}
   {% if product.price < 500 %}
     <div class="gh-book__frame gh-book__takeover" data-component="gh-book-takeover">
-      <h2 class="gh-book__title">{% if is_ar %}📅 هذا منتج استشاري{% else %}📅 This is a consultation service{% endif %}</h2>
+      <h2 class="gh-book__title">📅 This is a consultation service</h2>
       <p class="gh-book__note">
-        {% if is_ar %}
-          يُستخدم هذا السعر الرمزي لحجز موعدك فقط — لا حاجة للدفع هنا. اختر وقتًا يناسبك على التقويم لمناقشة احتياجاتك.
-        {% else %}
+        
           The symbolic price only reserves your slot — no need to pay here. Pick a time on the calendar to discuss your needs.
-        {% endif %}
+        
       </p>
       <a class="button primary lg" href="{{ section.settings.booking_url }}" target="_blank" rel="noopener noreferrer">
-        {% if is_ar %}احجز الآن على Google Calendar →{% else %}Book now on Google Calendar →{% endif %}
+        Book now on Google Calendar →
       </a>
       <script type="application/json" data-takeover-config>
         {"redirectUrl": {{ section.settings.booking_url | json }}, "countdownSec": 8}
@@ -39,8 +33,8 @@
     </script>
   {% else %}
   <div class="gh-book__frame">
-    <h2 class="gh-book__title">{% if is_ar %}احجز جلسة تعارف{% else %}Book a session{% endif %}</h2>
-    <p class="gh-book__note">{% if is_ar %}احجز جلسة استشارية مجانية للبدء مع {{ product.title }}.{% else %}Book a free consultation session to get started with {{ product.title }}.{% endif %}</p>
+    <h2 class="gh-book__title">Book a session</h2>
+    <p class="gh-book__note">Book a free consultation session to get started with {{ product.title }}.</p>
     <iframe
       class="gh-book__iframe"
       src="{{ section.settings.booking_url }}"
@@ -48,7 +42,7 @@
       height="600"
       style="border:0"
       loading="lazy"
-      title="{% if is_ar %}حجز جلسة{% else %}Book a session{% endif %}"
+      title="Book a session"
     ></iframe>
   </div>
   {% endif %}

@@ -1,8 +1,4 @@
 {%- liquid
-  assign is_ar = false
-  if request.locale.iso_code == 'ar'
-    assign is_ar = true
-  endif
   assign heading = section.settings.heading
   assign subheading = section.settings.subheading
   # curated handles — deterministic (works without theme-editor override)
@@ -20,13 +16,13 @@
   <div class="page-width">
     <div class="bs-featured__head">
       <p class="bs-featured__eyebrow">
-        {% if is_ar %}مختارات حصرية{% else %}Curated essentials{% endif %}
+        Curated essentials
       </p>
       <h2 class="bs-featured__heading">
-        {% if is_ar %}{{ heading | default: 'ابدأ رحلتك' }}{% else %}{{ heading | default: 'Start your journey' }}{% endif %}
+        {{ heading | default: 'Start your journey' }}
       </h2>
       <p class="bs-featured__sub">
-        {% if is_ar %}{{ subheading | default: 'منتجات رقمية جاهزة مع دفع سعودي مباشر — STC Pay · mada · بطاقة.' }}{% else %}{{ subheading | default: 'Ready-to-use digital products with direct Saudi payment — STC Pay · mada · Card.' }}{% endif %}
+        {{ subheading | default: 'Ready-to-use digital products with direct Saudi payment — STC Pay · mada · Card.' }}
       </p>
     </div>
 
