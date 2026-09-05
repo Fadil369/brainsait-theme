@@ -1,0 +1,64 @@
+{% liquid
+  assign collection_lede = collection.description | strip_html | truncate: 180
+%}
+
+<section class="brainsait-collection-page">
+  <header class="brainsait-collection-head bs-container">
+    <p class="brainsait-eyebrow">BrainSAIT catalog</p>
+    <h1>{{ collection.title | escape }}</h1>
+    {% if collection_lede != blank %}
+      <p>{{ collection_lede }}</p>
+    {% else %}
+      <p>Choose a clear product path with defined scope, price, delivery, and governance.</p>
+    {% endif %}
+  </header>
+
+  <div class="bs-container">
+    {% paginate collection.products by section.settings.products_per_page %}
+      {% if collection.products.size > 0 %}
+        <ul class="brainsait-collection-grid" role="list" aria-label="{{ collection.title | escape }} products">
+          {% for product in collection.products %}
+            <li>
+              {% render 'brainsait-product-card', product: product %}
+            </li>
+          {% endfor %}
+        </ul>
+
+        {% if paginate.pages > 1 %}
+          {% render 'pagination-controls', paginate: paginate %}
+        {% endif %}
+      {% else %}
+        <div class="brainsait-collection-empty">
+          <h2>No products found</h2>
+          <p>Try another BrainSAIT pathway or contact support for help choosing the right product.</p>
+          <a class="brainsait-button" href="{{ routes.collections_url }}/learn">Explore Learn</a>
+        </div>
+      {% endif %}
+    {% endpaginate %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "BrainSAIT collection grid",
+  "enabled_on": {
+    "templates": ["collection"]
+  },
+  "settings": [
+    {
+      "type": "range",
+      "id": "products_per_page",
+      "label": "Products per page",
+      "min": 8,
+      "max": 48,
+      "step": 4,
+      "default": 24
+    }
+  ],
+  "presets": [
+    {
+      "name": "BrainSAIT collection grid"
+    }
+  ]
+}
+{% endschema %}
