@@ -77,10 +77,13 @@
 
     {%- render 'meta-tags' -%}
 
-    {% # UCP agent discovery: points agents to the BrainSAIT Operating System agent profile %}
+    {% # Agent commerce discovery: passive metadata only; checkout remains Shopify-native unless gated MyFatoorah is enabled %}
+    <link rel="ai-catalog" href="https://bot.brainsait.org/.well-known/ai-catalog.json">
+    <link rel="ucp" href="https://bot.brainsait.org/.well-known/ucp">
+    <link rel="agent-card" href="https://ucp-agent.brainsait-fadil.workers.dev/.well-known/agent-card.json">
     <link
       rel="ucp-agent"
-      href="{{ settings.ucp_agent_url | default: 'https://app.brainsait.de/ucp-agent.json' }}"
+      href="{{ settings.ucp_agent_url | default: 'https://ucp-agent.brainsait-fadil.workers.dev/.well-known/agent-card.json' }}"
     >
 
     {%- render 'stylesheets' -%}
