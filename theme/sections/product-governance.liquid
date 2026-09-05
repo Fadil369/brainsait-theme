@@ -1,0 +1,17 @@
+{% liquid
+  assign oid = product.metafields.brainsait.oid.value
+  assign limits = product.metafields.brainsait.limits.value
+  assign overage = product.metafields.brainsait.overage.value
+  assign disclaimer = product.metafields.brainsait.disclaimer.value
+%}
+<section class="brainsait-product-section brainsait-section--accent"><div class="bs-container" data-reveal>
+  <p class="brainsait-eyebrow">Governance</p><h2>{{ section.settings.heading }}</h2>
+  <div class="brainsait-detail-grid">
+    {% if oid != blank %}<div><h3>Canonical identifier</h3>{{ oid | metafield_tag }}</div>{% endif %}
+    {% if limits != blank %}<div><h3>Included limits</h3>{{ limits | metafield_tag }}</div>{% endif %}
+    {% if overage != blank %}<div><h3>Overages</h3>{{ overage | metafield_tag }}</div>{% endif %}
+  </div>
+  {% if disclaimer != blank %}<div class="brainsait-disclaimer">{{ disclaimer | metafield_tag }}</div>{% endif %}
+  <p class="brainsait-disclaimer">A BrainSAIT verification or registry record does not replace professional licensure, regulatory approval, or independent compliance review.</p>
+</div></section>
+{% schema %}{"name":"Product governance","settings":[{"type":"text","id":"heading","label":"Heading","default":"Governance, limits, and accountability"}],"presets":[{"name":"Product governance"}]}{% endschema %}

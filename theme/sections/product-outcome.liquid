@@ -1,0 +1,12 @@
+{% liquid
+  assign outcome = product.metafields.brainsait.outcome.value
+  assign audience = product.metafields.brainsait.audience.value
+%}
+{% if outcome != blank or audience != blank %}
+  <section class="brainsait-product-section"><div class="bs-container brainsait-product-copy" data-reveal>
+    <p class="brainsait-eyebrow">Outcome</p><h2>{{ section.settings.heading }}</h2>
+    {% if outcome != blank %}<div class="brainsait-product-copy__lead">{{ outcome | metafield_tag }}</div>{% endif %}
+    {% if audience != blank %}<div><h3>Designed for</h3>{{ audience | metafield_tag }}</div>{% endif %}
+  </div></section>
+{% endif %}
+{% schema %}{"name":"Product outcome","settings":[{"type":"text","id":"heading","label":"Heading","default":"What this helps you achieve"}],"presets":[{"name":"Product outcome"}]}{% endschema %}

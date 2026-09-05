@@ -91,6 +91,16 @@ body { background: var(--bs-obsidian); color: var(--bs-ivory); font-family: var(
 .brainsait-product-card__form .brainsait-button, .brainsait-product-card__body > .brainsait-button { width: 100%; }
 .brainsait-trust { max-width: 64rem; }
 .brainsait-trust__text { max-width: 50rem; color: var(--bs-muted); font-size: var(--bs-text-lg); line-height: 1.7; }
+.brainsait-product-section { padding-block: clamp(3.5rem,7vw,6rem); }
+.brainsait-product-section h2 { max-width: 18ch; margin: .3rem 0 2rem; color: var(--bs-ivory); font-family: var(--bs-font-display); font-size: clamp(2rem,4vw,3.75rem); font-weight: 500; line-height: 1.05; }
+.brainsait-product-copy { max-width: 64rem; }
+.brainsait-product-copy__lead { color: var(--bs-ivory); font-size: var(--bs-text-lg); line-height: 1.7; }
+.brainsait-detail-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: var(--bs-space-8); }
+.brainsait-detail-grid > div { padding: var(--bs-space-6); border: 1px solid var(--bs-border); border-radius: var(--bs-radius-md); background: var(--bs-surface); color: var(--bs-muted); line-height: 1.65; }
+.brainsait-detail-grid h3 { color: var(--bs-ivory); }
+.brainsait-billing { max-width: 56rem; }
+.brainsait-billing > p { color: var(--bs-muted); line-height: 1.7; }
+.brainsait-disclaimer { margin-top: var(--bs-space-8); padding: var(--bs-space-4); border-left: 3px solid var(--bs-champagne-gold); color: var(--bs-muted); font-size: var(--bs-text-sm); line-height: 1.6; }
 .brainsait-footer { border-top: 1px solid var(--bs-border); background: var(--bs-graphite); }
 .brainsait-footer__inner { padding-block: clamp(3rem,7vw,5rem) 2rem; }
 .brainsait-footer__grid { display: grid; grid-template-columns: 1.5fr repeat(3,1fr); gap: var(--bs-space-8); }
@@ -119,6 +129,7 @@ body { background: var(--bs-obsidian); color: var(--bs-ivory); font-family: var(
   .brainsait-footer__grid { grid-template-columns: 1fr 1fr; }
   .brainsait-footer__brand { grid-column: 1 / -1; }
   .brainsait-pathway-grid, .brainsait-product-grid { grid-template-columns: 1fr; }
+  .brainsait-detail-grid { grid-template-columns: 1fr; }
 }
 @media (max-width: 32rem) { .brainsait-footer__grid { grid-template-columns: 1fr; } .brainsait-footer__brand { grid-column: auto; } }
 @media (prefers-reduced-motion: reduce) {

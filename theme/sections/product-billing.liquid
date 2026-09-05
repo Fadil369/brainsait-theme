@@ -1,0 +1,19 @@
+{% liquid
+  assign billing_label = product.metafields.brainsait.billing_label.value
+  assign purchase_mode = product.metafields.brainsait.purchase_mode.value | default: 'direct'
+  assign billing_model = product.metafields.brainsait.billing_model.value
+%}
+<section class="brainsait-product-section"><div class="bs-container brainsait-billing" data-reveal>
+  <p class="brainsait-eyebrow">Commercial terms</p><h2>{{ section.settings.heading }}</h2>
+  {% if billing_label != blank %}<p class="brainsait-product-copy__lead">{{ billing_label }}</p>{% endif %}
+  {% if billing_model == 'recurring' %}
+    <p>Memberships use a 30-day billing cycle. Renewal continues until cancellation. Access remains active through the paid period and changes only after verified payment events.</p>
+    <button class="brainsait-button" type="button" data-mf-pay data-product-id="{{ product.id }}" data-variant-id="{{ product.selected_or_first_available_variant.id }}">Start membership</button>
+  {% elsif purchase_mode == 'consultation' %}
+    <p>Final scope, implementation requirements, contractual terms, and any variable overages are confirmed before purchase.</p>
+    <a class="brainsait-button" href="/pages/contact?offer={{ product.handle | url_encode }}">Request consultation</a>
+  {% else %}
+    {% form 'product', product %}<input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}"><button class="brainsait-button" type="submit"{% unless product.available %} disabled{% endunless %}>Purchase for {{ product.price | money_with_currency }}</button>{% endform %}
+  {% endif %}
+</div></section>
+{% schema %}{"name":"Product billing","settings":[{"type":"text","id":"heading","label":"Heading","default":"Pricing and access"}],"presets":[{"name":"Product billing"}]}{% endschema %}
