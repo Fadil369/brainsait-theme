@@ -4,7 +4,15 @@
   assign purchase_mode = product.metafields.brainsait.purchase_mode.value | default: 'direct'
   assign family = product.metafields.brainsait.family.value | default: product.type
 %}
-<article class="brainsait-product-card" data-reveal>
+<article
+  class="brainsait-product-card"
+  data-reveal
+  data-agent-commerce-card
+  data-product-handle="{{ product.handle | escape }}"
+  data-product-family="{{ family | escape }}"
+  data-purchase-mode="{{ purchase_mode | escape }}"
+  data-variant-id="{{ product.selected_or_first_available_variant.id }}"
+>
   <a class="brainsait-product-card__media" href="{{ product.url }}" aria-label="{{ product.title | escape }}">
     {% if product.featured_image %}
       {{ product.featured_image | image_url: width: 900 | image_tag: widths: '360, 540, 720, 900', loading: 'lazy', alt: product.featured_image.alt | default: product.title }}

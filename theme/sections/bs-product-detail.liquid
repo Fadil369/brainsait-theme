@@ -775,7 +775,16 @@
   .bs-product-detail .bs-animate-delay-5 { animation-delay: 0.5s; opacity: 0; }
 {%- endstyle -%}
 
-<div class="bs-product-detail bs-product-detail--en" id="BsProductDetail-{{ section.id }}">
+{% render 'brainsait-agent-commerce', product: product %}
+
+<div
+  class="bs-product-detail bs-product-detail--en"
+  id="BsProductDetail-{{ section.id }}"
+  data-agent-commerce-detail
+  data-product-handle="{{ product.handle | escape }}"
+  data-product-family="{{ product.metafields.brainsait.family.value | default: product.type | escape }}"
+  data-purchase-mode="{{ product.metafields.brainsait.purchase_mode.value | default: 'direct' | escape }}"
+>
   <div class="bs-container">
 
     {%- assign en_eyebrow = section.settings.eyebrow_en | default: 'Featured Product' -%}
