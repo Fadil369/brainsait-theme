@@ -1290,32 +1290,6 @@
       "infoCount": 0
     },
     {
-      "path": "/home/fadil369/.worktrees/brainsait-shopify-relaunch/theme/snippets/country-localization.liquid",
-      "offenses": [
-        {
-          "check": "ValidScopedCSSClass",
-          "severity": "warning",
-          "start_row": 11,
-          "start_column": 18,
-          "end_row": 11,
-          "end_column": 28,
-          "message": "CSS class 'disclosure' may be defined outside the scope of this file."
-        },
-        {
-          "check": "ValidScopedCSSClass",
-          "severity": "warning",
-          "start_row": 12,
-          "start_column": 82,
-          "end_row": 12,
-          "end_column": 103,
-          "message": "CSS class 'localization-selector' may be defined outside the scope of this file."
-        }
-      ],
-      "errorCount": 0,
-      "warningCount": 2,
-      "infoCount": 0
-    },
-    {
       "path": "/home/fadil369/.worktrees/brainsait-shopify-relaunch/theme/snippets/language-localization.liquid",
       "offenses": [
         {
@@ -1333,6 +1307,32 @@
           "start_row": 11,
           "start_column": 82,
           "end_row": 11,
+          "end_column": 103,
+          "message": "CSS class 'localization-selector' may be defined outside the scope of this file."
+        }
+      ],
+      "errorCount": 0,
+      "warningCount": 2,
+      "infoCount": 0
+    },
+    {
+      "path": "/home/fadil369/.worktrees/brainsait-shopify-relaunch/theme/snippets/country-localization.liquid",
+      "offenses": [
+        {
+          "check": "ValidScopedCSSClass",
+          "severity": "warning",
+          "start_row": 11,
+          "start_column": 18,
+          "end_row": 11,
+          "end_column": 28,
+          "message": "CSS class 'disclosure' may be defined outside the scope of this file."
+        },
+        {
+          "check": "ValidScopedCSSClass",
+          "severity": "warning",
+          "start_row": 12,
+          "start_column": 82,
+          "end_row": 12,
           "end_column": 103,
           "message": "CSS class 'localization-selector' may be defined outside the scope of this file."
         }
@@ -1382,77 +1382,6 @@
       ],
       "errorCount": 0,
       "warningCount": 1,
-      "infoCount": 0
-    },
-    {
-      "path": "/home/fadil369/.worktrees/brainsait-shopify-relaunch/theme/snippets/pagination.liquid",
-      "offenses": [
-        {
-          "check": "ValidScopedCSSClass",
-          "severity": "warning",
-          "start_row": 6,
-          "start_column": 14,
-          "end_row": 6,
-          "end_column": 24,
-          "message": "CSS class 'pagination' may be defined outside the scope of this file."
-        },
-        {
-          "check": "ValidScopedCSSClass",
-          "severity": "warning",
-          "start_row": 7,
-          "start_column": 15,
-          "end_row": 7,
-          "end_column": 31,
-          "message": "CSS class 'pagination__list' may be defined outside the scope of this file."
-        },
-        {
-          "check": "ValidScopedCSSClass",
-          "severity": "warning",
-          "start_row": 9,
-          "start_column": 96,
-          "end_row": 9,
-          "end_column": 112,
-          "message": "CSS class 'pagination__item' may be defined outside the scope of this file."
-        },
-        {
-          "check": "ValidScopedCSSClass",
-          "severity": "warning",
-          "start_row": 15,
-          "start_column": 83,
-          "end_row": 15,
-          "end_column": 99,
-          "message": "CSS class 'pagination__item' may be defined outside the scope of this file."
-        },
-        {
-          "check": "ValidScopedCSSClass",
-          "severity": "warning",
-          "start_row": 17,
-          "start_column": 25,
-          "end_row": 17,
-          "end_column": 41,
-          "message": "CSS class 'pagination__item' may be defined outside the scope of this file."
-        },
-        {
-          "check": "ValidScopedCSSClass",
-          "severity": "warning",
-          "start_row": 19,
-          "start_column": 25,
-          "end_row": 19,
-          "end_column": 41,
-          "message": "CSS class 'pagination__item' may be defined outside the scope of this file."
-        },
-        {
-          "check": "ValidScopedCSSClass",
-          "severity": "warning",
-          "start_row": 25,
-          "start_column": 92,
-          "end_row": 25,
-          "end_column": 108,
-          "message": "CSS class 'pagination__item' may be defined outside the scope of this file."
-        }
-      ],
-      "errorCount": 0,
-      "warningCount": 7,
       "infoCount": 0
     },
     {
@@ -1533,6 +1462,77 @@
       ],
       "errorCount": 0,
       "warningCount": 8,
+      "infoCount": 0
+    },
+    {
+      "path": "/home/fadil369/.worktrees/brainsait-shopify-relaunch/theme/snippets/pagination.liquid",
+      "offenses": [
+        {
+          "check": "ValidScopedCSSClass",
+          "severity": "warning",
+          "start_row": 6,
+          "start_column": 14,
+          "end_row": 6,
+          "end_column": 24,
+          "message": "CSS class 'pagination' may be defined outside the scope of this file."
+        },
+        {
+          "check": "ValidScopedCSSClass",
+          "severity": "warning",
+          "start_row": 7,
+          "start_column": 15,
+          "end_row": 7,
+          "end_column": 31,
+          "message": "CSS class 'pagination__list' may be defined outside the scope of this file."
+        },
+        {
+          "check": "ValidScopedCSSClass",
+          "severity": "warning",
+          "start_row": 9,
+          "start_column": 96,
+          "end_row": 9,
+          "end_column": 112,
+          "message": "CSS class 'pagination__item' may be defined outside the scope of this file."
+        },
+        {
+          "check": "ValidScopedCSSClass",
+          "severity": "warning",
+          "start_row": 15,
+          "start_column": 83,
+          "end_row": 15,
+          "end_column": 99,
+          "message": "CSS class 'pagination__item' may be defined outside the scope of this file."
+        },
+        {
+          "check": "ValidScopedCSSClass",
+          "severity": "warning",
+          "start_row": 17,
+          "start_column": 25,
+          "end_row": 17,
+          "end_column": 41,
+          "message": "CSS class 'pagination__item' may be defined outside the scope of this file."
+        },
+        {
+          "check": "ValidScopedCSSClass",
+          "severity": "warning",
+          "start_row": 19,
+          "start_column": 25,
+          "end_row": 19,
+          "end_column": 41,
+          "message": "CSS class 'pagination__item' may be defined outside the scope of this file."
+        },
+        {
+          "check": "ValidScopedCSSClass",
+          "severity": "warning",
+          "start_row": 25,
+          "start_column": 92,
+          "end_row": 25,
+          "end_column": 108,
+          "message": "CSS class 'pagination__item' may be defined outside the scope of this file."
+        }
+      ],
+      "errorCount": 0,
+      "warningCount": 7,
       "infoCount": 0
     }
   ]

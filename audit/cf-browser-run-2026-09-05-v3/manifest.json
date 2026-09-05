@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-09-05T16:35:57.050Z",
+  "provider": "Cloudflare Browser Run /screenshot",
+  "results": [
+    {
+      "file": "01-home.png",
+      "url": "https://f3rbxp-n1.myshopify.com?preview_theme_id=149785313363",
+      "ok": true,
+      "status": 200,
+      "contentType": "image/png",
+      "browserMs": "8802.9189453125",
+      "bytes": 265080
+    },
+    {
+      "file": "02-oid-collection.png",
+      "url": "https://f3rbxp-n1.myshopify.com/collections/oid-registry?preview_theme_id=149785313363",
+      "ok": true,
+      "status": 200,
+      "contentType": "image/png",
+      "browserMs": "7289.230712890625",
+      "bytes": 545601
+    },
+    {
+      "file": "03-product-oid.png",
+      "url": "https://f3rbxp-n1.myshopify.com/products/oid-identity?preview_theme_id=149785313363",
+      "ok": true,
+      "status": 200,
+      "contentType": "image/png",
+      "browserMs": "16054.073974609375",
+      "bytes": 380940
+    },
+    {
+      "file": "04-mobile-home.png",
+      "url": "https://f3rbxp-n1.myshopify.com?preview_theme_id=149785313363",
+      "ok": true,
+      "status": 200,
+      "contentType": "image/png",
+      "browserMs": "11959.189208984375",
+      "bytes": 111610
+    }
+  ]
+}

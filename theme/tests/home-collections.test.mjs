@@ -17,9 +17,12 @@ test('homepage follows the approved merchandising sequence', async () => {
 
 test('hero and pathway grid use semantic headings and four canonical pathways', async () => {
   const hero = await read('sections/brainsait-hero.liquid');
+  const css = await read('assets/brainsait-tokens.css');
   const pathways = await read('sections/pathway-grid.liquid');
   assert.match(hero, /<h1[\s>]/);
   assert.match(hero, /From Knowledge to Production/);
+  assert.match(css, /brainsait-button[^}]*font-size:\s*var\(--bs-text-sm\)/s);
+  assert.match(css, /brainsait-button[^}]*line-height:\s*1\.2/s);
   assert.match(pathways, /<h2[\s>]/);
   for (const handle of ['learn', 'build', 'solutions', 'oid-registry']) {
     assert.match(pathways, new RegExp(`collections\\.url \\}\\}/${handle}|collections_url \\}\\}/${handle}`));
@@ -42,15 +45,15 @@ test('standardized product card exposes image, outcome, billing, price, and pred
 });
 
 test('featured offers and collections preserve native Shopify discovery controls', async () => {
+  const collectionTemplate = parseShopifyJson(await read('templates/collection.json'));
   const featured = await read('sections/featured-offers.liquid');
-  const collection = await read('sections/main-collection.liquid');
-  const filters = await read('blocks/filters.liquid');
-  const listFilter = await read('snippets/list-filter.liquid');
+  const collection = await read('sections/brainsait-collection-grid.liquid');
+  assert.equal(collectionTemplate.sections.main.type, 'brainsait-collection-grid');
+  assert.doesNotMatch(JSON.stringify(collectionTemplate), /gh-shelf/);
   assert.match(featured, /render 'brainsait-product-card'/);
   assert.match(featured, /section\.settings\.collection/);
-  assert.match(collection, /type: 'filters'/);
+  assert.match(collection, /brainsait-collection-head/);
+  assert.match(collection, /brainsait-collection-grid/);
   assert.match(collection, /render 'brainsait-product-card'/);
-  assert.match(filters, /results\.filters/);
-  assert.match(listFilter, /filter\.values/);
-  assert.match(collection, /aria-label/);
+  assert.match(collection, /aria-label="{{ collection\.title/);
 });
