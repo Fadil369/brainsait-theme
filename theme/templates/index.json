@@ -1,0 +1,88 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "store_hero": {
+      "type": "bs-store-hero",
+      "settings": {
+        "color_scheme": "background-1"
+      }
+    },
+    "featured_products": {
+      "type": "bs-featured-products",
+      "settings": {
+        "color_scheme": "background-1",
+        "heading": "Featured Products",
+        "subheading": "Ready-to-use digital products with direct Saudi payment — STC Pay · mada · Card. BPR: your permanent SPID + OID.",
+        "handles": "learn-brainsait-digital-access,build-forge-incubator-founders-program,provider-registry,solutions-ready-hospital-os,stealth-python-networking"
+      }
+    },
+    "value_props": {
+      "type": "bs-value-prop",
+      "settings": {}
+    },
+    "benefits_matrix": {
+      "type": "benefits-matrix",
+      "settings": {
+        "color_scheme": "background-1"
+      }
+    },
+    "featured_collections": {
+      "type": "collection-list",
+      "blocks": {
+        "col_learn": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "learn"
+          }
+        },
+        "col_build": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "build"
+          }
+        },
+        "col_solutions": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "solutions"
+          }
+        },
+        "col_learn_books": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "learn-books"
+          }
+        }
+      },
+      "block_order": [
+        "col_learn",
+        "col_build",
+        "col_solutions",
+        "col_learn_books"
+      ],
+      "settings": {
+        "heading_size": "medium"
+      }
+    },
+    "testimonials": {
+      "type": "bs-testimonials",
+      "settings": {}
+    }
+  },
+  "order": [
+    "store_hero",
+    "featured_products",
+    "value_props",
+    "benefits_matrix",
+    "featured_collections",
+    "testimonials"
+  ]
+}

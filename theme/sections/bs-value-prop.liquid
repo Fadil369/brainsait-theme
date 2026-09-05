@@ -1,0 +1,91 @@
+{%- liquid
+  assign is_ar = false
+  if request.locale.iso_code == 'ar'
+    assign is_ar = true
+  endif
+  assign learn_url = shop.url | append: '/collections/learn'
+  assign sol_url = shop.url | append: '/collections/solutions'
+  assign benefits_url = shop.url | append: '/pages/benefits'
+-%}
+{% # theme-check-disable ValidScopedCSSClass %}
+
+<section class="bs-value color-{{ section.settings.color_scheme }} gradient">
+  <div class="bs-value__inner page-width">
+
+    <div class="bs-value__head">
+      <p class="bs-value__eyebrow">
+        {% if is_ar %}لماذا برينسايت؟{% else %}Why BrainSAIT?{% endif %}
+      </p>
+      <h2 class="bs-value__heading">
+        {% if is_ar %}منصة حلول متكاملة، صُمّمت للمملكة{% else %}One platform for Learn, Build &amp; Solution{% endif %}
+      </h2>
+    </div>
+
+    <div class="bs-value__stats" role="list">
+      <div class="bs-value__stat">
+        <span class="bs-value__num">40+</span>
+        <span class="bs-value__label">{% if is_ar %}كتاب LEARN{% else %}LEARN books{% endif %}</span>
+      </div>
+      <div class="bs-value__stat">
+        <span class="bs-value__num">65+</span>
+        <span class="bs-value__label">{% if is_ar %}حلاً جاهزاً{% else %}solutions{% endif %}</span>
+      </div>
+      <div class="bs-value__stat">
+        <span class="bs-value__num">16</span>
+        <span class="bs-value__label">{% if is_ar %}يوماً للبناء{% else %}day BUILD sprint{% endif %}</span>
+      </div>
+      <div class="bs-value__stat" style="border-color: rgba(184,241,78,.35); background: linear-gradient(135deg, rgba(184,241,78,.09), rgba(255,255,255,.6));">
+        <span class="bs-value__num" style="-webkit-text-fill-color:#5a7a00; background:none;">◎∞</span>
+        <span class="bs-value__label">{% if is_ar %}هوية BPR دائمة{% else %}BPR permanent identity{% endif %}</span>
+      </div>
+    </div>
+
+    <div class="bs-value__trust" role="list">
+      <span class="bs-value__badge">🛡️ {% if is_ar %}متوافق مع PDPL{% else %}PDPL-aligned{% endif %}</span>
+      <span class="bs-value__badge" style="border-color: rgba(184,241,78,.3);">◎ {% if is_ar %}BPR: IANA 61026{% else %}BPR: IANA 61026{% endif %}</span>
+      <span class="bs-value__badge">💳 {% if is_ar %}دفع سعودي{% else %}Saudi pay{% endif %} · STC Pay · mada</span>
+      <span class="bs-value__badge">⚡ {% if is_ar %}تسليم فوري{% else %}instant delivery{% endif %}</span>
+      <span class="bs-value__badge">🌐 {% if is_ar %}عربي / إنجليزي{% else %}AR/EN{% endif %}</span>
+      <span class="bs-value__badge">◎ {% if is_ar %}QR موثَّق{% else %}QR-verified{% endif %}</span>
+    </div>
+
+    <div class="bs-value__actions">
+      <a href="{{ learn_url }}" class="button bs-value__cta">
+        {% if is_ar %}ابدأ مع LEARN{% else %}Start with LEARN{% endif %}
+      </a>
+      <a href="{{ benefits_url }}" class="bs-value__cta-secondary">
+        {% if is_ar %}قارن المزايا{% else %}Compare benefits{% endif %}
+      </a>
+    </div>
+
+  </div>
+</section>
+
+{% style %}
+  .bs-value { padding-block: 4.5rem; position: relative; overflow: hidden; }
+  .bs-value__inner { max-width: 960px; margin-inline: auto; text-align: center; }
+  .bs-value__eyebrow { font-size: 11px; letter-spacing: .1em; text-transform: uppercase; opacity: .7; margin-bottom: .6rem; }
+  .bs-value__heading { font-size: clamp(1.7rem, 4vw, 2.4rem); margin: 0 0 2.4rem; letter-spacing: -0.01em; }
+  .bs-value__stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; margin-bottom: 2.4rem; }
+  .bs-value__stat { display: flex; flex-direction: column; gap: .25rem; padding: 1.6rem 1rem; border-radius: 16px; border: 1px solid rgb(var(--color-border-rgb, 0 0 0) / .12); background: rgb(var(--color-background-rgb, 255 255 255) / .6); }
+  .bs-value__num { font-size: 2rem; font-weight: 800; background: linear-gradient(120deg, var(--gold-2, #f5dd9d), var(--gold, #e9c46a)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+  .bs-value__label { font-size: .82rem; opacity: .7; }
+  .bs-value__trust { display: flex; gap: .7rem; justify-content: center; flex-wrap: wrap; margin-bottom: 2rem; }
+  .bs-value__badge { display: inline-flex; align-items: center; gap: 6px; font-size: .82rem; font-weight: 600; padding: .5rem 1rem; border-radius: 999px; border: 1px solid rgb(var(--color-border-rgb, 0 0 0) / .16); background: rgb(var(--color-background-rgb, 255 255 255) / .5); }
+  .bs-value__actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+  .bs-value__cta-secondary { text-decoration: underline; text-underline-offset: 4px; opacity: .9; padding: .8rem 1.1rem; }
+  @media (max-width: 749px) { .bs-value__stats { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 480px) { .bs-value__stats { grid-template-columns: 1fr; } }
+{% endstyle %}
+
+{% schema %}
+{
+  "name": "BS Value Prop",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    { "type": "color_scheme", "id": "color_scheme", "label": "Color scheme", "default": "background-1" }
+  ],
+  "presets": [{ "name": "BS Value Prop" }]
+}
+{% endschema %}

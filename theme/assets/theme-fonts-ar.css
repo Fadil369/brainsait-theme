@@ -1,0 +1,16 @@
+/* Arabic typography for BrainSAIT — layered on top of Horizon's Latin font settings,
+   activated only for the Arabic locale (html[lang="ar"], see layout/theme.liquid). */
+@import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Almarai:wght@400;700;800&display=swap');
+
+html[lang="ar"] {
+  --font-body--family: 'Almarai', var(--font-body--family), sans-serif;
+  --font-subheading--family: 'Almarai', var(--font-subheading--family), sans-serif;
+  --font-heading--family: 'Amiri', var(--font-heading--family), serif;
+  --font-accent--family: 'Almarai', var(--font-accent--family), sans-serif;
+  --bs-font-mono: 'JetBrains Mono', ui-monospace, 'SF Mono', monospace;
+}
+
+html[lang="ar"] body {
+  font-feature-settings: 'kern' 1;
+  text-rendering: optimizeLegibility;
+}

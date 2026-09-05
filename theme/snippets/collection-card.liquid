@@ -1,0 +1,311 @@
+{%- doc -%}
+  This snippet is used to render a collection card.
+  To be used inside a block to inherit the block object settings.
+
+  @param {string} card_image - The image to display in the collection card
+  @param {string} children - The content to render inside the collection card
+  @param {object} collection - The collection to render the card for
+  @param {object} block - The block object
+  @param {object} section - The section object
+
+  @example
+  {% render 'collection-card',
+    card_image: card_image,
+    children: children,
+    block: block,
+    collection: collection,
+    section: section
+  %}
+{%- enddoc -%}
+
+{% style %}
+  {% if request.visual_preview_mode %}
+    .collection-card {
+      min-width: 250px;
+    }
+  {% endif %}
+{% endstyle %}
+
+{% liquid
+  assign onboarding = false
+  assign block_settings = block.settings
+  assign is_learn = false
+  assign learn_url = ''
+
+  if collection == blank
+    assign onboarding = true
+  endif
+
+  # LEARN card override: redirect to unified product, hide price, show monthly label
+  if collection.handle == 'brainsait-learn' or collection.handle == 'learn'
+    assign is_learn = true
+    assign learn_url = 'https://store.brainsait.de/products/learn-brainsait-digital-access'
+  endif
+
+  if block_settings.background_color != blank
+    render 'contrast-override', background_color: block_settings.background_color, section_id: block.id
+  endif
+%}
+
+  <div
+    class="
+      collection-card
+      border-style
+      {% if block_settings.placement == 'on_image' %}collection-card--image-bg{% endif %}
+      {% if section.settings.layout_type == 'bento' %}collection-card--image-height-fixed{% endif %}
+      {% if section.settings.layout_type == 'editorial' %}collection-card--flexible-aspect-ratio{% endif %}
+      {% if is_learn %} collection-card--learn{% endif %}
+      {% if block_settings.background_color != blank %} color-custom-{{ block.id }}{% endif %}
+    "
+  data-block-id="{{ block.id }}"
+  {% if onboarding %}
+    data-placeholder="true"
+  {% endif %}
+  style="
+    {% render 'border-override', settings: block_settings %}
+    --horizontal-alignment: {{ block_settings.horizontal_alignment }};
+    --vertical-alignment: {{ block_settings.vertical_alignment }};
+    --gap: {{ block_settings.collection_card_gap }}px;
+  "
+  {{- block.shopify_attributes -}}
+>
+  <a
+    class="collection-card__link"
+    {% unless onboarding %}
+      {% if is_learn %}
+        href="{{ learn_url }}"
+      {% else %}
+        href="{{ collection.url }}"
+      {% endif %}
+    {% endunless %}
+  >
+    <span class="visually-hidden">{{ collection.title }}</span>
+  </a>
+  <div class="collection-card__inner">
+    {{ card_image }}
+    <div class="collection-card__content layout-panel-flex--column">
+      {%- comment -%}
+        LEARN card: bilingual price label & subscribe button
+        Uses translation keys from en.default.json / ar.json sections.collection_card
+      {%- endcomment -%}
+      {% if is_learn %}
+        <div class="collection-card__learn-cta" role="group" aria-label="{{ 'sections.collection_card.subscribe' | t }}">
+          <span class="collection-card__learn-price" aria-label="{{ 'sections.collection_card.learn_plan' | t }}">{{ 'sections.collection_card.learn_plan' | t }}</span>
+          <a
+            href="{{ learn_url }}"
+            class="collection-card__learn-btn"
+            aria-label="{{ 'sections.collection_card.subscribe' | t }}"
+          >
+            {{ 'sections.collection_card.subscribe' | t }}
+          </a>
+          <a
+            href="{{ collection.url }}"
+            class="collection-card__learn-more"
+            aria-label="{{ 'sections.collection_card.learn_more' | t }}"
+          >
+            {{ 'sections.collection_card.learn_more' | t }}
+          </a>
+        </div>
+      {% endif %}
+      {{ children }}
+    </div>
+  </div>
+</div>
+
+{% stylesheet %}
+  .collection-card {
+    --fixed-card-height: var(--height-small);
+
+    width: 100%;
+    position: relative;
+    height: 100%;
+    flex: 1 1 var(--card-width-small);
+  }
+
+  .collection-card > svg {
+    height: 100%;
+    width: 100%;
+    aspect-ratio: var(--ratio);
+  }
+
+  .collection-card--image-bg .collection-card__inner {
+    height: 100%;
+  }
+
+  .collection-card__link {
+    position: absolute;
+    inset: 0;
+
+    /* allows focus outline to have radius in supported browsers */
+    border-radius: var(--border-radius);
+  }
+
+  .collection-card__inner {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    z-index: var(--layer-flat);
+    pointer-events: none;
+    gap: var(--gap);
+
+    a,
+    button {
+      pointer-events: auto;
+    }
+  }
+
+  /* allow all blocks to be selectable in editor preview */
+  .shopify-design-mode .collection-card__content * {
+    pointer-events: auto;
+  }
+
+  .collection-card__content {
+    --flex-wrap: wrap;
+
+    display: flex;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    max-width: 100%;
+    gap: var(--gap);
+  }
+
+  /* Nested image block rules */
+
+  .collection-card.collection-card--image-bg {
+    aspect-ratio: var(--ratio);
+  }
+
+  .collection-card.collection-card--image-bg .collection-card__content {
+    padding: var(--padding-lg);
+  }
+
+  .collection-card--image-height-fixed {
+    height: 100%;
+  }
+
+  /* Bento layout rules */
+  .collection-card--image-height-fixed .collection-card__image {
+    height: var(--fixed-card-height);
+    width: 100%;
+  }
+
+  .collection-card--image-height-fixed.collection-card--image-bg {
+    height: var(--fixed-card-height);
+    aspect-ratio: unset;
+  }
+
+  .collection-card__image .resource-image__image {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+  }
+
+  .collection-card--image-bg .collection-card__image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+  .collection-card__image svg {
+    height: 100%;
+    width: 100%;
+  }
+
+  /* Editorial layout */
+  .resource-list:not(.hidden--desktop) .collection-card--flexible-aspect-ratio {
+    .collection-card__image {
+      aspect-ratio: 99;
+      height: 100%;
+    }
+
+    .collection-card__inner {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .collection-card__content {
+      flex-shrink: 0;
+    }
+
+    &:not(.collection-card--image-bg) .collection-card__content {
+      height: auto;
+    }
+
+    &.collection-card.collection-card--image-bg,
+    &.collection-card .placeholder-svg {
+      aspect-ratio: 99;
+    }
+  }
+
+  /* LEARN card overrides */
+  .collection-card--learn .collection-card__learn-cta {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    margin-top: auto;
+    width: 100%;
+  }
+
+  .collection-card--learn .collection-card__learn-price {
+    display: inline-block;
+    font-size: 12px;
+    line-height: 1.4;
+    font-weight: 600;
+    color: #fff;
+    background: #0a2540;
+    padding: 4px 10px;
+    border-radius: 4px;
+  }
+
+  .collection-card--learn .collection-card__learn-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.4;
+    padding: 8px 20px;
+    width: 100%;
+    color: #0a2540;
+    background: #fff;
+    border: 2px solid #0a2540;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background 0.2s ease, color 0.2s ease;
+    cursor: pointer;
+  }
+
+  .collection-card--learn .collection-card__learn-btn:hover {
+    background: #0a2540;
+    color: #fff;
+  }
+
+  .collection-card--learn .collection-card__learn-more {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.4;
+    padding: 7px 16px;
+    width: 100%;
+    color: #0a2540;
+    background: transparent;
+    border: 1px solid rgba(10, 37, 64, 0.35);
+    border-radius: 4px;
+    text-decoration: none;
+    transition: border-color 0.2s ease, background 0.2s ease;
+    cursor: pointer;
+  }
+
+  .collection-card--learn .collection-card__learn-more:hover {
+    background: rgba(10, 37, 64, 0.06);
+    border-color: #0a2540;
+  }
+{% endstylesheet %}

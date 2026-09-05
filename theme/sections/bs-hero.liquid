@@ -1,0 +1,343 @@
+{% liquid
+  assign is_ar = false
+  if request.locale.iso_code == 'ar'
+    assign is_ar = true
+  endif
+%}
+{% # theme-check-disable ValidScopedCSSClass %}
+
+<div class="bs-hero">
+  <div class="bs-hero__glow bs-hero__glow--1" aria-hidden="true"></div>
+  <div class="bs-hero__glow bs-hero__glow--2" aria-hidden="true"></div>
+  <div class="bs-hero__grid" aria-hidden="true"></div>
+
+  <div class="bs-hero__float bs-hero__float--1" aria-hidden="true">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+      <circle cx="12" cy="5" r="2.2" />
+      <circle cx="5" cy="17" r="2.2" />
+      <circle cx="19" cy="17" r="2.2" />
+      <path d="M12 7.2 6.4 15M12 7.2l5.6 7.8M7.2 17h9.6" />
+    </svg>
+    <span>OID</span>
+  </div>
+  <div class="bs-hero__float bs-hero__float--2" aria-hidden="true">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+      <path d="M4 12a8 8 0 0 1 13.66-5.66M20 12a8 8 0 0 1-13.66 5.66" />
+      <path d="M17 3v4h-4M7 21v-4h4" />
+    </svg>
+    <span>FHIR / NPHIES</span>
+  </div>
+
+  <div class="bs-hero__inner page-width">
+    <p class="bs-hero__eyebrow">
+      {% if is_ar %}
+        بنية تحتية لهوية الرعاية الصحية
+      {% else %}
+        Healthcare identity infrastructure
+      {% endif %}
+    </p>
+
+    <h1 class="bs-hero__heading">
+      {% if is_ar %}
+        سجلّات OID وأدوات متوافقة مع FHIR، مصمَّمة للمملكة
+      {% else %}
+        OID registries and FHIR-aligned tooling, built for Saudi Arabia
+      {% endif %}
+    </h1>
+
+    <p class="bs-hero__subheading">
+      {% if is_ar %}
+        منتجات رقمية جاهزة لمطوري الرعاية الصحية والمؤسسات — تسليم فوري، وتجربة تسوّق ثنائية اللغة بالكامل.
+      {% else %}
+        Ready-to-use digital products for healthcare developers and enterprises — instant delivery, fully bilingual storefront.
+      {% endif %}
+    </p>
+
+    <div class="bs-hero__actions">
+      <a href="{{ routes.all_products_collection_url }}" class="button bs-hero__cta">
+        {% if is_ar %}
+          تصفّح الكتالوج
+        {% else %}
+          Explore the catalog
+        {% endif %}
+      </a>
+      <a href="{{ pages['knowledge-base'].url | default: '/pages/knowledge-base' }}" class="bs-hero__cta-secondary">
+        {% if is_ar %}
+          قاعدة المعرفة المجانية
+        {% else %}
+          Free knowledge base
+        {% endif %}
+      </a>
+    </div>
+
+    <ul class="bs-badge-row" role="list">
+      <li class="bs-badge">
+        <span class="bs-badge__dot" aria-hidden="true"></span>
+        {% if is_ar %}
+          حماية آمنة عبر PayPal
+        {% else %}
+          PayPal secured checkout
+        {% endif %}
+      </li>
+      <li class="bs-badge">
+        <span class="bs-badge__dot" aria-hidden="true"></span>
+        {% if is_ar %}
+          تسليم رقمي فوري
+        {% else %}
+          Instant digital delivery
+        {% endif %}
+      </li>
+      <li class="bs-badge">
+        <span class="bs-badge__dot" aria-hidden="true"></span>
+        {% if is_ar %}
+          أدوات متوافقة مع FHIR
+        {% else %}
+          FHIR-aligned tooling
+        {% endif %}
+      </li>
+      <li class="bs-badge">
+        <span class="bs-badge__dot" aria-hidden="true"></span>
+        {% if is_ar %}
+          عربي / إنجليزي بالكامل
+        {% else %}
+          Fully bilingual AR / EN
+        {% endif %}
+      </li>
+    </ul>
+  </div>
+</div>
+
+{% stylesheet %}
+  .bs-hero {
+    position: relative;
+    overflow: hidden;
+    background: var(--bs-grad-brand);
+    padding-block: 6rem 4.5rem;
+    isolation: isolate;
+  }
+
+  .bs-hero__grid {
+    position: absolute;
+    inset: -1px;
+    background-image:
+      linear-gradient(rgb(255 255 255 / 0.07) 1px, transparent 1px),
+      linear-gradient(90deg, rgb(255 255 255 / 0.07) 1px, transparent 1px);
+    background-size: 42px 42px;
+    mask-image: radial-gradient(ellipse 80% 60% at 50% 20%, black 40%, transparent 90%);
+    z-index: 0;
+  }
+
+  .bs-hero__glow {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(60px);
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  .bs-hero__glow--1 {
+    width: 26rem;
+    height: 26rem;
+    top: -8rem;
+    inset-inline-start: -6rem;
+    background: rgb(255 255 255 / 0.18);
+  }
+
+  .bs-hero__glow--2 {
+    width: 20rem;
+    height: 20rem;
+    bottom: -10rem;
+    inset-inline-end: -4rem;
+    background: rgb(34 211 238 / 0.22);
+  }
+
+  .bs-hero__float {
+    position: absolute;
+    z-index: 1;
+    display: none;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1rem;
+    border-radius: var(--bs-radius-pill);
+    background: rgb(255 255 255 / 0.14);
+    border: 1px solid rgb(255 255 255 / 0.3);
+    backdrop-filter: blur(8px);
+    color: #ffffff;
+    font-size: 0.8rem;
+    font-weight: 600;
+    box-shadow: 0 12px 30px rgb(0 0 0 / 0.18);
+  }
+
+  .bs-hero__float svg {
+    width: 1.1rem;
+    height: 1.1rem;
+    flex-shrink: 0;
+  }
+
+  .bs-hero__float--1 {
+    top: 12%;
+    inset-inline-start: 6%;
+    transform: rotate(-4deg);
+    animation: bs-float-1 7s ease-in-out infinite;
+  }
+
+  .bs-hero__float--2 {
+    bottom: 14%;
+    inset-inline-end: 5%;
+    transform: rotate(3deg);
+    animation: bs-float-2 8s ease-in-out infinite;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    @keyframes bs-float-1 {
+      0%, 100% { transform: translateY(0) rotate(-4deg); }
+      50% { transform: translateY(-10px) rotate(-2deg); }
+    }
+    @keyframes bs-float-2 {
+      0%, 100% { transform: translateY(0) rotate(3deg); }
+      50% { transform: translateY(-8px) rotate(5deg); }
+    }
+  }
+
+  @media screen and (min-width: 900px) {
+    .bs-hero__float {
+      display: inline-flex;
+    }
+  }
+
+  .bs-hero__inner {
+    position: relative;
+    z-index: 2;
+    max-width: 46rem;
+    margin-inline: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.1rem;
+  }
+
+  .bs-hero__eyebrow {
+    margin: 0;
+    font-family: var(--font-accent--family);
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgb(255 255 255 / 0.85);
+  }
+
+  .bs-hero__heading {
+    margin: 0;
+    font-family: var(--font-heading--family);
+    font-size: clamp(2rem, 5.5vw, 3.5rem);
+    line-height: 1.12;
+    letter-spacing: -0.01em;
+    color: #ffffff;
+    text-wrap: balance;
+  }
+
+  .bs-hero__subheading {
+    margin: 0;
+    max-width: 34rem;
+    font-size: 1.08rem;
+    line-height: 1.65;
+    color: rgb(255 255 255 / 0.9);
+  }
+
+  .bs-hero__actions {
+    margin-block-start: 0.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .bs-hero__cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding-inline: 2rem;
+    padding-block: 0.85rem;
+    border-radius: var(--bs-radius-pill);
+    background-color: #ffffff;
+    color: #14121f;
+    font-weight: 600;
+    text-decoration: none;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+
+  .bs-hero__cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgb(0 0 0 / 0.25);
+  }
+
+  .bs-hero__cta-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding-inline: 1.5rem;
+    padding-block: 0.75rem;
+    border-radius: var(--bs-radius-pill);
+    border: 1px solid rgb(255 255 255 / 0.5);
+    color: #ffffff;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background-color 0.15s ease, border-color 0.15s ease;
+  }
+
+  .bs-hero__cta-secondary:hover {
+    background-color: rgb(255 255 255 / 0.12);
+    border-color: rgb(255 255 255 / 0.8);
+  }
+
+  .bs-badge-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.6rem;
+    margin: 1.75rem 0 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .bs-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding-inline: 0.9rem;
+    padding-block: 0.4rem;
+    border-radius: var(--bs-radius-pill);
+    background-color: rgb(255 255 255 / 0.12);
+    border: 1px solid rgb(255 255 255 / 0.22);
+    color: #ffffff;
+    font-size: 0.8rem;
+  }
+
+  .bs-badge__dot {
+    width: 0.4rem;
+    height: 0.4rem;
+    border-radius: 50%;
+    background-color: #ffffff;
+    flex-shrink: 0;
+  }
+
+  @media screen and (min-width: 750px) {
+    .bs-hero {
+      padding-block: 8rem 6rem;
+    }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "BrainSAIT Hero",
+  "tag": "section",
+  "settings": [],
+  "presets": [
+    {
+      "name": "BrainSAIT Hero"
+    }
+  ]
+}
+{% endschema %}
