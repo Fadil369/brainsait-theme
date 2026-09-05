@@ -1,0 +1,2419 @@
+{
+  "name": "BrainSAIT AI Marketplace",
+  "name_ar": "سوق BrainSAIT للذكاء الاصطناعي",
+  "tagline": "Enterprise AI Skills — Not Just Prompts",
+  "tagline_ar": "مهارات ذكاء اصطناعي للمؤسسات — ليست مجرد أوامر",
+  "currency": "SAR",
+  "launch_date": "2026-07-19",
+  "products": [
+    {
+      "id": "hook-architect",
+      "name_ar": "مهندس العناوين",
+      "name_en": "Hook Architect",
+      "description_ar": "توليد 15-20 عنوان عالي التأثير لأي محتوى تسويقي",
+      "description_en": "Generate 15-20 high-impact hooks for any marketing content",
+      "category": "marketing",
+      "price_sar": 49,
+      "price_usd": 13,
+      "features": [
+        "15-20 hooks per request",
+        "Multiple frameworks",
+        "Platform optimization",
+        "Arabic + English"
+      ],
+      "delivery": "instant",
+      "tier": "standard",
+      "product_id": "BSP-HOOK-ARCHITECT",
+      "oid": "1.3.6.1.4.1.61026.9.5.2",
+      "version": "1.0.0",
+      "changelog": [
+        {
+          "version": "1.0.0",
+          "date": "2026-07-21",
+          "note": "Initial Article-12 standardized release (BSD-2026-07)"
+        }
+      ],
+      "license": "CC BY-NC-SA 4.0 — © 2024 BRAINSAIT LTD, Dr. Mohamed Elfadil Abuagla",
+      "ai_metadata": {
+        "type": "digital-product",
+        "languages": [
+          "ar",
+          "en"
+        ],
+        "distribution": "brainsait-marketplace",
+        "enterprise": "BrainSAIT LTD",
+        "enterprise_oid": "1.3.6.1.4.1.61026",
+        "directive": "BSD-2026-07",
+        "agent_readable": true
+      }
+    },
+    {
+      "id": "nphies-assistant",
+      "name_ar": "مساعد منصة الصحة",
+      "name_en": "NPHIES Assistant",
+      "description_ar": "التنقل في منصة مطالبات التأمين السعودية والتحقق من الطلبات",
+      "description_en": "Navigate Saudi insurance claims platform and validate submissions",
+      "category": "healthcare",
+      "price_sar": 249,
+      "price_usd": 67,
+      "features": [
+        "NPHIES claim validation",
+        "Error detection",
+        "Compliance checks",
+        "Arabic medical terms"
+      ],
+      "delivery": "instant",
+      "tier": "professional",
+      "product_id": "BSP-NPHIES-ASSISTANT",
+      "oid": "1.3.6.1.4.1.61026.9.1.12",
+      "version": "1.0.0",
+      "changelog": [
+        {
+          "version": "1.0.0",
+          "date": "2026-07-21",
+          "note": "Initial Article-12 standardized release (BSD-2026-07)"
+        }
+      ],
+      "license": "CC BY-NC-SA 4.0 — © 2024 BRAINSAIT LTD, Dr. Mohamed Elfadil Abuagla",
+      "ai_metadata": {
+        "type": "digital-product",
+        "languages": [
+          "ar",
+          "en"
+        ],
+        "distribution": "brainsait-marketplace",
+        "enterprise": "BrainSAIT LTD",
+        "enterprise_oid": "1.3.6.1.4.1.61026",
+        "directive": "BSD-2026-07",
+        "agent_readable": true
+      }
+    },
+    {
+      "id": "investor-pitch",
+      "name_ar": "وكيل عرض المستثمرين",
+      "name_en": "Investor Pitch Agent",
+      "description_ar": "إنشاء عرض تقديمي كامل للمستثمرين مع سرد ونماذج",
+      "description_en": "Create complete investor pitch with narrative and templates",
+      "category": "business",
+      "price_sar": 199,
+      "price_usd": 53,
+      "features": [
+        "Pitch deck narrative",
+        "Financial projections",
+        "Objection handling",
+        "Saudi market focus"
+      ],
+      "delivery": "instant",
+      "tier": "professional",
+      "product_id": "BSP-INVESTOR-PITCH",
+      "oid": "1.3.6.1.4.1.61026.9.4.3",
+      "version": "1.0.0",
+      "changelog": [
+        {
+          "version": "1.0.0",
+          "date": "2026-07-21",
+          "note": "Initial Article-12 standardized release (BSD-2026-07)"
+        }
+      ],
+      "license": "CC BY-NC-SA 4.0 — © 2024 BRAINSAIT LTD, Dr. Mohamed Elfadil Abuagla",
+      "ai_metadata": {
+        "type": "digital-product",
+        "languages": [
+          "ar",
+          "en"
+        ],
+        "distribution": "brainsait-marketplace",
+        "enterprise": "BrainSAIT LTD",
+        "enterprise_oid": "1.3.6.1.4.1.61026",
+        "directive": "BSD-2026-07",
+        "agent_readable": true
+      }
+    },
+    {
+      "id": "clinical-doc",
+      "name_ar": "وكيل التوثيق السريري",
+      "name_en": "Clinical Documentation Agent",
+      "description_ar": "توليد ملاحظات سريرية بالذكاء الاصطناعي مع الامتثال للمعايير",
+      "description_en": "AI-powered clinical note generation with compliance standards",
+      "category": "healthcare",
+      "price_sar": 199,
+      "price_usd": 53,
+      "features": [
+        "Clinical note generation",
+        "FHIR R4 compliant",
+        "ICD-10 coding",
+        "Arabic medical"
+      ],
+      "delivery": "instant",
+      "tier": "professional",
+      "product_id": "BSP-CLINICAL-DOC",
+      "oid": "1.3.6.1.4.1.61026.9.1.2",
+      "version": "1.0.0",
+      "changelog": [
+        {
+          "version": "1.0.0",
+          "date": "2026-07-21",
+          "note": "Initial Article-12 standardized release (BSD-2026-07)"
+        }
+      ],
+      "license": "CC BY-NC-SA 4.0 — © 2024 BRAINSAIT LTD, Dr. Mohamed Elfadil Abuagla",
+      "ai_metadata": {
+        "type": "digital-product",
+        "languages": [
+          "ar",
+          "en"
+        ],
+        "distribution": "brainsait-marketplace",
+        "enterprise": "BrainSAIT LTD",
+        "enterprise_oid": "1.3.6.1.4.1.61026",
+        "directive": "BSD-2026-07",
+        "agent_readable": true
+      }
+    },
+    {
+      "id": "landing-page",
+      "name_ar": "مهندس صفحات الهبوط",
+      "name_en": "Landing Page Engineer",
+      "description_ar": "نسخ صفحة هبوط كاملة مع تحسين التحويل والتصميم",
+      "description_en": "Complete landing page copy with conversion optimization",
+      "category": "marketing",
+      "price_sar": 99,
+      "price_usd": 26,
+      "features": [
+        "Full page copy",
+        "CTA optimization",
+        "SEO ready",
+        "A/B test variants"
+      ],
+      "delivery": "instant",
+      "tier": "standard",
+      "product_id": "BSP-LANDING-PAGE",
+      "oid": "1.3.6.1.4.1.61026.9.5.3",
+      "version": "1.0.0",
+      "changelog": [
+        {
+          "version": "1.0.0",
+          "date": "2026-07-21",
+          "note": "Initial Article-12 standardized release (BSD-2026-07)"
+        }
+      ],
+      "license": "CC BY-NC-SA 4.0 — © 2024 BRAINSAIT LTD, Dr. Mohamed Elfadil Abuagla",
+      "ai_metadata": {
+        "type": "digital-product",
+        "languages": [
+          "ar",
+          "en"
+        ],
+        "distribution": "brainsait-marketplace",
+        "enterprise": "BrainSAIT LTD",
+        "enterprise_oid": "1.3.6.1.4.1.61026",
+        "directive": "BSD-2026-07",
+        "agent_readable": true
+      }
+    },
+    {
+      "id": "ai-architect",
+      "name_ar": "مهندس نظام الذكاء الاصطناعي",
+      "name_en": "AI System Architect",
+      "description_ar": "هندسة نظام ذكاء اصطناعي متعدد الوكلاء للمؤسسات",
+      "description_en": "Multi-agent AI system architecture for enterprises",
+      "category": "development",
+      "price_sar": 249,
+      "price_usd": 67,
+      "features": [
+        "Architecture design",
+        "Agent orchestration",
+        "Scalability plan",
+        "Security review"
+      ],
+      "delivery": "instant",
+      "tier": "enterprise",
+      "product_id": "BSP-AI-ARCHITECT",
+      "oid": "1.3.6.1.4.1.61026.9.2.1",
+      "version": "1.0.0",
+      "changelog": [
+        {
+          "version": "1.0.0",
+          "date": "2026-07-21",
+          "note": "Initial Article-12 standardized release (BSD-2026-07)"
+        }
+      ],
+      "license": "CC BY-NC-SA 4.0 — © 2024 BRAINSAIT LTD, Dr. Mohamed Elfadil Abuagla",
+      "ai_metadata": {
+        "type": "digital-product",
+        "languages": [
+          "ar",
+          "en"
+        ],
+        "distribution": "brainsait-marketplace",
+        "enterprise": "BrainSAIT LTD",
+        "enterprise_oid": "1.3.6.1.4.1.61026",
+        "directive": "BSD-2026-07",
+        "agent_readable": true
+      }
+    },
+    {
+      "id": "vision2030",
+      "name_ar": "موافق رؤية 2030",
+      "name_en": "Vision 2030 Aligner",
+      "description_ar": "مواءمة المنتجات والمقترحات مع رؤية السعودية 2030",
+      "description_en": "Align products and proposals with Saudi Vision 2030",
+      "category": "business",
+      "price_sar": 199,
+      "price_usd": 53,
+      "features": [
+        "Vision 2030 mapping",
+        "NVP alignment",
+        "Government proposals",
+        "Arabic output"
+      ],
+      "delivery": "instant",
+      "tier": "professional",
+      "product_id": "BSP-VISION2030",
+      "oid": "1.3.6.1.4.1.61026.9.4.4",
+      "version": "1.0.0",
+      "changelog": [
+        {
+          "version": "1.0.0",
+          "date": "2026-07-21",
+          "note": "Initial Article-12 standardized release (BSD-2026-07)"
+        }
+      ],
+      "license": "CC BY-NC-SA 4.0 — © 2024 BRAINSAIT LTD, Dr. Mohamed Elfadil Abuagla",
+      "ai_metadata": {
+        "type": "digital-product",
+        "languages": [
+          "ar",
+          "en"
+        ],
+        "distribution": "brainsait-marketplace",
+        "enterprise": "BrainSAIT LTD",
+        "enterprise_oid": "1.3.6.1.4.1.61026",
+        "directive": "BSD-2026-07",
+        "agent_readable": true
+      }
+    },
+    {
+      "id": "workflow-architect",
+      "name_ar": "مهندس سير العمل",
+      "name_en": "Workflow Architect",
+      "description_ar": "تصميم أتمتة سير العمل من البداية للنهاية",
+      "description_en": "End-to-end workflow automation design",
+      "category": "operations",
+      "price_sar": 149,
+      "price_usd": 40,
+      "features": [
+        "Workflow mapping",
+        "Automation design",
+        "Integration plan",
+        "ROI analysis"
+      ],
+      "delivery": "instant",
+      "tier": "standard",
+      "product_id": "BSP-WORKFLOW-ARCHITECT",
+      "oid": "1.3.6.1.4.1.61026.9.3.13",
+      "version": "1.0.0",
+      "changelog": [
+        {
+          "version": "1.0.0",
+          "date": "2026-07-21",
+          "note": "Initial Article-12 standardized release (BSD-2026-07)"
+        }
+      ],
+      "license": "CC BY-NC-SA 4.0 — © 2024 BRAINSAIT LTD, Dr. Mohamed Elfadil Abuagla",
+      "ai_metadata": {
+        "type": "digital-product",
+        "languages": [
+          "ar",
+          "en"
+        ],
+        "distribution": "brainsait-marketplace",
+        "enterprise": "BrainSAIT LTD",
+        "enterprise_oid": "1.3.6.1.4.1.61026",
+        "directive": "BSD-2026-07",
+        "agent_readable": true
+      }
+    },
+    {
+      "id": "brand-voice",
+      "name_ar": "DNA الصوت التجارية",
+      "name_en": "Brand Voice DNA",
+      "description_ar": "دليل صوت تجاري كامل مع أمثلة ومعجم ومبادئ",
+      "description_en": "Complete brand voice guide with examples, vocabulary, and principles",
+      "category": "marketing",
+      "price_sar": 149,
+      "price_usd": 40,
+      "features": [
+        "Voice guide",
+        "Vocabulary",
+        "Examples",
+        "Platform variants"
+      ],
+      "delivery": "instant",
+      "tier": "standard",
+      "product_id": "BSP-BRAND-VOICE",
+      "oid": "1.3.6.1.4.1.61026.9.5.1",
+      "version": "1.0.0",
+      "changelog": [
+        {
+          "version": "1.0.0",
+          "date": "2026-07-21",
+          "note": "Initial Article-12 standardized release (BSD-2026-07)"
+        }
+      ],
+      "license": "CC BY-NC-SA 4.0 — © 2024 BRAINSAIT LTD, Dr. Mohamed Elfadil Abuagla",
+      "ai_metadata": {
+        "type": "digital-product",
+        "languages": [
+          "ar",
+          "en"
+        ],
+        "distribution": "brainsait-marketplace",
+        "enterprise": "BrainSAIT LTD",
+        "enterprise_oid": "1.3.6.1.4.1.61026",
+        "directive": "BSD-2026-07",
+        "agent_readable": true
+      }
+    },
+    {
+      "id": "enterprise-auditor",
+      "name_ar": "مراجع المؤسسات",
+      "name_en": "Enterprise Auditor",
+      "description_ar": "تدقيق الأمان والأداء والامتثال للمؤسسات",
+      "description_en": "Security, performance, and compliance audit for enterprises",
+      "category": "development",
+      "price_sar": 199,
+      "price_usd": 53,
+      "features": [
+        "Security audit",
+        "Performance review",
+        "Compliance check",
+        "Remediation plan"
+      ],
+      "delivery": "instant",
+      "tier": "professional",
+      "product_id": "BSP-ENTERPRISE-AUDITOR",
+      "oid": "1.3.6.1.4.1.61026.9.2.13",
+      "version": "1.0.0",
+      "changelog": [
+        {
+          "version": "1.0.0",
+          "date": "2026-07-21",
+          "note": "Initial Article-12 standardized release (BSD-2026-07)"
+        }
+      ],
+      "license": "CC BY-NC-SA 4.0 — © 2024 BRAINSAIT LTD, Dr. Mohamed Elfadil Abuagla",
+      "ai_metadata": {
+        "type": "digital-product",
+        "languages": [
+          "ar",
+          "en"
+        ],
+        "distribution": "brainsait-marketplace",
+        "enterprise": "BrainSAIT LTD",
+        "enterprise_oid": "1.3.6.1.4.1.61026",
+        "directive": "BSD-2026-07",
+        "agent_readable": true
+      }
+    },
+    {
+      "id": "abeer-medical-platform",
+      "name_ar": "منصة أبيـر الطبية المتكاملة",
+      "name_en": "Abeer Connected Healthcare Platform",
+      "description_ar": "منصة رعاية صحية موصولة بالكامل: حجوزات، سوق طبي، ومحرك شخصيات موحّد متصل بمنظومة BrainSAIT — حل مؤسسي مدفوع لمجموعات الرعاية الصحية",
+      "description_en": "Fully-connected healthcare ecosystem: bookings, medical market, and a unified profile engine wired into the BrainSAIT ecosystem — a paid enterprise solution for care groups",
+      "category": "healthcare",
+      "price_sar": 4999,
+      "price_usd": 1330,
+      "features": [
+        "Live booking → CRM",
+        "Medical market checkout",
+        "Unified patient profiles",
+        "Telegram care-team alerts",
+        "RBAC portals (patient/doctor/nursing/RCM)"
+      ],
+      "delivery": "enterprise",
+      "tier": "enterprise",
+      "flagship": true,
+      "product_id": "BSP-ABEER-MEDICAL-PLATFORM",
+      "oid": "1.3.6.1.4.1.61026.9.1.1",
+      "version": "1.0.0",
+      "changelog": [
+        {
+          "version": "1.0.0",
+          "date": "2026-07-21",
+          "note": "Initial Article-12 standardized release (BSD-2026-07)"
+        }
+      ],
+      "license": "CC BY-NC-SA 4.0 — © 2024 BRAINSAIT LTD, Dr. Mohamed Elfadil Abuagla",
+      "ai_metadata": {
+        "type": "digital-product",
+        "languages": [
+          "ar",
+          "en"
+        ],
+        "distribution": "brainsait-marketplace",
+        "enterprise": "BrainSAIT LTD",
+        "enterprise_oid": "1.3.6.1.4.1.61026",
+        "directive": "BSD-2026-07",
+        "agent_readable": true
+      }
+    },
+    {
+      "id": "momfood-cloud-kitchen",
+      "name_ar": "حاضنة المطابخ السحابية — لُقْمَة يُمّه",
+      "name_en": "MomFood Cloud Kitchen Incubator",
+      "description_ar": "منصة حاضنة المطابخ السحابية الصوتية: طلب أكل بيتي، تسجيل مطابخ، توصيل بسائقين، وأثر اجتماعي — متصلة بمنظومة BrainSAIT عبر وكيل Bit alShiekh",
+      "description_en": "Voice-first cloud-kitchen incubator: home-cooked orders, kitchen onboarding, driver delivery, and social impact — connected to the BrainSAIT ecosystem via the Bit alShiekh agent",
+      "category": "operations",
+      "price_sar": 3999,
+      "price_usd": 1065,
+      "features": [
+        "Voice AI agent (Bit alShiekh)",
+        "Cloud-kitchen onboarding",
+        "Driver delivery network",
+        "Social-impact tracking",
+        "CRM + ecosystem integration"
+      ],
+      "delivery": "enterprise",
+      "tier": "enterprise",
+      "flagship": true,
+      "product_id": "BSP-MOMFOOD-CLOUD-KITCHEN",
+      "oid": "1.3.6.1.4.1.61026.9.3.12",
+      "version": "1.0.0",
+      "changelog": [
+        {
+          "version": "1.0.0",
+          "date": "2026-07-21",
+          "note": "Initial Article-12 standardized release (BSD-2026-07)"
+        }
+      ],
+      "license": "CC BY-NC-SA 4.0 — © 2024 BRAINSAIT LTD, Dr. Mohamed Elfadil Abuagla",
+      "ai_metadata": {
+        "type": "digital-product",
+        "languages": [
+          "ar",
+          "en"
+        ],
+        "distribution": "brainsait-marketplace",
+        "enterprise": "BrainSAIT LTD",
+        "enterprise_oid": "1.3.6.1.4.1.61026",
+        "directive": "BSD-2026-07",
+        "agent_readable": true
+      }
+    },
+    {
+      "id": "saudi_healthcare_transformation_blueprint",
+      "product_id": "BSP-HEALTHCARE-TRANSFORMATION",
+      "oid": "1.3.6.1.4.1.61026.9.1.13",
+      "name_en": "BrainSAIT × Abeer Group",
+      "name_ar": "Saudi Healthcare Transformation Blueprint",
+      "description_en": "Saudi Healthcare Transformation Blueprint",
+      "description_ar": "منتج معرفي متميز من برين سايت: BrainSAIT × Abeer Group",
+      "category": "healthcare",
+      "price_sar": 299,
+      "price_usd": 79.73,
+      "features": [
+        "Article-5 compliant (PDF + EPUB + HTML)",
+        "Bilingual AR + EN",
+        "CC BY-NC-SA 4.0 licensed",
+        "OID-registered under enterprise hierarchy"
+      ],
+      "delivery": "instant",
+      "tier": "premium",
+      "version": "1.0.0",
+      "changelog": [
+        {
+          "version": "1.0.0",
+          "date": "2026-07-21",
+          "note": "Initial publication under BSD-2026-07 Article 5"
+        }
+      ],
+      "license": "CC BY-NC-SA 4.0 — © 2024 BRAINSAIT LTD, Dr. Mohamed Elfadil Abuagla",
+      "ai_metadata": {
+        "type": "knowledge-product",
+        "languages": [
+          "ar",
+          "en"
+        ],
+        "distribution": "brainsait-marketplace",
+        "enterprise": "BrainSAIT LTD",
+        "enterprise_oid": "1.3.6.1.4.1.61026",
+        "directive": "BSD-2026-07",
+        "agent_readable": true,
+        "format": [
+          "pdf",
+          "epub",
+          "html",
+          "markdown"
+        ]
+      },
+      "formats": [
+        "pdf",
+        "epub",
+        "html",
+        "markdown"
+      ],
+      "paths": {
+        "html": "https://brainsait.de/governance/knowledge-products/Saudi-Healthcare-Transformation-Blueprint.html",
+        "pdf": "https://brainsait.de/governance/knowledge-products/Saudi-Healthcare-Transformation-Blueprint.pdf",
+        "epub": "https://brainsait.de/governance/knowledge-products/Saudi-Healthcare-Transformation-Blueprint.epub"
+      }
+    },
+    {
+      "id": "solo_ai_business_blueprint",
+      "product_id": "BSP-SOLO-AI-BUSINESS",
+      "oid": "1.3.6.1.4.1.61026.9.4.4",
+      "name_en": "Solo AI Business Blueprint",
+      "name_ar": "Solo AI Business Blueprint",
+      "description_en": "Physician-Led Enterprise from Scratch",
+      "description_ar": "منتج معرفي متميز من برين سايت: Solo AI Business Blueprint",
+      "category": "business",
+      "price_sar": 199,
+      "price_usd": 53.07,
+      "features": [
+        "Article-5 compliant (PDF + EPUB + HTML)",
+        "Bilingual AR + EN",
+        "CC BY-NC-SA 4.0 licensed",
+        "OID-registered under enterprise hierarchy"
+      ],
+      "delivery": "instant",
+      "tier": "premium",
+      "version": "1.0.0",
+      "changelog": [
+        {
+          "version": "1.0.0",
+          "date": "2026-07-21",
+          "note": "Initial publication under BSD-2026-07 Article 5"
+        }
+      ],
+      "license": "CC BY-NC-SA 4.0 — © 2024 BRAINSAIT LTD, Dr. Mohamed Elfadil Abuagla",
+      "ai_metadata": {
+        "type": "knowledge-product",
+        "languages": [
+          "ar",
+          "en"
+        ],
+        "distribution": "brainsait-marketplace",
+        "enterprise": "BrainSAIT LTD",
+        "enterprise_oid": "1.3.6.1.4.1.61026",
+        "directive": "BSD-2026-07",
+        "agent_readable": true,
+        "format": [
+          "pdf",
+          "epub",
+          "html",
+          "markdown"
+        ]
+      },
+      "formats": [
+        "pdf",
+        "epub",
+        "html",
+        "markdown"
+      ],
+      "paths": {
+        "html": "https://brainsait.de/governance/knowledge-products/Solo-AI-Business-Blueprint.html",
+        "pdf": "https://brainsait.de/governance/knowledge-products/Solo-AI-Business-Blueprint.pdf",
+        "epub": "https://brainsait.de/governance/knowledge-products/Solo-AI-Business-Blueprint.epub"
+      }
+    },
+    {
+      "id": "strategic_ai_blueprints",
+      "product_id": "BSP-STRATEGIC-AI-BLUEPRINTS",
+      "oid": "1.3.6.1.4.1.61026.9.4.5",
+      "name_en": "Strategic AI Blueprints",
+      "name_ar": "Strategic AI Blueprints",
+      "description_en": "The BrainSAIT Field Manual",
+      "description_ar": "منتج معرفي متميز من برين سايت: Strategic AI Blueprints",
+      "category": "business",
+      "price_sar": 249,
+      "price_usd": 66.4,
+      "features": [
+        "Article-5 compliant (PDF + EPUB + HTML)",
+        "Bilingual AR + EN",
+        "CC BY-NC-SA 4.0 licensed",
+        "OID-registered under enterprise hierarchy"
+      ],
+      "delivery": "instant",
+      "tier": "premium",
+      "version": "1.0.0",
+      "changelog": [
+        {
+          "version": "1.0.0",
+          "date": "2026-07-21",
+          "note": "Initial publication under BSD-2026-07 Article 5"
+        }
+      ],
+      "license": "CC BY-NC-SA 4.0 — © 2024 BRAINSAIT LTD, Dr. Mohamed Elfadil Abuagla",
+      "ai_metadata": {
+        "type": "knowledge-product",
+        "languages": [
+          "ar",
+          "en"
+        ],
+        "distribution": "brainsait-marketplace",
+        "enterprise": "BrainSAIT LTD",
+        "enterprise_oid": "1.3.6.1.4.1.61026",
+        "directive": "BSD-2026-07",
+        "agent_readable": true,
+        "format": [
+          "pdf",
+          "epub",
+          "html",
+          "markdown"
+        ]
+      },
+      "formats": [
+        "pdf",
+        "epub",
+        "html",
+        "markdown"
+      ],
+      "paths": {
+        "html": "https://brainsait.de/governance/knowledge-products/Strategic-AI-Blueprints.html",
+        "pdf": "https://brainsait.de/governance/knowledge-products/Strategic-AI-Blueprints.pdf",
+        "epub": "https://brainsait.de/governance/knowledge-products/Strategic-AI-Blueprints.epub"
+      }
+    },
+    {
+      "id": "digital_organization_handbook",
+      "product_id": "BSP-DIGITAL-ORG-HANDBOOK",
+      "oid": "1.3.6.1.4.1.61026.9.3.14",
+      "name_en": "Digital Organization Handbook",
+      "name_ar": "Digital Organization Handbook",
+      "description_en": "Operating an AI-Native Enterprise",
+      "description_ar": "منتج معرفي متميز من برين سايت: Digital Organization Handbook",
+      "category": "operations",
+      "price_sar": 149,
+      "price_usd": 39.73,
+      "features": [
+        "Article-5 compliant (PDF + EPUB + HTML)",
+        "Bilingual AR + EN",
+        "CC BY-NC-SA 4.0 licensed",
+        "OID-registered under enterprise hierarchy"
+      ],
+      "delivery": "instant",
+      "tier": "premium",
+      "version": "1.0.0",
+      "changelog": [
+        {
+          "version": "1.0.0",
+          "date": "2026-07-21",
+          "note": "Initial publication under BSD-2026-07 Article 5"
+        }
+      ],
+      "license": "CC BY-NC-SA 4.0 — © 2024 BRAINSAIT LTD, Dr. Mohamed Elfadil Abuagla",
+      "ai_metadata": {
+        "type": "knowledge-product",
+        "languages": [
+          "ar",
+          "en"
+        ],
+        "distribution": "brainsait-marketplace",
+        "enterprise": "BrainSAIT LTD",
+        "enterprise_oid": "1.3.6.1.4.1.61026",
+        "directive": "BSD-2026-07",
+        "agent_readable": true,
+        "format": [
+          "pdf",
+          "epub",
+          "html",
+          "markdown"
+        ]
+      },
+      "formats": [
+        "pdf",
+        "epub",
+        "html",
+        "markdown"
+      ],
+      "paths": {
+        "html": "https://brainsait.de/governance/knowledge-products/Digital-Organization-Handbook.html",
+        "pdf": "https://brainsait.de/governance/knowledge-products/Digital-Organization-Handbook.pdf",
+        "epub": "https://brainsait.de/governance/knowledge-products/Digital-Organization-Handbook.epub"
+      }
+    },
+    {
+      "id": "api_revision_notebook",
+      "product_id": "BSP-API-REVISION-NOTEBOOK",
+      "oid": "1.3.6.1.4.1.61026.9.2.2",
+      "name_en": "API Revision Notebook",
+      "name_ar": "API Revision Notebook",
+      "description_en": "The BrainSAIT Reference",
+      "description_ar": "منتج معرفي متميز من برين سايت: API Revision Notebook",
+      "category": "development",
+      "price_sar": 179,
+      "price_usd": 47.73,
+      "features": [
+        "Article-5 compliant (PDF + EPUB + HTML)",
+        "Bilingual AR + EN",
+        "CC BY-NC-SA 4.0 licensed",
+        "OID-registered under enterprise hierarchy"
+      ],
+      "delivery": "instant",
+      "tier": "premium",
+      "version": "1.0.0",
+      "changelog": [
+        {
+          "version": "1.0.0",
+          "date": "2026-07-21",
+          "note": "Initial publication under BSD-2026-07 Article 5"
+        }
+      ],
+      "license": "CC BY-NC-SA 4.0 — © 2024 BRAINSAIT LTD, Dr. Mohamed Elfadil Abuagla",
+      "ai_metadata": {
+        "type": "knowledge-product",
+        "languages": [
+          "ar",
+          "en"
+        ],
+        "distribution": "brainsait-marketplace",
+        "enterprise": "BrainSAIT LTD",
+        "enterprise_oid": "1.3.6.1.4.1.61026",
+        "directive": "BSD-2026-07",
+        "agent_readable": true,
+        "format": [
+          "pdf",
+          "epub",
+          "html",
+          "markdown"
+        ]
+      },
+      "formats": [
+        "pdf",
+        "epub",
+        "html",
+        "markdown"
+      ],
+      "paths": {
+        "html": "https://brainsait.de/governance/knowledge-products/API-Revision-Notebook.html",
+        "pdf": "https://brainsait.de/governance/knowledge-products/API-Revision-Notebook.pdf",
+        "epub": "https://brainsait.de/governance/knowledge-products/API-Revision-Notebook.epub"
+      }
+    },
+    {
+      "id": "mom_ecosystem_strategy",
+      "product_id": "BSP-MOM-ECOSYSTEM-STRATEGY",
+      "oid": "1.3.6.1.4.1.61026.9.4.6",
+      "name_en": "BrainSAIT × MomFood",
+      "name_ar": "MOM Ecosystem Strategy",
+      "description_en": "MOM Ecosystem Strategy",
+      "description_ar": "منتج معرفي متميز من برين سايت: BrainSAIT × MomFood",
+      "category": "business",
+      "price_sar": 99,
+      "price_usd": 26.4,
+      "features": [
+        "Article-5 compliant (PDF + EPUB + HTML)",
+        "Bilingual AR + EN",
+        "CC BY-NC-SA 4.0 licensed",
+        "OID-registered under enterprise hierarchy"
+      ],
+      "delivery": "instant",
+      "tier": "premium",
+      "version": "1.0.0",
+      "changelog": [
+        {
+          "version": "1.0.0",
+          "date": "2026-07-21",
+          "note": "Initial publication under BSD-2026-07 Article 5"
+        }
+      ],
+      "license": "CC BY-NC-SA 4.0 — © 2024 BRAINSAIT LTD, Dr. Mohamed Elfadil Abuagla",
+      "ai_metadata": {
+        "type": "knowledge-product",
+        "languages": [
+          "ar",
+          "en"
+        ],
+        "distribution": "brainsait-marketplace",
+        "enterprise": "BrainSAIT LTD",
+        "enterprise_oid": "1.3.6.1.4.1.61026",
+        "directive": "BSD-2026-07",
+        "agent_readable": true,
+        "format": [
+          "pdf",
+          "epub",
+          "html",
+          "markdown"
+        ]
+      },
+      "formats": [
+        "pdf",
+        "epub",
+        "html",
+        "markdown"
+      ],
+      "paths": {
+        "html": "https://brainsait.de/governance/knowledge-products/MOM-Ecosystem-Strategy.html",
+        "pdf": "https://brainsait.de/governance/knowledge-products/MOM-Ecosystem-Strategy.pdf",
+        "epub": "https://brainsait.de/governance/knowledge-products/MOM-Ecosystem-Strategy.epub"
+      }
+    },
+    {
+      "id": "api-revision-notebook",
+      "product_id": "BKP-API-REVISION-NOTEBOOK",
+      "name_en": "Api Revision Notebook",
+      "name_ar": "Api Revision Notebook",
+      "description_en": "API Revision Notebook: The BrainSAIT Reference",
+      "description_ar": "وثيقة رقمية من BrainSAIT — مكتبة المعرفة المؤسسية",
+      "category": "development",
+      "tier": "standard",
+      "price_sar": 49,
+      "price_usd": 13,
+      "currency": "SAR",
+      "delivery": "instant_download",
+      "delivery_urls": {
+        "html": "/knowledge/_published/api-revision-notebook.html",
+        "pdf": "/knowledge/_published/api-revision-notebook.pdf",
+        "epub": "/knowledge/_published/api-revision-notebook.epub"
+      },
+      "formats_available": [
+        "html",
+        "pdf",
+        "epub"
+      ],
+      "features": [
+        "PDF",
+        "EPUB",
+        "HTML",
+        "Instant download",
+        "Bilingual"
+      ],
+      "oid": "1.3.6.1.4.1.61026.10.9.1",
+      "version": "1.0.0",
+      "changelog": [
+        {
+          "version": "1.0.0",
+          "date": "2026-07-21",
+          "note": "Knowledge pipeline: formatted + registered under BSD-2026-07 Art. 5"
+        }
+      ],
+      "license": "CC BY-NC-SA 4.0 — © 2024 BRAINSAIT LTD, Dr. Mohamed Elfadil Abuagla",
+      "ai_metadata": {
+        "type": "knowledge-product",
+        "languages": [
+          "ar",
+          "en"
+        ],
+        "distribution": "brainsait-marketplace",
+        "enterprise": "BrainSAIT LTD",
+        "enterprise_oid": "1.3.6.1.4.1.61026"
+      }
+    },
+    {
+      "id": "digital-organization-handbook",
+      "product_id": "BKP-DIGITAL-ORGANIZATION-HANDBOOK",
+      "name_en": "Digital Organization Handbook",
+      "name_ar": "Digital Organization Handbook",
+      "description_en": "Digital Organization Handbook: Operating an AI-Native Enterprise",
+      "description_ar": "وثيقة رقمية من BrainSAIT — مكتبة المعرفة المؤسسية",
+      "category": "business",
+      "tier": "standard",
+      "price_sar": 99,
+      "price_usd": 26,
+      "currency": "SAR",
+      "delivery": "instant_download",
+      "delivery_urls": {
+        "html": "/knowledge/_published/digital-organization-handbook.html",
+        "pdf": "/knowledge/_published/digital-organization-handbook.pdf",
+        "epub": "/knowledge/_published/digital-organization-handbook.epub"
+      },
+      "formats_available": [
+        "html",
+        "pdf",
+        "epub"
+      ],
+      "features": [
+        "PDF",
+        "EPUB",
+        "HTML",
+        "Instant download",
+        "Bilingual"
+      ],
+      "oid": "1.3.6.1.4.1.61026.10.9.2",
+      "version": "1.0.20260721",
+      "changelog": [
+        {
+          "version": "1.0.20260721",
+          "date": "2026-07-21",
+          "note": "Knowledge pipeline: formatted + registered under BSD-2026-07 Art. 5"
+        }
+      ],
+      "license": "CC BY-NC-SA 4.0 — © 2024 BRAINSAIT LTD, Dr. Mohamed Elfadil Abuagla",
+      "ai_metadata": {
+        "type": "knowledge-product",
+        "languages": [
+          "ar",
+          "en"
+        ],
+        "distribution": "brainsait-marketplace",
+        "enterprise": "BrainSAIT LTD",
+        "enterprise_oid": "1.3.6.1.4.1.61026"
+      }
+    },
+    {
+      "id": "mom-ecosystem-strategy",
+      "product_id": "BKP-MOM-ECOSYSTEM-STRATEGY",
+      "name_en": "Mom Ecosystem Strategy",
+      "name_ar": "Mom Ecosystem Strategy",
+      "description_en": "BrainSAIT × MomFood: MOM Ecosystem Strategy",
+      "description_ar": "وثيقة رقمية من BrainSAIT — مكتبة المعرفة المؤسسية",
+      "category": "MOM",
+      "tier": "standard",
+      "price_sar": 59,
+      "price_usd": 16,
+      "currency": "SAR",
+      "delivery": "instant_download",
+      "delivery_urls": {
+        "html": "/knowledge/_published/mom-ecosystem-strategy.html",
+        "pdf": "/knowledge/_published/mom-ecosystem-strategy.pdf",
+        "epub": "/knowledge/_published/mom-ecosystem-strategy.epub"
+      },
+      "formats_available": [
+        "html",
+        "pdf",
+        "epub"
+      ],
+      "features": [
+        "PDF",
+        "EPUB",
+        "HTML",
+        "Instant download",
+        "Bilingual"
+      ],
+      "oid": "1.3.6.1.4.1.61026.10.11.1",
+      "version": "1.0.20260721",
+      "changelog": [
+        {
+          "version": "1.0.20260721",
+          "date": "2026-07-21",
+          "note": "Knowledge pipeline: formatted + registered under BSD-2026-07 Art. 5"
+        }
+      ],
+      "license": "CC BY-NC-SA 4.0 — © 2024 BRAINSAIT LTD, Dr. Mohamed Elfadil Abuagla",
+      "ai_metadata": {
+        "type": "knowledge-product",
+        "languages": [
+          "ar",
+          "en"
+        ],
+        "distribution": "brainsait-marketplace",
+        "enterprise": "BrainSAIT LTD",
+        "enterprise_oid": "1.3.6.1.4.1.61026"
+      }
+    },
+    {
+      "id": "saudi-healthcare-transformation-blueprint",
+      "product_id": "BKP-SAUDI-HEALTHCARE-TRANSFORMATION-BLUEPRINT",
+      "name_en": "Saudi Healthcare Transformation Blueprint",
+      "name_ar": "Saudi Healthcare Transformation Blueprint",
+      "description_en": "BrainSAIT × Abeer Group: Saudi Healthcare Transformation Blueprint",
+      "description_ar": "وثيقة رقمية من BrainSAIT — مكتبة المعرفة المؤسسية",
+      "category": "healthcare",
+      "tier": "premium",
+      "price_sar": 249,
+      "price_usd": 66,
+      "currency": "SAR",
+      "delivery": "instant_download",
+      "delivery_urls": {
+        "html": "/knowledge/_published/saudi-healthcare-transformation-blueprint.html",
+        "pdf": "/knowledge/_published/saudi-healthcare-transformation-blueprint.pdf",
+        "epub": "/knowledge/_published/saudi-healthcare-transformation-blueprint.epub"
+      },
+      "formats_available": [
+        "html",
+        "pdf",
+        "epub"
+      ],
+      "features": [
+        "PDF",
+        "EPUB",
+        "HTML",
+        "Instant download",
+        "Bilingual"
+      ],
+      "oid": "1.3.6.1.4.1.61026.10.9.3",
+      "version": "1.0.20260721",
+      "changelog": [
+        {
+          "version": "1.0.20260721",
+          "date": "2026-07-21",
+          "note": "Knowledge pipeline: formatted + registered under BSD-2026-07 Art. 5"
+        }
+      ],
+      "license": "CC BY-NC-SA 4.0 — © 2024 BRAINSAIT LTD, Dr. Mohamed Elfadil Abuagla",
+      "ai_metadata": {
+        "type": "knowledge-product",
+        "languages": [
+          "ar",
+          "en"
+        ],
+        "distribution": "brainsait-marketplace",
+        "enterprise": "BrainSAIT LTD",
+        "enterprise_oid": "1.3.6.1.4.1.61026"
+      }
+    },
+    {
+      "id": "solo-ai-business-blueprint",
+      "product_id": "BKP-SOLO-AI-BUSINESS-BLUEPRINT",
+      "name_en": "Solo Ai Business Blueprint",
+      "name_ar": "Solo Ai Business Blueprint",
+      "description_en": "Solo AI Business Blueprint: Physician-Led Enterprise from Scratch",
+      "description_ar": "وثيقة رقمية من BrainSAIT — مكتبة المعرفة المؤسسية",
+      "category": "AI/Strategy",
+      "tier": "standard",
+      "price_sar": 79,
+      "price_usd": 21,
+      "currency": "SAR",
+      "delivery": "instant_download",
+      "delivery_urls": {
+        "html": "/knowledge/_published/solo-ai-business-blueprint.html",
+        "pdf": "/knowledge/_published/solo-ai-business-blueprint.pdf",
+        "epub": "/knowledge/_published/solo-ai-business-blueprint.epub"
+      },
+      "formats_available": [
+        "html",
+        "pdf",
+        "epub"
+      ],
+      "features": [
+        "PDF",
+        "EPUB",
+        "HTML",
+        "Instant download",
+        "Bilingual"
+      ],
+      "oid": "1.3.6.1.4.1.61026.10.10.1",
+      "version": "1.0.20260721",
+      "changelog": [
+        {
+          "version": "1.0.20260721",
+          "date": "2026-07-21",
+          "note": "Knowledge pipeline: formatted + registered under BSD-2026-07 Art. 5"
+        }
+      ],
+      "license": "CC BY-NC-SA 4.0 — © 2024 BRAINSAIT LTD, Dr. Mohamed Elfadil Abuagla",
+      "ai_metadata": {
+        "type": "knowledge-product",
+        "languages": [
+          "ar",
+          "en"
+        ],
+        "distribution": "brainsait-marketplace",
+        "enterprise": "BrainSAIT LTD",
+        "enterprise_oid": "1.3.6.1.4.1.61026"
+      }
+    },
+    {
+      "id": "strategic-ai-blueprints",
+      "product_id": "BKP-STRATEGIC-AI-BLUEPRINTS",
+      "name_en": "Strategic Ai Blueprints",
+      "name_ar": "Strategic Ai Blueprints",
+      "description_en": "Strategic AI Blueprints: The BrainSAIT Field Manual",
+      "description_ar": "وثيقة رقمية من BrainSAIT — مكتبة المعرفة المؤسسية",
+      "category": "AI/Strategy",
+      "tier": "premium",
+      "price_sar": 199,
+      "price_usd": 53,
+      "currency": "SAR",
+      "delivery": "instant_download",
+      "delivery_urls": {
+        "html": "/knowledge/_published/strategic-ai-blueprints.html",
+        "pdf": "/knowledge/_published/strategic-ai-blueprints.pdf",
+        "epub": "/knowledge/_published/strategic-ai-blueprints.epub"
+      },
+      "formats_available": [
+        "html",
+        "pdf",
+        "epub"
+      ],
+      "features": [
+        "PDF",
+        "EPUB",
+        "HTML",
+        "Instant download",
+        "Bilingual"
+      ],
+      "oid": "1.3.6.1.4.1.61026.10.10.2",
+      "version": "1.0.20260721",
+      "changelog": [
+        {
+          "version": "1.0.20260721",
+          "date": "2026-07-21",
+          "note": "Knowledge pipeline: formatted + registered under BSD-2026-07 Art. 5"
+        }
+      ],
+      "license": "CC BY-NC-SA 4.0 — © 2024 BRAINSAIT LTD, Dr. Mohamed Elfadil Abuagla",
+      "ai_metadata": {
+        "type": "knowledge-product",
+        "languages": [
+          "ar",
+          "en"
+        ],
+        "distribution": "brainsait-marketplace",
+        "enterprise": "BrainSAIT LTD",
+        "enterprise_oid": "1.3.6.1.4.1.61026"
+      }
+    },
+    {
+      "id": "drive-1984-survival-notebook-pdf",
+      "source": "drive",
+      "drive_id": "1tjbI1W1yruxg1wmdQmEk3epKzs00mn4O",
+      "product_type": "novel",
+      "name_ar": "1984 Survival Notebook — رواية/قصة",
+      "name_en": "1984 Survival Notebook",
+      "name_type_ar": "رواية/قصة",
+      "description_ar": "1984 Survival Notebook — رواية/قصة من مكتبة BrainSAIT الرقمية. تسليم فوري عبر رابط Google Drive آمن بعد الدفع.",
+      "description_en": "1984 Survival Notebook — a BrainSAIT novel from the digital library. Instant delivery via secure Google Drive link after payment.",
+      "category": "creative",
+      "category_ar": "روايات وقصص",
+      "price_sar": 79,
+      "price_usd": 21,
+      "features": [
+        "رواية/قصة — Novel",
+        "تسليم فوري / Instant delivery",
+        "رابط Drive آمن / Secure Drive link",
+        "جودة عالية / High quality"
+      ],
+      "delivery": "instant",
+      "delivery_url": "https://drive.google.com/uc?export=download&id=1tjbI1W1yruxg1wmdQmEk3epKzs00mn4O",
+      "tier": "premium",
+      "file_size_mb": null
+    },
+    {
+      "id": "drive-absolute-zero-mindset-pdf",
+      "source": "drive",
+      "drive_id": "1-o0lydbLZI2e0CJ0wEBRKpoBPOBUrzXS",
+      "product_type": "mini-book",
+      "name_ar": "Absolute Zero Mindset — مؤلَّف مصغّر",
+      "name_en": "Absolute Zero Mindset",
+      "name_type_ar": "مؤلَّف مصغّر",
+      "description_ar": "Absolute Zero Mindset — مؤلَّف مصغّر من مكتبة BrainSAIT الرقمية. تسليم فوري عبر رابط Google Drive آمن بعد الدفع.",
+      "description_en": "Absolute Zero Mindset — a BrainSAIT mini-book from the digital library. Instant delivery via secure Google Drive link after payment.",
+      "category": "creative",
+      "category_ar": "مؤلفات مصغّرة",
+      "price_sar": 49,
+      "price_usd": 13,
+      "features": [
+        "مؤلَّف مصغّر — Mini-Book",
+        "تسليم فوري / Instant delivery",
+        "رابط Drive آمن / Secure Drive link",
+        "جودة عالية / High quality"
+      ],
+      "delivery": "instant",
+      "delivery_url": "https://drive.google.com/uc?export=download&id=1-o0lydbLZI2e0CJ0wEBRKpoBPOBUrzXS",
+      "tier": "standard",
+      "file_size_mb": null
+    },
+    {
+      "id": "drive-anatomy-of-a-torn-soul-pdf",
+      "source": "drive",
+      "drive_id": "1lymJqsHOkX-dPOsJX3l-q36zxoT5bpPD",
+      "product_type": "novel",
+      "name_ar": "Anatomy of a Torn Soul — رواية/قصة",
+      "name_en": "Anatomy of a Torn Soul",
+      "name_type_ar": "رواية/قصة",
+      "description_ar": "Anatomy of a Torn Soul — رواية/قصة من مكتبة BrainSAIT الرقمية. تسليم فوري عبر رابط Google Drive آمن بعد الدفع.",
+      "description_en": "Anatomy of a Torn Soul — a BrainSAIT novel from the digital library. Instant delivery via secure Google Drive link after payment.",
+      "category": "creative",
+      "category_ar": "روايات وقصص",
+      "price_sar": 79,
+      "price_usd": 21,
+      "features": [
+        "رواية/قصة — Novel",
+        "تسليم فوري / Instant delivery",
+        "رابط Drive آمن / Secure Drive link",
+        "جودة عالية / High quality"
+      ],
+      "delivery": "instant",
+      "delivery_url": "https://drive.google.com/uc?export=download&id=1lymJqsHOkX-dPOsJX3l-q36zxoT5bpPD",
+      "tier": "premium",
+      "file_size_mb": null
+    },
+    {
+      "id": "drive-api-revision-notebook-pdf",
+      "source": "drive",
+      "drive_id": "1UPJ10rXtExWorp3X8SdjXvlpXQF1wc29",
+      "product_type": "software",
+      "name_ar": "API Revision Notebook — حلّ برمجي",
+      "name_en": "API Revision Notebook",
+      "name_type_ar": "حلّ برمجي",
+      "description_ar": "API Revision Notebook — حلّ برمجي من مكتبة BrainSAIT الرقمية. تسليم فوري عبر رابط Google Drive آمن بعد الدفع.",
+      "description_en": "API Revision Notebook — a BrainSAIT software from the digital library. Instant delivery via secure Google Drive link after payment.",
+      "category": "development",
+      "category_ar": "حلول برمجية وأنظمة",
+      "price_sar": 99,
+      "price_usd": 26,
+      "features": [
+        "حلّ برمجي — Software",
+        "تسليم فوري / Instant delivery",
+        "رابط Drive آمن / Secure Drive link",
+        "جودة عالية / High quality"
+      ],
+      "delivery": "instant",
+      "delivery_url": "https://store.brainsait.de/a/downloads",
+      "tier": "premium",
+      "file_size_mb": null,
+      "delivery_mode": "licensed-r2",
+      "download_portal": "https://store.brainsait.de/a/downloads"
+    },
+    {
+      "id": "drive-apple-ai-anatomy-pdf",
+      "source": "drive",
+      "drive_id": "1JKLGj8aVlps5q5Q_g7Ukkn-vUofCTb6t",
+      "product_type": "healthcare",
+      "name_ar": "Apple AI Anatomy — حلّ صحّي",
+      "name_en": "Apple AI Anatomy",
+      "name_type_ar": "حلّ صحّي",
+      "description_ar": "Apple AI Anatomy — حلّ صحّي من مكتبة BrainSAIT الرقمية. تسليم فوري عبر رابط Google Drive آمن بعد الدفع.",
+      "description_en": "Apple AI Anatomy — a BrainSAIT healthcare from the digital library. Instant delivery via secure Google Drive link after payment.",
+      "category": "healthcare",
+      "category_ar": "حلول الصحة الرقمية",
+      "price_sar": 119,
+      "price_usd": 32,
+      "features": [
+        "حلّ صحّي — Healthcare",
+        "تسليم فوري / Instant delivery",
+        "رابط Drive آمن / Secure Drive link",
+        "جودة عالية / High quality"
+      ],
+      "delivery": "instant",
+      "delivery_url": "https://store.brainsait.de/a/downloads",
+      "tier": "professional",
+      "file_size_mb": null,
+      "delivery_mode": "licensed-r2",
+      "download_portal": "https://store.brainsait.de/a/downloads"
+    },
+    {
+      "id": "drive-autonomous-ai-blogging-engine-pdf",
+      "source": "drive",
+      "drive_id": "1Tgusz-EQHU39m5faXW6rvBp8ksrji7Yr",
+      "product_type": "skill",
+      "name_ar": "Autonomous AI Blogging Engine — مهارة",
+      "name_en": "Autonomous AI Blogging Engine",
+      "name_type_ar": "مهارة",
+      "description_ar": "Autonomous AI Blogging Engine — مهارة من مكتبة BrainSAIT الرقمية. تسليم فوري عبر رابط Google Drive آمن بعد الدفع.",
+      "description_en": "Autonomous AI Blogging Engine — a BrainSAIT skill from the digital library. Instant delivery via secure Google Drive link after payment.",
+      "category": "development",
+      "category_ar": "مهارات ووكلاء ذكاء اصطناعي",
+      "price_sar": 89,
+      "price_usd": 24,
+      "features": [
+        "مهارة — Skill",
+        "تسليم فوري / Instant delivery",
+        "رابط Drive آمن / Secure Drive link",
+        "جودة عالية / High quality"
+      ],
+      "delivery": "instant",
+      "delivery_url": "https://drive.google.com/uc?export=download&id=1Tgusz-EQHU39m5faXW6rvBp8ksrji7Yr",
+      "tier": "professional",
+      "file_size_mb": null
+    },
+    {
+      "id": "drive-bite-model-scientific-assessment-of-authoritarian-control-pdf",
+      "source": "drive",
+      "drive_id": "1t2Ls_FNzOwYFZiExyCKUGJYqUzP8Hlgp",
+      "product_type": "blueprint",
+      "name_ar": "BITE Model Scientific Assessment of Authoritarian Control — مخطّط استراتيجي",
+      "name_en": "BITE Model Scientific Assessment of Authoritarian Control",
+      "name_type_ar": "مخطّط استراتيجي",
+      "description_ar": "BITE Model Scientific Assessment of Authoritarian Control — مخطّط استراتيجي من مكتبة BrainSAIT الرقمية. تسليم فوري عبر رابط Google Drive آمن بعد الدفع.",
+      "description_en": "BITE Model Scientific Assessment of Authoritarian Control — a BrainSAIT blueprint from the digital library. Instant delivery via secure Google Drive link after payment.",
+      "category": "business",
+      "category_ar": "مخططات واستراتيجيات",
+      "price_sar": 89,
+      "price_usd": 24,
+      "features": [
+        "مخطّط استراتيجي — Blueprint",
+        "تسليم فوري / Instant delivery",
+        "رابط Drive آمن / Secure Drive link",
+        "جودة عالية / High quality"
+      ],
+      "delivery": "instant",
+      "delivery_url": "https://drive.google.com/uc?export=download&id=1t2Ls_FNzOwYFZiExyCKUGJYqUzP8Hlgp",
+      "tier": "professional",
+      "file_size_mb": null
+    },
+    {
+      "id": "drive-brainsait-ai-masterclass-pdf",
+      "source": "drive",
+      "drive_id": "10bbHuagYzY1RBHwP3Q4iGlX5tRqdPHLg",
+      "product_type": "skill",
+      "name_ar": "BrainSAIT AI Masterclass — مهارة",
+      "name_en": "BrainSAIT AI Masterclass",
+      "name_type_ar": "مهارة",
+      "description_ar": "BrainSAIT AI Masterclass — مهارة من مكتبة BrainSAIT الرقمية. تسليم فوري عبر رابط Google Drive آمن بعد الدفع.",
+      "description_en": "BrainSAIT AI Masterclass — a BrainSAIT skill from the digital library. Instant delivery via secure Google Drive link after payment.",
+      "category": "development",
+      "category_ar": "مهارات ووكلاء ذكاء اصطناعي",
+      "price_sar": 89,
+      "price_usd": 24,
+      "features": [
+        "مهارة — Skill",
+        "تسليم فوري / Instant delivery",
+        "رابط Drive آمن / Secure Drive link",
+        "جودة عالية / High quality"
+      ],
+      "delivery": "instant",
+      "delivery_url": "https://store.brainsait.de/a/downloads",
+      "tier": "professional",
+      "file_size_mb": null,
+      "delivery_mode": "licensed-r2",
+      "download_portal": "https://store.brainsait.de/a/downloads"
+    },
+    {
+      "id": "drive-brainsait-health-os-pdf",
+      "source": "drive",
+      "drive_id": "1oQGj4q9hACVlMXVtokgZUqEZ_JEUZrwE",
+      "product_type": "template",
+      "name_ar": "BrainSAIT Health OS — قالب",
+      "name_en": "BrainSAIT Health OS",
+      "name_type_ar": "قالب",
+      "description_ar": "BrainSAIT Health OS — قالب من مكتبة BrainSAIT الرقمية. تسليم فوري عبر رابط Google Drive آمن بعد الدفع.",
+      "description_en": "BrainSAIT Health OS — a BrainSAIT template from the digital library. Instant delivery via secure Google Drive link after payment.",
+      "category": "operations",
+      "category_ar": "قوالب وأطر جاهزة",
+      "price_sar": 69,
+      "price_usd": 18,
+      "features": [
+        "قالب — Template",
+        "تسليم فوري / Instant delivery",
+        "رابط Drive آمن / Secure Drive link",
+        "جودة عالية / High quality"
+      ],
+      "delivery": "instant",
+      "delivery_url": "https://store.brainsait.de/a/downloads",
+      "tier": "professional",
+      "file_size_mb": null,
+      "delivery_mode": "licensed-r2",
+      "download_portal": "https://store.brainsait.de/a/downloads"
+    },
+    {
+      "id": "drive-clinical-code-pdf",
+      "source": "drive",
+      "drive_id": "1c8PkTE0rsqpvBkGZa72fVGC7YFldfc22",
+      "product_type": "software",
+      "name_ar": "Clinical Code — حلّ برمجي",
+      "name_en": "Clinical Code",
+      "name_type_ar": "حلّ برمجي",
+      "description_ar": "Clinical Code — حلّ برمجي من مكتبة BrainSAIT الرقمية. تسليم فوري عبر رابط Google Drive آمن بعد الدفع.",
+      "description_en": "Clinical Code — a BrainSAIT software from the digital library. Instant delivery via secure Google Drive link after payment.",
+      "category": "development",
+      "category_ar": "حلول برمجية وأنظمة",
+      "price_sar": 99,
+      "price_usd": 26,
+      "features": [
+        "حلّ برمجي — Software",
+        "تسليم فوري / Instant delivery",
+        "رابط Drive آمن / Secure Drive link",
+        "جودة عالية / High quality"
+      ],
+      "delivery": "instant",
+      "delivery_url": "https://store.brainsait.de/a/downloads",
+      "tier": "premium",
+      "file_size_mb": null,
+      "delivery_mode": "licensed-r2",
+      "download_portal": "https://store.brainsait.de/a/downloads"
+    },
+    {
+      "id": "drive-digital-autonomy-blueprint-pdf",
+      "source": "drive",
+      "drive_id": "1YPBl3EBVhYZwhiZxoY0TCz7xZ--qUyjn",
+      "product_type": "template",
+      "name_ar": "Digital Autonomy Blueprint — قالب",
+      "name_en": "Digital Autonomy Blueprint",
+      "name_type_ar": "قالب",
+      "description_ar": "Digital Autonomy Blueprint — قالب من مكتبة BrainSAIT الرقمية. تسليم فوري عبر رابط Google Drive آمن بعد الدفع.",
+      "description_en": "Digital Autonomy Blueprint — a BrainSAIT template from the digital library. Instant delivery via secure Google Drive link after payment.",
+      "category": "operations",
+      "category_ar": "قوالب وأطر جاهزة",
+      "price_sar": 69,
+      "price_usd": 18,
+      "features": [
+        "قالب — Template",
+        "تسليم فوري / Instant delivery",
+        "رابط Drive آمن / Secure Drive link",
+        "جودة عالية / High quality"
+      ],
+      "delivery": "instant",
+      "delivery_url": "https://store.brainsait.de/a/downloads",
+      "tier": "professional",
+      "file_size_mb": null,
+      "delivery_mode": "licensed-r2",
+      "download_portal": "https://store.brainsait.de/a/downloads"
+    },
+    {
+      "id": "drive-digital-childhood-pdf",
+      "source": "drive",
+      "drive_id": "1RMJwfvqR-X76M2kClMdVHYQGm0IMOZy6",
+      "product_type": "mini-book",
+      "name_ar": "Digital Childhood — مؤلَّف مصغّر",
+      "name_en": "Digital Childhood",
+      "name_type_ar": "مؤلَّف مصغّر",
+      "description_ar": "Digital Childhood — مؤلَّف مصغّر من مكتبة BrainSAIT الرقمية. تسليم فوري عبر رابط Google Drive آمن بعد الدفع.",
+      "description_en": "Digital Childhood — a BrainSAIT mini-book from the digital library. Instant delivery via secure Google Drive link after payment.",
+      "category": "creative",
+      "category_ar": "مؤلفات مصغّرة",
+      "price_sar": 49,
+      "price_usd": 13,
+      "features": [
+        "مؤلَّف مصغّر — Mini-Book",
+        "تسليم فوري / Instant delivery",
+        "رابط Drive آمن / Secure Drive link",
+        "جودة عالية / High quality"
+      ],
+      "delivery": "instant",
+      "delivery_url": "https://drive.google.com/uc?export=download&id=1RMJwfvqR-X76M2kClMdVHYQGm0IMOZy6",
+      "tier": "standard",
+      "file_size_mb": null
+    },
+    {
+      "id": "drive-digital-health-bridge-pdf",
+      "source": "drive",
+      "drive_id": "1jRJT61mYJZWofDLllKX7shQVHaIUinW8",
+      "product_type": "healthcare",
+      "name_ar": "Digital Health Bridge — حلّ صحّي",
+      "name_en": "Digital Health Bridge",
+      "name_type_ar": "حلّ صحّي",
+      "description_ar": "Digital Health Bridge — حلّ صحّي من مكتبة BrainSAIT الرقمية. تسليم فوري عبر رابط Google Drive آمن بعد الدفع.",
+      "description_en": "Digital Health Bridge — a BrainSAIT healthcare from the digital library. Instant delivery via secure Google Drive link after payment.",
+      "category": "healthcare",
+      "category_ar": "حلول الصحة الرقمية",
+      "price_sar": 119,
+      "price_usd": 32,
+      "features": [
+        "حلّ صحّي — Healthcare",
+        "تسليم فوري / Instant delivery",
+        "رابط Drive آمن / Secure Drive link",
+        "جودة عالية / High quality"
+      ],
+      "delivery": "instant",
+      "delivery_url": "https://store.brainsait.de/a/downloads",
+      "tier": "professional",
+      "file_size_mb": null,
+      "delivery_mode": "licensed-r2",
+      "download_portal": "https://store.brainsait.de/a/downloads"
+    },
+    {
+      "id": "drive-digital-income-strategy-your-three-pathways-pdf",
+      "source": "drive",
+      "drive_id": "16-FBGsE7YlVLfylgUM2gvtshbnxSiJ9h",
+      "product_type": "blueprint",
+      "name_ar": "Digital Income Strategy Your Three Pathways — مخطّط استراتيجي",
+      "name_en": "Digital Income Strategy Your Three Pathways",
+      "name_type_ar": "مخطّط استراتيجي",
+      "description_ar": "Digital Income Strategy Your Three Pathways — مخطّط استراتيجي من مكتبة BrainSAIT الرقمية. تسليم فوري عبر رابط Google Drive آمن بعد الدفع.",
+      "description_en": "Digital Income Strategy Your Three Pathways — a BrainSAIT blueprint from the digital library. Instant delivery via secure Google Drive link after payment.",
+      "category": "business",
+      "category_ar": "مخططات واستراتيجيات",
+      "price_sar": 89,
+      "price_usd": 24,
+      "features": [
+        "مخطّط استراتيجي — Blueprint",
+        "تسليم فوري / Instant delivery",
+        "رابط Drive آمن / Secure Drive link",
+        "جودة عالية / High quality"
+      ],
+      "delivery": "instant",
+      "delivery_url": "https://store.brainsait.de/a/downloads",
+      "tier": "professional",
+      "file_size_mb": null,
+      "delivery_mode": "licensed-r2",
+      "download_portal": "https://store.brainsait.de/a/downloads"
+    },
+    {
+      "id": "drive-digital-organization-handbook-pdf",
+      "source": "drive",
+      "drive_id": "1XoNXJ7Q0I1hmOnb6PYbd_cPr_AauUJgt",
+      "product_type": "template",
+      "name_ar": "Digital Organization Handbook — قالب",
+      "name_en": "Digital Organization Handbook",
+      "name_type_ar": "قالب",
+      "description_ar": "Digital Organization Handbook — قالب من مكتبة BrainSAIT الرقمية. تسليم فوري عبر رابط Google Drive آمن بعد الدفع.",
+      "description_en": "Digital Organization Handbook — a BrainSAIT template from the digital library. Instant delivery via secure Google Drive link after payment.",
+      "category": "operations",
+      "category_ar": "قوالب وأطر جاهزة",
+      "price_sar": 69,
+      "price_usd": 18,
+      "features": [
+        "قالب — Template",
+        "تسليم فوري / Instant delivery",
+        "رابط Drive آمن / Secure Drive link",
+        "جودة عالية / High quality"
+      ],
+      "delivery": "instant",
+      "delivery_url": "https://store.brainsait.de/a/downloads",
+      "tier": "professional",
+      "file_size_mb": null,
+      "delivery_mode": "licensed-r2",
+      "download_portal": "https://store.brainsait.de/a/downloads"
+    },
+    {
+      "id": "drive-dom-study-notes-pdf",
+      "source": "drive",
+      "drive_id": "1QYLqcQe2TChCz2jYxPae4NEAu4E0W1NV",
+      "product_type": "template",
+      "name_ar": "DOM Study Notes — قالب",
+      "name_en": "DOM Study Notes",
+      "name_type_ar": "قالب",
+      "description_ar": "DOM Study Notes — قالب من مكتبة BrainSAIT الرقمية. تسليم فوري عبر رابط Google Drive آمن بعد الدفع.",
+      "description_en": "DOM Study Notes — a BrainSAIT template from the digital library. Instant delivery via secure Google Drive link after payment.",
+      "category": "operations",
+      "category_ar": "قوالب وأطر جاهزة",
+      "price_sar": 69,
+      "price_usd": 18,
+      "features": [
+        "قالب — Template",
+        "تسليم فوري / Instant delivery",
+        "رابط Drive آمن / Secure Drive link",
+        "جودة عالية / High quality"
+      ],
+      "delivery": "instant",
+      "delivery_url": "https://store.brainsait.de/a/downloads",
+      "tier": "professional",
+      "file_size_mb": null,
+      "delivery_mode": "licensed-r2",
+      "download_portal": "https://store.brainsait.de/a/downloads"
+    },
+    {
+      "id": "drive-etimad-and-nphies-integration-pdf",
+      "source": "drive",
+      "drive_id": "1Ht2eS0e2PvoOitB7qT0dLES70VHVFMw4",
+      "product_type": "healthcare",
+      "name_ar": "Etimad and NPHIES Integration — حلّ صحّي",
+      "name_en": "Etimad and NPHIES Integration",
+      "name_type_ar": "حلّ صحّي",
+      "description_ar": "Etimad and NPHIES Integration — حلّ صحّي من مكتبة BrainSAIT الرقمية. تسليم فوري عبر رابط Google Drive آمن بعد الدفع.",
+      "description_en": "Etimad and NPHIES Integration — a BrainSAIT healthcare from the digital library. Instant delivery via secure Google Drive link after payment.",
+      "category": "healthcare",
+      "category_ar": "حلول الصحة الرقمية",
+      "price_sar": 119,
+      "price_usd": 32,
+      "features": [
+        "حلّ صحّي — Healthcare",
+        "تسليم فوري / Instant delivery",
+        "رابط Drive آمن / Secure Drive link",
+        "جودة عالية / High quality"
+      ],
+      "delivery": "instant",
+      "delivery_url": "https://store.brainsait.de/a/downloads",
+      "tier": "professional",
+      "file_size_mb": null,
+      "delivery_mode": "licensed-r2",
+      "download_portal": "https://store.brainsait.de/a/downloads"
+    },
+    {
+      "id": "drive-etimad-digital-governance-blueprint-pdf",
+      "source": "drive",
+      "drive_id": "1olQuPLGEQhtAcfdyileGY4XWYdB0T8pK",
+      "product_type": "template",
+      "name_ar": "Etimad Digital Governance Blueprint — قالب",
+      "name_en": "Etimad Digital Governance Blueprint",
+      "name_type_ar": "قالب",
+      "description_ar": "Etimad Digital Governance Blueprint — قالب من مكتبة BrainSAIT الرقمية. تسليم فوري عبر رابط Google Drive آمن بعد الدفع.",
+      "description_en": "Etimad Digital Governance Blueprint — a BrainSAIT template from the digital library. Instant delivery via secure Google Drive link after payment.",
+      "category": "operations",
+      "category_ar": "قوالب وأطر جاهزة",
+      "price_sar": 69,
+      "price_usd": 18,
+      "features": [
+        "قالب — Template",
+        "تسليم فوري / Instant delivery",
+        "رابط Drive آمن / Secure Drive link",
+        "جودة عالية / High quality"
+      ],
+      "delivery": "instant",
+      "delivery_url": "https://store.brainsait.de/a/downloads",
+      "tier": "professional",
+      "file_size_mb": null,
+      "delivery_mode": "licensed-r2",
+      "download_portal": "https://store.brainsait.de/a/downloads"
+    },
+    {
+      "id": "drive-from-mind-to-market-pdf",
+      "source": "drive",
+      "drive_id": "1yxOMFTCXx1kQTFO-NtXj3F3LsWPDZ23j",
+      "product_type": "mini-book",
+      "name_ar": "From Mind to Market — مؤلَّف مصغّر",
+      "name_en": "From Mind to Market",
+      "name_type_ar": "مؤلَّف مصغّر",
+      "description_ar": "From Mind to Market — مؤلَّف مصغّر من مكتبة BrainSAIT الرقمية. تسليم فوري عبر رابط Google Drive آمن بعد الدفع.",
+      "description_en": "From Mind to Market — a BrainSAIT mini-book from the digital library. Instant delivery via secure Google Drive link after payment.",
+      "category": "creative",
+      "category_ar": "مؤلفات مصغّرة",
+      "price_sar": 49,
+      "price_usd": 13,
+      "features": [
+        "مؤلَّف مصغّر — Mini-Book",
+        "تسليم فوري / Instant delivery",
+        "رابط Drive آمن / Secure Drive link",
+        "جودة عالية / High quality"
+      ],
+      "delivery": "instant",
+      "delivery_url": "https://store.brainsait.de/a/downloads",
+      "tier": "standard",
+      "file_size_mb": null,
+      "delivery_mode": "licensed-r2",
+      "download_portal": "https://store.brainsait.de/a/downloads"
+    },
+    {
+      "id": "drive-game-theory-for-parents-pdf",
+      "source": "drive",
+      "drive_id": "1ab-oCh-LbaxCnrCI0UGM6XAlg2_6F8mC",
+      "product_type": "mini-book",
+      "name_ar": "Game Theory for Parents — مؤلَّف مصغّر",
+      "name_en": "Game Theory for Parents",
+      "name_type_ar": "مؤلَّف مصغّر",
+      "description_ar": "Game Theory for Parents — مؤلَّف مصغّر من مكتبة BrainSAIT الرقمية. تسليم فوري عبر رابط Google Drive آمن بعد الدفع.",
+      "description_en": "Game Theory for Parents — a BrainSAIT mini-book from the digital library. Instant delivery via secure Google Drive link after payment.",
+      "category": "creative",
+      "category_ar": "مؤلفات مصغّرة",
+      "price_sar": 49,
+      "price_usd": 13,
+      "features": [
+        "مؤلَّف مصغّر — Mini-Book",
+        "تسليم فوري / Instant delivery",
+        "رابط Drive آمن / Secure Drive link",
+        "جودة عالية / High quality"
+      ],
+      "delivery": "instant",
+      "delivery_url": "https://drive.google.com/uc?export=download&id=1ab-oCh-LbaxCnrCI0UGM6XAlg2_6F8mC",
+      "tier": "standard",
+      "file_size_mb": null
+    },
+    {
+      "id": "drive-healthcare-ai-2025-pdf",
+      "source": "drive",
+      "drive_id": "1PsvjMD1Si8wVbUVqC5a3Av1BI53l1EhY",
+      "product_type": "healthcare",
+      "name_ar": "Healthcare AI 2025 — حلّ صحّي",
+      "name_en": "Healthcare AI 2025",
+      "name_type_ar": "حلّ صحّي",
+      "description_ar": "Healthcare AI 2025 — حلّ صحّي من مكتبة BrainSAIT الرقمية. تسليم فوري عبر رابط Google Drive آمن بعد الدفع.",
+      "description_en": "Healthcare AI 2025 — a BrainSAIT healthcare from the digital library. Instant delivery via secure Google Drive link after payment.",
+      "category": "healthcare",
+      "category_ar": "حلول الصحة الرقمية",
+      "price_sar": 119,
+      "price_usd": 32,
+      "features": [
+        "حلّ صحّي — Healthcare",
+        "تسليم فوري / Instant delivery",
+        "رابط Drive آمن / Secure Drive link",
+        "جودة عالية / High quality"
+      ],
+      "delivery": "instant",
+      "delivery_url": "https://store.brainsait.de/a/downloads",
+      "tier": "professional",
+      "file_size_mb": null,
+      "delivery_mode": "licensed-r2",
+      "download_portal": "https://store.brainsait.de/a/downloads"
+    },
+    {
+      "id": "drive-hyper-scalable-agency-system-pdf",
+      "source": "drive",
+      "drive_id": "13FBsY1DAYZhJnBR0GLOYb3DV2pAqYE2e",
+      "product_type": "software",
+      "name_ar": "Hyper-Scalable Agency System — حلّ برمجي",
+      "name_en": "Hyper-Scalable Agency System",
+      "name_type_ar": "حلّ برمجي",
+      "description_ar": "Hyper-Scalable Agency System — حلّ برمجي من مكتبة BrainSAIT الرقمية. تسليم فوري عبر رابط Google Drive آمن بعد الدفع.",
+      "description_en": "Hyper-Scalable Agency System — a BrainSAIT software from the digital library. Instant delivery via secure Google Drive link after payment.",
+      "category": "development",
+      "category_ar": "حلول برمجية وأنظمة",
+      "price_sar": 99,
+      "price_usd": 26,
+      "features": [
+        "حلّ برمجي — Software",
+        "تسليم فوري / Instant delivery",
+        "رابط Drive آمن / Secure Drive link",
+        "جودة عالية / High quality"
+      ],
+      "delivery": "instant",
+      "delivery_url": "https://store.brainsait.de/a/downloads",
+      "tier": "premium",
+      "file_size_mb": null,
+      "delivery_mode": "licensed-r2",
+      "download_portal": "https://store.brainsait.de/a/downloads"
+    },
+    {
+      "id": "drive-izhar-ul-haq-forensic-analysis-pdf",
+      "source": "drive",
+      "drive_id": "14HdDsUEpnop1rW2J1uleaEM_2H1igsGd",
+      "product_type": "novel",
+      "name_ar": "Izhar ul-Haq Forensic Analysis — رواية/قصة",
+      "name_en": "Izhar ul-Haq Forensic Analysis",
+      "name_type_ar": "رواية/قصة",
+      "description_ar": "Izhar ul-Haq Forensic Analysis — رواية/قصة من مكتبة BrainSAIT الرقمية. تسليم فوري عبر رابط Google Drive آمن بعد الدفع.",
+      "description_en": "Izhar ul-Haq Forensic Analysis — a BrainSAIT novel from the digital library. Instant delivery via secure Google Drive link after payment.",
+      "category": "creative",
+      "category_ar": "روايات وقصص",
+      "price_sar": 79,
+      "price_usd": 21,
+      "features": [
+        "رواية/قصة — Novel",
+        "تسليم فوري / Instant delivery",
+        "رابط Drive آمن / Secure Drive link",
+        "جودة عالية / High quality"
+      ],
+      "delivery": "instant",
+      "delivery_url": "https://drive.google.com/uc?export=download&id=14HdDsUEpnop1rW2J1uleaEM_2H1igsGd",
+      "tier": "premium",
+      "file_size_mb": null
+    },
+    {
+      "id": "drive-leading-joy-in-healthcare-pdf",
+      "source": "drive",
+      "drive_id": "1pERwy5tDhjMCrevv7rHxWrhuEsTraydr",
+      "product_type": "healthcare",
+      "name_ar": "Leading Joy in Healthcare — حلّ صحّي",
+      "name_en": "Leading Joy in Healthcare",
+      "name_type_ar": "حلّ صحّي",
+      "description_ar": "Leading Joy in Healthcare — حلّ صحّي من مكتبة BrainSAIT الرقمية. تسليم فوري عبر رابط Google Drive آمن بعد الدفع.",
+      "description_en": "Leading Joy in Healthcare — a BrainSAIT healthcare from the digital library. Instant delivery via secure Google Drive link after payment.",
+      "category": "healthcare",
+      "category_ar": "حلول الصحة الرقمية",
+      "price_sar": 119,
+      "price_usd": 32,
+      "features": [
+        "حلّ صحّي — Healthcare",
+        "تسليم فوري / Instant delivery",
+        "رابط Drive آمن / Secure Drive link",
+        "جودة عالية / High quality"
+      ],
+      "delivery": "instant",
+      "delivery_url": "https://store.brainsait.de/a/downloads",
+      "tier": "professional",
+      "file_size_mb": null,
+      "delivery_mode": "licensed-r2",
+      "download_portal": "https://store.brainsait.de/a/downloads"
+    },
+    {
+      "id": "drive-one-ecosystem-limitless-intelligence-pdf",
+      "source": "drive",
+      "drive_id": "1AE4wNgRSLyrviwYY0KBTPWVL44KU7mxi",
+      "product_type": "mini-book",
+      "name_ar": "One Ecosystem Limitless Intelligence — مؤلَّف مصغّر",
+      "name_en": "One Ecosystem Limitless Intelligence",
+      "name_type_ar": "مؤلَّف مصغّر",
+      "description_ar": "One Ecosystem Limitless Intelligence — مؤلَّف مصغّر من مكتبة BrainSAIT الرقمية. تسليم فوري عبر رابط Google Drive آمن بعد الدفع.",
+      "description_en": "One Ecosystem Limitless Intelligence — a BrainSAIT mini-book from the digital library. Instant delivery via secure Google Drive link after payment.",
+      "category": "creative",
+      "category_ar": "مؤلفات مصغّرة",
+      "price_sar": 49,
+      "price_usd": 13,
+      "features": [
+        "مؤلَّف مصغّر — Mini-Book",
+        "تسليم فوري / Instant delivery",
+        "رابط Drive آمن / Secure Drive link",
+        "جودة عالية / High quality"
+      ],
+      "delivery": "instant",
+      "delivery_url": "https://store.brainsait.de/a/downloads",
+      "tier": "standard",
+      "file_size_mb": null,
+      "delivery_mode": "licensed-r2",
+      "download_portal": "https://store.brainsait.de/a/downloads"
+    },
+    {
+      "id": "drive-one-million-rps-achieved-pdf",
+      "source": "drive",
+      "drive_id": "1UzPVcIIm1Xpp6vtu9zFushyy7ap7LIJS",
+      "product_type": "mini-book",
+      "name_ar": "One Million RPS Achieved — مؤلَّف مصغّر",
+      "name_en": "One Million RPS Achieved",
+      "name_type_ar": "مؤلَّف مصغّر",
+      "description_ar": "One Million RPS Achieved — مؤلَّف مصغّر من مكتبة BrainSAIT الرقمية. تسليم فوري عبر رابط Google Drive آمن بعد الدفع.",
+      "description_en": "One Million RPS Achieved — a BrainSAIT mini-book from the digital library. Instant delivery via secure Google Drive link after payment.",
+      "category": "creative",
+      "category_ar": "مؤلفات مصغّرة",
+      "price_sar": 49,
+      "price_usd": 13,
+      "features": [
+        "مؤلَّف مصغّر — Mini-Book",
+        "تسليم فوري / Instant delivery",
+        "رابط Drive آمن / Secure Drive link",
+        "جودة عالية / High quality"
+      ],
+      "delivery": "instant",
+      "delivery_url": "https://store.brainsait.de/a/downloads",
+      "tier": "standard",
+      "file_size_mb": null,
+      "delivery_mode": "licensed-r2",
+      "download_portal": "https://store.brainsait.de/a/downloads"
+    },
+    {
+      "id": "drive-private-ai-blueprint-pdf",
+      "source": "drive",
+      "drive_id": "10-Hszwzli3T3zDqd1uM0CPiDyjhiVjvF",
+      "product_type": "template",
+      "name_ar": "Private AI Blueprint — قالب",
+      "name_en": "Private AI Blueprint",
+      "name_type_ar": "قالب",
+      "description_ar": "Private AI Blueprint — قالب من مكتبة BrainSAIT الرقمية. تسليم فوري عبر رابط Google Drive آمن بعد الدفع.",
+      "description_en": "Private AI Blueprint — a BrainSAIT template from the digital library. Instant delivery via secure Google Drive link after payment.",
+      "category": "operations",
+      "category_ar": "قوالب وأطر جاهزة",
+      "price_sar": 69,
+      "price_usd": 18,
+      "features": [
+        "قالب — Template",
+        "تسليم فوري / Instant delivery",
+        "رابط Drive آمن / Secure Drive link",
+        "جودة عالية / High quality"
+      ],
+      "delivery": "instant",
+      "delivery_url": "https://store.brainsait.de/a/downloads",
+      "tier": "professional",
+      "file_size_mb": null,
+      "delivery_mode": "licensed-r2",
+      "download_portal": "https://store.brainsait.de/a/downloads"
+    },
+    {
+      "id": "drive-professional-writing-mastery-pdf",
+      "source": "drive",
+      "drive_id": "19us_97LB_rvCaAn5vAXBfTxras3nsdgw",
+      "product_type": "skill",
+      "name_ar": "Professional Writing Mastery — مهارة",
+      "name_en": "Professional Writing Mastery",
+      "name_type_ar": "مهارة",
+      "description_ar": "Professional Writing Mastery — مهارة من مكتبة BrainSAIT الرقمية. تسليم فوري عبر رابط Google Drive آمن بعد الدفع.",
+      "description_en": "Professional Writing Mastery — a BrainSAIT skill from the digital library. Instant delivery via secure Google Drive link after payment.",
+      "category": "development",
+      "category_ar": "مهارات ووكلاء ذكاء اصطناعي",
+      "price_sar": 89,
+      "price_usd": 24,
+      "features": [
+        "مهارة — Skill",
+        "تسليم فوري / Instant delivery",
+        "رابط Drive آمن / Secure Drive link",
+        "جودة عالية / High quality"
+      ],
+      "delivery": "instant",
+      "delivery_url": "https://store.brainsait.de/a/downloads",
+      "tier": "professional",
+      "file_size_mb": null,
+      "delivery_mode": "licensed-r2",
+      "download_portal": "https://store.brainsait.de/a/downloads"
+    },
+    {
+      "id": "drive-saudi-health-innovation-guide-pdf",
+      "source": "drive",
+      "drive_id": "1tQQKUM12U9ETF7CtLKg5iUlBoH4nQexN",
+      "product_type": "healthcare",
+      "name_ar": "Saudi Health Innovation Guide — حلّ صحّي",
+      "name_en": "Saudi Health Innovation Guide",
+      "name_type_ar": "حلّ صحّي",
+      "description_ar": "Saudi Health Innovation Guide — حلّ صحّي من مكتبة BrainSAIT الرقمية. تسليم فوري عبر رابط Google Drive آمن بعد الدفع.",
+      "description_en": "Saudi Health Innovation Guide — a BrainSAIT healthcare from the digital library. Instant delivery via secure Google Drive link after payment.",
+      "category": "healthcare",
+      "category_ar": "حلول الصحة الرقمية",
+      "price_sar": 119,
+      "price_usd": 32,
+      "features": [
+        "حلّ صحّي — Healthcare",
+        "تسليم فوري / Instant delivery",
+        "رابط Drive آمن / Secure Drive link",
+        "جودة عالية / High quality"
+      ],
+      "delivery": "instant",
+      "delivery_url": "https://store.brainsait.de/a/downloads",
+      "tier": "professional",
+      "file_size_mb": null,
+      "delivery_mode": "licensed-r2",
+      "download_portal": "https://store.brainsait.de/a/downloads"
+    },
+    {
+      "id": "drive-saudi-health-transformation-pdf",
+      "source": "drive",
+      "drive_id": "1oFIfxptF6Yxb5tjpx-00quq0oOQgcL-x",
+      "product_type": "healthcare",
+      "name_ar": "Saudi Health Transformation — حلّ صحّي",
+      "name_en": "Saudi Health Transformation",
+      "name_type_ar": "حلّ صحّي",
+      "description_ar": "Saudi Health Transformation — حلّ صحّي من مكتبة BrainSAIT الرقمية. تسليم فوري عبر رابط Google Drive آمن بعد الدفع.",
+      "description_en": "Saudi Health Transformation — a BrainSAIT healthcare from the digital library. Instant delivery via secure Google Drive link after payment.",
+      "category": "healthcare",
+      "category_ar": "حلول الصحة الرقمية",
+      "price_sar": 119,
+      "price_usd": 32,
+      "features": [
+        "حلّ صحّي — Healthcare",
+        "تسليم فوري / Instant delivery",
+        "رابط Drive آمن / Secure Drive link",
+        "جودة عالية / High quality"
+      ],
+      "delivery": "instant",
+      "delivery_url": "https://store.brainsait.de/a/downloads",
+      "tier": "professional",
+      "file_size_mb": null,
+      "delivery_mode": "licensed-r2",
+      "download_portal": "https://store.brainsait.de/a/downloads"
+    },
+    {
+      "id": "drive-sbs-nphies-integration-blueprint-pdf",
+      "source": "drive",
+      "drive_id": "1M8hK0lWXkKH3kWzd8RXTrdTl3HavIeEW",
+      "product_type": "template",
+      "name_ar": "SBS NPHIES Integration Blueprint — قالب",
+      "name_en": "SBS NPHIES Integration Blueprint",
+      "name_type_ar": "قالب",
+      "description_ar": "SBS NPHIES Integration Blueprint — قالب من مكتبة BrainSAIT الرقمية. تسليم فوري عبر رابط Google Drive آمن بعد الدفع.",
+      "description_en": "SBS NPHIES Integration Blueprint — a BrainSAIT template from the digital library. Instant delivery via secure Google Drive link after payment.",
+      "category": "operations",
+      "category_ar": "قوالب وأطر جاهزة",
+      "price_sar": 69,
+      "price_usd": 18,
+      "features": [
+        "قالب — Template",
+        "تسليم فوري / Instant delivery",
+        "رابط Drive آمن / Secure Drive link",
+        "جودة عالية / High quality"
+      ],
+      "delivery": "instant",
+      "delivery_url": "https://store.brainsait.de/a/downloads",
+      "tier": "professional",
+      "file_size_mb": null,
+      "delivery_mode": "licensed-r2",
+      "download_portal": "https://store.brainsait.de/a/downloads"
+    },
+    {
+      "id": "drive-sdc-fhir-stu-4-notes-pdf",
+      "source": "drive",
+      "drive_id": "1MzrkYeaSF8XnaaxB8nNicPLH0twbZISv",
+      "product_type": "template",
+      "name_ar": "SDC FHIR STU 4 Notes — قالب",
+      "name_en": "SDC FHIR STU 4 Notes",
+      "name_type_ar": "قالب",
+      "description_ar": "SDC FHIR STU 4 Notes — قالب من مكتبة BrainSAIT الرقمية. تسليم فوري عبر رابط Google Drive آمن بعد الدفع.",
+      "description_en": "SDC FHIR STU 4 Notes — a BrainSAIT template from the digital library. Instant delivery via secure Google Drive link after payment.",
+      "category": "operations",
+      "category_ar": "قوالب وأطر جاهزة",
+      "price_sar": 69,
+      "price_usd": 18,
+      "features": [
+        "قالب — Template",
+        "تسليم فوري / Instant delivery",
+        "رابط Drive آمن / Secure Drive link",
+        "جودة عالية / High quality"
+      ],
+      "delivery": "instant",
+      "delivery_url": "https://store.brainsait.de/a/downloads",
+      "tier": "professional",
+      "file_size_mb": null,
+      "delivery_mode": "licensed-r2",
+      "download_portal": "https://store.brainsait.de/a/downloads"
+    },
+    {
+      "id": "drive-solo-ai-business-blueprint-pdf",
+      "source": "drive",
+      "drive_id": "11e3TsNeHttRDbHO-YZXR_owd2B3wuepD",
+      "product_type": "template",
+      "name_ar": "Solo AI Business Blueprint — قالب",
+      "name_en": "Solo AI Business Blueprint",
+      "name_type_ar": "قالب",
+      "description_ar": "Solo AI Business Blueprint — قالب من مكتبة BrainSAIT الرقمية. تسليم فوري عبر رابط Google Drive آمن بعد الدفع.",
+      "description_en": "Solo AI Business Blueprint — a BrainSAIT template from the digital library. Instant delivery via secure Google Drive link after payment.",
+      "category": "operations",
+      "category_ar": "قوالب وأطر جاهزة",
+      "price_sar": 69,
+      "price_usd": 18,
+      "features": [
+        "قالب — Template",
+        "تسليم فوري / Instant delivery",
+        "رابط Drive آمن / Secure Drive link",
+        "جودة عالية / High quality"
+      ],
+      "delivery": "instant",
+      "delivery_url": "https://store.brainsait.de/a/downloads",
+      "tier": "professional",
+      "file_size_mb": null,
+      "delivery_mode": "licensed-r2",
+      "download_portal": "https://store.brainsait.de/a/downloads"
+    },
+    {
+      "id": "drive-stealth-python-networking-pdf",
+      "source": "drive",
+      "drive_id": "1gS05VUW4rEvLwjNeVIVoviIkIT0a96tt",
+      "product_type": "software",
+      "name_ar": "Stealth Python Networking — حلّ برمجي",
+      "name_en": "Stealth Python Networking",
+      "name_type_ar": "حلّ برمجي",
+      "description_ar": "Stealth Python Networking — حلّ برمجي من مكتبة BrainSAIT الرقمية. تسليم فوري عبر رابط Google Drive آمن بعد الدفع.",
+      "description_en": "Stealth Python Networking — a BrainSAIT software from the digital library. Instant delivery via secure Google Drive link after payment.",
+      "category": "development",
+      "category_ar": "حلول برمجية وأنظمة",
+      "price_sar": 99,
+      "price_usd": 26,
+      "features": [
+        "حلّ برمجي — Software",
+        "تسليم فوري / Instant delivery",
+        "رابط Drive آمن / Secure Drive link",
+        "جودة عالية / High quality"
+      ],
+      "delivery": "instant",
+      "delivery_url": "https://store.brainsait.de/a/downloads",
+      "tier": "premium",
+      "file_size_mb": null,
+      "delivery_mode": "licensed-r2",
+      "download_portal": "https://store.brainsait.de/a/downloads"
+    },
+    {
+      "id": "drive-strategic-ai-blueprint-pdf",
+      "source": "drive",
+      "drive_id": "1QjIkgb2Jdl9jwNrsCplQcC_AYtuQu3Ln",
+      "product_type": "template",
+      "name_ar": "Strategic AI Blueprint — قالب",
+      "name_en": "Strategic AI Blueprint",
+      "name_type_ar": "قالب",
+      "description_ar": "Strategic AI Blueprint — قالب من مكتبة BrainSAIT الرقمية. تسليم فوري عبر رابط Google Drive آمن بعد الدفع.",
+      "description_en": "Strategic AI Blueprint — a BrainSAIT template from the digital library. Instant delivery via secure Google Drive link after payment.",
+      "category": "operations",
+      "category_ar": "قوالب وأطر جاهزة",
+      "price_sar": 69,
+      "price_usd": 18,
+      "features": [
+        "قالب — Template",
+        "تسليم فوري / Instant delivery",
+        "رابط Drive آمن / Secure Drive link",
+        "جودة عالية / High quality"
+      ],
+      "delivery": "instant",
+      "delivery_url": "https://drive.google.com/uc?export=download&id=1QjIkgb2Jdl9jwNrsCplQcC_AYtuQu3Ln",
+      "tier": "professional",
+      "file_size_mb": null
+    },
+    {
+      "id": "drive-the-ai-skill-economy-pdf",
+      "source": "drive",
+      "drive_id": "1tAuWkbHAEkQFT63POEJT_lldIUQ7_ehx",
+      "product_type": "skill",
+      "name_ar": "The AI Skill Economy — مهارة",
+      "name_en": "The AI Skill Economy",
+      "name_type_ar": "مهارة",
+      "description_ar": "The AI Skill Economy — مهارة من مكتبة BrainSAIT الرقمية. تسليم فوري عبر رابط Google Drive آمن بعد الدفع.",
+      "description_en": "The AI Skill Economy — a BrainSAIT skill from the digital library. Instant delivery via secure Google Drive link after payment.",
+      "category": "development",
+      "category_ar": "مهارات ووكلاء ذكاء اصطناعي",
+      "price_sar": 89,
+      "price_usd": 24,
+      "features": [
+        "مهارة — Skill",
+        "تسليم فوري / Instant delivery",
+        "رابط Drive آمن / Secure Drive link",
+        "جودة عالية / High quality"
+      ],
+      "delivery": "instant",
+      "delivery_url": "https://store.brainsait.de/a/downloads",
+      "tier": "professional",
+      "file_size_mb": null,
+      "delivery_mode": "licensed-r2",
+      "download_portal": "https://store.brainsait.de/a/downloads"
+    },
+    {
+      "id": "drive-the-api-blueprint-pdf",
+      "source": "drive",
+      "drive_id": "1P3YvZ7ctGc2azh9rgxpej-WeqHn7TGCW",
+      "product_type": "software",
+      "name_ar": "The API Blueprint — حلّ برمجي",
+      "name_en": "The API Blueprint",
+      "name_type_ar": "حلّ برمجي",
+      "description_ar": "The API Blueprint — حلّ برمجي من مكتبة BrainSAIT الرقمية. تسليم فوري عبر رابط Google Drive آمن بعد الدفع.",
+      "description_en": "The API Blueprint — a BrainSAIT software from the digital library. Instant delivery via secure Google Drive link after payment.",
+      "category": "development",
+      "category_ar": "حلول برمجية وأنظمة",
+      "price_sar": 99,
+      "price_usd": 26,
+      "features": [
+        "حلّ برمجي — Software",
+        "تسليم فوري / Instant delivery",
+        "رابط Drive آمن / Secure Drive link",
+        "جودة عالية / High quality"
+      ],
+      "delivery": "instant",
+      "delivery_url": "https://store.brainsait.de/a/downloads",
+      "tier": "premium",
+      "file_size_mb": null,
+      "delivery_mode": "licensed-r2",
+      "download_portal": "https://store.brainsait.de/a/downloads"
+    },
+    {
+      "id": "drive-the-architecture-of-self-pdf",
+      "source": "drive",
+      "drive_id": "1uKk_5OAZgdGR1BTflSQb6GkdBUccjZUY",
+      "product_type": "skill",
+      "name_ar": "The Architecture of Self — مهارة",
+      "name_en": "The Architecture of Self",
+      "name_type_ar": "مهارة",
+      "description_ar": "The Architecture of Self — مهارة من مكتبة BrainSAIT الرقمية. تسليم فوري عبر رابط Google Drive آمن بعد الدفع.",
+      "description_en": "The Architecture of Self — a BrainSAIT skill from the digital library. Instant delivery via secure Google Drive link after payment.",
+      "category": "development",
+      "category_ar": "مهارات ووكلاء ذكاء اصطناعي",
+      "price_sar": 89,
+      "price_usd": 24,
+      "features": [
+        "مهارة — Skill",
+        "تسليم فوري / Instant delivery",
+        "رابط Drive آمن / Secure Drive link",
+        "جودة عالية / High quality"
+      ],
+      "delivery": "instant",
+      "delivery_url": "https://drive.google.com/uc?export=download&id=1uKk_5OAZgdGR1BTflSQb6GkdBUccjZUY",
+      "tier": "professional",
+      "file_size_mb": null
+    },
+    {
+      "id": "drive-the-decentralized-hospital-1-pdf",
+      "source": "drive",
+      "drive_id": "1fQjg6ie-8WJVJ2JaBKWCAC4nXj-Uj7yr",
+      "product_type": "healthcare",
+      "name_ar": "The Decentralized Hospital (1) — حلّ صحّي",
+      "name_en": "The Decentralized Hospital (1)",
+      "name_type_ar": "حلّ صحّي",
+      "description_ar": "The Decentralized Hospital (1) — حلّ صحّي من مكتبة BrainSAIT الرقمية. تسليم فوري عبر رابط Google Drive آمن بعد الدفع.",
+      "description_en": "The Decentralized Hospital (1) — a BrainSAIT healthcare from the digital library. Instant delivery via secure Google Drive link after payment.",
+      "category": "healthcare",
+      "category_ar": "حلول الصحة الرقمية",
+      "price_sar": 119,
+      "price_usd": 32,
+      "features": [
+        "حلّ صحّي — Healthcare",
+        "تسليم فوري / Instant delivery",
+        "رابط Drive آمن / Secure Drive link",
+        "جودة عالية / High quality"
+      ],
+      "delivery": "instant",
+      "delivery_url": "https://store.brainsait.de/a/downloads",
+      "tier": "professional",
+      "file_size_mb": null,
+      "delivery_mode": "licensed-r2",
+      "download_portal": "https://store.brainsait.de/a/downloads"
+    },
+    {
+      "id": "drive-the-hospital-at-home-pdf",
+      "source": "drive",
+      "drive_id": "1ox0ftk0VGiLkfeYxfOsXRDzryUdYsGSx",
+      "product_type": "healthcare",
+      "name_ar": "The Hospital at Home — حلّ صحّي",
+      "name_en": "The Hospital at Home",
+      "name_type_ar": "حلّ صحّي",
+      "description_ar": "The Hospital at Home — حلّ صحّي من مكتبة BrainSAIT الرقمية. تسليم فوري عبر رابط Google Drive آمن بعد الدفع.",
+      "description_en": "The Hospital at Home — a BrainSAIT healthcare from the digital library. Instant delivery via secure Google Drive link after payment.",
+      "category": "healthcare",
+      "category_ar": "حلول الصحة الرقمية",
+      "price_sar": 119,
+      "price_usd": 32,
+      "features": [
+        "حلّ صحّي — Healthcare",
+        "تسليم فوري / Instant delivery",
+        "رابط Drive آمن / Secure Drive link",
+        "جودة عالية / High quality"
+      ],
+      "delivery": "instant",
+      "delivery_url": "https://store.brainsait.de/a/downloads",
+      "tier": "professional",
+      "file_size_mb": null,
+      "delivery_mode": "licensed-r2",
+      "download_portal": "https://store.brainsait.de/a/downloads"
+    },
+    {
+      "id": "drive-the-outlier-equation-pdf",
+      "source": "drive",
+      "drive_id": "1uaosafcZ0norBnSG_8WBS1iYUSjPfxy1",
+      "product_type": "novel",
+      "name_ar": "The Outlier Equation — رواية/قصة",
+      "name_en": "The Outlier Equation",
+      "name_type_ar": "رواية/قصة",
+      "description_ar": "The Outlier Equation — رواية/قصة من مكتبة BrainSAIT الرقمية. تسليم فوري عبر رابط Google Drive آمن بعد الدفع.",
+      "description_en": "The Outlier Equation — a BrainSAIT novel from the digital library. Instant delivery via secure Google Drive link after payment.",
+      "category": "creative",
+      "category_ar": "روايات وقصص",
+      "price_sar": 79,
+      "price_usd": 21,
+      "features": [
+        "رواية/قصة — Novel",
+        "تسليم فوري / Instant delivery",
+        "رابط Drive آمن / Secure Drive link",
+        "جودة عالية / High quality"
+      ],
+      "delivery": "instant",
+      "delivery_url": "https://store.brainsait.de/a/downloads",
+      "tier": "premium",
+      "file_size_mb": null,
+      "delivery_mode": "licensed-r2",
+      "download_portal": "https://store.brainsait.de/a/downloads"
+    },
+    {
+      "id": "drive-the-ultimate-persistent-ai-agent-pdf",
+      "source": "drive",
+      "drive_id": "13jSbgpw5aOZ0P6WMRvTqP9cVF0TyetgB",
+      "product_type": "skill",
+      "name_ar": "The Ultimate Persistent AI Agent — مهارة",
+      "name_en": "The Ultimate Persistent AI Agent",
+      "name_type_ar": "مهارة",
+      "description_ar": "The Ultimate Persistent AI Agent — مهارة من مكتبة BrainSAIT الرقمية. تسليم فوري عبر رابط Google Drive آمن بعد الدفع.",
+      "description_en": "The Ultimate Persistent AI Agent — a BrainSAIT skill from the digital library. Instant delivery via secure Google Drive link after payment.",
+      "category": "development",
+      "category_ar": "مهارات ووكلاء ذكاء اصطناعي",
+      "price_sar": 89,
+      "price_usd": 24,
+      "features": [
+        "مهارة — Skill",
+        "تسليم فوري / Instant delivery",
+        "رابط Drive آمن / Secure Drive link",
+        "جودة عالية / High quality"
+      ],
+      "delivery": "instant",
+      "delivery_url": "https://store.brainsait.de/a/downloads",
+      "tier": "professional",
+      "file_size_mb": null,
+      "delivery_mode": "licensed-r2",
+      "download_portal": "https://store.brainsait.de/a/downloads"
+    },
+    {
+      "id": "drive-voice-agent-production-blueprint-pdf",
+      "source": "drive",
+      "drive_id": "1m4HW6MnaRM5Lm3ELOavJ4GWoowGtVzEI",
+      "product_type": "template",
+      "name_ar": "Voice Agent Production Blueprint — قالب",
+      "name_en": "Voice Agent Production Blueprint",
+      "name_type_ar": "قالب",
+      "description_ar": "Voice Agent Production Blueprint — قالب من مكتبة BrainSAIT الرقمية. تسليم فوري عبر رابط Google Drive آمن بعد الدفع.",
+      "description_en": "Voice Agent Production Blueprint — a BrainSAIT template from the digital library. Instant delivery via secure Google Drive link after payment.",
+      "category": "operations",
+      "category_ar": "قوالب وأطر جاهزة",
+      "price_sar": 69,
+      "price_usd": 18,
+      "features": [
+        "قالب — Template",
+        "تسليم فوري / Instant delivery",
+        "رابط Drive آمن / Secure Drive link",
+        "جودة عالية / High quality"
+      ],
+      "delivery": "instant",
+      "delivery_url": "https://store.brainsait.de/a/downloads",
+      "tier": "professional",
+      "file_size_mb": null,
+      "delivery_mode": "licensed-r2",
+      "download_portal": "https://store.brainsait.de/a/downloads"
+    },
+    {
+      "id": "all_men",
+      "source": "drive",
+      "drive_id": "1OPkdWlTEMzR4Yo8OONOP4-6IFHFPKc_4",
+      "product_type": "novel",
+      "name_ar": "All Men — رواية",
+      "name_en": "All Men",
+      "name_type_ar": "رواية",
+      "description_ar": "All Men — رواية من مكتبة BrainSAIT الرقمية. تسليم فوري عبر رابط Google Drive آمن بعد الدفع.",
+      "description_en": "All Men — a BrainSAIT novel from the digital library. Instant delivery via secure Google Drive link after payment.",
+      "category": "creative",
+      "category_ar": "روايات وقصص",
+      "price_sar": 79,
+      "price_usd": 21,
+      "features": [
+        "رواية — Novel",
+        "تسليم فوري / Instant delivery",
+        "رابط Drive آمن / Secure Drive link",
+        "جودة عالية / High quality"
+      ],
+      "delivery": "instant",
+      "delivery_url": "https://store.brainsait.de/a/downloads",
+      "tier": "premium",
+      "file_size_mb": 4,
+      "delivery_mode": "licensed-r2",
+      "download_portal": "https://store.brainsait.de/a/downloads"
+    },
+    {
+      "id": "between_one_beat_and_another_arabic",
+      "source": "drive",
+      "drive_id": "1MtHCSNKy9etICq9uoba_L3WGPRNEIZtJ",
+      "product_type": "novel",
+      "name_ar": "Between One Beat and Another (العربية) — رواية",
+      "name_en": "Between One Beat and Another — Arabic",
+      "name_type_ar": "رواية",
+      "description_ar": "Between One Beat and Another (العربية) — رواية من مكتبة BrainSAIT الرقمية. تسليم فوري عبر رابط Google Drive آمن بعد الدفع.",
+      "description_en": "Between One Beat and Another (Arabic) — a BrainSAIT novel from the digital library. Instant delivery via secure Google Drive link after payment.",
+      "category": "creative",
+      "category_ar": "روايات وقصص",
+      "price_sar": 79,
+      "price_usd": 21,
+      "features": [
+        "رواية — Novel",
+        "تسليم فوري / Instant delivery",
+        "رابط Drive آمن / Secure Drive link",
+        "جودة عالية / High quality"
+      ],
+      "delivery": "instant",
+      "delivery_url": "https://store.brainsait.de/a/downloads",
+      "tier": "premium",
+      "file_size_mb": 2,
+      "delivery_mode": "licensed-r2",
+      "download_portal": "https://store.brainsait.de/a/downloads"
+    },
+    {
+      "id": "between_one_beat_and_another_english",
+      "source": "drive",
+      "drive_id": "1N5mibVHCttznF9h8oz1zJfKCBK7ftaC_",
+      "product_type": "novel",
+      "name_ar": "Between One Beat and Another (English) — رواية",
+      "name_en": "Between One Beat and Another — English",
+      "name_type_ar": "رواية",
+      "description_ar": "Between One Beat and Another (English) — رواية من مكتبة BrainSAIT الرقمية. تسليم فوري عبر رابط Google Drive آمن بعد الدفع.",
+      "description_en": "Between One Beat and Another (English) — a BrainSAIT novel from the digital library. Instant delivery via secure Google Drive link after payment.",
+      "category": "creative",
+      "category_ar": "روايات وقصص",
+      "price_sar": 79,
+      "price_usd": 21,
+      "features": [
+        "رواية — Novel",
+        "تسليم فوري / Instant delivery",
+        "رابط Drive آمن / Secure Drive link",
+        "جودة عالية / High quality"
+      ],
+      "delivery": "instant",
+      "delivery_url": "https://store.brainsait.de/a/downloads",
+      "tier": "premium",
+      "file_size_mb": 2,
+      "delivery_mode": "licensed-r2",
+      "download_portal": "https://store.brainsait.de/a/downloads"
+    },
+    {
+      "id": "republic-of-cells",
+      "source": "drive",
+      "drive_id": "1_tMuX9iEi0Y3RAXYS678XjxOi7JRtcOH",
+      "product_type": "novel",
+      "name_ar": "جمهورية الخلايا — رواية علمية أدبية",
+      "name_en": "The Republic of Cells — Complete Edition",
+      "name_type_ar": "رواية علمية أدبية",
+      "description_ar": "جمهورية الخلايا — رواية علمية أدبية من مكتبة BrainSAIT الرقمية. تسليم فوري عبر رابط Google Drive آمن بعد الدفع.",
+      "description_en": "The Republic of Cells — a literary-scientific BrainSAIT novel from the digital library. Instant delivery via secure Google Drive link after payment.",
+      "category": "creative",
+      "category_ar": "روايات وقصص",
+      "price_sar": 369,
+      "price_usd": 99,
+      "features": [
+        "رواية — Novel",
+        "تسليم فوري / Instant delivery",
+        "رابط Drive آمن / Secure Drive link",
+        "جودة عالية / High quality"
+      ],
+      "delivery": "instant",
+      "delivery_url": "https://store.brainsait.de/a/downloads",
+      "tier": "premium",
+      "file_size_mb": 7,
+      "delivery_mode": "licensed-r2",
+      "download_portal": "https://store.brainsait.de/a/downloads"
+    }
+  ],
+  "compliance": {
+    "directive": "BSD-2026-07",
+    "article": [
+      5,
+      12
+    ],
+    "standardized": "2026-07-21",
+    "knowledge_products_published": 6,
+    "knowledge_pipeline_date": "2026-07-21"
+  }
+}

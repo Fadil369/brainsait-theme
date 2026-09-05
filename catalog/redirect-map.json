@@ -1,0 +1,30 @@
+[
+  {
+    "path": "/products/brainsait-oid-registry-explorer-platform-license",
+    "target": "/products/oid-registry-explorer-seat"
+  },
+  {
+    "path": "/products/brainsait-oid-white-label-enterprise-license-رخصة-المؤسسة-بالعلامة-التجارية-الخاصة",
+    "target": "/products/oid-white-label-enterprise"
+  },
+  {
+    "path": "/products/enterprise-oid-badge-management-system-self-hosted-license",
+    "target": "/products/oid-verification-badge"
+  },
+  {
+    "path": "/products/oid-enterprise-namespace-architect-مهندس-نطاق-الهوية-المؤسسي",
+    "target": "/products/oid-enterprise-namespace-license"
+  },
+  {
+    "path": "/products/oid-fhir-integration-platform-منصة-تكامل-oid-مع-fhir",
+    "target": "/products/oid-fhir-integration-platform"
+  },
+  {
+    "path": "/products/spark-ai-startup-builder-سبارك-باني-الشركات-الناشئة",
+    "target": "/products/spark-ai-startup-builder"
+  },
+  {
+    "path": "/products/vision-2030-healthcare-ai-quick-start-bundle-حزمة-الانطلاق-رؤية-2030",
+    "target": "/products/vision-2030-healthcare-ai-quick-start-bundle"
+  }
+]

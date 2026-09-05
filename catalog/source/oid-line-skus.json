@@ -1,0 +1,15 @@
+{
+  "line": "OID LINE",
+  "currency": "SAR",
+  "billing_policy": "annual-first, monthly decoy only for badge, one-time setup + annual platform for integrate/enterprise",
+  "verify_pattern": "https://verify.brainsait.org/{SPID}",
+  "registry_api": "https://registry.brainsait.org/api/verify/{SPID}",
+  "skus": [
+    {"sku": "OID-BADGE", "oid": "1.3.6.1.4.1.61026.14.1", "handle": "oid-verification-badge", "title_en": "OID Verification Badge", "title_ar": "شارة التحقق OID", "prices": {"monthly": 990, "annual": 9900}, "metric": "verified providers", "gates": ["1 provider", "QR verify", "directory listing", "monitoring"], "overage": "extra provider 9900/yr pro-rata", "lark_sync": {"table": "tblPgelWDynXUGRz", "status": "verified"}},
+    {"sku": "OID-EXPLORER", "oid": "1.3.6.1.4.1.61026.14.2", "handle": "oid-registry-explorer-seat", "title_en": "OID Registry Explorer Seat", "title_ar": "مقعد مستكشف السجل", "prices": {"annual": 24000}, "metric": "facilities", "gates": ["1 facility", "audit trail", "dashboard"], "overage": "extra facility 24000/yr", "lark_sync": {"table": "tbljJr3uB2RqIU3e"}},
+    {"sku": "OID-FHIR", "oid": "1.3.6.1.4.1.61026.14.3", "handle": "oid-fhir-integration-platform", "title_en": "OID FHIR Integration Platform", "title_ar": "منصة تكامل OID مع FHIR", "prices": {"one_time": 120000}, "metric": "integrations", "gates": ["FHIR R4 profiles", "code mapping", "go-live"], "overage": "extra integration scoped", "lark_sync": {"table": "tbljJr3uB2RqIU3e"}},
+    {"sku": "OID-NPHIES", "oid": "1.3.6.1.4.1.61026.14.4", "handle": "nphies-oid-healthcare-identity-bundle", "title_en": "NPHIES-OID Healthcare Identity Bundle", "title_ar": "حزمة الهوية الصحية NPHIES-OID", "prices": {"one_time": 180000, "support_annual": 48000}, "metric": "claims volume", "gates": ["eligibility+auth+claims", "CCHI conformance", "training"], "overage": "extra payer/transaction tier", "lark_sync": {"table": "tbljJr3uB2RqIU3e"}},
+    {"sku": "OID-NAMESPACE", "oid": "1.3.6.1.4.1.61026.14.5", "handle": "oid-enterprise-namespace-license", "title_en": "OID Enterprise Namespace License", "title_ar": "رخصة نطاق OID للمؤسسات", "prices": {"annual": 240000, "setup": 48000}, "metric": "namespaces + child arcs", "gates": ["1 namespace + 18 children", "oid-base registration via BS-AGT-000002", "DID + QR"], "overage": "extra namespace 240000/yr", "lark_sync": {"table": "tbl9J4ad6nRt7Exg"}},
+    {"sku": "OID-WHITELABEL", "oid": "1.3.6.1.4.1.61026.14.6", "handle": "oid-white-label-enterprise", "title_en": "OID White-Label Enterprise", "title_ar": "العلامة التجارية الخاصة OID", "prices": {"annual": 480000}, "metric": "territory + volume", "gates": ["white-label registry+verify", "SSO/residency/SLA", "training"], "overage": "committed spend + revenue share", "lark_sync": {"table": "tbljJr3uB2RqIU3e"}}
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "generatedAt": "2026-09-05T08:06:14Z",
+  "sources": {
+    "shopify": {
+      "path": "source/shopify-products.json",
+      "products": 216
+    },
+    "oid": {
+      "path": "source/oid-line-skus.json",
+      "offers": 6
+    },
+    "bpr": {
+      "path": "source/bpr-monetization-map.json"
+    },
+    "hub": {
+      "path": "source/hub-catalog.json",
+      "products": 71
+    }
+  }
+}
