@@ -200,9 +200,11 @@
     {% endunless %}
     <div class="pcard-foot">
       {% if is_free %}
-        <span class="pcard-badge pcard-badge-free">FREE</span>
+        <span class="pcard-price pcard-price-gold">
+          {% if is_ar %}مجاني{% else %}Free{% endif %}
+        </span>
       {% else %}
-        <span class="pcard-price">{% if is_bpr %}3,960 / 163 {% if is_ar %}ر.س{% else %}SAR{% endif %}{% else %}{{ product.price | money }}{% endif %}{% if plan_label != '' %} <span class="pcard-plan" {% if is_bpr %}style="background:rgba(184,241,78,.18); color:#3a5a00; border:1px solid rgba(184,241,78,.35);"{% endif %}>{{ plan_label }}</span>{% endif %}</span>
+        <span class="pcard-price pcard-price-gold">{% if is_bpr %}3,960 / 163 {% if is_ar %}ر.س{% else %}SAR{% endif %}{% else %}{{ product.price | money }}{% endif %}{% if plan_label != '' %} <span class="pcard-plan" {% if is_bpr %}style="background:rgba(184,241,78,.18); color:#3a5a00; border:1px solid rgba(184,241,78,.35);"{% endif %}>{{ plan_label }}</span>{% endif %}</span>
       {% endif %}
       <div class="pcard-cta">
         {% if is_bpr %}
@@ -253,6 +255,14 @@
   </div>
 </article>
 {% stylesheet %}
+  .pcard-price-gold {
+    font-weight: 800;
+    background: linear-gradient(120deg, #f5dd9d, #e9c46a, #f0c96e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  [dir="rtl"] .pcard-price-gold { font-weight: 800; }
   .pcard-plan {
     display: inline-block;
     margin-left: 6px;

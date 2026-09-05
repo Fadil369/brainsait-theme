@@ -1,0 +1,507 @@
+{%- comment -%}
+  BrainSAIT Branded Header — gh.io design system
+  Premium luxury glass header with Learn · Build · Solutions navigation
+  and dark/light theme toggle with localStorage persistence.
+{%- endcomment -%}
+
+{% liquid
+  assign is_ar = false
+  if request.locale.iso_code == 'ar'
+    assign is_ar = true
+  endif
+  assign locale_dir = 'ltr'
+  if is_ar
+    assign locale_dir = 'rtl'
+  endif
+%}
+
+<style>
+  :root[data-theme='light'] {
+    --color-canvas: #ffffff;
+    --color-header-bg: rgba(255, 255, 255, 0.82);
+    --color-header-border: rgba(18, 24, 52, 0.12);
+    --color-ink: #1f2937;
+    --color-ink-soft: #6b7280;
+    --color-surface: rgba(0, 0, 0, 0.045);
+    --color-surface-2: rgba(0, 0, 0, 0.078);
+    --color-gold: #c49b3e;
+    --color-gold-grad: linear-gradient(120deg, #d4af37, #c49b3e);
+    --color-mobile-bg: rgba(255, 255, 255, 0.96);
+    --color-badge-border: rgba(18, 24, 52, 0.14);
+    --color-badge-bg: rgba(196, 155, 62, 0.10);
+    --color-badge-ink: #a37b1e;
+    --glass: var(--color-header-bg);
+    --glass-blur: saturate(180%) blur(12px);
+    --line: var(--color-header-border);
+    --ink: var(--color-ink);
+    --ink-soft: var(--color-ink-soft);
+    --surface: var(--color-surface);
+    --surface-2: var(--color-surface-2);
+    --gold: var(--color-gold);
+    --gold-grad: var(--color-gold-grad);
+  }
+
+  :root[data-theme='dark'],
+  :root:not([data-theme]) {
+    --color-canvas: #0a0e18;
+    --color-header-bg: rgba(10, 14, 24, 0.88);
+    --color-header-border: rgba(255, 255, 255, 0.08);
+    --color-ink: #e4e8f1;
+    --color-ink-soft: #a3aed0;
+    --color-surface: rgba(255, 255, 255, 0.045);
+    --color-surface-2: rgba(255, 255, 255, 0.078);
+    --color-gold: #e9c46a;
+    --color-gold-grad: linear-gradient(120deg, #f5dd9d, #e9c46a);
+    --color-mobile-bg: rgba(10, 14, 24, 0.96);
+    --color-badge-border: rgba(255, 255, 255, 0.10);
+    --color-badge-bg: rgba(233, 196, 106, 0.12);
+    --color-badge-ink: #e9c46a;
+    --glass: var(--color-header-bg);
+    --glass-blur: saturate(135%) blur(10px);
+    --line: var(--color-header-border);
+    --ink: var(--color-ink);
+    --ink-soft: var(--color-ink-soft);
+    --surface: var(--color-surface);
+    --surface-2: var(--color-surface-2);
+    --gold: var(--color-gold);
+    --gold-grad: var(--color-gold-grad);
+  }
+
+  .brainsait-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: var(--glass);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    border-bottom: 1px solid var(--line);
+    transition: background 0.35s ease, border-color 0.35s ease;
+  }
+
+  .brainsait-header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 24px;
+    height: 64px;
+    direction: {{ locale_dir }};
+  }
+
+  /* Logo */
+  .brainsait-header__logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: var(--ink);
+    font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    transition: opacity 0.2s;
+    flex-shrink: 0;
+  }
+
+  .brainsait-header__logo:hover {
+    opacity: 0.85;
+  }
+
+  .brainsait-header__logo-icon {
+    width: 34px;
+    height: 34px;
+    background: var(--gold-grad);
+    border-radius: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .brainsait-header__logo:hover .brainsait-header__logo-icon {
+    transform: scale(1.06);
+    box-shadow: 0 2px 8px rgba(233, 196, 106, 0.25);
+  }
+
+  /* Nav */
+  .brainsait-header__nav {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin: 0 28px;
+    flex-shrink: 0;
+  }
+
+  .brainsait-header__nav a {
+    color: var(--ink-soft);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 6px 14px;
+    border-radius: 8px;
+    position: relative;
+    transition: color 0.2s, background 0.2s;
+    white-space: nowrap;
+  }
+
+  .brainsait-header__nav a:hover,
+  .brainsait-header__nav a.active {
+    color: var(--ink);
+    background: var(--surface);
+  }
+
+  .brainsait-header__nav a.active {
+    color: var(--ink);
+    font-weight: 600;
+  }
+
+  .brainsait-header__nav a::after {
+    content: '';
+    position: absolute;
+    inset: auto 0 0 0;
+    height: 2px;
+    background: var(--gold);
+    border-radius: 1px;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .brainsait-header__nav a:hover::after,
+  .brainsait-header__nav a.active::after {
+    transform: scaleX(1);
+  }
+
+  /* Badge for registry */
+  .brainsait-header__registry {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 10px;
+    background: var(--color-badge-bg);
+    border: 1px solid var(--color-badge-border);
+    border-radius: 6px;
+    color: var(--color-badge-ink);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    transition: background 0.2s, border-color 0.2s;
+  }
+
+  .brainsait-header__registry:hover {
+    background: var(--color-badge-border);
+  }
+
+  /* Actions */
+  .brainsait-header__actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+  }
+
+  /* Theme toggle */
+  .brainsait-header__theme-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    color: var(--ink-soft);
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.2s;
+    line-height: 1;
+  }
+
+  .brainsait-header__theme-toggle:hover {
+    background: var(--surface-2);
+    color: var(--ink);
+  }
+
+  /* RTL: move nav to start, actions to end */
+  [dir='rtl'] .brainsait-header__inner {
+    flex-direction: row-reverse;
+  }
+
+  [dir='rtl'] .brainsait-header__nav {
+    margin: 0 28px;
+  }
+
+  /* Mobile hamburger */
+  .brainsait-header__menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--ink);
+    font-size: 22px;
+    cursor: pointer;
+    padding: 6px;
+    line-height: 1;
+    transition: color 0.2s;
+  }
+
+  .brainsait-header__menu-btn:hover {
+    color: var(--ink-soft);
+  }
+
+  /* Mobile overlay */
+  .brainsait-header__mobile-overlay {
+    display: none;
+  }
+
+  @media screen and (max-width: 868px) {
+    .brainsait-header__inner {
+      padding: 0 16px;
+      height: 58px;
+    }
+
+    .brainsait-header__nav {
+      display: none;
+      position: fixed;
+      top: 58px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: var(--color-mobile-bg);
+      backdrop-filter: var(--glass-blur);
+      -webkit-backdrop-filter: var(--glass-blur);
+      flex-direction: column;
+      align-items: stretch;
+      padding: 24px 20px;
+      gap: 4px;
+      z-index: 999;
+      overflow-y: auto;
+      margin: 0;
+    }
+
+    .brainsait-header__nav.open {
+      display: flex;
+    }
+
+    .brainsait-header__mobile-overlay {
+      display: block;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.3);
+      z-index: 998;
+    }
+
+    .brainsait-header__nav.open + .brainsait-header__mobile-overlay {
+      display: none;
+    }
+
+    .brainsait-header__nav.open a {
+      font-size: 16px;
+      padding: 12px 14px;
+      border-radius: 10px;
+    }
+
+    .brainsait-header__nav.open .brainsait-header__registry {
+      margin-top: 8px;
+      justify-content: center;
+      padding: 10px 14px;
+      font-size: 13px;
+    }
+
+    .brainsait-header__menu-btn {
+      display: block;
+    }
+  }
+
+  /* Reduce motion */
+  @media (prefers-reduced-motion: reduce) {
+    .brainsait-header,
+    .brainsait-header__nav a,
+    .brainsait-header__nav a::after,
+    .brainsait-header__theme-toggle,
+    .brainsait-header__logo-icon {
+      transition: none;
+    }
+  }
+</style>
+
+<header class="brainsait-header" role="banner">
+  <div class="brainsait-header__inner">
+
+    <!-- Logo -->
+    <a href="/" class="brainsait-header__logo" aria-label="BrainSAIT Home">
+      <span class="brainsait-header__logo-icon" aria-hidden="true">🧠</span>
+      <span>BrainSAIT</span>
+    </a>
+
+    <!-- Desktop nav -->
+    <nav class="brainsait-header__nav" id="brainsait-nav" aria-label="Main navigation">
+      <a href="/collections/learn" class="{% if request.path contains '/collections/learn' or request.path contains '/learn' %}active{% endif %}">
+        {% if is_ar %}تعلّم{% else %}Learn{% endif %}
+      </a>
+      <a href="/collections/build" class="{% if request.path contains '/collections/build' or request.path contains '/build' %}active{% endif %}">
+        {% if is_ar %}ابنِ{% else %}Build{% endif %}
+      </a>
+      <a href="/collections/solutions" class="{% if request.path contains '/collections/solutions' or request.path contains '/solutions' %}active{% endif %}">
+        {% if is_ar %}حلول{% else %}Solutions{% endif %}
+      </a>
+      <a href="/pages/benefits" class="{% if request.path contains '/benefits' or request.path contains '/pages/benefits' %}active{% endif %}">
+        {% if is_ar %}المزايا{% else %}Benefits{% endif %}
+      </a>
+      <a href="https://registry.brainsait.org" target="_blank" rel="noopener noreferrer" class="brainsait-header__registry">
+        <span>BPR</span>
+        <span aria-hidden="true">{% if is_ar %}↗{% else %}↗{% endif %}</span>
+      </a>
+    </nav>
+
+    <!-- Actions -->
+    <div class="brainsait-header__actions">
+      <button class="brainsait-header__theme-toggle" id="theme-toggle" aria-label="Toggle dark/light theme" type="button">
+        <span class="icon-sun" aria-hidden="true">☀️</span>
+        <span class="icon-moon" aria-hidden="true" style="display:none;">🌙</span>
+      </button>
+      <button class="brainsait-header__menu-btn" id="menu-btn" aria-label="Open menu" type="button" aria-expanded="false">☰</button>
+    </div>
+
+  </div>
+
+  <!-- Mobile overlay -->
+  <div class="brainsait-header__mobile-overlay" id="mobile-overlay"></div>
+</header>
+
+<script>
+  (function () {
+    'use strict';
+
+    /* ── Theme toggle ───────────────────────────────────── */
+    var html = document.documentElement;
+    var toggle = document.getElementById('theme-toggle');
+    var iconSun = toggle ? toggle.querySelector('.icon-sun') : null;
+    var iconMoon = toggle ? toggle.querySelector('.icon-moon') : null;
+
+    function applyTheme(theme) {
+      html.setAttribute('data-theme', theme);
+      localStorage.setItem('brainsait-theme', theme);
+      updateIcons(theme);
+    }
+
+    function updateIcons(theme) {
+      if (!iconSun || !iconMoon) return;
+      if (theme === 'light') {
+        iconSun.style.display = 'none';
+        iconMoon.style.display = '';
+      } else {
+        iconSun.style.display = '';
+        iconMoon.style.display = 'none';
+      }
+    }
+
+    // Restore saved theme (run immediately before paint)
+    var saved = localStorage.getItem('brainsait-theme');
+    if (saved) {
+      applyTheme(saved);
+    } else if (!html.hasAttribute('data-theme')) {
+      // Respect system preference
+      var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      applyTheme(prefersDark ? 'dark' : 'light');
+    }
+
+    if (toggle) {
+      toggle.addEventListener('click', function () {
+        var current = html.getAttribute('data-theme');
+        applyTheme(current === 'dark' || (!current && !saved) ? 'light' : 'dark');
+      });
+    }
+
+    // Listen for system theme changes
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function (e) {
+      if (!localStorage.getItem('brainsait-theme')) {
+        applyTheme(e.matches ? 'dark' : 'light');
+      }
+    });
+
+    /* ── Mobile menu ────────────────────────────────────── */
+    var menuBtn = document.getElementById('menu-btn');
+    var nav = document.getElementById('brainsait-nav');
+    var overlay = document.getElementById('mobile-overlay');
+
+    function openMenu() {
+      if (!nav || !menuBtn) return;
+      nav.classList.add('open');
+      menuBtn.setAttribute('aria-expanded', 'true');
+      menuBtn.textContent = '✕';
+      menuBtn.setAttribute('aria-label', 'Close menu');
+    }
+
+    function closeMenu() {
+      if (!nav || !menuBtn) return;
+      nav.classList.remove('open');
+      menuBtn.setAttribute('aria-expanded', 'false');
+      menuBtn.textContent = '☰';
+      menuBtn.setAttribute('aria-label', 'Open menu');
+    }
+
+    if (menuBtn) {
+      menuBtn.addEventListener('click', function () {
+        if (nav.classList.contains('open')) {
+          closeMenu();
+        } else {
+          openMenu();
+        }
+      });
+    }
+
+    if (overlay) {
+      overlay.addEventListener('click', closeMenu);
+    }
+
+    // Close on nav link click (mobile)
+    if (nav) {
+      var links = nav.querySelectorAll('a');
+      for (var i = 0; i < links.length; i++) {
+        links[i].addEventListener('click', function () {
+          if (window.innerWidth <= 868) {
+            closeMenu();
+          }
+        });
+      }
+    }
+
+    // Close on ESC
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && nav && nav.classList.contains('open')) {
+        closeMenu();
+        if (menuBtn) menuBtn.focus();
+      }
+    });
+
+    /* ── Active link detection on scroll ────────────────── */
+    // (Optional: highlight nav link matching current page on load)
+    var currentPath = window.location.pathname;
+    if (nav) {
+      var navLinks = nav.querySelectorAll('a');
+      for (var j = 0; j < navLinks.length; j++) {
+        var href = navLinks[j].getAttribute('href');
+        if (href && currentPath === href) {
+          navLinks[j].classList.add('active');
+        }
+      }
+    }
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "BrainSAIT Header",
+  "class": "brainsait-header-section",
+  "settings": [],
+  "presets": [
+    {
+      "name": "BrainSAIT Header"
+    }
+  ]
+}
+{% endschema %}

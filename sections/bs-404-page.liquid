@@ -1,0 +1,144 @@
+{%- comment -%}
+  BrainSAIT 404 Page Section — matches gh.io design system
+{%- endcomment -%}
+
+{% liquid
+  assign is_ar = false
+  if request.locale.iso_code == 'ar'
+    assign is_ar = true
+  endif
+%}
+
+{% stylesheet %}
+  :root[data-theme='light'] {
+    --bs-404-bg: #f7f8fb;
+    --bs-404-surface: rgba(255,255,255,0.78);
+    --bs-404-surface-2: rgba(255,255,255,0.96);
+    --bs-404-line: rgba(18,24,52,0.12);
+    --bs-404-ink: #151a30;
+    --bs-404-ink-soft: #333b57;
+    --bs-404-gold: #b8860b;
+    --bs-404-gold-grad: linear-gradient(120deg, #d4a437, #b8860b);
+    --bs-404-shadow: 0 24px 60px rgba(24,32,78,0.14);
+  }
+
+  :root:not([data-theme]), :root[data-theme='dark'] {
+    --bs-404-bg: #080b12;
+    --bs-404-surface: rgba(255,255,255,0.045);
+    --bs-404-surface-2: rgba(255,255,255,0.078);
+    --bs-404-line: rgba(255,255,255,0.12);
+    --bs-404-ink: #eef1fb;
+    --bs-404-ink-soft: #c6cce6;
+    --bs-404-gold: #e9c46a;
+    --bs-404-gold-grad: linear-gradient(120deg, #f5dd9d, #e9c46a);
+    --bs-404-shadow: 0 18px 44px rgba(0,0,0,0.36);
+  }
+
+  .bs-404 {
+    text-align: center;
+    padding: 3rem 1rem;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--bs-404-bg);
+    color: var(--bs-404-ink);
+    font-family: 'Manrope', system-ui, sans-serif;
+  }
+  [dir='rtl'] .bs-404 { font-family: 'Almarai', 'Manrope', system-ui, sans-serif; }
+
+  .bs-404__glow {
+    width: 100px; height: 100px;
+    margin: 0 auto 1.5rem;
+    background: var(--bs-404-gold-grad);
+    border-radius: 20px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 42px; font-weight: 800; color: #070a18;
+    box-shadow: var(--bs-404-shadow);
+  }
+  .bs-404__title { font-size: 52px; font-weight: 800; margin-bottom: 0.5rem; }
+  .bs-404__heading {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 22px; font-weight: 600; margin-bottom: 0.5rem;
+  }
+  [dir='rtl'] .bs-404__heading { font-family: 'Amiri', 'Playfair Display', Georgia, serif; }
+  .bs-404__desc { color: var(--bs-404-ink-soft); margin-bottom: 2rem; line-height: 1.6; }
+  .bs-404__actions { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-bottom: 2.5rem; }
+
+  .bs-404__btn {
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 11px 22px; border-radius: 999px;
+    font-size: 13px; font-weight: 600;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .bs-404__btn:hover { transform: translateY(-2px); }
+  .bs-404__btn--primary {
+    background: var(--bs-404-gold-grad); color: #070a18;
+    box-shadow: 0 8px 24px rgba(233,196,106,0.3);
+  }
+  .bs-404__btn--primary:hover { box-shadow: 0 12px 32px rgba(233,196,106,0.4); }
+  .bs-404__btn--secondary {
+    background: var(--bs-404-surface); color: var(--bs-404-ink);
+    border: 1px solid var(--bs-404-line);
+    backdrop-filter: saturate(135%) blur(10px);
+  }
+  .bs-404__btn--secondary:hover { background: var(--bs-404-surface-2); }
+
+  .bs-404__nav { border-top: 1px solid var(--bs-404-line); padding-top: 1.25rem; width: 100%; }
+  .bs-404__nav-links { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+  .bs-404__nav-links a {
+    color: var(--bs-404-ink-soft); text-decoration: none; font-size: 12px;
+    padding: 5px 10px; border-radius: 8px; transition: all 0.2s;
+    border: 1px solid var(--bs-404-line); background: var(--bs-404-surface);
+  }
+  .bs-404__nav-links a:hover { color: var(--bs-404-gold); }
+{% endstylesheet %}
+
+<section class="bs-404">
+  <div class="bs-404__glow">404</div>
+  <h1 class="bs-404__title">404</h1>
+  <h2 class="bs-404__heading">{% if is_ar %}الصفحة غير موجودة{% else %}Page Not Found{% endif %}</h2>
+  <p class="bs-404__desc">
+    {% if is_ar %}
+      العذر، الصفحة التي تبحث عنها لم تعد متاحة أو لم تكن موجودة أبداً.
+      جرب العودة إلى المتجر أو تصفح الفئات أدناه.
+    {% else %}
+      The page you're looking for doesn't exist or has been moved.
+      Try heading back to the store or browse categories below.
+    {% endif %}
+  </p>
+  <div class="bs-404__actions">
+    <a href="/" class="bs-404__btn bs-404__btn--primary">
+      {% if is_ar %}↩ العودة للمتجر{% else %}↩ Back to Store{% endif %}
+    </a>
+    <a href="/collections/learn" class="bs-404__btn bs-404__btn--secondary">
+      📚 {% if is_ar %}تعلّم{% else %}Learn{% endif %}
+    </a>
+    <a href="/collections/solutions" class="bs-404__btn bs-404__btn--secondary">
+      🚀 {% if is_ar %}حلول{% else %}Solutions{% endif %}
+    </a>
+  </div>
+  <nav class="bs-404__nav">
+    <div class="bs-404__nav-links">
+      <a href="/collections/learn">{% if is_ar %}تعلّم{% else %}Learn{% endif %}</a>
+      <a href="/collections/build">{% if is_ar %}ابنِ{% else %}Build{% endif %}</a>
+      <a href="/collections/solutions">{% if is_ar %}حلول{% else %}Solutions{% endif %}</a>
+      <a href="/pages/benefits">{% if is_ar %}المزايا{% else %}Benefits{% endif %}</a>
+      <a href="https://registry.brainsait.org">BPR Registry</a>
+    </div>
+  </nav>
+</section>
+
+{% schema %}
+{
+  "name": "BS 404 Page",
+  "tag": "section",
+  "class": "bs-404-section",
+  "settings": [],
+  "presets": [
+    { "name": "BS 404 Page" }
+  ]
+}
+{% endschema %}
