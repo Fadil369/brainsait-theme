@@ -1,0 +1,114 @@
+{
+  "themes": [
+    {
+      "id": 148731494483,
+      "name": "Horizon",
+      "created_at": "2026-08-04T10:53:13+03:00",
+      "updated_at": "2026-08-31T21:28:50+03:00",
+      "role": "unpublished",
+      "theme_store_id": 2481,
+      "previewable": true,
+      "processing": false,
+      "admin_graphql_api_id": "gid://shopify/Theme/148731494483"
+    },
+    {
+      "id": 148931149907,
+      "name": "Updated copy of BrainSAIT — GitHub.io Card Rede...",
+      "created_at": "2026-08-10T20:52:56+03:00",
+      "updated_at": "2026-08-19T05:15:08+03:00",
+      "role": "unpublished",
+      "theme_store_id": 2481,
+      "previewable": true,
+      "processing": false,
+      "admin_graphql_api_id": "gid://shopify/Theme/148931149907"
+    },
+    {
+      "id": 149209940051,
+      "name": "Super Store Theme",
+      "created_at": "2026-08-19T03:24:28+03:00",
+      "updated_at": "2026-08-30T07:11:17+03:00",
+      "role": "unpublished",
+      "theme_store_id": 2481,
+      "previewable": true,
+      "processing": false,
+      "admin_graphql_api_id": "gid://shopify/Theme/149209940051"
+    },
+    {
+      "id": 149498495059,
+      "name": "Canyon",
+      "created_at": "2026-08-27T16:33:29+03:00",
+      "updated_at": "2026-08-27T16:52:47+03:00",
+      "role": "unpublished",
+      "theme_store_id": 2481,
+      "previewable": true,
+      "processing": false,
+      "admin_graphql_api_id": "gid://shopify/Theme/149498495059"
+    },
+    {
+      "id": 149504753747,
+      "name": "Publisher",
+      "created_at": "2026-08-27T20:01:01+03:00",
+      "updated_at": "2026-09-03T19:58:41+03:00",
+      "role": "unpublished",
+      "theme_store_id": 1864,
+      "previewable": true,
+      "processing": false,
+      "admin_graphql_api_id": "gid://shopify/Theme/149504753747"
+    },
+    {
+      "id": 149665480787,
+      "name": "Publisher — Fixes (routing, cards, translations)",
+      "created_at": "2026-09-01T21:06:07+03:00",
+      "updated_at": "2026-09-01T21:07:09+03:00",
+      "role": "unpublished",
+      "theme_store_id": 1864,
+      "previewable": true,
+      "processing": false,
+      "admin_graphql_api_id": "gid://shopify/Theme/149665480787"
+    },
+    {
+      "id": 149734752339,
+      "name": "Horizon",
+      "created_at": "2026-09-03T19:52:32+03:00",
+      "updated_at": "2026-09-03T19:52:45+03:00",
+      "role": "unpublished",
+      "theme_store_id": null,
+      "previewable": true,
+      "processing": false,
+      "admin_graphql_api_id": "gid://shopify/Theme/149734752339"
+    },
+    {
+      "id": 149734948947,
+      "name": "Horizon",
+      "created_at": "2026-09-03T19:55:06+03:00",
+      "updated_at": "2026-09-03T19:55:19+03:00",
+      "role": "unpublished",
+      "theme_store_id": null,
+      "previewable": true,
+      "processing": false,
+      "admin_graphql_api_id": "gid://shopify/Theme/149734948947"
+    },
+    {
+      "id": 149735112787,
+      "name": "Horizon",
+      "created_at": "2026-09-03T19:58:14+03:00",
+      "updated_at": "2026-09-03T21:00:12+03:00",
+      "role": "main",
+      "theme_store_id": null,
+      "previewable": true,
+      "processing": false,
+      "admin_graphql_api_id": "gid://shopify/Theme/149735112787"
+    },
+    {
+      "id": 149746483283,
+      "name": "Horizon — UI/UX Fixes",
+      "created_at": "2026-09-04T04:22:07+03:00",
+      "updated_at": "2026-09-04T05:47:42+03:00",
+      "role": "unpublished",
+      "theme_store_id": null,
+      "previewable": true,
+      "processing": false,
+      "admin_graphql_api_id": "gid://shopify/Theme/149746483283"
+    }
+  ]
+}

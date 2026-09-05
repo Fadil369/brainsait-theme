@@ -1,0 +1,13 @@
+query BaselineRedirects {
+  urlRedirects(first: 250) {
+    nodes {
+      id
+      path
+      target
+    }
+    pageInfo {
+      hasNextPage
+      endCursor
+    }
+  }
+}

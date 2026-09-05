@@ -1,0 +1,31 @@
+query BaselineCollections {
+  collections(first: 250) {
+    nodes {
+      id
+      title
+      handle
+      descriptionHtml
+      updatedAt
+      sortOrder
+      ruleSet {
+        appliedDisjunctively
+        rules {
+          column
+          condition
+          relation
+        }
+      }
+      productsCount {
+        count
+      }
+      seo {
+        title
+        description
+      }
+    }
+    pageInfo {
+      hasNextPage
+      endCursor
+    }
+  }
+}
